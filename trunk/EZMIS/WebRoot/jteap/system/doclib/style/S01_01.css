@@ -1,0 +1,416 @@
+body{
+	font-family: Arial, sans-serif;
+	margin: 0px;
+	padding: 0px;
+}
+.bodyTopBG {
+	background-image: url(bodyTopBG.gif);
+	background-repeat: repeat-x;
+	background-position: top;
+	background-color: #8aa000;
+	height: 694px;
+}
+.bodyBottomBG {
+	background-image: url(bodyBottomBG.gif);
+	background-position: left bottom;
+	height: 694px;
+	background-repeat: no-repeat;
+}
+.LeftFlash {
+	height: 476px;
+	width: 195px;
+	vertical-align: top;
+	background-image: url(hl.gif);
+	background-repeat: no-repeat;
+	background-position: top;
+}
+.TopLogo {
+	height: 83px;
+	width: 805px;
+	background-image: url(TopLogo.gif);
+	background-repeat: no-repeat;
+	background-position: left top;
+	vertical-align: top;
+}
+#TopButton{
+	width: 156px;
+	height: 21px; /*¸ß¶ÈÊÇ±³¾°Í¼Æ¬µÄÒ»°ë*/
+	background: url(TopBotton.gif);
+	list-style-type: none;
+	padding: 0px;
+	margin: 30px 12px 0px;
+	float: right;
+}
+#TopButton li{
+		float: left;
+}
+#TopButton li a{
+		display: block;
+		width: 78px;
+		height: 21px;
+}
+#TopButton li#home a:hover,#activeh{
+		background: url(TopBotton.gif) 0 -21px; 
+}
+#TopButton li#homemap a:hover,#activea{
+		background: url(TopBotton.gif) -78px -21px;
+}
+.nav {
+	height: 46px;
+	width: 805px;
+	background-image: url(navBG.jpg);
+	background-repeat: no-repeat;
+}
+#menu {
+	padding:0px;
+}
+#menu ul {
+	float:Left;
+	list-style:none;
+	margin:0px;
+	padding: 15px 6px 0px 6px;
+}
+#menu ul li {
+	float:Left;
+	display:block;
+	margin-Top: 0;
+	margin-Right: 6px;
+	margin-Bottom: 0;
+	margin-Left: 6px;
+}
+.menuDiv {
+	width:2px;
+	height:23px;
+	background-image: url(navButtonBG.gif);
+	background-repeat: no-repeat;
+	background-position: top;
+}
+a.scrollover {
+    color: #003059;
+    font-family: "Î¢ÈíÑÅºÚ";
+    font-size: 16px;
+	letter-spacing: 1px;
+}
+a.scrollover em:first-line {
+    color: #FFFF00;
+	text-decoration: underline;
+    font-weight: bold;
+	letter-spacing: 1px;
+}
+.MainLeft {
+	background-image: url(MainLeft.jpg);
+	background-repeat: no-repeat;
+	height: 428px;
+	width: 528px;
+	vertical-align: top;
+	padding-top: 24px;
+	padding-left: 13px;
+}
+.MainRight {
+	background-image: url(MainRight.jpg);
+	background-repeat: no-repeat;
+	height: 452px;
+	width: 264px;
+	vertical-align: top;
+}
+.Bottom {
+	font-size: 13px;
+	color: #FFFFFF;
+	text-decoration: none;
+	margin-top: 94px;
+	width: 805px;
+	text-align: center;
+}
+/*- Menu Tabs--------------------------- */
+    #tabs{
+	float:left;
+	width:509px;
+	font-size:16px;
+	line-height:normal;
+	background-image: url(NewsTopBG.jpg);
+	background-repeat: no-repeat;
+	height: 32px;
+	font-family: "Î¢ÈíÑÅºÚ";
+	text-decoration: none;
+	letter-spacing: 1px;
+      }
+    #tabs ul {
+	margin:0;
+	padding:0px;
+	list-style:none;
+      }
+    #tabs li {
+      display:inline;
+      margin:0;
+      padding:0;
+      }
+    #tabs li  a {
+	float:left;
+	background:url("tableftJ.gif") no-repeat left top;
+	margin:0;
+	padding:0 0 0 27px;
+	text-decoration:none;
+	height: 32px;
+      }
+    #tabs li  a span {
+	float:left;
+	display:block;
+	background:url("tabrightJ.gif") no-repeat right top;
+	padding:2px 20px 7px 3px;
+	color:#FFFFFF;
+      }
+    /* Commented Backslash Hack hides rule from IE5-Mac \*/
+    #tabs li  a span {float:none;}
+    /* End IE5-Mac hack */
+    #tabs li  a:hover span {
+	color:#000000;
+      }
+    #tabs li  a:hover {
+	background-position:0% -32px;
+      }
+    #tabs li  a:hover span {
+	background-position:100% -32px;
+      }
+    .tabsMain {
+	background-image: url(NewsMainBG.jpg);
+	background-repeat: no-repeat;
+	height: 207px;
+	width: 509px;
+	padding: 6px;
+      }
+    .tabsMainPhoto {
+	height: 197px;
+	width: 241px;
+	float: left;
+	background-image: url(tabsMainPhoto.gif);
+	background-repeat: no-repeat;
+	vertical-align: top;
+	padding-top: 1px;
+	padding-left: 1px;
+      }
+    .tabsMainTxt {
+	width: 250px;
+	float: left;
+      }
+.NewsIco {
+	height: 24px;
+	width: 23px;
+	background-image: url(NewsIco.gif);
+	background-repeat: no-repeat;
+	background-position: top;
+	border-bottom-width: 1px;
+	border-bottom-style: dashed;
+	border-bottom-color: #2993bd;
+}
+.NewsTxt {
+	height: 24px;
+	border-bottom-width: 1px;
+	border-bottom-style: dashed;
+	border-bottom-color: #2993bd;
+	font-size: 15px;
+	color: #000000;
+	text-decoration: none;
+	text-align: left;
+	font-family: "ºÚÌå";
+	padding-top: 2px;
+}
+.NewsTxt a:link,.NewsTxt a:visited {
+	font-size: 15px;
+	color: #000000;
+	text-decoration: none;
+}
+.NewsTxt a:hover{
+	color: #FFFF00;
+}
+.more_1 {
+	text-decoration: none;
+	border-style: none;
+	float: right;
+	margin-right: 16px;
+	margin-top: 10px;
+}
+.more_2 {
+	text-decoration: none;
+	border-style: none;
+	margin-bottom: -2px;
+	margin-left: 257px;
+}
+.ICO_new {
+	text-decoration: none;
+	border-style: none;
+	margin-bottom: 1px;
+	margin-left: 5px;
+}
+.PhotoTitle {
+	font-size:16px;
+	font-family: "Î¢ÈíÑÅºÚ";
+	padding-left: 132px;
+	letter-spacing: 1px;
+}
+.PhotoDIV {
+	width: 493px;
+	margin-left: 7px;
+	margin-top: 12px;
+}
+#PhotoMask {
+	position:absolute;
+	width:165px;
+	height:110px;
+	z-index:100;
+}
+.PhotoTxt {
+	font-size:13px;
+	color: #666666;
+	text-align: center;
+	padding-top: 2px;
+}
+.PhotoTxt a:link,.PhotoTxt a:visited {
+	color: #666666;
+	text-decoration: none;
+}
+.PhotoTxt a:hover{
+	color: #000000;
+}
+.RightTitle1 {
+	font-size:16px;
+	font-family: "Î¢ÈíÑÅºÚ";
+	letter-spacing: 1px;
+	margin-top: 27px;
+	margin-left: 20px;
+}
+.RightTitle2 {
+	font-size:16px;
+	font-family: "Î¢ÈíÑÅºÚ";
+	letter-spacing: 1px;
+	margin-top: 20px;
+	margin-left: 20px;
+}
+.RightTitle3 {
+	font-size:16px;
+	font-family: "Î¢ÈíÑÅºÚ";
+	letter-spacing: 1px;
+	margin-top: 16px;
+	margin-left: 20px;
+}
+.ICO_RightTitle {
+	margin-bottom: -1px;
+	margin-right: 6px;
+}
+.Login {
+	width: 150px;
+	margin-left: 75px;
+	margin-top: 11px;
+}
+
+.Input01 {
+	FONT-SIZE: 13px;
+	border: 1px inset #ebebeb;
+	width: 92%;
+	color: #1C488F;
+	background-color: #ebebeb;
+}
+.Input02 {
+	FONT-SIZE: 13px;
+	border: 1px outset #F6A036;
+	width: 92%;
+	color: #000000;
+	background-color: #feebd4;
+}
+.enter_ico {
+	text-align: right;
+	background-image: url(enter.jpg);
+	width: 42px;
+	height: 49px;
+	background-repeat: no-repeat;
+	background-position: center top;
+	cursor: hand;
+}
+.enter_icoH {
+	text-align: right;
+	width: 42px;
+	height: 49px;
+	cursor: hand;
+	background: url(enter.jpg) 0 -49px; 
+}
+.SafeTitle {
+	text-align: center;
+	font-family: "Î¢ÈíÑÅºÚ";
+	font-size: 16px;
+	font-weight: bold;
+	color: #FFFF00;
+	text-decoration: none;
+	margin-top: 12px;
+	width: 214px;
+	margin-left: 16px;
+}
+.SafeDays {
+	text-align: center;
+	font-family: "Î¢ÈíÑÅºÚ";
+	font-size: 14px;
+	font-weight: bold;
+	color: #FFFF00;
+	text-decoration: none;
+	margin-top: 25px;
+	margin-left: 80px;
+	width: 140px;
+}
+.WeatherTAB {
+	height: 115px;
+	width: 214px;
+	margin-top: 6px;
+	margin-left: 16px;
+}
+.WeatherTxt1 {
+	font-size: 18px;
+	color: #FD7100;
+	text-decoration: none;
+	text-align: center;
+	margin-top: 2px;
+	font-family: "Î¢ÈíÑÅºÚ";
+}
+.WeatherTxt2 {
+	font-size: 16px;
+	color: #000000;
+	text-decoration: none;
+	text-align: left;
+	margin-top: 16px;
+}
+.WeatherTxt3 {
+	font-size: 14px;
+	color: #000000;
+	text-decoration: none;
+	text-align: left;
+	margin-top: 3px;
+}
+.WeatherTxt4 {
+	font-size: 16px;
+	color: #CD0000;
+	text-decoration: none;
+	text-align: left;
+	font-family: "Î¢ÈíÑÅºÚ";
+}
+.WeatherTxt5 {
+	font-size: 16px;
+	color: #009196;
+	text-decoration: none;
+	text-align: left;
+	font-family: "Î¢ÈíÑÅºÚ";
+}
+.WeatherTxt6 {
+	font-size: 14px;
+	color: #3996B8;
+	text-decoration: none;
+	text-align: left;
+	margin-top: 3px;
+	font-family: "ºÚÌå";
+	margin-left: 8px;
+}
+.WeatherTxt6 a:link,.WeatherTxt6 a:visited {
+	color: #3996B8;
+	text-decoration: none;
+}
+.WeatherTxt6 a:hover{
+	color: #000000;
+}
+
+

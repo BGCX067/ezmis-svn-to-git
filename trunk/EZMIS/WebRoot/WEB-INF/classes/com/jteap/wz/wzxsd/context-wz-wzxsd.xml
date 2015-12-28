@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd"
+	default-autowire="byName" default-lazy-init="true">
+
+	<bean id="wzxsdManager" class="com.jteap.wz.wzxsd.manager.WzxsdManager" />
+	<bean id="wzxsdMxManager" class="com.jteap.wz.wzxsd.manager.WzxsdMxManager" />
+	
+	<bean id="wzxsdAction" class="com.jteap.wz.wzxsd.web.WzxsdAction" scope="prototype"></bean>
+	<bean id="wzxsdMxAction" class="com.jteap.wz.wzxsd.web.WzxsdMxAction" scope="prototype"></bean>
+	
+</beans>

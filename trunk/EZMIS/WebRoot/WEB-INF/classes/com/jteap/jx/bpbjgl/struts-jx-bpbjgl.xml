@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="jteap.jx.bpbjgl" namespace="/jteap/jx/bpbjgl" extends="jteap-actions">
+		<action name="BpbjZyflAction" class="jx_BpbjZyflAction" />
+		<action name="BpbjxxAction" class="jx_BpbjxxAction" />
+	</package>
+</struts>

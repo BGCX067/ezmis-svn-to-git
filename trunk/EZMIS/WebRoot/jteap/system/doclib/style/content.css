@@ -1,0 +1,47 @@
+#ContentLink {
+	padding-top: 2px;
+	padding-left: 7px;
+	width: '100%';
+}
+
+#ContentLink a {
+	font-size: 9pt;
+	width: '100%';
+	color: #1f3a87;
+	text-decoration: none;
+	overflow: hidden;
+	white-space: nowrap;
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	text-decoration: none;
+}
+
+#ContentLink a:hover {
+	color: #bc2931;
+}
+
+#more {
+	position:fixed;
+	_position:absolute;
+	right:5px;
+	bottom:3px;
+}
+#more a {
+	font-size: 9pt;
+	width: 35;
+	color: blue;
+	text-decoration: none;
+	overflow: hidden;
+	white-space: nowrap;
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	text-decoration: none;
+}
+#more a:hover {
+	color: #bc2931;
+}
+.image {
+	border: 1px;
+	border-color: #d5dfe5;
+	border-style: ridge;
+}

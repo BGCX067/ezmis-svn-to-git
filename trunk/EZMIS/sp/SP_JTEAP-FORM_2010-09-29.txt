@@ -1,0 +1,11 @@
+1.EFormExpVelocityCF.java
+protected void setContextMap(Map contextMap) {
+修改为
+public void setContextMap(Map contextMap) {
+
+供外界调用
+
+2.EFormFjAction.java修改附件下载功能，修正了下载附件时将缓冲区中空白字节写入了文件中导致文件无法打开的bug
+3.eformEditors.js中
+  COMB控件添加事件:onchange
+  CAL控件添加readonly属性和minDate maxDate属性，达到日历选择控件限制日期选择范围的空能

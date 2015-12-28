@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	
+	
+	
+	
+	<!-- 角色动作-->
+	<package name="jteap.system.role" namespace="/jteap/system/role" extends="jteap-actions">
+		<action name="RoleAction" class="system_RoleAction"/>
+		<action name="R2RAction" class="system_R2RAction"/>
+	</package>
+	
+
+	
+
+	
+</struts>

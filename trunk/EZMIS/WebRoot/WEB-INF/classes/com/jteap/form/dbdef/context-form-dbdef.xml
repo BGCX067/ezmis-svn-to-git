@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd"
+	default-autowire="byName" default-lazy-init="true">
+
+    <!-- 数据表定义 -->
+	<bean id="defTableInfoManager" class="com.jteap.form.dbdef.manager.DefTableInfoManager" />
+	<bean id="defColumnInfoManager" class="com.jteap.form.dbdef.manager.DefColumnInfoManager" />
+	<bean id="physicTableManager" class="com.jteap.form.dbdef.manager.PhysicTableManager" />
+	
+	<bean id="form_DefTableInfoAction" class="com.jteap.form.dbdef.web.DefTableInfoAction" scope="prototype"></bean>
+	<bean id="form_DefColumnInfoAction" class="com.jteap.form.dbdef.web.DefColumnInfoAction" scope="prototype"></bean>
+	<bean id="form_PhysicTableAction" class="com.jteap.form.dbdef.web.PhysicTableAction" scope="prototype"></bean>
+	
+	<!-- 自定义报表 -->
+	<bean id="defDataSourceManager" class="com.jteap.form.dbdef.manager.DefDataSourceManager" />
+	<bean id="form_DefDataSourceAction" class="com.jteap.form.dbdef.web.DefDataSourceAction" scope="prototype"></bean>
+	
+	
+	
+</beans>

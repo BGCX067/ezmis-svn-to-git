@@ -1,0 +1,36 @@
+ <!--
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" 
+
+"http://www.springframework.org/dtd/spring-beans.dtd">
+ 
+<beans>
+定时侦测配置文件中的root用户密码是否修改，如果修改就重新进行加密
+	<bean id="checkjob" class="com.jteap.system.quartz.ConfigFileEncryptJob"></bean>
+	<bean id="autoStatInvokingJobDetail"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject">
+			<ref bean="checkjob" />
+		</property>
+		<property name="targetMethod">
+			<value>encodePassword</value>
+		</property>
+	</bean>
+
+	<bean id="cronTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+        <property name="jobDetail" ref="autoStatInvokingJobDetail"/>
+        <property name="cronExpression" value="0/20 0-59 0-23 *,* * ?"/>
+    </bean>
+    
+   
+	<bean id="schedulerFactory"
+		class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="triggers">
+			<list>
+				<ref bean="cronTrigger" />
+			</list>
+		</property>
+	</bean>
+
+</beans>
+ -->

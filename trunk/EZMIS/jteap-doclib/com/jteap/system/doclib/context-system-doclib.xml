@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd"
+	default-autowire="byName" default-lazy-init="true">
+
+    <!-- FreeMarker配置 -->
+	<bean id="freemarkerConfig" 
+        class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
+        <property name="templateLoaderPath" value="/jteap/system/doclib/template/"/>
+    </bean>
+    <bean id="viewResolver" 
+        class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
+        <property name="viewClass">
+            <value>
+                org.springframework.web.servlet.view.freemarker.FreeMarkerView 
+                </value>
+        </property>
+        <property name="prefix">
+            <value>/</value>
+        </property>
+        <property name="suffix">
+            <value>.jspx</value>
+        </property>
+    </bean>
+
+	<!-- 自定义文档中心 -->
+	<bean id="doclibManager" class="com.jteap.system.doclib.manager.DoclibManager" />
+	<bean id="doclibCatalogManager" class="com.jteap.system.doclib.manager.DoclibCatalogManager" />
+	<bean id="doclibCatalogFieldManager" class="com.jteap.system.doclib.manager.DoclibCatalogFieldManager" />
+	<bean id="doclibFvManager" class="com.jteap.system.doclib.manager.DoclibFvManager" />
+	<bean id="doclibAttachManager" class="com.jteap.system.doclib.manager.DoclibAttachManager"></bean>
+
+	<bean id="system_DoclibCatalogAction" class="com.jteap.system.doclib.web.DoclibCatalogAction"></bean>
+	<bean id="system_DoclibAction" class="com.jteap.system.doclib.web.DoclibAction"></bean>
+	<bean id="system_DoclibCatalogFieldAction" class="com.jteap.system.doclib.web.DoclibCatalogFieldAction"></bean>
+	<bean id="system_DoclibAttachAction" class="com.jteap.system.doclib.web.DoclibAttachAction"></bean>
+	
+<!-- 自定义文档级别 -->
+	<bean id="doclibLevelManager" class="com.jteap.system.doclib.manager.DoclibLevelManager"></bean>
+	<bean id="doclibLevelRoleManager" class="com.jteap.system.doclib.manager.DoclibLevelRoleManager"></bean>
+	
+	<bean id="system_DoclibLevelAction" class="com.jteap.system.doclib.web.DoclibLevelAction"></bean>
+	<bean id="system_DoclibLevelRoleAction" class="com.jteap.system.doclib.web.DoclibLevelRoleAction"></bean>
+
+	<bean id="system_DoclibRoleTreeAction" class="com.jteap.system.doclib.web.DoclibRoleTreeAction"></bean>
+</beans>

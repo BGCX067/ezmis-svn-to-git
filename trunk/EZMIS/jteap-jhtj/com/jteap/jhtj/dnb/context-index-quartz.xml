@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" 
+
+"http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+
+<!-- 每天01:00时 定期保存电能表每天24点的有功增量总 -->	
+	<bean id="checkjob3" class="com.jteap.jhtj.dnb.quartz.ConfigFileEncryptJob3"></bean>
+    
+    <bean id="autoStatInvokingJobDetail4"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject">
+			<ref bean="checkjob3" />
+		</property>
+		<property name="targetMethod">
+			<value>saveDnbYgzlz</value>
+		</property>
+		
+	</bean>
+
+	<bean id="cronTrigger4" class="org.springframework.scheduling.quartz.CronTriggerBean">
+        <property name="jobDetail" ref="autoStatInvokingJobDetail4"/>
+        <property name="cronExpression" value="0 0 2 * * ?"/>
+    </bean>
+ 
+<!--  --> 
+	<bean id="schedulerFactory3"
+		class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="triggers">
+			<list>
+				<ref bean="cronTrigger4" />
+			</list>
+		</property>
+		<property name="quartzProperties">
+			<props>
+				<prop key="org.quartz.threadPool.threadCount">1</prop>
+			</props>
+		</property>
+	</bean>
+
+</beans>

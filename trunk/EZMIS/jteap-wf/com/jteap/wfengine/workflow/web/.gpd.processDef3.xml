@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<process-diagram name="�ҵ����" width="918" height="765">
+  <node name="��̿�ʼ" x="26" y="73" width="140" height="40">
+    <transition name="��̿�ʼ">
+      <label x="5" y="-10"/>
+    </transition>
+  </node>
+  <node name="�����Ŀ" x="25" y="162" width="140" height="40">
+    <transition name="a����100">
+      <label x="5" y="-10"/>
+    </transition>
+    <transition name="b����100">
+      <label x="5" y="-10"/>
+    </transition>
+  </node>
+  <node name="��������" x="199" y="271" width="140" height="40">
+    <transition name="�Ӳ��ŵ�ִ��">
+      <label x="13" y="2"/>
+    </transition>
+  </node>
+  <node name="ִ��" x="19" y="474" width="140" height="40">
+    <transition name="">
+      <label x="5" y="-10"/>
+    </transition>
+  </node>
+  <node name="ϵͳ��ǩ" x="23" y="551" width="140" height="40">
+    <transition name="��ǩͨ��">
+      <label x="5" y="-10"/>
+    </transition>
+    <transition name="�ܾ��ǩ">
+      <label x="5" y="-10"/>
+      <bendpoint w1="123" h1="-44" w2="131" h2="43"/>
+    </transition>
+  </node>
+  <node name="�鵵" x="21" y="640" width="140" height="40">
+    <transition name="������">
+      <label x="5" y="-10"/>
+    </transition>
+  </node>
+  <node name="��̽���" x="22" y="724" width="140" height="40"/>
+  <node name="��������" x="-123" y="254" width="140" height="40">
+    <transition name="�Ӹ��ܵ�ִ��">
+      <label x="5" y="-10"/>
+    </transition>
+  </node>
+</process-diagram>

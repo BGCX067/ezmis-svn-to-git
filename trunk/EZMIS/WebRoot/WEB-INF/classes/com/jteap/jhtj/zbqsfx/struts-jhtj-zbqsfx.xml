@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	
+	
+	<!-- 人员组织 -->
+	<package name="jteap.jhtj.zbqsfx" namespace="/jteap/jhtj/zbqsfx"
+		extends="jteap-actions">
+		<action name="zbqsfxAction" class="system_zbqsfxAction">
+			<result name="showIndexAction">/jteap/jhtj/zbqsfx/zbqsfxIndex.jsp</result>
+			<result name="showChartAction">/jteap/jhtj/zbqsfx/zbqsfxChart.jsp</result>
+		</action>
+	</package>
+</struts>

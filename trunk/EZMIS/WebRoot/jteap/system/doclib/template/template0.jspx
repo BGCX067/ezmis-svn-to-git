@@ -1,0 +1,80 @@
+<html >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>${title}</title>
+<link href="${basePath}/jteap/system/doclib/temp0_style/style.css" rel="stylesheet" type="text/css" />
+<link href="${basePath}/jteap/system/doclib/style/S01_01.css" rel="stylesheet" type="text/css" />
+<link href="${basePath}/jteap/system/doclib/style/S01_02.css" rel="stylesheet" type="text/css" />
+<link href="${basePath}/jteap/system/doclib/style/S01_03.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="top-left">&nbsp;</td>
+    <td class="top-center">&nbsp;</td>
+    <td class="top-right">
+    </td>
+  </tr>
+</table>
+
+
+
+<div class="pop-out">
+ <div class="pop-in">  
+  <div class="pop-main">
+   
+   <div class="popword-title">${parent }<span>&gt;</span>${title }</div>
+
+          <!--  start of 正文 -->
+
+          <div class="ArticleTitle">${title}</div>
+ 
+		  <div class="ArticleInfo">来源：湖北能源集团鄂州发电有限公司&nbsp;&nbsp;作者：${creator}&nbsp;&nbsp;发布时间：${createdt}</div>
+
+
+<div class="ArticleMain" style="height:400px;">
+  	${content}
+  	
+  
+  <div style="margin-left:0px">
+    <fieldset>
+      <legend class="ArticleMainIco"> 相关附件 </legend>
+		<#list list as list>
+			<table width="100%" border="0" cellpadding="0"
+				cellspacing="0">
+				<tr>
+					<td class="NewsIco3">
+						&nbsp;
+					</td>
+					<td class="NewsTxt3">
+						<a href="${basePath}/jteap/doclib/DoclibAction!downAttachAction.do?attachid=${list.id}">附件名称:${list.name}【点击下载】</a>
+					</td>
+				</tr>
+			</table>
+		</#list>
+    </fieldset>
+  </div>
+
+</div>
+
+     <div class="mod-hr"></div>
+
+<div class="PageTureTxt01">
+<a href="#">返回顶部</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">打印本页</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#" onClick="window.opener=null;window.close();">关闭窗口</a>
+</div>
+          <!--  end of 正文 -->
+  </div>
+ </div> 
+</div> 
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="bom">
+  <tr>
+    <td class="bom-center">版权所有 湖北能源集团鄂州发电有限公司</td>
+  </tr>
+</table>
+
+
+</body>
+</html>

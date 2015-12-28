@@ -1,0 +1,27 @@
+
+FONT {
+	font-size: 12px;
+}
+
+.JC{
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.HC{
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.NOL{
+	border-left: none;
+}
+
+.NOR{
+	border-right: none;
+}
+
+.NOLR{
+	border-left: none;
+	border-right: none;
+}

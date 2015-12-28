@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	
+	
+	<!-- 人员组织 -->
+	<package name="jteap.jhtj.zyzb" namespace="/jteap/jhtj/zyzb"
+		extends="jteap-actions">
+		<action name="zyzbAction" class="system_zyzbAction">
+			<result name="getLeftView">/jteap/jhtj/zyzb/zyzbLeftNav.jsp</result>
+			<result name="getZbjdViewIndexAction">/jteap/jhtj/zyzb/zyzbChart.jsp</result>
+		</action>
+	</package>
+</struts>

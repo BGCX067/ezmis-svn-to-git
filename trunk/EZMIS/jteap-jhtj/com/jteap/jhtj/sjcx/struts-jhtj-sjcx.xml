@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	
+	
+	<!-- 人员组织 -->
+	<package name="jteap.jhtj.sjcx" namespace="/jteap/jhtj/sjcx"
+		extends="jteap-actions">
+		<action name="sjcxAction" class="system_sjcxAction">
+			<result name="showIndexAction">/jteap/jhtj/sjcx/sjcxIndex.jsp</result>
+			<result name="showFindPageAction">/jteap/jhtj/sjcx/sjcxGrid.jsp</result>
+		</action>
+	</package>
+</struts>

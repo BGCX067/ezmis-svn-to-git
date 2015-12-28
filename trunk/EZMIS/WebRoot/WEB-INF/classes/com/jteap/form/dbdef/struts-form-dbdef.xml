@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+
+	<!-- 数据定义 -->
+	<package name="jteap.form.dbdef" namespace="/jteap/form/dbdef"
+		extends="jteap-actions">
+		<action name="DefTableInfoAction" class="form_DefTableInfoAction">
+		</action>
+		<action name="DefColumnInfoAction" class="form_DefColumnInfoAction">
+		</action>
+		<action name="PhysicTableAction" class="form_PhysicTableAction">
+		</action>		
+		<action name="DefDataSourceAction" class="form_DefDataSourceAction"></action>
+	</package>
+
+
+	
+</struts>

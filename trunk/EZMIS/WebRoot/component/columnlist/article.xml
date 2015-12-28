@@ -1,0 +1,304 @@
+<?xml version="1.0"?>
+<articles>
+	<article identifier="columnlist" type="widget" name="ColumnList" version="1.04" template="standard-article.wal">
+		<licenses>
+			<license identifier="asl2">Apache Software License 2.0</license>
+		</licenses>
+		<compatibility>
+			<compatible browser="any" />
+		</compatibility>
+		<description>
+			A DHTML column list widget. Can be generated from supplied data or attached
+			to an existing html structure. Supports multiple selection, sorting, column
+			resizing, column moving and keyboard navigation.
+		</description>
+		<authors>
+			<author identifier="emil">Emil A Eklund</author>
+		</authors>
+		<sections>
+
+<section filename="columnlist.html" title="Introduction" output="standard">
+<p>
+	<span class="date">2004-10-28</span>: First public version released.<br />
+	<span class="date">2004-11-23</span>: Fixed column resizing in mozilla. It still can't make columns smaller than their content, but otherwise it seems to work.
+	<span class="date">2005-05-22</span>: Fixed a bug in the removeRange method for index based removal, where the rows where deleted in the wrong order. Also added a clear method, that removes all rows.<br />
+	<span class="date">2005-12-08</span>: Fixed bug that caused rows to be colored even if colorEvenRows was false.
+		Added rowSelection, columnSorting, moveColumns, sortAscImage and sortDescImage properties.
+		Implemented column moving and alignment.
+		Updated column resizing implementation.
+		Added support for making columns smaller than their content in Mozilla, bringing the Mozilla support up to pair with that for IE.
+		Added support for specifying column width on create.<br />
+	<span class="date">2006-03-14</span>: Fixed bug in getVellValue method, implemented this.moveColumns property and fixed an alignment bug.<br />
+	<span class="date">2006-05-26</span>: Changed license to Apache Software License 2.0.<br />
+</p>
+<h2>Introduction</h2>
+<p>
+	Since Erik wrote the <a href="../sortabletable/sortabletable.html">Sortable Table</a>
+	article a year and a half ago we've received quite a few questions about
+	how to combine it with the fixed header example, demonstrated in the
+	<a href="../syncscroll/syncscroll.html">Synchronized Scroll</a> article, thus creating
+	a sortable table with a fixed header. However it's not that easy to combine those and
+	the result has often been a disappointment.
+</p>
+<p>
+	This ColumnList widget tries to overcome this, it uses the Sortable Table script
+	to perform the sorting and has a table with a fixed header. It also adds a few extras;
+	such as a clean object oriented interface, column resizing and, row coloring,
+	to name a few.
+</p>
+<h3>Attach or Generate</h3>
+<p>
+	The widget can either attach to a set of existing html elements or create the
+	necessary elements on-the-fly from a javascript data structure.
+	Both methods has its advantages, it's more efficient to attach to an existing
+	structure than to generate it, but on-the-fly creation allows for mor flexibility.
+	Either way the content can be accessed and modified in the same way regardless
+	of how the widget was created.
+</p>
+<h3>Multiple Selection</h3>
+<p>
+	There's also an option to allow multiple selection which, if enabled, makes it
+	possible to select more than one row using the control or shift keys.
+	Other keyboard bindings, such as the up and down arrow keys, are supported as well.
+</p>
+</section>
+
+<section filename="implementation.html" title="Implementation" output="standard">
+<h2>Implementation</h2>
+<p>
+	A ColumnList widget is basically a table where the header is fixed and the body
+	scrollable. In HTML/XHTML terms that means a table divided into a thead and a tbody section.
+	Where the <code>overflow</code> property of the tbody is set to <code>auto</code> (or <code>scroll</code>).
+</p>
+<p>
+	The markup for such a table would look something like this, notice the style argument in red.
+	The <code>overflow</code> property is pretty meaningless if the height is set to <code>auto</code>
+	or if the height specified is greather than the height of the content. Thus to demonstrate the
+	behavior it's set to slightly less than required for all rows to be visible.
+</p>
+<p>
+	<pre>&lt;table cellspacing="0" cellpadding="0"&gt;
+&lt;thead&gt;
+&lt;tr&gt;&lt;th&gt;Flavor&lt;/th&gt;&lt;th&gt;Color&lt;/th&gt;&lt;th&gt;Texture&lt;/th&gt;&lt;th&gt;Price&lt;/th&gt;&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody style="<span style="color: red;">height: 75px; overflow: auto</span>;"&gt;
+&lt;tr&gt;&lt;td&gt;Vanilla&lt;/td&gt;&lt;td&gt;White&lt;/td&gt;&lt;td&gt;Smooth&lt;/td&gt;&lt;td&gt;$ 10&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Pear&lt;/td&gt;&lt;td&gt;Green&lt;/td&gt;&lt;td&gt;Smooth&lt;/td&gt;&lt;td&gt;$ 8&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Strawberry&lt;/td&gt;&lt;td&gt;Pink&lt;/td&gt;&lt;td&gt;Smooth&lt;/td&gt;&lt;td&gt;$ 8&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Chocolate&lt;/td&gt;&lt;td&gt;Brown&lt;/td&gt;&lt;td&gt;Chunky&lt;/td&gt;&lt;td&gt;$ 8&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Pistachio&lt;/td&gt;&lt;td&gt;Light green&lt;/td&gt;&lt;td&gt;Chunky&lt;/td&gt;&lt;td&gt;$ 9&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;</pre>
+</p>
+<h2>The Problem</h2>
+<p>
+	The screenshots below shows what the example code, together with a few css rules, looks like in Mozilla (Firefox 1.0 PR)
+	and Internet Explorer (6.0).
+</p>
+<p style="font-weight: bold;">Result in  Mozilla</p>
+<p>
+	<img src="article-images/moz.png" style="width: 304px; height: 99px;" alt="Example as rendered in Mozilla." />
+</p>
+<p style="font-weight: bold;">Result in Internet Explorer</p>
+<p>
+	<img src="article-images/ie.png" style="width: 304px; height: 413px;" alt="Example as rendered in Internet Explorer" />
+</p>
+<p>
+	In Mozilla the result is pretty much what would be expected. The horizontal scrollbar is clearly not desirable,
+	but that's easy enough to resolve by setting the <code>overflow</code> property to the mozilla specifiec
+	<code>-moz-scrollbars-vertical</code> value, or by setting the <code>overflow-x</code> property to <code>hidden</code>
+	(<code>overflow-x</code>/<code>y</code> will be supported in Mozilla Firefox 1.1).
+</p>
+<p>
+	In Internet Explorer on the other hand, the result is nothing like what one would expect. The <code>overflow</code>
+	property on the tbody is completely ignored, and the height applies to all rows rather than the entire body section.
+</p>
+<h3>The Solution</h3>
+<p>
+	Since Internet Explorer is still, by far, the most common browser this approach,
+	no matter how conveniently, is not going to cut it. Instead we'll have to use two
+	tables. One for the headers and the other for the body. Then by placing the table
+	containing the body in a scrollable container (a block element, such as a
+	<code>div</code>, with a fixed height and the <code>overflow</code> property set
+	to <code>auto</code>) the body can be scrolled vertically without affecting the header.
+</p>
+<p>
+	Of course, this approach results in a whole set of new issues;
+	columns got different widths in the header and body and scrolling the body
+	horizontally does not affect the header. Those issues, luckily, are quite
+	easy to deal with. Each header column is simply resized according to the
+	equivalent body column and the header's <code>scrollLeft</code> property is
+	synchronized to that of the body.
+</p>
+<h3>Mozilla quirks</h3>
+<p>
+	After overcoming all the Internet Explorer quirks it's time to deal with the
+	Mozilla ones.
+</p>
+<p>
+	Since the horizontal scroll of the header is synchronized with that of the
+	body the overflow property is set to hidden, as we don't want a horizontal
+	scrollbar for header.
+</p>
+<p>
+	However, mozilla does not allow the <code>scroll*</code> properties on elements
+	with the <code>overflow</code> property set to <code>hidden</code> thus we'll
+	have to set it to <code>-moz-scrollbars-none</code> which is basically the same
+	as <code>hidden</code> in IE, the container has overflow type <code>scroll</code>
+	but no scrollbars are shown.
+</p>
+<p>
+	Recent versions of Mozilla handles <code>overflow: hidden</code> the same way Internet
+	Explorer does, rendering this work around obsolete. However to remain compatible with
+	older Mozilla versions this code is still used.
+</p>
+</section>
+
+
+<section filename="usage.html" title="Usage" output="standard">
+<h2>Usage</h2>
+<p>
+	To use the ColumnList widget the <i>columnlist.js</i>, <i>sortabletable.js</i>
+	and <i>columnlist.css</i> files needs to be included and two images used to
+	indicate sorting direction <i>asc.png</i> and <i>desc.png</i> should be
+	placed in a the same directory (if their located elsewhere change the
+	<code>IMG_DESC</code> and <code>IMG_ASC</code> settings at the top of
+	the <i>columnlist.js</i> file).
+	<pre>&lt;link type="text/css" rel="stylesheet" href="columnlist.css" /&gt;
+&lt;script type="text/javascript" src="sortabletable.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="columnlist.js"&gt;&lt;/script&gt;</pre>
+</p>
+<p>
+	As mentioned in the introduction the columnlist can be created in two different
+	ways, either by attaching to an existing structure or by generating it. Let's
+	begin with the later of the two.
+</p>
+<h3>Generating a new structure</h3>
+<p>
+	The first step is to create an instance of the WebFXColumnList class using
+	the default constructor <code>o = new WebFXColumnList()</code>. Then the
+	<code>create</code> method is called, with the target element and an array
+	with column labels as the arguments. This will create a new, emtpy, column
+	list widget out of the container element. Once it's created rows can be added
+	using the <code>addRow</code> method (or <code>addRows</code> to add multiple
+	rows at once).
+</p>
+<h3>HTML</h3>
+<p>
+	The base of the column list is the container element and it has to be an
+	existing element. The size of this element controls the size of the widget.
+	<pre>&lt;div id="container" style="width: 320px; height: 240px;"&gt;</pre>
+</p>
+<h3>JavaScript</h3>
+<p>
+	The following JavaScript code will create a ColumnList widget with the 15
+	most popular kinds of ice cream (according to the International Ice Cream Association).
+	<pre>var aColumns = [
+'Rank',
+'Flavor',
+'Color',
+'Share'
+];
+
+var aData = [
+['1','Vanilla','White','29%'],
+['2','Chocolate','Brown','8.9%'],
+['3','Butter pecan','Light brown','5.3%'],
+['4','Strawberry','Pink','5.3%'],
+['5','Neapolitan','Greenish brown','4.2%'],
+['6','Chocolate chip','Brown','3.9%'],
+['7','French vanilla','Yellowish white','3.8%'],
+['8','Cookies and cream','Light brown','3.6%'],
+['9','Vanilla fudge ripple','White', '2.6%'],
+['10','Praline pecan','Brown','1.7%'],
+['11','Cherry','Red','1.6%'],
+['12','Chocolate almond','Brown','1.6%'],
+['13','Coffee','Dark brown', '1.6%'],
+['14','Rocky road','brown', '1.5%'],
+['15','Chocolate marshmallow','Light brown','1.3%']
+];
+
+var el = document.getElementById('container');
+
+var o = new WebFXColumnList();
+o.create(el, aColumns);
+o.addRows(aData);</pre>
+</p>
+<h3>Result</h3>
+<p>
+	<iframe src="demo2.html" style="width: 500px; height: 240px;" onkeydown="if (window.event) { window.event.cancelBubble = true; } else { preventDefault(); } return false;"> </iframe>
+</p>
+<h3>Attaching to existing structure</h3>
+<p>
+	The other method that can be used to create a column list widget
+	is to attach it to an existing structure. This method is preferred
+	if the content is being generated by a server side script of some
+	sort as it's quite a lot faster for larger amounts of date. The major
+	drawbacks are that it's not as convenient and requires more markup.
+</p>
+<p>
+	The idea here is to manually create the structure that would be generated
+	by the create method (described above) and then simply attach the widget
+	to it.
+</p>
+<p>
+	The main difference here is that the content (header columns and data)
+	is defined using HTML rather than JavaScript. Thus there's a lot of HTML
+	markup but very little JavaScript, quite the opposite of the create method.
+<h3>HTML</h3>
+<pre>&lt;div id="container" class="webfx-columnlist" style="margin-left: 50px; width: 640px; height: 480px;"&gt;
+&lt;div id="head" class="webfx-columnlist-head"&gt;
+&lt;table cellspacing="0" cellpadding="0"&gt;
+&lt;tr&gt;
+&lt;td&gt;Flavor&lt;img src="images/asc.png"/&gt;&lt;/td&gt;
+&lt;td&gt;Color&lt;img src="images/asc.png"/&gt;&lt;/td&gt;
+&lt;td&gt;Texture&lt;img src="images/asc.png"/&gt;&lt;/td&gt;
+&lt;td&gt;Price&lt;img src="images/asc.png"/&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;div id="body" class="webfx-columnlist-body"&gt;
+&lt;table cellspacing="0" cellpadding="0"&gt;
+&lt;colgroup span="4"&gt;
+&lt;col style="width: auto;" /&gt;
+&lt;col style="width: auto;" /&gt;
+&lt;col style="width: auto;" /&gt;
+&lt;col style="width: auto;" /&gt;
+&lt;/colgroup&gt;
+&lt;tr&gt;&lt;td&gt;Vanilla&lt;/td&gt;&lt;td&gt;White&lt;/td&gt;&lt;td&gt;Smooth&lt;/td&gt;&lt;td&gt;$ 10&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Pear&lt;/td&gt;&lt;td&gt;Green&lt;/td&gt;&lt;td&gt;Smooth&lt;/td&gt;&lt;td&gt;$ 8&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Strawberry&lt;/td&gt;&lt;td&gt;Pink&lt;/td&gt;&lt;td&gt;Smooth&lt;/td&gt;&lt;td&gt;$ 8&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Chocolate&lt;/td&gt;&lt;td&gt;Brown&lt;/td&gt;&lt;td&gt;Chunky&lt;/td&gt;&lt;td&gt;$ 8&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Pistachio&lt;/td&gt;&lt;td&gt;Light green&lt;/td&gt;&lt;td&gt;Chunky&lt;/td&gt;&lt;td&gt;$ 9&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;</pre>
+</p>
+<h3>JavaScript</h3>
+<p>
+	<pre>var o = new WebFXColumnList();
+var rc = o.bind(document.getElementById('container'), document.getElementById('head'), document.getElementById('body'));</pre>
+</p>
+<h3>Result</h3>
+<p>
+	The example code above is actually a shortened version of the demo linked below.
+	Please see that demo for the full source and the result.
+</p>
+
+</section>
+
+
+<section filename="api.html" title="API" output="standard" source="api.xml" stylesheet="api.xsl" />
+
+<section filename="demo.html" title="Demo" output="link" />
+
+
+	</sections>
+		<files>
+			<file type="archive" version="1.04" filename="/download/collist104.zip" />
+			<file type="archive" version="1.03" filename="/download/collist102.zip" />
+			<file type="archive" version="1.02" filename="/download/collist102.zip" />
+			<file type="archive" version="1.01" filename="/download/collist101.zip" />
+			<file type="archive" version="1.0"  filename="/download/collist100.zip" />
+		</files>
+	</article>
+</articles>

@@ -1,0 +1,12 @@
+2010/12/15
+1.
+f_SaveForm加入参数is_Not_Valid_Null，用来判断是否进行空字段验证
+is_Not_Valid_Null ：
+		false：进行空字段验证
+		true ：不进行空字段验证
+不传参数时默认进行空字段验证
+
+2.eformEditors中文本框控件增加属性isPassword，判断是否是密码框控件
+
+
+3.完善打印功能，直接调用eformIF.js的Print()方法，或者调用eformRec.js中的doPrintForm()方法即可调出打印页面

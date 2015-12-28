@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	
+	
+	<!-- 人员组织 -->
+	<package name="jteap.jhtj.sjxxxdy" namespace="/jteap/jhtj/sjxxxdy"
+		extends="jteap-actions">
+		<action name="tjInfoItemAction" class="system_tjInfoItemAction">
+			<result name="showOtherSystemPageAction">/jteap/jhtj/sjxxxdy/otherSystemIndex.jsp</result>
+			<result name="showComputePageAction">/jteap/jhtj/sjxxxdy/computeIndex.jsp</result>
+		</action>
+		<action name="importExcelAction" class="system_importExcelAction"></action>
+	</package>
+</struts>

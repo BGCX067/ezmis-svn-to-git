@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd"
+	default-autowire="byName" default-lazy-init="true">
+
+
+	<bean id="tongjiManager" class="com.jteap.dgt.fjdgztj.manager.TongjiManager"></bean>
+	<bean id="wyhdManager" class="com.jteap.dgt.fjdgztj.manager.WyhdManager"></bean>
+	<bean id="gz110Manager" class="com.jteap.dgt.fjdgztj.manager.Gz110Manager"></bean>
+	<bean id="ldjsManager" class="com.jteap.dgt.fjdgztj.manager.LdjsManager"></bean>
+	<bean id="dsdtManager" class="com.jteap.dgt.fjdgztj.manager.DsdtManager"></bean>
+	<bean id="hdjyManager" class="com.jteap.dgt.fjdgztj.manager.HdjyManager"></bean>
+	<bean id="tzzlManager" class="com.jteap.dgt.fjdgztj.manager.TzzlManager"></bean>
+	
+	<bean id="tongjiAction" class="com.jteap.dgt.fjdgztj.web.TongJiAction"></bean>
+	<bean id="wyhdAction" class="com.jteap.dgt.fjdgztj.web.WyhdAction"></bean>
+	<bean id="gz110Action" class="com.jteap.dgt.fjdgztj.web.Gz110Action"></bean>
+	<bean id="ldjsAction" class="com.jteap.dgt.fjdgztj.web.LdjsAction"></bean>
+	<bean id="dsdtAction" class="com.jteap.dgt.fjdgztj.web.DsdtAction"></bean>
+	<bean id="ghAction" class="com.jteap.dgt.fjdgztj.web.GhAction" scope="prototype">
+		<property name="doclibManager" ref="doclibManager" />
+		<property name="doclibCatalogManager" ref="doclibCatalogManager" />
+		<property name="hdjyManager" ref="hdjyManager" />
+		<property name="tzzlManager" ref="tzzlManager" />
+		<property name="eformFjManager" ref="eformFjManager" />
+	</bean>
+	
+	
+</beans>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd"
+	default-autowire="byName" default-lazy-init="true">
+
+	<bean id="xqjhManager" class="com.jteap.wz.xqjh.manager.XqjhManager" />
+	<bean id="xqjhDetailManager" class="com.jteap.wz.xqjh.manager.XqjhDetailManager" />
+	<bean id="xqjhJDBCManager" class="com.jteap.wz.xqjh.manager.XqjhJDBCManager" />
+
+	<bean id="wz_XqjhAction" class="com.jteap.wz.xqjh.web.XqjhAction" scope="prototype"></bean>
+	<bean id="wz_XqjhDetailAction" class="com.jteap.wz.xqjh.web.XqjhDetailAction" scope="prototype"></bean>
+	
+	
+</beans>

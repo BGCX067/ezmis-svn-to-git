@@ -1,0 +1,77 @@
+a { color:#213f71; font-size:9pt; text-decoration:none;}
+a:hover {color:#0066cc; }
+.blk_18 {
+ overflow:hidden;
+ zoom:1;
+ font-size:9pt;
+ /**
+ border-left:1px solid #AFCAD0;
+ border-right:1px solid #AFCAD0;
+ **/
+ background:#CBD9E4;
+ /*
+ width:1280px;
+ */
+ margin-top:1px;
+ margin:0 auto;
+}
+.blk_18 .pcont {
+/*
+ width:1230px;
+*/
+ float:left;
+ overflow:hidden;
+ padding-left:2px;
+ border:1px solid #CBD9E4;
+}
+.blk_18 .ScrCont {
+ width:32766px;
+ zoom:1;
+ margin-left:-5px;
+}
+.blk_18 #List1_1, .blk_18 #List2_1 {
+ float:left;
+}
+.blk_18 .LeftBotton, .blk_18 .RightBotton {
+ width:25px;
+ height:20px;
+ float:left;
+}
+.blk_18 .LeftBotton {
+	margin-top:30px;
+	background:url(images/leftBtn.gif) no-repeat;
+}
+.blk_18 .RightBotton {
+	margin-top:30px;
+	background:url(images/rightBtn.gif) no-repeat;
+}
+.blk_18 .LeftBotton:hover {
+	margin-top:30px;
+	background:url(images/leftBtn.gif) no-repeat;
+}
+.blk_18 .RightBotton:hover {
+	margin-top:30px;
+	background:url(images/rightBtn.gif) no-repeat;
+}
+.blk_18 .pl img {
+ display:block;
+ cursor:pointer;
+ border:none;
+ margin:6px auto 1px auto;
+}
+.blk_18 .pl {
+ width:103px;
+ border-right:1px solid #9DBEC3;
+ float:left;
+ margin-left:0px;
+ text-align:center;
+ line-height:24px;
+}
+.blk_18 a.pl:hover {
+ border:0px solid #5dacec;
+ color:#5dacec;
+ border-right:1px solid #9DBEC3;
+ margin:0px;
+ background:#D9E8FB;
+ width:103px;
+}

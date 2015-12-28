@@ -1,0 +1,287 @@
+/* lib_Tab */
+#lib_Tab1{
+	width:100%;
+	margin:5px 0px 1px 1px;
+	padding:0px;
+}
+.lib_tabborder{
+	border-bottom: 0px solid #95c9e1;
+}
+.lib_Menubox {
+	height:32px;
+	position:relative;
+}
+
+.lib_Menubox ul{
+	margin:0px;
+	padding:0px;
+	list-style:none;
+	top:3px;
+	left:0;
+	margin-left:0px;
+	height:32px;
+	text-align:center;
+	font-size: 14px;
+}
+.lib_Menubox li{
+	float:left;
+	display:block;
+	cursor:pointer;
+	width:124px;
+	color:#FFF;
+	font-weight:bold;
+	margin-right:1px;
+	height:33px;
+	line-height:35px;
+	background-image: url(Framing2BG.jpg);
+	background-repeat: no-repeat;
+}
+.lib_Menubox li.hover{
+	padding:0px;
+	width:126px;
+	color:#000;
+	height:33px;
+	line-height:35px;
+	background-image: url(Framing1BG.jpg);
+	background-repeat: no-repeat;
+}
+.lib_Contentbox{
+	clear:both;
+	margin-top:0px;
+	border-top:none;
+	height:315px;
+	text-align:center;
+	padding-top:5px;
+}
+.lib-main-left{
+	height: auto;
+	padding:3px 8px 2px 8px;
+	text-align: left;
+	width: 45%;
+	border: 1px solid #a8aba0;
+	margin-right: 2px;
+	margin-bottom: 5px;
+	background-color: #F1F5FE;
+	float: left;
+}
+.lib-main-right{
+	height: auto;
+	padding:3px 8px 2px 8px;
+	text-align: left;
+	width: 47%;
+	border: 1px solid #a8aba0;
+	margin-right: 2px;
+	margin-bottom: 5px;
+	background-color: #F1F5FE;
+	float: right;
+	height:144px;
+}
+.lib-main{
+	height: auto;
+	padding:3px 8px 2px 8px;
+	text-align: left;
+	width: auto;
+	border: 1px solid #a8aba0;
+	margin-right: 2px;
+	margin-bottom: 5px;
+	background-color: #F1F5FE;
+}
+.lib-main2{
+	height: auto;
+	padding:1px 2px 2px 0px;
+	text-align: right;
+	width: auto;
+	margin-right: 2px;
+	margin-bottom: 5px;
+	background-color: #F1F5FE;
+}
+.lib-line{
+	height: 7px;
+	width: auto;
+	border: 1px solid #999999;
+	background-color: #dbd9da;
+	margin-right: 2px;
+}
+.Aide-tab{
+	font-size: 14px;
+	color: #F60;
+	line-height: 150%;
+	width: 100%;
+}
+.Aide-tab span{
+	font-size: 16px;
+	color: #F60;
+	line-height: 150%;
+	font-weight: bold;
+	text-decoration: underline;
+}
+.Aide-tab2{
+	font-size: 14px;
+	line-height: 180%;
+	width: 100%;
+}
+
+.Aide-txt1{
+	color: #000;
+}
+.Aide-txt2{
+	color: #F00;
+}
+.Aide-txt3{
+	color: #097c25;
+}
+.Aidemenu{
+	margin: 0 auto;
+	padding: 0;
+	width: 100%;
+	border: 1px solid #93b9d9;
+}
+
+.Aidemenu a.menuitem{
+	background: black url(glossyback.gif) repeat-x bottom left;
+	font: bold 14px "Lucida Grande", "Trebuchet MS", Verdana, Helvetica, sans-serif;
+	color: #1c488f;
+	display: block;
+	position: relative; /*To help in the anchoring of the ".statusicon" icon image*/
+	width: auto;
+	padding: 4px 0;
+	padding-left: 6px;
+	text-decoration: none;
+	cursor: hand;
+	text-align: left;
+	padding-bottom: 5px;
+	padding-right: 28px;
+}
+
+
+.Aidemenu a.menuitem:visited, .Aidemenu .menuitem:active{
+	color: #1c488f;
+}
+
+.Aidemenu a.menuitem .statusicon{ /*CSS for icon image that gets dynamically added to headers*/
+position: absolute;
+top: 5px;
+right: 5px;
+border: none;
+}
+
+.Aidemenu a.menuitem:hover{
+	background-image: url(glossyback2.gif);
+	color: #FFFFFF;
+}
+
+.Aidemenu div.submenu{ /*DIV that contains each sub menu*/
+background: white;
+}
+
+.Aidemenu div.submenu ul{ /*UL of each sub menu*/
+list-style-type: none;
+margin: 0;
+padding: 0;
+}
+
+.Aidemenu div.submenu ul li{
+border-bottom: 1px solid blue;
+}
+
+.Aidemenu div.submenu ul li a{
+display: block;
+font: normal 13px "Lucida Grande", "Trebuchet MS", Verdana, Helvetica, sans-serif;
+color: black;
+text-decoration: none;
+padding: 2px 0;
+padding-left: 10px;
+}
+
+.Aidemenu div.submenu ul li a:hover{
+background: #DFDCCB;
+colorz: white;
+}
+
+
+
+.AidTAB{
+	width:99%;
+	margin: 3px 0px 3px 0px;
+	padding: 1px;
+	text-align:center;
+	background-color: #FFFFFF;
+	border: 1px solid #93B9D9;
+}
+.AidTABTbEntry{
+	height:16px;
+	background-color: #E6EFF7;
+	font-size: 13px;
+	line-height: 140%;
+	border: 1px none #2D74C6;
+	text-align: left;
+	padding: 3px;
+	cursor: hand;
+}
+.AidTABTbEntry2{
+	height:16px;
+	background-color: #ffffff;
+	font-size: 13px;
+	line-height: 140%;
+	border: 1px none #2D74C6;
+	text-align: left;
+	padding: 3px;
+	cursor: hand;
+}
+.AidTABTbEntry3{
+	height:16px;
+	background-color: #E6EFF7;
+	font-size: 13px;
+	line-height: 140%;
+	border: 1px none #2D74C6;
+	text-align: left;
+	padding: 3px;
+	color: #707070;
+}
+.AidTABTbEntry4{
+	height:16px;
+	background-color: #ffffff;
+	font-size: 13px;
+	line-height: 140%;
+	border: 1px none #2D74C6;
+	text-align: left;
+	padding: 3px;
+	color: #707070;
+}
+.AidTABTbEntrySelect{
+	height:16px;
+	background-color: #FFFFCC;
+	border: 0.5px solid #87ACC0;
+	border: 0.5px solid #87ACC0;
+	border: 0.5px solid #87ACC0;
+	font-size: 13px;
+	line-height: 140%;
+	text-align: left;
+	padding: 3px;
+	cursor: hand;
+}
+.AidTABTbEntrySelect1{
+	height:16px;
+	background-color: #FFFFCC;
+	border: 0.5px solid #87ACC0;
+	border: 0.5px solid #87ACC0;
+	border: 0.5px solid #87ACC0;
+	font-size: 13px;
+	line-height: 140%;
+	text-align: left;
+	color: #707070;
+	padding: 3px;
+}
+.AidTABTbEntrySelect2{
+	height:16px;
+	background-color: #FFFFCC;
+	border: 0.5px solid #87ACC0;
+	border: 0.5px solid #87ACC0;
+	border: 0.5px solid #87ACC0;
+	font-size: 13px;
+	line-height: 140%;
+	text-align: right;
+	color: #ad0000;
+	padding: 3px;
+	padding-right: 5px;
+}

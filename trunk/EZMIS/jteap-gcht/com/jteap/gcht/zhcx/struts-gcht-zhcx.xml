@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="jteap.gcht.zhcx" namespace="/jteap/gcht/zhcx" extends="jteap-actions">
+		<action name="GchtZhcxAction" class="ht_GchtZhcxAction"></action>
+		<action name="GcxmcxAction" class="ht_GcxmcxAction"></action>
+		<action name="HttjcxAction" class="ht_HttjcxAction"></action>
+	</package>
+</struts>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd"
+	default-autowire="byName" default-lazy-init="true">
+
+	<!--  -->
+	<bean id="zhiBiaoShowManager" class="com.jteap.yx.aqyxfx.manager.ZhiBiaoShowManager" />
+	<bean id="yx_zhiBiaoShowAction" class="com.jteap.yx.aqyxfx.web.ZhiBiaoShowAction" scope="prototype"/>
+	
+	<bean id="kkxsjManager" class="com.jteap.yx.aqyxfx.manager.KkxsjManager" />
+	<bean id="yx_kkxsjAction" class="com.jteap.yx.aqyxfx.web.KkxsjAction" scope="prototype"/>
+ 
+	
+	<bean id="bkhdltjManager" class="com.jteap.yx.aqyxfx.manager.BkhdlTjManager" />
+	<bean id="bkhdlcxManager" class="com.jteap.yx.aqyxfx.manager.BkhdlCxManager" />
+	<bean id="yx_bkhdltjAction" class="com.jteap.yx.aqyxfx.web.BkhdlTjAction" scope="prototype"/>
+
+	<bean id="yyqkfxManager" class="com.jteap.yx.aqyxfx.manager.YyqkfxManager" />
+	<bean id="yx_yyqkfxAction" class="com.jteap.yx.aqyxfx.web.YyqkfxAction" scope="prototype"/>	
+ 
+	
+	<bean id="fxbManager" class="com.jteap.yx.aqyxfx.manager.FxbManager" />
+	<bean id="yx_fxbAction" class="com.jteap.yx.aqyxfx.web.FxbAction" scope="prototype"/>
+ 
+</beans>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="jteap.gcht.gcxmgl" namespace="/jteap/gcht/gcxmgl" extends="jteap-actions">
+		<!-- 工程立项 -->
+		<action name="GclxAction" class="ht_GclxAction"></action>
+		<!-- 工程立项查询 -->
+		<action name="GclxcxAction" class="ht_GclxcxAction"></action>
+		
+		<!-- 开工签证 -->
+		<action name="KgqzAction" class="ht_KgqzAction"></action>
+		<!-- 开工签证查询 -->
+		<action name="KgqzcxAction" class="ht_KgqzcxAction"></action>
+		
+		<!-- 工程验收 -->
+		<action name="GcysAction" class="ht_GcysAction"></action>
+		<!-- 工程验收查询 -->
+		<action name="GcyscxAction" class="ht_GcyscxAction"></action>
+		
+		<!-- 工程结算支付 -->
+		<action name="JszfAction" class="ht_JszfAction"></action>
+		<!-- 工程结算支付查询 -->
+		<action name="JszfcxAction" class="ht_JszfcxAction"></action>
+		
+		<!-- 质量保证金 -->
+		<action name="ZlbzjAction" class="ht_ZlbzjAction"></action>
+		<!-- 工程预决算书 -->
+		<action name="GcyjssAction" class="ht_GcyjssAction"></action>
+	</package>
+</struts>

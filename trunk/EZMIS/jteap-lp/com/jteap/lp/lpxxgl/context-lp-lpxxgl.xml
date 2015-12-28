@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd"
+	default-autowire="byName" default-lazy-init="true">
+
+	<bean id="aqcsCatalogManager" class="com.jteap.lp.lpxxgl.manager.AqcsCatalogManager" />
+	
+	<bean id="lp_AqcsCatalogAction" class="com.jteap.lp.lpxxgl.web.AqcsCatalogAction" scope="prototype"></bean>
+	
+	<bean id="aqcsManager" class="com.jteap.lp.lpxxgl.manager.AqcsManager" />
+	
+	<bean id="lp_AqcsAction" class="com.jteap.lp.lpxxgl.web.AqcsAction" scope="prototype"></bean>
+</beans>

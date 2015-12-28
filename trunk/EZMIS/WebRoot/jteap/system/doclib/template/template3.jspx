@@ -1,0 +1,113 @@
+ <html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>文章正文</title>
+<link href="${basePath}/jteap/gh/style/style.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="${basePath}/script/adapter/ext/ext-base.js"></script>
+	<script type="text/javascript" src="${basePath}/script/ext-all.js"></script> 
+	<script type="text/javascript">
+		//返回工会简介页面
+		function gotoGhPages(){
+			Ext.Ajax.request({
+				url:"${basePath}/jteap/doclib/DoclibAction!getGhjjUrlAction.do",
+				success:function(ajax){
+					var responseText=ajax.responseText;	
+					var responseObj = Ext.decode(responseText);
+					if (responseObj.success) {
+						var url="${basePath}/jteap/system/doclib/generate/"+responseObj.url;
+						window.parent.window.location= url;
+					}
+				},
+				failure:function(){
+			 		alert("提交失败");
+			 	},
+			 	method:'POST'
+			});
+		}
+	</script>
+</head>
+
+<body>
+<table width="1024" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td class="mainBG">
+    
+<!--  start of top --> 
+     <div class="top">
+     
+      <div id="top-menu">
+         <ul>
+           <li><a href="${basePath}/GhAction!getGhObjectsAction.do" class="scrollover">首页</a></li>
+           <li><a href="#" onclick="gotoGhPages()" class="scrollover">工会简介</a></li>
+           <li><a href="${basePath}/jteap/gh/wzList.jsp?catalogCode=ghwj" class="scrollover">工会文件</a></li>
+           <li><a href="${basePath}/jteap/gh/wzList.jsp?catalogCode=zzjs" class="scrollover">组织建设</a></li>
+           <li><a href="${basePath}/jteap/gh/wzList.jsp?catalogCode=mzgl" class="scrollover">民主管理</a></li>
+           <li><a href="${basePath}/jteap/gh/wzList.jsp?catalogCode=hyfc" class="scrollover">会员风采</a></li>
+           <li><a href="${basePath}/jteap/gh/wzList.jsp?catalogCode=hdjy" class="scrollover">活动剪影</a></li>
+           <li><a href="${basePath}/jteap/gh/wzList.jsp?catalogCode=dsdt" class="scrollover">导师带徒</a></li>
+           <li><a href="${basePath}/jteap/gh/wzList.jsp?catalogCode=gz110zl" class="scrollover">工会110</a></li>
+         </ul> 
+	    </div>
+     
+     </div>
+<!--  end of top --> 
+
+<!--  start of main -->
+<table width="888" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td>
+
+
+<div class="subMAIN" style="height: 700px;">
+        <!--  start of Title -->
+         <div class="RoundedCorner" >
+         	 ${title }
+         </div>
+        <!--  end of Title -->
+       
+       <div class="ArticleInfo">发布时间&nbsp;:&nbsp;&nbsp;
+  			${createdt}
+       </div>
+     
+<!--  start of sub-txt -->
+     <div class="ArticleMain" id="textdiv">
+       ${content}
+	  <div style="margin:10px; padding:10px">
+		<fieldset>
+		  <legend class="ArticleMainIco"> 相关附件 </legend>
+			<#list list as list>
+				<table width="100%" border="0" cellpadding="0"
+					cellspacing="0">
+					<tr>
+						<td class="NewsIco3">
+							&nbsp;
+						</td>
+						<td class="NewsTxt3">
+							<a href="${basePath}/jteap/doclib/DoclibAction!downAttachAction.do?attachid=${list.id}">附件名称:${list.name}【点击下载】</a>
+						</td>
+					</tr>
+				</table>
+			</#list>
+		</fieldset>
+	  </div>
+     </div>
+<!--  end of sub-txt -->     
+</div>
+
+
+
+   </td>
+  </tr>
+</table>
+<!--  end of main -->
+
+<div class="bom">&nbsp;</div>
+     
+    </td>
+  </tr>
+</table>
+
+
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" 
+
+"http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<bean id="qxtjTimingJob" class="org.springframework.scheduling.quartz.JobDetailBean">   
+        <property name="jobClass">   
+            <value>
+            	com.jteap.jx.qxgl.quartz.TimingJob
+            </value>   
+        </property>   
+        <property name="jobDataAsMap">   
+            <map>   
+                <entry key="sessionFactory" value-ref="sessionFactory"></entry>   
+                <entry key="qxtjManager" value-ref="qxtjManager"></entry>   
+            </map>   
+        </property>   
+    </bean>   
+	
+<!-- 实时监控有没有报表任务 -->
+
+	<bean id="qxtjCronTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+        <property name="jobDetail" ref="qxtjTimingJob"/>
+        <property name="cronExpression" value="0 30 0 28 * ? *"/>
+    </bean>
+    
+<!--  -->    
+	<bean id="qxtjSchedulerFactory"
+		class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="triggers">
+			<list>
+				<ref bean="qxtjCronTrigger" />
+			</list>
+		</property>
+	</bean>
+
+</beans>

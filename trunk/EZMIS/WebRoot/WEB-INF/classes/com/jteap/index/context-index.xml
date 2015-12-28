@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd"
+	default-autowire="byName" default-lazy-init="true">
+
+	<bean id="preferenceManager" class="com.jteap.index.manager.PreferenceManager" />
+	<bean id="myQuickManager" class="com.jteap.index.manager.MyQuickManager" />
+	<bean id="jizuFhqxManager" class="com.jteap.index.manager.JizuFhqxManager" />
+	<bean id="nowInfoManager" class="com.jteap.index.manager.NowInfoManager" />
+	<bean id="scZhxxManager" class="com.jteap.index.manager.ScZhxxManager" />
+	<bean id="xiTongTongZhiManager" class="com.jteap.index.manager.XiTongTongZhiManager" />
+	
+	<bean id="index_PreferenceAction" class="com.jteap.index.web.PreferenceAction" scope="prototype"/>
+	<bean id="index_MyQuickAction" class="com.jteap.index.web.MyQuickAction" scope="prototype" />
+	<bean id="index_NowInfoAction" class="com.jteap.index.web.NowInfoAction" scope="prototype" />
+	<bean id="index_XiTongTongZhiAction" class="com.jteap.index.web.XiTongTongZhiAction" scope="prototype" />
+	
+</beans>

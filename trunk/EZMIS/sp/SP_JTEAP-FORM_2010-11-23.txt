@@ -1,0 +1,24 @@
+2010/11/23
+1.common.js中增加FakeWindow组件，该组件主要是为了封装window.open,window.openModalDialog,window.openModelessDialog的调用，方便调用对应类型的对话框  $FW是FackWindow的简写方式
+使用方法
+var fw = new $FW({
+	url:url,
+	width:800,
+	height:200			
+	id:"sss",		//id，相同id的窗口只会打开一个	，没设置id时该值为Date().getTime()
+	type:"T2",		//窗口类型  T1  T2  T3  分别代表普通窗口、模式对话框、非模式对话框
+	toolbar:false,		//工具栏
+	scrollbars:false,	//滚动条
+	menubar:false,		//菜单栏
+	userIF:false,		//是否采用Iframe套框,为解决模式窗口无法刷新的问题
+	resizable:true,		//是否支持调整大小
+	callback:function(retValue){	//回调函数
+		alert("操作成功");
+	}
+});
+fw.show();
+
+简单调用方式:
+new $FW({url:url}).show();				//window.open方式调用窗口
+new $FW({url:url,type:'T2',userIF:true}).show();	//模式对话框
+new $FW({url:url,type:'T3',userIF:true}).show();	//非模式对话框

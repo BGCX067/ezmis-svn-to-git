@@ -1,0 +1,18 @@
+2010-10-12
+1.自定义表单增加导出EXCEL表单功能
+  更新poi库，使用3.6版本的库，将老库删除掉，否则会报错
+  eformIF中添加API：ExportRecExcel();可直接在表单中调用该方法导出当前表单
+
+2.子表控件添加onadd和ondelete事件
+ onadd(rec)
+ ondelete(rec)
+使用案例：
+添加记录时,为字段FIELD2设置初始值
+function evt_#{fd}_onadd(edr,args){
+  var rec = args[0];
+  var value = getEditor('DI100531142539').getValue();
+  rec.data.FIELD2=value ;
+}
+
+注意：
+更新包后，删除xbean-2.1.0.jar、poi-2.5.1.jar

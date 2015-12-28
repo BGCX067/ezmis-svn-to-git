@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>无标题文档</title>
+<style type="text/css">
+<!--
+.STYLE1 {color: #0000FF}
+.STYLE2 {color: #FF0000}
+-->
+</style>
+</head>
+
+<body>
+<p>公式格式案例：<span class="STYLE1">3+&quot;tanchang&quot;+@IF(A&gt;100?@SYSDT(&quot;YYYY-mm-DD&quot;):@USERLOGINID())+@UUID()+@INVOKE(&quot;com.jteap.cform.util.CalculateFormula&quot;)+&quot;SSSSSSSSS&quot;+@SQL(&quot;SELECT VALUE FROM XXXX WHERE A&gt;'100' AND B&lt;100&quot;)</span></p>
+<p><br />
+  <span class="STYLE2">1.系统日期：</span><br />
+  @SYSDT(&quot;yyyy-MM-dd hh:mm:ss&quot;)	系统时间，按照指定的格式格式化</p>
+<p><span class="STYLE2">2.组织名称</span>,当前登录用户所属的组织名称,是否待路径<br />
+@GROUPNAME(true|false); </p>
+<p><span class="STYLE2">3.所属组织简称</span><br />
+@GROUPSHORTNAME();</p>
+<p><span class="STYLE2">4.取得当前SESSION中的数据</span><br />
+@HTTPSESSION(VARNAME);</p>
+<p><span class="STYLE2">5.当前登录用户名称</span><br />
+@USERLOGINNAME();</p>
+<p><span class="STYLE2">6.当前登录编号</span><br />
+@USERLOGINID();</p>
+<p><span class="STYLE2">7.当前登录用的中文名称</span><br />
+@USERCNAME();</p>
+<p><span class="STYLE2">8.SQL公式</span><br />
+  如果返回的数据是多条记录，则只取第一条记录的第一个字段的值<br />
+@SQL(&quot;SELECT VALUE FROM XXXX WHERE A&gt;&quot;100&quot; AND B&lt;100&quot;);</p>
+<p><span class="STYLE2">9.IF公式</span><br />
+  @IF(流程变量?&quot;&quot;:&quot;&quot;);<br />
+  流程变量：<br />
+aaa &amp;&amp; bbb || ccc</p>
+<p><span class="STYLE2">10.唯一编号</span><br />
+@UUID();</p>
+<p><span class="STYLE2">11.解析数字</span><br />
+@PARSENUMBER(&quot;232.33&quot;);</p>
+<p><span class="STYLE2">11.调用指定的类</span><br />
+  @INVOKE(&quot;com.jteap.cform.util.CalculateFormula&quot;)<br />
+  该类必须实现接口<br />
+  <strong>public class com.jteap.cform.util.CalculateFormula(){<br />
+  public String calculate(httpservletrequest,httpservletresponse,jbpmContext,schema,tablename,id);<br />
+}</strong></p>
+<P><FONT color="#ff0000">12.当前字段的值</FONT><BR></BR> 
+@VALUE()</P><P><FONT color="#ff0000">13.取环境变量的值，包括表单的值他字段</FONT><BR></BR>@CONTEXT(&quot;SDF&quot;)<BR></BR><BR></BR></P>
+<p>&nbsp;</p>
+<p></p>
+</body>
+</html>

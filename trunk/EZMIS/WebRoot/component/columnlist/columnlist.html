@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<title>ColumnList (WebFX)</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<script type="text/javascript" src="local/webfxlayout.js"></script>
+	</head>
+	<body>
+		<!-- WebFX Layout Include -->
+		<script type="text/javascript">
+			//<![CDATA[
+			var articleMenu= new WebFXMenu;
+			articleMenu.left  = 384;
+			articleMenu.top   = 86;
+			articleMenu.width = 140;
+			articleMenu.add(new WebFXMenuItem("Introduction", "columnlist.html"));
+			articleMenu.add(new WebFXMenuItem("Implementation", "implementation.html"));
+			articleMenu.add(new WebFXMenuItem("Usage", "usage.html"));
+			articleMenu.add(new WebFXMenuItem("API", "api.html"));
+			articleMenu.add(new WebFXMenuItem("Demo", "demo.html"));
+			articleMenu.add(new WebFXMenuSeparator);
+			articleMenu.add(new WebFXMenuItem("Download", "http://webfx.eae.net/download/collist104.zip"));
+			webfxMenuBar.add(new WebFXMenuButton("Article Menu", null, null, articleMenu));
+
+			webfxLayout.writeTitle("ColumnList");
+			webfxLayout.writeMenu();
+			webfxLayout.writeDesignedByEdger();
+			//]]>
+		</script>
+		<!-- End WebFX Layout Includes -->
+		<div class="webfx-main-body">
+			<p>
+				<span class="date">2004-10-28</span>: First public version released.<br />
+				<span class="date">2004-11-23</span>: Fixed column resizing in mozilla. It still can't make columns smaller than their content, but otherwise it seems to work.
+				<span class="date">2005-05-22</span>: Fixed a bug in the removeRange method for index based removal, where the rows where deleted in the wrong order. Also added a clear method, that removes all rows.<br />
+				<span class="date">2005-12-08</span>: Fixed bug that caused rows to be colored even if colorEvenRows was false.
+					Added rowSelection, columnSorting, moveColumns, sortAscImage and sortDescImage properties.
+					Implemented column moving and alignment.
+					Updated column resizing implementation.
+					Added support for making columns smaller than their content in Mozilla, bringing the Mozilla support up to pair with that for IE.
+					Added support for specifying column width on create.<br />
+				<span class="date">2006-03-14</span>: Fixed bug in getVellValue method, implemented this.moveColumns property and fixed an alignment bug.<br />
+				<span class="date">2006-05-26</span>: Changed license to Apache Software License 2.0.<br />
+			</p>
+			<h2>Introduction</h2>
+			<p>
+				Since Erik wrote the <a href="../sortabletable/sortabletable.html">Sortable Table</a>
+				article a year and a half ago we've received quite a few questions about
+				how to combine it with the fixed header example, demonstrated in the
+				<a href="../syncscroll/syncscroll.html">Synchronized Scroll</a> article, thus creating
+				a sortable table with a fixed header. However it's not that easy to combine those and
+				the result has often been a disappointment.
+			</p>
+			<p>
+				This ColumnList widget tries to overcome this, it uses the Sortable Table script
+				to perform the sorting and has a table with a fixed header. It also adds a few extras;
+				such as a clean object oriented interface, column resizing and, row coloring,
+				to name a few.
+			</p>
+			<h3>Attach or Generate</h3>
+			<p>
+				The widget can either attach to a set of existing html elements or create the
+				necessary elements on-the-fly from a javascript data structure.
+				Both methods has its advantages, it's more efficient to attach to an existing
+				structure than to generate it, but on-the-fly creation allows for mor flexibility.
+				Either way the content can be accessed and modified in the same way regardless
+				of how the widget was created.
+			</p>
+			<h3>Multiple Selection</h3>
+			<p>
+				There's also an option to allow multiple selection which, if enabled, makes it
+				possible to select more than one row using the control or shift keys.
+				Other keyboard bindings, such as the up and down arrow keys, are supported as well.
+			</p>
+			<p>
+				Introduction<br />
+				<a href="implementation.html">Implementation</a><br />
+				<a href="usage.html">Usage</a><br />
+				<a href="api.html">API</a><br />
+				<a href="demo.html">Demo</a><br />
+				<a href="http://webfx.eae.net/download/collist104.zip">Download</a>
+			</p>
+			<p class="author">Author: Emil A Eklund</p>
+			<!-- end webfx-main-body -->
+		</div>
+	</body>
+</html>

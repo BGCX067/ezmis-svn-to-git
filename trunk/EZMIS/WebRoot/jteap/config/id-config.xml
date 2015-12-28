@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- 编码配置  -->
+<!-- 
+可使用的变量：
+${personLoginName}				当前登录名称 可使用工号
+${sysdt(yyyy-MM-dd hh:mm:ss)}	当前时间
+${sNo(####)}					流水号
+${UUID32}						32位UUID
+ -->

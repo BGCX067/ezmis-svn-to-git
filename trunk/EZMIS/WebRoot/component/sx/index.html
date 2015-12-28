@@ -1,0 +1,129 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>生肖</title>
+<link href="zl_style.css" rel="stylesheet" type="text/css" />
+<script language="javascript" src="http:/mimg.163.com/js3style/servicejs/assist_set_cookie.js"></script>
+<script language="JavaScript"> 
+<!--
+	function fGetAnimal(){
+		var nYear = document.getElementById("year").value;
+		if(nYear == ""){
+			alert("请输入您的出生年份");
+			return false;
+		}else if(nYear.search(/^\d{4}$/g) != 0){
+			alert("出生年份必须为四位数字");
+			return false;
+		}
+		var nTmp = (nYear - 1900) % 12;
+		if(nTmp < 0){
+			nTmp += 12;
+		}
+		var sValue = "";
+		switch(nTmp)
+		{
+			case 0 : sValue = "子鼠"; break;
+			case 1 : sValue = "丑牛"; break;
+			case 2 : sValue = "寅虎"; break;
+			case 3 : sValue = "卯兔"; break;
+			case 4 : sValue = "辰龙"; break;
+			case 5 : sValue = "巳蛇"; break;
+			case 6 : sValue = "午马"; break;
+			case 7 : sValue = "未羊"; break;
+			case 8 : sValue = "申猴"; break;
+			case 9 : sValue = "酉鸡"; break;
+			case 10 : sValue = "戌狗"; break;
+			case 11 : sValue = "亥猪"; break;
+		}
+		document.getElementById("anmialShow").innerHTML = sValue;
+		return false;
+	}
+//-->
+</script>
+</head>
+<body lang="zh">
+<!--内容开始-->
+<form name="animalForm" onSubmit="return fGetAnimal();"/>
+<div class="sx_top">生于： &nbsp;<input id="year" name="year" type="text" class="inp" value="" onFocus="this.style.borderColor='#889297';this.style.backgroundColor='#FFFFE8'" onBlur="this.style.borderColor='#7F9DB9';this.style.backgroundColor='#FFF'" maxlength="4"> 
+&nbsp;年 &nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" name="Submit" value=" 查看生肖 " class="btn"> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;查到的生肖是： <span class="C00604C" id="anmialShow"></span>
+</div></form>
+<table class="sx_tab" cellspacing="0" cellpadding="2">
+  <tr>
+    <td class="TD1"><img src="shu.gif" /></td>
+    <td class="TD2">子鼠</td>
+    <td class="TD3">1900、1912、1924、1936、1948、1960、1972 1984、1996、2008、2020、2032、2044、2056</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="TD1"><img src="niu.gif" /></td>
+    <td class="TD2">丑牛</td>
+    <td class="TD3">1901、1913、1925、1937、1949、1961、1973 1985、1997、2009、2021、2033、2045、2057</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="TD1"><img src="hu.gif" /></td>
+    <td class="TD2">寅虎</td>
+    <td class="TD3">1902、1914、1926、1938、1950、1962、1974 1986、1998、2010、2022、2034、2046、2058</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="TD1"><img src="tu.gif" /></td>
+    <td class="TD2">卯兔</td>
+    <td class="TD3">1903、1915、1927、1939、1951、1963、1975 1987、1999、2011、2023、2035、2047、2059</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="TD1"><img src="long.gif" /></td>
+    <td class="TD2">辰龙</td>
+    <td class="TD3">1904、1916、1928、1940、1952、1964、1976 1988、2000、2012、2024、2036、2048、2060</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="TD1"><img src="she.gif" /></td>
+    <td class="TD2">巳蛇</td>
+    <td class="TD3">1905、1917、1929、1941、1953、1965、1977 1989、2001、2013、2025、2037、2049、2061</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="TD1"><img src="ma.gif" /></td>
+    <td class="TD2">午马</td>
+    <td class="TD3">1906、1918、1930、1942、1954、1966、1978 1990、2002、2014、2026、2038、2050、2062</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="TD1"><img src="yang.gif" /></td>
+    <td class="TD2">未羊</td>
+    <td class="TD3">1907、1919、1931、1943、1955、1967、1979 1991、2003、2015、2027、2039、2051、2063</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="TD1"><img src="hou.gif" /></td>
+    <td class="TD2">申猴</td>
+    <td class="TD3">1908、1920、1932、1944、1956、1968、1980 1992、2004、2016、2028、2040、2052、2064</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="TD1"><img src="ji.gif" /></td>
+    <td class="TD2">酉鸡</td>
+    <td class="TD3">1909、1921、1933、1945、1957、1969、1981 1993、2005、2017、2029、2041、2053、2065</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="TD1"><img src="gou.gif" /></td>
+    <td class="TD2">戌狗</td>
+    <td class="TD3">1910、1922、1934、1946、1958、1970、1982 1994、2006、2018、2030、2042、2054、2066</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="TD1"><img src="zhu.gif" /></td>
+    <td class="TD2">亥猪</td>
+    <td class="TD3">1911、1923、1935、1947、1959、1971、1983 1995、2007、2019、2031、2043、2055、2067</td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+<div class="clear" style="height:20px"></div>
+
+</body>
+</html>
+

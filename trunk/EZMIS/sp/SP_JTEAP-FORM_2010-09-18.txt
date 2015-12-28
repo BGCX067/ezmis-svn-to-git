@@ -1,0 +1,22 @@
+2010-09-18
+1.common.js添加$ajax_syn方法，主要是AjaxRequest_Sync方法的简写
+2.自定义表单添加新的ATLT控件，附件列表
+3.自定义控件中，事件定义中的方法名称，由原来的evt_字段名_事件名，修改为evt_#{fd}_事件名，与当前控件脱离硬性关联，避免修改字段名后，事件方法均要重新定义
+4.web.xml中添加EFORM 附件列表 附件上传SERVLET
+ <servlet>
+    <description>EFORM 附件列表 附件上传SERVLET</description>
+    <display-name>EFormFjUploadServlet</display-name>
+    <servlet-name>EFormFjUploadServlet</servlet-name>
+    <servlet-class>com.jteap.form.eform.web.EFormFjUploadServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>EFormFjUploadServlet</servlet-name>
+    <url-pattern>/jteap/form/eform/EFormFjUploadServlet</url-pattern>
+  </servlet-mapping>
+
+5.config.propertis中添加属性
+#eform 附件存放目录 可使用规则包括  contextPath userLoginName  date  filename
+#EFORM_FJ_REPOSITORY 附件存储文件系统的库路径，如果为空，则为servletContextPath路径
+EFORM_FJ_REPOSITORY = c:/xx
+EFORM_FJ_PATH_RULE=/userfiles/${userLoginName}/${date(yyyyMM)}/${date(dd)}/

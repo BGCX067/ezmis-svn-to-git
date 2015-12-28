@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd"
+	default-autowire="byName" default-lazy-init="true">
+
+	<bean id="dqgzSetManager" class="com.jteap.yx.dqgzgl.manager.DqgzSetManager" />
+	<bean id="dqgzCatalogManager" class="com.jteap.yx.dqgzgl.manager.DqgzCatalogManager" />
+	<bean id="dqgzHandleManager" class="com.jteap.yx.dqgzgl.manager.DqgzHandleManager" />
+	
+	<bean id="yx_DqgzSetAction" class="com.jteap.yx.dqgzgl.web.DqgzSetAction" scope="prototype"></bean>
+	<bean id="yx_DqgzCatalogAction" class="com.jteap.yx.dqgzgl.web.DqgzCatalogAction" scope="prototype"></bean>
+	<bean id="yx_DqgzHanleAction" class="com.jteap.yx.dqgzgl.web.DqgzHanleAction" scope="prototype"></bean>
+	<bean id="yx_DqgzStatisAction" class="com.jteap.yx.dqgzgl.web.DqgzStatisAction" scope="prototype"></bean>
+	
+	<bean id="dqgzScheduler" class="com.jteap.yx.dqgzgl.quartz.DqgzScheduler" 
+		init-method="startSchedulerJob" lazy-init="false"></bean>
+	 
+</beans>

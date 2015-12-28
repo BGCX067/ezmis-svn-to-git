@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd"
+	default-autowire="byName" default-lazy-init="true">
+	
+	<bean id="kgfhzjlManager" class="com.jteap.yx.tz.manager.KgfhzjlManager" />
+	<bean id="dqsbbhjlManager" class="com.jteap.yx.tz.manager.DqsbbhjlManager" />
+	<bean id="jdxjlManager" class="com.jteap.yx.tz.manager.JdxjlManager" />
+	<bean id="dqysjyjlManager" class="com.jteap.yx.tz.manager.DqysjyjlManager" />
+	<bean id="sbjycljlManager" class="com.jteap.yx.tz.manager.SbjycljlManager" />
+	<bean id="lqljlManager" class="com.jteap.yx.tz.manager.LqljlManager" />
+	<bean id="bhdzxgjlManager" class="com.jteap.yx.tz.manager.BhdzxgjlManager" />
+	<bean id="bhzddzjlManager" class="com.jteap.yx.tz.manager.BhzddzjlManager" />
+	<bean id="cydtj300Manager" class="com.jteap.yx.tz.manager.Cydtj300Manager" />
+	<bean id="cydtj600Manager" class="com.jteap.yx.tz.manager.Cydtj600Manager" />
+	<bean id="dqgzpManager" class="com.jteap.yx.tz.manager.DqgzpManager" />
+	<bean id="blqdzjl300Manager" class="com.jteap.yx.tz.manager.Blqdzjl300Manager" />
+	<bean id="blqdzjl600Manager" class="com.jteap.yx.tz.manager.Blqdzjl600Manager" />
+	
+	<bean id="yx_KgfhzjlAction" class="com.jteap.yx.tz.web.KgfhzjlAction" scope="prototype"></bean>
+	<bean id="yx_DqsbbhjlAction" class="com.jteap.yx.tz.web.DqsbbhjlAction" scope="prototype"></bean>
+	<bean id="yx_JdxjlAction" class="com.jteap.yx.tz.web.JdxjlAction" scope="prototype"></bean>
+	<bean id="yx_DqysjyjlAction" class="com.jteap.yx.tz.web.DqysjyjlAction" scope="prototype"></bean>
+	<bean id="yx_SbjycljlAction" class="com.jteap.yx.tz.web.SbjycljlAction" scope="prototype"></bean>
+	<bean id="yx_LqljlAction" class="com.jteap.yx.tz.web.LqljlAction" scope="prototype"></bean>
+	<bean id="yx_BhdzxgjlAction" class="com.jteap.yx.tz.web.BhdzxgjlAction" scope="prototype"></bean>
+	<bean id="yx_BhzddzjlAction" class="com.jteap.yx.tz.web.BhzddzjlAction" scope="prototype"></bean>
+	<bean id="yx_Cydtj300Action" class="com.jteap.yx.tz.web.Cydtj300Action" scope="prototype"></bean>
+	<bean id="yx_Cydtj600Action" class="com.jteap.yx.tz.web.Cydtj600Action" scope="prototype"></bean>
+	<bean id="yx_DqgzpAction" class="com.jteap.yx.tz.web.DqgzpAction" scope="prototype"></bean>
+	<bean id="yx_Blqdzjl300Action" class="com.jteap.yx.tz.web.Blqdzjl300Action" scope="prototype"></bean>
+	<bean id="yx_Blqdzjl600Action" class="com.jteap.yx.tz.web.Blqdzjl600Action" scope="prototype"></bean>
+</beans>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="com.jteap.wz.xqjhsq" namespace="/jteap/wz/xqjhsq" extends="jteap-actions">
+		<action name="XqjhsqAction" class="wz_XqjhsqAction"></action>
+		<action name="XqjhsqDetailAction" class="wz_XqjhsqDetailAction"></action>
+		<action name="XqjhsqLogAction" class="wz_XqjhsqLogAction"></action>		
+		<action name="XqjhsqxxAction" class="wz_XqjhsqxxAction"></action>
+		<action name="XqjhsqfpxxAction" class="wz_XqjhsqfpxxAction"></action>
+		<action name="GroupExtendForWzAction" class="wz_GroupExtendForWzAction"></action>
+	</package>
+</struts>

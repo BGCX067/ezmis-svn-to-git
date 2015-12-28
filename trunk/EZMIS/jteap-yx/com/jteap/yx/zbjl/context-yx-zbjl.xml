@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd"
+	default-autowire="byName" default-lazy-init="true">
+
+	<bean id="zhiBanJiLuManager" class="com.jteap.yx.zbjl.manager.ZhiBanJiLuManager" />
+	<bean id="jbyxfsManager" class="com.jteap.yx.zbjl.manager.JbyxfsManager" />
+	
+	<bean id="yx_ZhiBanJiLuAction" class="com.jteap.yx.zbjl.web.ZhiBanJiLuAction" scope="prototype"></bean>
+	<bean id="yx_JbyxfsAction" class="com.jteap.yx.zbjl.web.JbyxfsAction" scope="prototype"></bean>
+	
+</beans>

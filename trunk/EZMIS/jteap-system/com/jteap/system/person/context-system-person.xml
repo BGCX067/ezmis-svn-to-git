@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd"
+	default-autowire="byName" default-lazy-init="true">
+
+	<!-- 组织 -->
+	<bean id="groupManager" class="com.jteap.system.group.manager.GroupManager" />
+	<bean id="system_GroupAction" class="com.jteap.system.group.web.GroupAction" scope="prototype"/>
+	
+	<!-- 用户 -->
+	<bean id="personManager" class="com.jteap.system.person.manager.PersonManager" />
+	<bean id="system_PersonAction" class="com.jteap.system.person.web.PersonAction" scope="prototype"></bean>
+	
+	
+	<!-- 用户&组织关联对象 -->
+	<bean id="p2gManager" class="com.jteap.system.person.manager.P2GManager"/>
+	<bean id="system_P2GAction" class="com.jteap.system.person.web.P2GAction" scope="prototype"></bean>
+	
+	  <!-- 用户&角色关联对象 -->
+     <bean id="p2roleManager" class="com.jteap.system.person.manager.P2RoleManager"/>
+     <bean id="p2resManager" class="com.jteap.system.person.manager.P2ResManager"/>
+     <bean id="system_P2RoleAction" class="com.jteap.system.person.web.P2RoleAction" scope="prototype"></bean>
+   
+
+	
+	<!-- 平台管理员管理对象 -->
+	<bean id="rootManager" class="com.jteap.system.person.manager.RootManager" />
+
+	
+	
+</beans>

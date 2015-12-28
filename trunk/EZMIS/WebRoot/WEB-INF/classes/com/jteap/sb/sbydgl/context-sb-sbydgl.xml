@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd"
+	default-autowire="byName" default-lazy-init="true">
+
+	<bean id="sbydxxManager" class="com.jteap.sb.sbydgl.manager.SbydxxManager" />
+	<bean id="sbydglManager" class="com.jteap.sb.sbydgl.manager.SbydglManager" />
+	
+	<bean id="sb_SbydxxAction" class="com.jteap.sb.sbydgl.web.SbydxxAction" scope="prototype"></bean>
+	<bean id="sb_SbydbgAction" class="com.jteap.sb.sbydgl.web.SbydbgAction" scope="prototype"></bean>
+	<bean id="sb_SbydtzdAction" class="com.jteap.sb.sbydgl.web.SbydtzdAction" scope="prototype"></bean>
+	
+</beans>

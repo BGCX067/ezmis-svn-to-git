@@ -1,0 +1,99 @@
+﻿.btn_changpassword {
+    background-image: url(../resources/details.gif) !important;
+    font-size: 9pt;
+}
+
+
+#header{
+   border:0 none;
+   background:#1E4176 url(../resources/hd-bg.gif) repeat-x 0 0;
+   padding-top:3px;
+   padding-left:3px;
+}
+#header .title{
+	color: #FFFFFF;
+	font:normal 20px 榛戜綋,verdana,sans-serif;
+    letter-spacing:1px;
+    padding: 4px;
+	padding-left: 18px;
+}
+#buttom{
+   border:0 none;
+   background:#1E4176 url(../resources/hd-bg.gif) repeat-x 0 0;
+   padding-left:3px;
+}
+#buttom .title{
+	color: #FFFFFF;
+	font:normal 9px 榛戜綋,verdana,sans-serif;
+    letter-spacing:1px;
+    padding: 4px;
+	padding-left: 18px;
+	text-align:center;
+}
+.x-tree-node div.func-node{
+    background:#eee url(../resources/cmp-bg.gif) repeat-x;
+    margin-top:1px;
+    border-top:1px solid #ddd;
+    border-bottom:1px solid #ccc;
+    padding-top:2px;
+    padding-bottom:1px;
+}
+
+.loading-indicator {
+    font:bold 13px  Tahoma, Verdana, Arial, Helvetica, sans-serif;
+    position:absolute;
+    top:35%;
+    left:43%;
+    color:#444;
+    background-image:url(../resources/images/default/shared/large-loading.gif);
+    background-repeat: no-repeat;
+    background-position:left 5px;
+    padding:10px 10px 10px 38px;
+	text-align:left;
+}
+#loading-mask{
+	position:absolute;
+	left:0;
+	top:0;
+    width:100%;
+    height:100%;
+    z-index:20000;
+    background-color:white;
+}
+#loading{
+	position:absolute;
+	left:45%;
+	top:40%;
+	padding:2px;
+	z-index:20001;
+    height:auto;
+}
+#loading img {
+    margin-bottom:5px;
+}
+#loading .loading-indicator{
+	background:white;
+	color:#555;
+	font:bold 13px tahoma,arial,helvetica;
+	padding:10px;
+	margin:0;
+    text-align:center;
+    height:auto;
+}
+
+
+#welcome{
+
+}
+/*Firefox涓负鍏煎marquee 瑕嗙洊铡熺粍浠朵腑镄勬牱寮?*/
+.x-toolbar .ytb-text{padding:0px;}
+
+/*缈婚〉镙戣妭镣规牱寮?/
+.page-span-1 a:link{color:red;}
+.page-span-1 a:visited{color:red;}
+.page-span-1 a:hover{color:green;}
+.page-span-1{color:red;}
+.page-span-2{color:blue;}
+.x-tree-pagectrl-ctn{
+	background-color:red;
+}

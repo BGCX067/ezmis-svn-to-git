@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+	<!-- 待办任务 -->
+	<package name="jteap.wfengine.tasktodo" namespace="/jteap/wfengine/tasktodo" extends="jteap-actions">
+		<action name="TaskToDoAction" class="wfengine_TaskAction">
+		</action>		
+	</package>
+
+</struts>

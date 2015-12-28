@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<process-definition
+  xmlns=""  name="测试最新流程">
+   <start-state name="start">
+      <transition name="" to="起草项目"></transition>
+   </start-state>
+   <task-node name="起草项目">
+      <task name="起草项目">
+      	<assignment pooled-actors="#{creator}"></assignment>
+      </task>
+      <transition name="等于1000" condition="#{mytag:xxx(money)==1000} " to="分管生产副总审批"></transition>
+      <transition name="大于1000" condition="#{money>1000}" to="部门负责人审批"></transition>
+   </task-node>
+   <task-node name="部门负责人审批">
+      <task name="部门负责人审批">
+      	<assignment pooled-actors="#{mytag:actors('','','MrBao')}"></assignment>    	
+      </task>
+      <transition name="" to="执行"></transition>
+   </task-node>
+   <task-node name="分管生产副总审批">
+      <task name="分管生产副总审批">
+      	<assignment pooled-actors="#{mytag:actors('40288ac42235b274012235b3b0a50003','','MrBao')}"></assignment>    	
+      </task>
+      <transition name="" to="执行"></transition>
+   </task-node>
+   <task-node name="执行">
+      <task name="执行">
+     	 <assignment pooled-actors="#{mytag:actors('','','MrBao')}"></assignment>     	 
+      </task>
+      <transition name="" to="系统会签"></transition>
+   </task-node>
+   <task-node name="系统会签" signal="last-wait" create-tasks="false" end-tasks="true">
+      <task name="系统会签">
+
+      </task>
+      <event type="node-enter">  
+            <action name="createInstance"  
+                class="com.jteap.wfengine.workflow.actionHandler.DynamicCreateTaskInstance">  
+            </action>  
+       </event>  	
+       <event type="task-end">  
+            <action name="endTaskProcess"  
+                class="com.jteap.wfengine.workflow.actionHandler.CountersignActionHandler">  
+            </action>  
+       </event>
+      <transition name="会签通过" to="归档"></transition>
+      <transition name="拒绝会签" to="执行"></transition>  
+   </task-node>
+   <task-node name="归档">
+      <task name="归档">
+	    <assignment pooled-actors="#{mytag:actors('','','MrBao')}"></assignment>		      
+      </task>
+      <transition name="" to="终结"></transition>
+   </task-node>
+   <end-state name="终结"></end-state>
+</process-definition>

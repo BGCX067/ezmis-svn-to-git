@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<link type="text/css" rel="stylesheet" href="includes/columnlist.css" />
+		<script type="text/javascript" src="includes/sortabletable.js"></script>
+		<script type="text/javascript" src="includes/columnlist.js"></script>
+		<style type="text/css">
+			html, body { margin: 0px; padding: 0px; overflow: hidden; border: none; }
+			body { background: threedface;  }
+		</style>
+	</head>
+	<body>
+		<div id="container"></div>
+	</body>
+	<script type="text/javascript">
+		//<![CDATA[
+		var aColumns = [
+			['Rank',   '10%', TYPE_NUMBER],
+			['Flavor', '40%', TYPE_STRING],
+			['Color',  '40%', TYPE_STRING],
+			['Share',  '10%', TYPE_NUMBER]
+		];
+
+		var aData = [
+			['1','Vanilla','White','29%'],
+			['2','Chocolate','Brown','8.9%'],
+			['3','Butter pecan','Light brown','5.3%'],
+			['4','Strawberry','Pink','5.3%'],
+			['5','Neapolitan','Greenish brown','4.2%'],
+			['6','Chocolate chip','Brown','3.9%'],
+			['7','French vanilla','Yellowish white','3.8%'],
+			['8','Cookies and cream','Light brown','3.6%'],
+			['9','Vanilla fudge ripple','White', '2.6%'],
+			['10','Praline pecan','Brown','1.7%'],
+			['11','Cherry','Red','1.6%'],
+			['12','Chocolate almond','Brown','1.6%'],
+			['13','Coffee','Dark brown', '1.6%'],
+			['14','Rocky road','brown', '1.5%'],
+			['15','Chocolate marshmallow','Light brown','1.3%']
+		];
+
+		var el = document.getElementById('container');
+
+		var o = new WebFXColumnList();
+		o.create(el, aColumns);
+		o.addRows(aData);
+
+		function calcSize() {
+			var dw = (window.innerWidth)?window.innerWidth:document.documentElement.clientWidth;
+			var dh = (window.innerHeight)?window.innerHeight:document.documentElement.clientHeight;
+			o.resize(dw-2, dh-2);
+		}
+		
+		calcSize();
+		
+		window.onresize = calcSize;
+		//]]>
+	</script>
+</html>

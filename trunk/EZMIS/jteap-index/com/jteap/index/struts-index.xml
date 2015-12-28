@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	
+	<package name="jteap.index" namespace="/jteap/index"
+		extends="jteap-actions">
+		<action name="PreferenceAction" class="index_PreferenceAction"></action>
+		<action name="MyQuickAction" class="index_MyQuickAction"></action>
+		<action name="NowInfoAction" class="index_NowInfoAction"></action>
+		<action name="XiTongTongZhiAction" class="index_XiTongTongZhiAction"></action>
+	</package>
+	
+</struts>

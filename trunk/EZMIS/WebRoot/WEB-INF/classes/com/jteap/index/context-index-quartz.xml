@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" 
+
+"http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+
+<!-- 每天00:00时设置各机组连续运行、停运天数 -->	
+	<bean id="checkjob2" class="com.jteap.index.quartz.ConfigFileEncryptJob2"></bean>
+    
+    <bean id="autoStatInvokingJobDetail2"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject">
+			<ref bean="checkjob2" />
+		</property>
+		<property name="targetMethod">
+			<value>setJzRunDay</value>
+		</property>
+	</bean>
+
+	<bean id="cronTrigger2" class="org.springframework.scheduling.quartz.CronTriggerBean">
+        <property name="jobDetail" ref="autoStatInvokingJobDetail2"/>
+        <property name="cronExpression" value="0 0 0,4,8,12,16,20 * * ?"/>	<!--   0 48 07 ? * * | 0 0 0 * * ? -->
+    </bean>
+ 
+<!-- 每5分钟取得1、2机组的负荷 保存到sisdata表空间 -->	
+    <bean id="autoStatInvokingJobDetail3"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject">
+			<ref bean="checkjob2" />
+		</property>
+		<property  name="targetMethod">
+			<value>saveJzFh</value>
+		</property>
+	</bean>
+
+	<bean id="cronTrigger3" class="org.springframework.scheduling.quartz.CronTriggerBean">
+        <property name="jobDetail" ref="autoStatInvokingJobDetail3"/>
+        <property name="cronExpression" value="0 0/5 * * * ?"/>
+    </bean> 
+<!-- 每30秒取最新全厂负荷 保存sisdata.SS_EZDC -->
+ <bean id="autoStatInvokingJobDetailAll"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject">
+			<ref bean="checkjob2" />
+		</property>
+		<property  name="targetMethod">
+			<value>saveAllJzFh</value>
+		</property>
+	</bean>
+
+	<bean id="cronTriggerAll" class="org.springframework.scheduling.quartz.CronTriggerBean">
+        <property name="jobDetail" ref="autoStatInvokingJobDetailAll"/>
+        <property name="cronExpression" value="0/30 * * * * ?"/>
+    </bean> 
+<!--  -->    
+	<bean id="schedulerFactory2"
+		class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="triggers">
+			<list>
+				<ref bean="cronTrigger2" />
+				<ref bean="cronTrigger3" />
+				<ref bean="cronTriggerAll" />
+			</list>
+		</property>
+	</bean>
+
+</beans>

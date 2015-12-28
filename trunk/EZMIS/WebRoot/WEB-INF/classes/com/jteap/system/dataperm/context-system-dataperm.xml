@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:jee="http://www.springframework.org/schema/jee" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-2.5.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd"
+	default-autowire="byName" default-lazy-init="true">
+
+	<bean id="datapermManager" class="com.jteap.system.dataperm.manager.DatapermManager" />
+	
+	<bean id="system_DatapermAction" class="com.jteap.system.dataperm.web.DatapermAction"></bean>
+	
+	<bean id="tableToClassManager" class="com.jteap.system.dataperm.manager.TableToClassManager" />
+	
+	<bean id="system_TableToClassAction" class="com.jteap.system.dataperm.web.TableToClassAction"></bean>
+
+	<bean id="system_DatapermCatalogAction" class="com.jteap.system.dataperm.web.DatapermCatalogAction"></bean>
+	
+	
+	<bean id="searchAdvice" class="com.jteap.system.dataperm.util.SearchAdvice"></bean>
+	<aop:config>
+		<aop:aspect ref="searchAdvice">
+			<aop:around method="mainAdvice" pointcut="execution(* com.jteap..*.*(..))" />
+		</aop:aspect>
+	</aop:config>
+	
+	
+</beans>

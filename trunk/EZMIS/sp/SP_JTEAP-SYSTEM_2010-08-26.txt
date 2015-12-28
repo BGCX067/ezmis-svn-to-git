@@ -1,0 +1,9 @@
+﻿2010-08-26
+1.组织人员页面添加汉字转拼音功能（结构型如：张三->zhangs，有同名人员在后面添加数字区分）
+2.TB_SYS_PERSON表中添加字段login_name2，存储登录人员拼音登录名。登录页面中添加可以同时用工号和登录名登录
+3.修复组织人员页面中“增加用户”是在填写昵称中没有出去空格即输入空格仍算有效字符的bug
+4.修改HibernateGenericDao中removeBatchInHql()方法：
+	将hribernateTemplate.getSessionFactory().openSession();
+	改为hribernateTemplate.getSessionFactory().getCurrentSession();
+5.组织人员页面中移除用户后不再刷新组织树
+6.组织人员页面中添加用户名称模糊查询

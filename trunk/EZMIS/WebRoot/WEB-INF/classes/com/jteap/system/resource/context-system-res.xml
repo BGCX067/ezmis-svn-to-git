@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd"
+	default-autowire="byName" default-lazy-init="true">
+
+	
+	<!-- 资源 -->
+	<bean id="resManager" class="com.jteap.system.resource.manager.ResourceManager"/>
+	<bean id="operationManager" class="com.jteap.system.resource.manager.OperationManager"/>
+	<bean id="moduleManager" class="com.jteap.system.resource.manager.ModuleManager"/>
+    <bean id="resourcesUsersManager" class="com.jteap.system.resource.manager.ResourcesUsersManager" />
+	
+	<bean id="system_ModuleAction" class="com.jteap.system.resource.web.ModuleAction" scope="prototype"></bean>
+	<bean id="system_ResourceAction" class="com.jteap.system.resource.web.ResourceAction" scope="prototype"></bean>
+	<bean id="system_OperationAction" class="com.jteap.system.resource.web.OperationAction" scope="prototype"></bean>
+	<bean id="system_ResourcesUsersAction" class="com.jteap.system.resource.web.ResourcesUsersAction" scope="prototype"></bean>
+
+
+
+	
+</beans>

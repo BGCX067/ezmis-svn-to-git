@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="com.jteap.wz.yhdgl" namespace="/jteap/wz/yhdgl" extends="jteap-actions">
+		<action name="YhdglAction" class="wz_YhdglAction"></action>		
+		<action name="YhdglEFormAction" class="wz_YhdglEFormAction"></action>
+		<action name="YhdglAddEFormAction" class="wz_YhdglAddEFormAction"></action>		
+		<action name="WzhtAction" class="wz_wzhtAction"></action>	
+		<action name="YhdglSelectAction" class="wz_YhdglSelectAction"></action>	
+	</package>
+</struts>

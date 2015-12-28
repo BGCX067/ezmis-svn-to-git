@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="EZMIS">
+        <wb-resource deploy-path="/" source-path="/WebRoot"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/jteap-config"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/jteap-test"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/jteap-doclib"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/jteap-example"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/jteap-form"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/jteap-jhtj"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/jteap-yx"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/jteap-system"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/jteap-bz"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/jteap-sb"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/jteap-wf"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/jteap-jx"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/jteap-sso"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/jteap-dgt"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/jteap-lp"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/jteap-index"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/jteap-gcht"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/jteap-question"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/jteap-wz"/>
+        <property name="context-root" value="/EZMIS"/>
+        <property name="java-output-path" value="/EZMIS/WebRoot/WEB-INF/classes"/>
+    </wb-module>
+</project-modules>

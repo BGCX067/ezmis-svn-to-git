@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd"
+	default-autowire="byName" default-lazy-init="true">
+
+	<bean id="xqjhsqManager" class="com.jteap.wz.xqjhsq.manager.XqjhsqManager" />
+	<bean id="xqjhsqJDBCManager" class="com.jteap.wz.xqjhsq.manager.XqjhsqJDBCManager" />
+	<bean id="xqjhsqDetailManager" class="com.jteap.wz.xqjhsq.manager.XqjhsqDetailManager" />
+	<bean id="xqjhsqLogManager" class="com.jteap.wz.xqjhsq.manager.XqjhsqLogManager" />
+	 
+	<bean id="wz_XqjhsqxxAction" class="com.jteap.wz.xqjhsq.web.XqjhsqxxAction" scope="prototype"></bean>
+	<bean id="wz_XqjhsqAction" class="com.jteap.wz.xqjhsq.web.XqjhsqAction" scope="prototype"></bean>
+	<bean id="wz_XqjhsqDetailAction" class="com.jteap.wz.xqjhsq.web.XqjhsqDetailAction" scope="prototype"></bean>
+	<bean id="wz_XqjhsqLogAction" class="com.jteap.wz.xqjhsq.web.XqjhsqLogAction" scope="prototype"></bean>
+	<bean id="wz_XqjhsqfpxxAction" class="com.jteap.wz.xqjhsq.web.XqjhsqfpxxAction" scope="prototype"></bean>
+	<bean id="wz_GroupExtendForWzAction" class="com.jteap.wz.xqjhsq.web.GroupExtendForWzAction" scope="prototype"></bean>
+	
+</beans>

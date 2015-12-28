@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd"
+	default-autowire="byName" default-lazy-init="true">
+
+	<bean id="wzbfdManager" class="com.jteap.wz.bfdgl.manager.WzbfdManager" />
+	<bean id="wzbfdMxManager" class="com.jteap.wz.bfdgl.manager.WzbfdMxManager" />
+	
+	<bean id="wzbfdAction" class="com.jteap.wz.bfdgl.web.WzbfdAction" scope="prototype"></bean>
+	<bean id="wzbfdMxAction" class="com.jteap.wz.bfdgl.web.WzbfdMxAction" scope="prototype"></bean>
+	
+</beans>

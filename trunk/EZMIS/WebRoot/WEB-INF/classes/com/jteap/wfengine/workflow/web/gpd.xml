@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<process-diagram name="测试最新流程" width="686" height="525">
+  <node name="start" x="207" y="5" width="140" height="40">
+    <transition name="">
+      <label x="5" y="-10"/>
+    </transition>
+  </node>
+  <node name="起草项目" x="206" y="83" width="140" height="40">
+    <transition name="等于1000">
+      <label x="5" y="-10"/>
+    </transition>
+    <transition name="大于1000">
+      <label x="5" y="-10"/>
+    </transition>
+  </node>
+  <node name="部门负责人审批" x="65" y="180" width="140" height="40">
+    <transition name="">
+      <label x="5" y="-10"/>
+    </transition>
+  </node>
+  <node name="分管生产副总审批" x="358" y="178" width="140" height="40">
+    <transition name="">
+      <label x="5" y="-10"/>
+    </transition>
+  </node>
+  <node name="执行" x="214" y="244" width="140" height="40">
+    <transition name="">
+      <label x="5" y="-10"/>
+    </transition>
+  </node>
+  <node name="系统会签" x="214" y="323" width="140" height="40">
+    <transition name="会签通过">
+      <label x="-19" y="-11"/>
+    </transition>
+    <transition name="拒绝会签">
+      <label x="-20" y="-11"/>
+      <bendpoint w1="184" h1="0" w2="184" h2="79"/>
+      <bendpoint w1="183" h1="-82" w2="183" h2="-3"/>
+    </transition>
+  </node>
+  <node name="归档" x="214" y="396" width="140" height="40">
+    <transition name="">
+      <label x="5" y="-10"/>
+    </transition>
+  </node>
+  <node name="终结" x="215" y="473" width="140" height="40"/>
+</process-diagram>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<!-- 默认模板 -->
+	<template name="默认模板" path="template0.jspx" default="false"></template>
+	<!-- 报电监会模板 -->
+	<template name="报电监会模板" path="template1.jspx" default="false"></template>
+	<!-- 报集团模板 -->
+	<template name="报集团模板" path="template2.jspx" default="false"></template>
+	<!-- 工会模板 -->
+	<template name="工会模板" path="template3.jspx" default="false"></template>
+</root>

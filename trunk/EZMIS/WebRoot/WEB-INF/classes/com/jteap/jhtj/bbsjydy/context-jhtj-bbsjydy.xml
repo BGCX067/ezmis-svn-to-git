@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd"
+	default-autowire="byName" default-lazy-init="true">
+	
+	<bean id="bbIOManager" class="com.jteap.jhtj.bbsjydy.manager.BbIOManager" />
+	<bean id="system_bbIOAction" class="com.jteap.jhtj.bbsjydy.web.BbIOAction" scope="prototype"/>
+	
+	<bean id="bbSjzdManager" class="com.jteap.jhtj.bbsjydy.manager.BbSjzdManager" />
+	<bean id="system_bbSjzdAction" class="com.jteap.jhtj.bbsjydy.web.BbSjzdAction" scope="prototype"/>
+</beans>

@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>JavaScript 仿LightBox内容显示效果</title>
+</head>
+
+<body>
+
+<br /><br /><br /><br />
+
+<script type="text/javascript" src="lightbox.js"></script>
+<style>
+.lightbox{width:300px;background:#FFFFFF;border:1px solid #ccc;line-height:25px; top:20%; left:20%;}
+.lightbox dt{background:#f4f4f4; padding:5px;}
+</style>
+
+<dl id="idBox" class="lightbox">
+  <dt id="idBoxHead"><b>LightBox</b> </dt>
+  <dd>
+    内容显示
+    <br /><br />
+    <input name="" type="button" value=" 关闭 " id="idBoxCancel" />
+    <br /><br />
+  </dd>
+</dl>
+
+
+<div style="margin:0 auto; width:900px; height:1000px; border:1px solid #000000;">
+
+<input type="button" value="关闭覆盖层" id="btnOverlay" />
+<input type="button" value="黑色覆盖层" id="btnOverColor" />
+<input type="button" value="全透覆盖层" id="btnOverOpacity" />
+<input type="button" value="定位效果" id="btnFixed" />
+<input type="button" value="居中效果" id="btnCenter" />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<select>
+<option>覆盖select测试</option>
+</select> 
+<input name="" type="button" value=" 打开 " id="idBoxOpen" />
+
+</div>
+
+
+
+<script>
+
+var box = new LightBox("idBox");
+
+$("idBoxCancel").onclick = function(){ box.Close(); }
+$("idBoxOpen").onclick = function(){ box.Show(); }
+
+$("btnOverlay").onclick = function(){
+	box.Close();
+	if(box.Over){
+		box.Over = false;
+		this.value = "打开覆盖层";
+	} else {
+		box.Over = true;
+		this.value = "关闭覆盖层";
+	}
+}
+
+$("btnOverColor").onclick = function(){
+	box.Close();
+	box.Over = true;
+	if(box.OverLay.Color == "#fff"){
+		box.OverLay.Color = "#000";
+		this.value = "白色覆盖层";
+	} else {
+		box.OverLay.Color = "#fff"
+		this.value = "黑色覆盖层";
+	}
+}
+
+$("btnOverOpacity").onclick = function(){
+	box.Close();
+	box.Over = true;
+	if(box.OverLay.Opacity == 0){
+		box.OverLay.Opacity = 50;
+		this.value = "全透覆盖层";
+	} else {
+		box.OverLay.Opacity = 0;
+		this.value = "半透覆盖层";
+	}
+}
+
+$("btnFixed").onclick = function(){
+	box.Close();
+	if(box.Fixed){
+		box.Fixed = false;
+		this.value = "定位效果";
+	} else {
+		box.Fixed = true;
+		this.value = "取消定位";
+	}
+}
+
+$("btnCenter").onclick = function(){
+	box.Close();
+	if(box.Center){
+		box.Center = false;
+		box.Box.style.left = box.Box.style.top = "20%";
+		box.Box.style.marginTop = box.Box.style.marginLeft = "0";
+		this.value = "居中效果";
+	} else {
+		box.Center = true;
+		this.value = "重新定位";
+	}
+}
+</script>
+
+</body>
+</html>

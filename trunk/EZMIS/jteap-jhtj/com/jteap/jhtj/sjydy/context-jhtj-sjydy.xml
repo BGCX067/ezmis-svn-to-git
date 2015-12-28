@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd"
+	default-autowire="byName" default-lazy-init="true">
+
+	<!-- 组织 -->
+	<bean id="tjAppIOManager" class="com.jteap.jhtj.sjydy.manager.TjAppIOManager" />
+	<bean id="system_tjAppIOAction" class="com.jteap.jhtj.sjydy.web.TjAppIOAction" scope="prototype"/>
+	
+	<bean id="tjAppSjzdManager" class="com.jteap.jhtj.sjydy.manager.TjAppSjzdManager" />
+	<bean id="system_tjAppSjzdAction" class="com.jteap.jhtj.sjydy.web.TjAppSjzdAction" scope="prototype"/>
+	
+</beans>

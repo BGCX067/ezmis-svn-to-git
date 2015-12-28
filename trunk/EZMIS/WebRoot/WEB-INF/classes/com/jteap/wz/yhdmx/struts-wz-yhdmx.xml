@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="com.jteap.wz.yhdmx" namespace="/jteap/wz/yhdmx" extends="jteap-actions">
+		<action name="YhdmxAction" class="wz_YhdmxAction"></action>		
+		<action name="YhdmxsAction" class="wz_YhdmxsAction"></action>		
+		<action name="YhdmxSelectAction" class="wz_YhdmxSelectAction"></action>	
+		<action name="YhdmxAddEFormAction" class="wz_YhdmxAddEFormAction"></action>	
+	</package>
+</struts>

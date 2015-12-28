@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans   
+        http://www.springframework.org/schema/beans/spring-beans-2.5.xsd   
+        http://www.springframework.org/schema/context   
+        http://www.springframework.org/schema/context/spring-context-2.5.xsd   
+        http://www.springframework.org/schema/tx   
+        http://www.springframework.org/schema/tx/spring-tx-2.5.xsd"
+	default-autowire="byName" default-lazy-init="true">
+	
+	<!-- PROXOOL数据源配置 具体数据库连接信息见proxool.xml 
+	<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName">
+			<value>org.logicalcobwebs.proxool.ProxoolDriver</value>
+		</property>
+		<property name="url">
+			<value>proxool.jteap</value>
+		</property>
+	</bean>
+ 	-->
+	<!-- dbcp连接池
+	<bean id="dataSource"
+		class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close">
+		<property name="driverClassName"
+			value="oracle.jdbc.OracleDriver" />
+		<property name="url" value="jdbc:oracle:thin:@192.168.10.231:1521:ORCL" />
+		<property name="username" value="JTEAPSYS" />
+		<property name="password" value="JTEAPSYS" />
+	</bean>
+	 -->
+	<!-- JNDI 配置方案  -->
+	<bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">  
+    	<property name="jndiName" value="ezmis/jndi"></property>  
+    	<property name="jndiEnvironment"> 
+			<props> 
+				<prop key="java.naming.provider.url">t3://localhost:7001</prop> 
+				<prop key="java.naming.factory.initial">weblogic.jndi.WLInitialContextFactory</prop> 
+			</props> 
+    	</property>
+	</bean>
+	
+	<!-- sis系统数据源 -->
+	<bean id="sisdataSource" class="org.springframework.jndi.JndiObjectFactoryBean">  
+    	<property name="jndiName" value="sisdata"></property>  
+    	<property name="jndiEnvironment"> 
+			<props> 
+				<prop key="java.naming.provider.url">t3://localhost:7001</prop> 
+				<prop key="java.naming.factory.initial">weblogic.jndi.WLInitialContextFactory</prop> 
+			</props> 
+    	</property>
+	</bean> 
+	
+	<!-- sqlserver数据源 -->
+	<bean id="sqldataSource" class="org.springframework.jndi.JndiObjectFactoryBean" >  
+    	<property name="jndiName" value="sqldata"></property>  
+    	<property name="jndiEnvironment"> 
+			<props> 
+				<prop key="java.naming.provider.url">t3://localhost:7001</prop> 
+				<prop key="java.naming.factory.initial">weblogic.jndi.WLInitialContextFactory</prop> 
+			</props> 
+    	</property>
+	</bean> 
+	
+	 
+	 	<!-- p6spy 用于显示sql 并进行调试用 系统正式上线后将不会使用 
+	<bean id="dataSource"
+		class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close">
+		<property name="driverClassName"
+			value="com.p6spy.engine.spy.P6SpyDriver" />
+		<property name="url" value="jdbc:oracle:thin:@192.168.10.231:1521:ORCL" />
+		<property name="username" value="JTEAPSYS" />
+		<property name="password" value="JTEAPSYS" />
+	</bean>
+	-->
+	
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">
+					com.jteap.wz.base.Oracle9ThunisoftDialect
+				</prop>
+				<prop key="hibernate.jdbc.use_scrollable_resultset">true</prop>
+				<prop key="hibernate.hbm2ddl.auto">none</prop>
+				<prop key="hibernate.format_sql">false</prop>
+				<prop key="hibernate.show_sql">true</prop>
+				
+				<!-- 打开二级缓存以及查询缓存 -->
+				<prop key="hibernate.cache.provider_class">org.hibernate.cache.EhCacheProvider</prop>
+				<prop key="hibernate.cache.use_query_cache">true</prop>   
+				<prop key="cache.use_second_level_cache">true</prop>
+				
+				<!--oracle数据库性能优化  -->
+				<prop key="hibernate.jdbc.fetch_size">50</prop>
+				<prop key="hibernate.jdbc.batch_size">25</prop>
+				
+			</props>
+		</property>
+		<property name="packagesToScan">
+			<list>
+				<value>com.jteap.**.model</value>
+			</list>
+		</property>
+		<property name="mappingResources">
+			<list>
+			<!-- 兼容jbpm hibernate 2的写法 -->
+			    <value>org/jbpm/db/hibernate.queries.hbm.xml</value>
+			    <value>org/jbpm/graph/action/MailAction.hbm.xml</value>
+			    <value>org/jbpm/graph/def/ProcessDefinition.hbm.xml</value>
+			    <value>org/jbpm/graph/def/Node.hbm.xml</value>
+			    <value>org/jbpm/graph/def/Transition.hbm.xml</value>
+			    <value>org/jbpm/graph/def/Event.hbm.xml</value>
+			    <value>org/jbpm/graph/def/Action.hbm.xml</value>
+			    <value>org/jbpm/graph/def/SuperState.hbm.xml</value>
+			    <value>org/jbpm/graph/def/ExceptionHandler.hbm.xml</value>
+			    <value>org/jbpm/instantiation/Delegation.hbm.xml</value>
+			    <value>org/jbpm/graph/action/Script.hbm.xml</value>
+			    <value>org/jbpm/graph/node/StartState.hbm.xml</value>
+			    <value>org/jbpm/graph/node/EndState.hbm.xml</value>
+			    <value>org/jbpm/graph/node/ProcessState.hbm.xml</value>
+			    <value>org/jbpm/graph/node/Decision.hbm.xml</value>
+			    <value>org/jbpm/graph/node/Fork.hbm.xml</value>
+			    <value>org/jbpm/graph/node/Join.hbm.xml</value>
+			    <value>org/jbpm/graph/node/MailNode.hbm.xml</value>
+			    <value>org/jbpm/graph/node/State.hbm.xml</value>
+			    <value>org/jbpm/graph/node/TaskNode.hbm.xml</value>
+			    <value>org/jbpm/context/def/ContextDefinition.hbm.xml</value>
+			    <value>org/jbpm/context/def/VariableAccess.hbm.xml</value>
+			    <value>org/jbpm/bytes/ByteArray.hbm.xml</value>
+			    <value>org/jbpm/module/def/ModuleDefinition.hbm.xml</value>
+			    <value>org/jbpm/file/def/FileDefinition.hbm.xml</value>
+			    <value>org/jbpm/taskmgmt/def/TaskMgmtDefinition.hbm.xml</value>
+			    <value>org/jbpm/taskmgmt/def/Swimlane.hbm.xml</value>
+			    <value>org/jbpm/taskmgmt/def/Task.hbm.xml</value>
+			    <value>org/jbpm/taskmgmt/def/TaskController.hbm.xml</value>
+			    <value>org/jbpm/scheduler/def/CreateTimerAction.hbm.xml</value>
+			    <value>org/jbpm/scheduler/def/CancelTimerAction.hbm.xml</value>
+			    <value>org/jbpm/graph/exe/Comment.hbm.xml</value>
+			    <value>org/jbpm/graph/exe/ProcessInstance.hbm.xml</value>
+			    <value>org/jbpm/graph/exe/Token.hbm.xml</value>
+			    <value>org/jbpm/graph/exe/RuntimeAction.hbm.xml</value>
+			    <value>org/jbpm/module/exe/ModuleInstance.hbm.xml</value>
+			    <value>org/jbpm/context/exe/ContextInstance.hbm.xml</value>
+			    <value>org/jbpm/context/exe/TokenVariableMap.hbm.xml</value>
+			    <value>org/jbpm/context/exe/VariableInstance.hbm.xml</value>
+			    <value>org/jbpm/context/exe/variableinstance/ByteArrayInstance.hbm.xml</value>
+			    <value>org/jbpm/context/exe/variableinstance/DateInstance.hbm.xml</value>
+			    <value>org/jbpm/context/exe/variableinstance/DoubleInstance.hbm.xml</value>
+			    <value>org/jbpm/context/exe/variableinstance/HibernateLongInstance.hbm.xml</value>
+			    <value>org/jbpm/context/exe/variableinstance/HibernateStringInstance.hbm.xml</value>
+			    <value>org/jbpm/context/exe/variableinstance/LongInstance.hbm.xml</value>
+			    <value>org/jbpm/context/exe/variableinstance/NullInstance.hbm.xml</value>
+			    <value>org/jbpm/context/exe/variableinstance/StringInstance.hbm.xml</value>
+			    <value>org/jbpm/job/Job.hbm.xml</value>
+			    <value>org/jbpm/job/Timer.hbm.xml</value>
+			    <value>org/jbpm/job/ExecuteNodeJob.hbm.xml</value>
+			    <value>org/jbpm/job/ExecuteActionJob.hbm.xml</value>
+			    <value>org/jbpm/job/CleanUpProcessJob.hbm.xml</value>
+			    <value>org/jbpm/taskmgmt/exe/TaskMgmtInstance.hbm.xml</value>
+			    <value>org/jbpm/taskmgmt/exe/TaskInstance.hbm.xml</value>
+			    <value>org/jbpm/taskmgmt/exe/PooledActor.hbm.xml</value>
+			    <value>org/jbpm/taskmgmt/exe/SwimlaneInstance.hbm.xml</value>
+			    <value>org/jbpm/logging/log/ProcessLog.hbm.xml</value>
+			    <value>org/jbpm/logging/log/MessageLog.hbm.xml</value>
+			    <value>org/jbpm/logging/log/CompositeLog.hbm.xml</value>
+			    <value>org/jbpm/graph/log/ActionLog.hbm.xml</value>
+			    <value>org/jbpm/graph/log/NodeLog.hbm.xml</value>
+			    <value>org/jbpm/graph/log/ProcessInstanceCreateLog.hbm.xml</value>
+			    <value>org/jbpm/graph/log/ProcessInstanceEndLog.hbm.xml</value>
+			    <value>org/jbpm/graph/log/ProcessStateLog.hbm.xml</value>
+			    <value>org/jbpm/graph/log/SignalLog.hbm.xml</value>
+			    <value>org/jbpm/graph/log/TokenCreateLog.hbm.xml</value>
+			    <value>org/jbpm/graph/log/TokenEndLog.hbm.xml</value>
+			    <value>org/jbpm/graph/log/TransitionLog.hbm.xml</value>
+			    <value>org/jbpm/context/log/VariableLog.hbm.xml</value>
+			    <value>org/jbpm/context/log/VariableCreateLog.hbm.xml</value>
+			    <value>org/jbpm/context/log/VariableDeleteLog.hbm.xml</value>
+			    <value>org/jbpm/context/log/VariableUpdateLog.hbm.xml</value>
+			    <value>org/jbpm/context/log/variableinstance/ByteArrayUpdateLog.hbm.xml</value>
+			    <value>org/jbpm/context/log/variableinstance/DateUpdateLog.hbm.xml</value>
+			    <value>org/jbpm/context/log/variableinstance/DoubleUpdateLog.hbm.xml</value>
+			    <value>org/jbpm/context/log/variableinstance/HibernateLongUpdateLog.hbm.xml</value>
+			    <value>org/jbpm/context/log/variableinstance/HibernateStringUpdateLog.hbm.xml</value>
+			    <value>org/jbpm/context/log/variableinstance/LongUpdateLog.hbm.xml</value>
+			    <value>org/jbpm/context/log/variableinstance/StringUpdateLog.hbm.xml</value>
+			    <value>org/jbpm/taskmgmt/log/TaskLog.hbm.xml</value>
+			    <value>org/jbpm/taskmgmt/log/TaskCreateLog.hbm.xml</value>
+			    <value>org/jbpm/taskmgmt/log/TaskAssignLog.hbm.xml</value>
+			    <value>org/jbpm/taskmgmt/log/TaskEndLog.hbm.xml</value>
+			    <value>org/jbpm/taskmgmt/log/SwimlaneLog.hbm.xml</value>
+			    <value>org/jbpm/taskmgmt/log/SwimlaneCreateLog.hbm.xml</value>
+			    <value>org/jbpm/taskmgmt/log/SwimlaneAssignLog.hbm.xml</value>
+		   </list>
+	     </property>
+	</bean>
+
+	<!--Hibernate TransactionManager-->
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+</beans>

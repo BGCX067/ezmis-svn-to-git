@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="com.jteap.yx.tz" namespace="/jteap/yx/tz" extends="jteap-actions">
+		<action name="KgfhzjlAction" class="yx_KgfhzjlAction"></action>
+		<action name="DqsbbhjlAction" class="yx_DqsbbhjlAction"></action>
+		<action name="JdxjlAction" class="yx_JdxjlAction"></action>
+		<action name="DqysjyjlAction" class="yx_DqysjyjlAction"></action>
+		<action name="SbjycljlAction" class="yx_SbjycljlAction"></action>
+		<action name="LqljlAction" class="yx_LqljlAction"></action>
+		<action name="BhdzxgjlAction" class="yx_BhdzxgjlAction"></action>
+		<action name="BhzddzjlAction" class="yx_BhzddzjlAction"></action>
+		<action name="Cydtj300Action" class="yx_Cydtj300Action"></action>
+		<action name="Cydtj600Action" class="yx_Cydtj600Action"></action>
+		<action name="DqgzpAction" class="yx_DqgzpAction"></action>
+		<action name="Blqdzjl300Action" class="yx_Blqdzjl300Action"></action>
+		<action name="Blqdzjl600Action" class="yx_Blqdzjl600Action"></action>
+	</package>
+</struts>

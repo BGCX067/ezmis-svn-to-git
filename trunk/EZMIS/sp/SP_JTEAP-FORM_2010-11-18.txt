@@ -1,0 +1,3 @@
+2010-11-18
+1.修改自定义表单保存excel文件格式,由于weblogic包冲突原因，导致office2007格式的文件无法解析，所以保存excel模板时，仅限于保存office2003格式的excel文件
+2.修改自定义表单，子表大数据量poptextarea，默认值存在的bug

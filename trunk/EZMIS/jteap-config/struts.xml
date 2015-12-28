@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+    <constant name="struts.enable.DynamicMethodInvocation" value="true" />
+    <constant name="struts.devMode" value="false" />
+    <constant name="struts.objectFactory" value="spring" />
+    <constant name="struts.action.extension" value="do" />
+    <constant name="struts.i18n.reload" value="true" />   
+    <constant name="struts.locale" value="zh_CN" />
+    <constant name="struts.i18n.encoding" value="UTF-8"/>
+    <constant name="struts.multipart.saveDir" value="c:/xx" />
+    <constant name="struts.multipart.maxSize" value="113286690" />
+    
+   
+    <!-- 定义全局的拦截器-->
+	<package name="jteap-actions" extends="struts-default">
+	    <interceptors>
+			<interceptor name="actionInvokeInfo" class="com.jteap.core.web.ActionInvokeInterceptor"/>
+			<interceptor name="IPLockInterceptor" class="com.jteap.system.iplock.support.IPLockInterceptor"/>
+			<interceptor-stack name="JTEAPDefaultStack">
+				<interceptor-ref name="checkbox">
+					<param name="uncheckedValue">0</param>
+				</interceptor-ref>
+				<interceptor-ref name="IPLockInterceptor"></interceptor-ref>
+				<interceptor-ref name="actionInvokeInfo"></interceptor-ref>
+				<interceptor-ref name="defaultStack"/><!-- 必须加，否则出错 -->
+				<!-- <interceptor-ref name="timer"/>  -->
+			</interceptor-stack>
+	    </interceptors>
+	    <default-interceptor-ref name="JTEAPDefaultStack"/><!-- 这句是设置所有Action自动调用的拦截器堆栈 -->
+	</package>
+	
+<!-- 系统 -->
+	<include file="com/jteap/system/dict/struts-system-dict.xml"/>
+	<include file="com/jteap/system/iplock/struts-system-iplock.xml"/>
+	<include file="com/jteap/system/log/struts-system-log.xml"/>
+	<include file="com/jteap/system/login/struts-system-login.xml"/>
+	<include file="com/jteap/system/person/struts-system-person.xml"/>
+	<include file="com/jteap/system/resource/struts-system-res.xml"/>
+	<include file="com/jteap/system/role/struts-system-role.xml"/>
+	<include file="com/jteap/system/jdbc/struts-system-jdbc.xml"/>
+	<include file="com/jteap/system/web/struts-system.xml"/>
+	<include file="com/jteap/system/dataperm/struts-system-dataperm.xml"/>
+	<include file="com/jteap/system/doclib/struts-system-doclib.xml"/>
+	
+	<include file="com/jteap/component/livegrid/struts-component-livegrid.xml"/>
+	<include file="com/jteap/wk/lv/struts-wk-lv.xml"/>
+	
+<!-- EZMIS首页 -->	
+	<include file="com/jteap/index/struts-index.xml"/>
+	
+<!-- 自定义表单 -->
+	<include file="com/jteap/form/dbdef/struts-form-dbdef.xml"/>
+	<include file="com/jteap/form/cform/struts-form-cform.xml"/>
+	<include file="com/jteap/form/eform/struts-form-eform.xml"/>
+
+<!-- 流程定义 -->
+	<include file="com/jteap/wfengine/tasktodo/struts-wfengine-tasktodo.xml"></include>
+	<include file="com/jteap/wfengine/wfi/struts-wfengine-wfi.xml"></include>
+	<include file="com/jteap/wfengine/workflow/struts-wfengine-workflow.xml"></include>
+		
+<!-- 运行子系统 -->
+	<!-- 交接班 -->
+	<include file="com/jteap/yx/jjb/struts-yx-jjb.xml"/>	
+	<!-- 值班记录 -->
+	<include file="com/jteap/yx/zbjl/struts-yx-zbjl.xml"/>
+	<!-- 定期工作 -->
+	<include file="com/jteap/yx/dqgzgl/struts-yx-dqgzgl.xml"/>
+	<!-- 运行日志 -->
+	<include file="com/jteap/yx/runlog/struts-yx-runlog.xml"/>	
+	<!-- 发电指标运行与考核 -->
+	<include file="com/jteap/yx/fdzbfxykh/struts-yx-fdzbfxykh.xml"/>
+	<!-- 运行台账 -->
+	<include file="com/jteap/yx/tz/struts-yx-tz.xml"/>
+	
+<!-- 计划统计 -->
+	<include file="com/jteap/jhtj/jkbldy/struts-jhtj-tjinterface.xml"/>
+	<include file="com/jteap/jhtj/yyjkwh/struts-jhtj-tjdllio.xml"/>
+	<include file="com/jteap/jhtj/ljydy/struts-jhtj-ljydy.xml"/>
+	<include file="com/jteap/jhtj/sjydy/struts-jhtj-sjydy.xml"/>
+	<include file="com/jteap/jhtj/sjflsz/struts-jhtj-sjflsz.xml"/>
+	<include file="com/jteap/jhtj/sjxxxdy/struts-jhtj-sjxxxdy.xml"/>
+	<include file="com/jteap/jhtj/sjwh/struts-jhtj-sjwh.xml"/>
+	<include file="com/jteap/jhtj/bbzc/struts-jhtj-bbzc.xml"/>
+	<include file="com/jteap/jhtj/bbsjydy/struts-jhtj-bbsjydy.xml"/>
+	<include file="com/jteap/jhtj/bbsj/struts-jhtj-bbsj.xml"/>
+	<include file="com/jteap/jhtj/bbzz/struts-jhtj-bbzz.xml"/>
+	<include file="com/jteap/jhtj/sjcx/struts-jhtj-sjcx.xml"/>
+	<include file="com/jteap/jhtj/bbcx/struts-jhtj-bbcx.xml"/>
+	<include file="com/jteap/jhtj/zbqsfx/struts-jhtj-zbqsfx.xml"/>
+	<include file="com/jteap/jhtj/sjdbfx/struts-jhtj-sjdbfx.xml"/>
+	<include file="com/jteap/jhtj/sgzbfx/struts-jhtj-sgzbfx.xml"/>
+	<include file="com/jteap/jhtj/zyzb/struts-jhtj-zyzb.xml"/>
+	<include file="com/jteap/jhtj/sjqx/struts-jhtj-sjqx.xml"/>
+	<include file="com/jteap/jhtj/dnb/struts-jhtj-dnb.xml"/>
+	
+<!-- 班组 -->
+	<include file="com/jteap/bz/bzinfo/struts-bz-sy.xml"/>
+	<include file="com/jteap/bz/bztj/struts-bz-tj.xml"/>
+<!-- 设备管理子系统 -->
+	<!-- 设备台帐管理 -->
+	<include file="com/jteap/sb/sbtzgl/struts-sb-sbtzgl.xml"/>
+	
+	<!-- 设备评级管理 -->
+	<include file="com/jteap/sb/sbpjgl/struts-sb-sbpjgl.xml"/>
+	
+	<!-- 设备停复役管理 -->
+	<include file="com/jteap/sb/sbtfygl/struts-sb-sbtfygl.xml"/>
+	
+	<!-- 设备异动管理 -->
+	<include file="com/jteap/sb/sbydgl/struts-sb-sbydgl.xml"/>
+	
+<!-- 检修管理系统 -->
+	<!-- 缺陷申请 -->
+	<include file="com/jteap/jx/qxgl/struts-jx-qxgl.xml"></include>
+	<!-- 大小修管理 -->
+	<include file="com/jteap/jx/dxxgl/struts-jx-dxxgl.xml"></include>
+	<!-- 备品备件管理 -->
+	<include file="com/jteap/jx/bpbjgl/struts-jx-bpbjgl.xml"></include>
+	
+<!-- 单点登录 -->
+	<include file="com/jteap/sso/struts-sso.xml"></include>
+	
+<!-- 党工团 -->
+	<include file="com/jteap/dgt/dzz/struts-dgt-dzz.xml"/>
+	<include file="com/jteap/dgt/dyxxk/struts-dgt-dyxxk.xml"/>
+	<include file="com/jteap/dgt/tyxx/struts-dgt-tyxx.xml"/>
+	<include file="com/jteap/dgt/fjdgztj/struts-dgt-fjdgztj.xml"/>
+
+<!-- 两票系统 -->
+	<include file="com/jteap/lp/pkgl/struts-lp-pkgl.xml"/>
+	<include file="com/jteap/lp/gzpgl/struts-lp-gzpgl.xml"/>
+	<include file="com/jteap/lp/lspgl/struts-lp-lspgl.xml"/>
+	<include file="com/jteap/lp/czpgl/struts-lp-czpgl.xml"/>
+	<include file="com/jteap/lp/lpxxgl/struts-lp-lpxxgl.xml"/>
+	<include file="com/jteap/lp/lpsh/struts-lp-lpsh.xml"/>
+	<include file="com/jteap/lp/lpzhcx/struts-lp-lpzhcx.xml"/>
+	<include file="com/jteap/lp/lptjgl/struts-lp-lptjgl.xml"/>
+
+<!-- MIS系统问题反馈 -->
+	<include file="com/jteap/question/struts-question.xml" />
+
+<!-- 工程合同 -->	
+	<!-- 合同审批 -->
+	<include file="com/jteap/gcht/htsp/struts-gcht-htsp.xml" />
+	<include file="com/jteap/gcht/htzx/struts-gcht-htzx.xml" />
+	<include file="com/jteap/gcht/gcxmgl/struts-gcht-gcxmgl.xml" />
+	<!-- 招投标管理 -->
+	<include file="com/jteap/gcht/ztbgl/struts-gcht-ztbgl.xml" />
+	<!-- 供应商管理 -->
+	<include file="com/jteap/gcht/gysgl/struts-gcht-gysgl.xml" />
+	<!-- 综合查询 -->
+	<include file="com/jteap/gcht/zhcx/struts-gcht-zhcx.xml" />
+	
+<!-- 物资系统 -->
+	<include file="com/jteap/wz/struts-wz.xml"/>
+	
+	
+	<include file="com/jteap/yx/aqyxfx/struts-yx-zhibiao.xml"/>
+</struts>

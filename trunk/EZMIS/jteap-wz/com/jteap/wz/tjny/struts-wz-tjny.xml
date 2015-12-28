@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+
+	<!-- 统计年月-->
+	<package name="jteap.wz.tjny" namespace="/jteap/wz/tjny"
+		extends="jteap-actions">
+
+		<action name="TjnyTreeAction" class="tjnyTreeAction">
+		</action>
+	</package>
+
+
+
+</struts>

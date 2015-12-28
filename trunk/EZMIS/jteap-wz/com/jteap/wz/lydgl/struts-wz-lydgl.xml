@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="com.jteap.wz.lydgl" namespace="/jteap/wz/lydgl" extends="jteap-actions">
+		<action name="LydglAction" class="wz_LydglAction"></action>		
+		<action name="LydmxAction" class="wz_LydmxAction"></action>
+	</package>
+</struts>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="com.jteap.yx.dqgzgl" namespace="/jteap/yx/dqgzgl" extends="jteap-actions">
+		<action name="DqgzSetAction" class="yx_DqgzSetAction"></action>
+		<action name="DqgzCatalogAction" class="yx_DqgzCatalogAction"></action>		
+		<action name="DqgzHanleAction" class="yx_DqgzHanleAction"></action>
+		<action name="DqgzStatisAction" class="yx_DqgzStatisAction"></action>
+	</package>
+</struts>

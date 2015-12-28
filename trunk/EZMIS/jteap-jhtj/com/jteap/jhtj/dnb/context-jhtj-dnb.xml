@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd"
+	default-autowire="byName" default-lazy-init="false">
+
+	<!-- 组织 -->
+	<bean id="dnbManager" class="com.jteap.jhtj.dnb.manager.DnbManager"/>
+	<bean id="dnbBbManager" class="com.jteap.jhtj.dnb.manager.DnbBbManager"/>
+	<bean id="dnbChangeManager" class="com.jteap.jhtj.dnb.manager.DnbChangeManager"/>
+	<bean id="system_dnbAction" class="com.jteap.jhtj.dnb.web.DnbAction" scope="prototype"/>
+	<bean id="system_dnbBbAction" class="com.jteap.jhtj.dnb.web.DnbBbAction" scope="prototype"/>
+	<bean id="system_dnbChangeAction" class="com.jteap.jhtj.dnb.web.DnbChangeAction" scope="prototype"/>
+</beans>

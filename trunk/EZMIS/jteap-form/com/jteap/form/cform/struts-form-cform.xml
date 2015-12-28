@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	
+	<!-- 自定义表单动作-->
+	<package name="jteap.form.cform" namespace="/jteap/form/cform" extends="jteap-actions">
+		<action name="CFormCatalogAction" class="form_CFormCatalogAction"></action>		
+		<action name="CFormAction" class="form_CFormAction">
+			<result name="showExcelFormUpdate">/jteap/form/cform/excelForm.jsp</result>
+		</action>
+	</package>
+	
+
+</struts>

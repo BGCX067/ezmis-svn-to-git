@@ -1,0 +1,5 @@
+2010-10-22
+1.从表控件，添加afteredit和beforeedit事件
+2.从表控件，列模型中如果不定义editor，则默认为{xtype:textfield}，修改为如果不定义editor，就不可编辑该列
+3.下拉树控件完善
+4.修改导出excel，兼容weblogic

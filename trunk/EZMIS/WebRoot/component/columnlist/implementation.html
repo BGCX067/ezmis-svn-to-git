@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<title>ColumnList Usage (WebFX)</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<script type="text/javascript" src="local/webfxlayout.js"></script>
+		<link type="text/css" rel="stylesheet" href="columnlist.css" />
+		<script src="columnlist.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<!-- WebFX Layout Include -->
+		<script type="text/javascript">
+			//<![CDATA[
+			var articleMenu= new WebFXMenu;
+			articleMenu.left  = 384;
+			articleMenu.top   = 86;
+			articleMenu.width = 140;
+			articleMenu.add(new WebFXMenuItem("Introduction", "columnlist.html"));
+			articleMenu.add(new WebFXMenuItem("Implementation", "implementation.html"));
+			articleMenu.add(new WebFXMenuItem("Usage", "usage.html"));
+			articleMenu.add(new WebFXMenuItem("API", "api.html"));
+			articleMenu.add(new WebFXMenuItem("Demo", "demo.html"));
+			articleMenu.add(new WebFXMenuSeparator);
+			articleMenu.add(new WebFXMenuItem("Download", "http://webfx.eae.net/download/collist104.zip"));
+			webfxMenuBar.add(new WebFXMenuButton("Article Menu", null, null, articleMenu));
+
+			webfxLayout.writeTitle("ColumnList Implementation");
+			webfxLayout.writeMenu();
+			webfxLayout.writeDesignedByEdger();
+			//]]>
+		</script>
+		<!-- End WebFX Layout Includes -->
+		<div class="webfx-main-body">
+			<h2>Implementation</h2>
+			<p>
+				A ColumnList widget is basically a table where the header is fixed and the body
+				scrollable. In HTML/XHTML terms that means a table divided into a thead and a tbody section.
+				Where the <code>overflow</code> property of the tbody is set to <code>auto</code> (or <code>scroll</code>).
+			</p>
+			<p>
+				The markup for such a table would look something like this, notice the style argument in red.
+				The <code>overflow</code> property is pretty meaningless if the height is set to <code>auto</code>
+				or if the height specified is greather than the height of the content. Thus to demonstrate the
+				behavior it's set to slightly less than required for all rows to be visible.
+			</p>
+			<p>
+				<pre>&lt;table cellspacing="0" cellpadding="0"&gt;
+	&lt;thead&gt;
+		&lt;tr&gt;&lt;th&gt;Flavor&lt;/th&gt;&lt;th&gt;Color&lt;/th&gt;&lt;th&gt;Texture&lt;/th&gt;&lt;th&gt;Price&lt;/th&gt;&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody style="<span style="color: red;">height: 75px; overflow: auto</span>;"&gt;
+		&lt;tr&gt;&lt;td&gt;Vanilla&lt;/td&gt;&lt;td&gt;White&lt;/td&gt;&lt;td&gt;Smooth&lt;/td&gt;&lt;td&gt;$ 10&lt;/td&gt;&lt;/tr&gt;
+		&lt;tr&gt;&lt;td&gt;Pear&lt;/td&gt;&lt;td&gt;Green&lt;/td&gt;&lt;td&gt;Smooth&lt;/td&gt;&lt;td&gt;$ 8&lt;/td&gt;&lt;/tr&gt;
+		&lt;tr&gt;&lt;td&gt;Strawberry&lt;/td&gt;&lt;td&gt;Pink&lt;/td&gt;&lt;td&gt;Smooth&lt;/td&gt;&lt;td&gt;$ 8&lt;/td&gt;&lt;/tr&gt;
+		&lt;tr&gt;&lt;td&gt;Chocolate&lt;/td&gt;&lt;td&gt;Brown&lt;/td&gt;&lt;td&gt;Chunky&lt;/td&gt;&lt;td&gt;$ 8&lt;/td&gt;&lt;/tr&gt;
+		&lt;tr&gt;&lt;td&gt;Pistachio&lt;/td&gt;&lt;td&gt;Light green&lt;/td&gt;&lt;td&gt;Chunky&lt;/td&gt;&lt;td&gt;$ 9&lt;/td&gt;&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;</pre>
+			</p>
+			<h2>The Problem</h2>
+			<p>
+				The screenshots below shows what the example code, together with a few css rules, looks like in Mozilla (Firefox 1.0 PR)
+				and Internet Explorer (6.0).
+			<p>
+			<p style="font-weight: bold;">Result in  Mozilla</p>
+			<p>
+				<img src="article-images/moz.png" style="width: 304px; height: 99px;" alt="Example as rendered in Mozilla." />
+			</p>
+			<p style="font-weight: bold;">Result in Internet Explorer</p>
+			<p>
+				<img src="article-images/ie.png" style="width: 304px; height: 413px;" alt="Example as rendered in Internet Explorer" />
+			</p>
+			<p>
+				In Mozilla the result is pretty much what would be expected. The horizontal scrollbar is clearly not desirable,
+				but that's easy enough to resolve by setting the <code>overflow</code> property to the mozilla specifiec
+				<code>-moz-scrollbars-vertical</code> value, or by setting the <code>overflow-x</code> property to <code>hidden</code>
+				(<code>overflow-x</code>/<code>y</code> will be supported in Mozilla Firefox 1.1).
+			</p>
+			<p>
+				In Internet Explorer on the other hand, the result is nothing like what one would expect. The <code>overflow</code>
+				property on the tbody is completely ignored, and the height applies to all rows rather than the entire body section.
+			</p>
+			<h3>The Solution</h3>
+			<p>
+				Since Internet Explorer is still, by far, the most common browser this approach,
+				no matter how conveniently, is not going to cut it. Instead we'll have to use two
+				tables. One for the headers and the other for the body. Then by placing the table
+				containing the body in a scrollable container (a block element, such as a
+				<code>div</code>, with a fixed height and the <code>overflow</code> property set
+				to <code>auto</code>) the body can be scrolled vertically without affecting the header.
+			</p>
+			<p>
+				Of course, this approach results in a whole set of new issues;
+				columns got different widths in the header and body and scrolling the body
+				horizontally does not affect the header. Those issues, luckily, are quite
+				easy to deal with. Each header column is simply resized according to the
+				equivalent body column and the header's <code>scrollLeft</code> property is
+				synchronized to that of the body.
+			</p>
+			<h3>Mozilla quirks</h3>
+			<p>
+				After overcoming all the Internet Explorer quirks it's time to deal with the
+				Mozilla ones.
+			<p>
+				Since the horizontal scroll of the header is synchronized with that of the
+				body the overflow property is set to hidden, as we don't want a horizontal
+				scrollbar for header.
+			</p>
+			<p>
+				However, mozilla does not allow the <code>scroll*</code> properties on elements
+				with the <code>overflow</code> property set to <code>hidden</code> thus we'll
+				have to set it to <code>-moz-scrollbars-none</code> which is basically the same
+				as <code>hidden</code> in IE, the container has overflow type <code>scroll</code>
+				but no scrollbars are shown.
+			</p>
+			<p>
+				Recent versions of Mozilla handles <code>overflow: hidden</code> the same way Internet
+				Explorer does, rendering this work around obsolete. However to remain compatible with
+				older Mozilla versions this code is still used.
+			</p>
+			<p>
+				<a href="columnlist.html">Introduction</a><br />
+				Implementation<br />
+				<a href="usage.html">Usage</a><br />
+				<a href="api.html">API</a><br />
+				<a href="demo.html">Demo</a><br />
+				<a href="http://webfx.eae.net/download/collist104.zip">Download</a>
+			</p>
+			<p class="author">Author: Emil A Eklund</p>
+			<!-- end webfx-main-body -->
+		</div>
+	</body>
+</html>

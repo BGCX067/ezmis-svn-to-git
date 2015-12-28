@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="com.jteap.yx.runlog" namespace="/jteap/yx/runlog" extends="jteap-actions">
+		<action name="LogsCatalogAction" class="yx_LogsCatalogAction"></action>
+		<action name="LogsColumnInfoAction" class="yx_LogsColumnInfoAction"></action>		
+		<action name="LogsTableInfoAction" class="yx_LogsTableInfoAction"></action>
+		<action name="PhysicLogsAction" class="yx_PhysicLogsAction"></action>
+		<action name="RltjAction" class="yx_RltjAction"></action>
+	</package>
+</struts>

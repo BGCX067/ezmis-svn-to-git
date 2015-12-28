@@ -1,0 +1,12 @@
+2010-11-17
+1.数据定义增加表分类功能
+2.自定义表单中添加签名控件
+3.自定义表单修改多处bug
+4.子表控件支持poptextarea控件编辑器
+配置方式：
+{header:'FIELD10',dataIndex:'FIELD10',width:300,hidden:'false',sortable:true,editor:{xtype:'poptextarea'},renderer:function renderName(value, metadata, record){ 
+				metadata.attr ='style="white-space:normal;"'; 
+				return value; 
+			}
+}
+

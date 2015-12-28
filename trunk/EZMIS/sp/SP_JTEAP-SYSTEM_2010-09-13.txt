@@ -1,0 +1,2 @@
+﻿2010-09-13
+1.更新StringUtil类，增加clobToStringByDB（）方法。方法主要作用，根据不同的连接池将clob转成String类型

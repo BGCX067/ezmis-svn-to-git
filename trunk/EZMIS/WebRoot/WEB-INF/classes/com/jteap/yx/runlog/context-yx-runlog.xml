@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd"
+	default-autowire="byName" default-lazy-init="true">
+	
+	<bean id="logsCatalogManager" class="com.jteap.yx.runlog.manager.LogsCatalogManager" />
+	<bean id="logsColumnInfoManager" class="com.jteap.yx.runlog.manager.LogsColumnInfoManager" />
+	<bean id="logsTableInfoManager" class="com.jteap.yx.runlog.manager.LogsTableInfoManager" />
+	<bean id="physicLogsManager" class="com.jteap.yx.runlog.manager.PhysicLogsManager" />
+	
+	<bean id="yx_LogsCatalogAction" class="com.jteap.yx.runlog.web.LogsCatalogAction" scope="prototype"></bean>
+	<bean id="yx_LogsColumnInfoAction" class="com.jteap.yx.runlog.web.LogsColumnInfoAction" scope="prototype"></bean>
+	<bean id="yx_LogsTableInfoAction" class="com.jteap.yx.runlog.web.LogsTableInfoAction" scope="prototype"></bean>
+	<bean id="yx_PhysicLogsAction" class="com.jteap.yx.runlog.web.PhysicLogsAction"></bean>
+	<bean id="yx_RltjAction" class="com.jteap.yx.runlog.web.RltjAction"></bean>
+</beans>

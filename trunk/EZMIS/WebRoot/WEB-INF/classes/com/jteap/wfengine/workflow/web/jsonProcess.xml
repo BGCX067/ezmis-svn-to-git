@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxGraphModel>
+	<root>
+		<Workflow 流程名称="MyWorkflow" 流程说明="" 明细链接="" 流程变量=""
+			flowName="我的流程" flowType="新建分类" formType="" formTypeId=""
+			relFormId="8a8a8a89229abcd201229ac2b85b0002" relFormName="树形控件使用案例1"
+			processPage="SHUXINGKONGJIAN"
+			flowVariable="[{'name_cn':'C','storemode':'append','kind':'flowVariable','name':'c','type':'String','value':'value'},{'name_cn':'B','storemode':'append','kind':'flowVariable','name':'b','type':'Integer','value':'0'},{'name_cn':'A','storemode':'append','kind':'flowVariable','name':'a','type':'Integer','value':'0'}]"
+			flowId="8a8a8a8122c029960122c0299ee80002"
+			workflow="{'name':'我的流程','formtype':null,'flowCatalog':{'id':'40288ac4229acc0c01229b3e8b620002'},'cform':{'id':'8a8a8a89229abcd201229ac2b85b0002'},'process_url':'SHUXINGKONGJIAN','flowVariables':[{'name_cn':'C','storemode':'append','kind':'flowVariable','name':'c','type':'String','value':'value'},{'name_cn':'B','storemode':'append','kind':'flowVariable','name':'b','type':'Integer','value':'0'},{'name_cn':'A','storemode':'append','kind':'flowVariable','name':'a','type':'Integer','value':'0'}],'flowOperations':[{'name':'添加','mark':'btnAdd'},{'name':'修改','mark':'btnModify'}]}"
+			flowTypeId="40288ac4229acc0c01229b3e8b620002" id="0">
+			<mxCell />
+		</Workflow>
+		<Layer label="Default Layer" id="1">
+			<mxCell parent="0" />
+		</Layer>
+		<start-state label="流程开始" name="流程开始" 节点说明="" 操作链接="" id="2">
+			<mxCell style="symbol;image=images/symbols/event.png"
+				vertex="1" parent="1">
+				<mxGeometry x="310" y="10" width="32" height="32"
+					as="geometry" />
+			</mxCell>
+		</start-state>
+		<end-state label="流程结束" name="流程结束" 节点说明="" 操作链接="" id="3">
+			<mxCell style="symbol;image=images/symbols/event_end.png"
+				vertex="1" parent="1">
+				<mxGeometry x="320" y="460" width="32" height="32"
+					as="geometry" />
+			</mxCell>
+		</end-state>
+		<task label="起草项目" 任务名称="环节" 任务说明="" 操作链接="" 任务参与者="" 节点变量=""
+			name="起草项目" description="起草项目" process_url=""
+			taskVariable="[{'name':'a','name_cn':'A','value':'50','kind':'flowVariable','isNeed':true,'flag':false},{'name':'b','name_cn':'B','value':'100','kind':'flowVariable','isNeed':true,'flag':false},{'name':'','name_cn':'','value':'','kind':'','isNeed':'','flag':undefined}]"
+			taskOperate="[{'name':'修改','mark':'btnModify'},{'name':'','mark':''}]"
+			event="[{'eventName':'beforeTask','proceClass':'','proceScript':''},{'eventName':'enterTask','proceClass':'','proceScript':''},{'eventName':'leaveTask','proceClass':'','proceScript':''}]"
+			processMode="1" processKind="single" isChooseActor="1"
+			onlyOnePerson="0"
+			taskPower="[{'persons':null,'groups':null,'roles':'40285c8121a0d60c0121a0d813e30005','is_self_dept':false,'is_pcreator':false,'is_up_dept':true,'up_node_person':true,'name':'系统专业人 '}]"
+			task="{'name':'起草项目','description':'起草项目','process_url':null,'flowConfig':{'name':'我的流程'},'nodeVariables':[{'variable':{'name':'a','name_cn':'A','kind':'flowVariable'},'isNeed':true,'value':'50'},{'variable':{'name':'b','name_cn':'B','kind':'flowVariable'},'isNeed':true,'value':'100'}],'flowOperations':[{'name':'修改','mark':'btnModify'},{'name':'添加','mark':''}],'nodePermission':{'name':'系统专业人 |','processMode':'1','processKind':'multi','isChooseActor':true,'isOneProcessActor':false,'expression':&quot;[{'persons':null,'groups':null,'roles':'40285c8121a0d60c0121a0d813e30005','is_self_dept':false,'is_pcreator':false,'is_up_dept':true,'up_node_person':true,'name':'系统专业人 '}]&quot;}}"
+			id="4">
+			<mxCell vertex="1" parent="1">
+				<mxGeometry x="300" y="100" width="72" height="32"
+					as="geometry" />
+			</mxCell>
+		</task>
+		<task label="部门审批" 任务名称="环节" 任务说明="" 操作链接="" 任务参与者="" 节点变量=""
+			name="部门审批" description="部门审批" process_url=""
+			taskVariable="[{'name':'a','name_cn':'A','value':'100','kind':'flowVariable','isNeed':true,'flag':false},{'name':'','name_cn':'','value':'','kind':'','isNeed':'','flag':undefined}]"
+			taskOperate="[{'name':'添加','mark':'btnAdd'},{'name':'','mark':''}]"
+			event="[{'eventName':'beforeTask','proceClass':'','proceScript':''},{'eventName':'enterTask','proceClass':'','proceScript':''},{'eventName':'leaveTask','proceClass':'','proceScript':''}]"
+			processMode="1" processKind="single" isChooseActor="1"
+			isOneProcessActor="0"
+			taskPower="[{'persons':null,'groups':'8a8a8a81227d149c01227d87d93c0005','roles':'40285c8121a0d60c0121a0d7e8360004','is_self_dept':true,'is_pcreator':false,'is_up_dept':false,'up_node_person':false,'name':'保护专业人 物资采购组'}]"
+			task="{'name':'部门审批','description':'部门审批','process_url':null,'flowConfig':{'name':'我的流程'},'nodeVariables':[{'variable':{'name':'a','name_cn':'A','kind':'flowVariable'},'isNeed':true,'value':'100'}],'flowOperations':[{'name':'添加','mark':'btnAdd'},{'name':'修改','mark':''}],'nodePermission':{'name':'保护专业人 物资采购组|','processMode':'1','processKind':'multi','isChooseActor':true,'isOneProcessActor':false,'expression':&quot;[{'persons':null,'groups':'8a8a8a81227d149c01227d87d93c0005','roles':'40285c8121a0d60c0121a0d7e8360004','is_self_dept':true,'is_pcreator':false,'is_up_dept':false,'up_node_person':false,'name':'保护专业人 物资采购组'}]&quot;}}"
+			id="5">
+			<mxCell vertex="1" parent="1">
+				<mxGeometry x="130" y="170" width="72" height="32"
+					as="geometry" />
+			</mxCell>
+		</task>
+		<task label="副总审批" 任务名称="环节" 任务说明="" 操作链接="" 任务参与者="" 节点变量=""
+			name="副总审批" description="副总审批" process_url=""
+			taskVariable="[{'name':'b','name_cn':'B','value':'100','kind':'flowVariable','isNeed':true,'flag':false},{'name':'','name_cn':'','value':'','kind':'','isNeed':'','flag':undefined}]"
+			taskOperate="[{'name':'修改','mark':'btnModify'},{'name':'','mark':''}]"
+			event="[{'eventName':'beforeTask','proceClass':'','proceScript':''},{'eventName':'enterTask','proceClass':'','proceScript':''},{'eventName':'leaveTask','proceClass':'','proceScript':''}]"
+			processMode="1" processKind="single" isChooseActor="1"
+			isOneProcessActor="0"
+			taskPower="[{'persons':null,'groups':'8a8a8a81227d149c01227d87d93c0005','roles':'40285c8121a0d60c0121a0d813e30005','is_self_dept':false,'is_pcreator':false,'is_up_dept':false,'up_node_person':true,'name':'系统专业人 物资采购组'}]"
+			task="{'name':'副总审批','description':'副总审批','process_url':null,'flowConfig':{'name':'我的流程'},'nodeVariables':[{'variable':{'name':'b','name_cn':'B','kind':'flowVariable'},'isNeed':true,'value':'100'}],'flowOperations':[{'name':'修改','mark':'btnModify'},{'name':'添加','mark':''}],'nodePermission':{'name':'系统专业人 物资采购组|','processMode':'1','processKind':'multi','isChooseActor':true,'isOneProcessActor':false,'expression':&quot;[{'persons':null,'groups':'8a8a8a81227d149c01227d87d93c0005','roles':'40285c8121a0d60c0121a0d813e30005','is_self_dept':false,'is_pcreator':false,'is_up_dept':false,'up_node_person':true,'name':'系统专业人 物资采购组'}]&quot;}}"
+			id="6">
+			<mxCell vertex="1" parent="1">
+				<mxGeometry x="460" y="170" width="72" height="32"
+					as="geometry" />
+			</mxCell>
+		</task>
+		<task label="执行" 任务名称="环节" 任务说明="" 操作链接="" 任务参与者="" 节点变量=""
+			name="执行" description="执行" process_url=""
+			taskVariable="[{'name':'c','name_cn':'C','value':'value','kind':'flowVariable','isNeed':true,'flag':false},{'name':'','name_cn':'','value':'','kind':'','isNeed':'','flag':undefined}]"
+			taskOperate="[{'name':'添加','mark':'btnAdd'},{'name':'','mark':''}]"
+			event="[{'eventName':'beforeTask','proceClass':'','proceScript':''},{'eventName':'enterTask','proceClass':'','proceScript':''},{'eventName':'leaveTask','proceClass':'','proceScript':''}]"
+			processMode="" processKind="single" isChooseActor="1"
+			isOneProcessActor="0"
+			taskPower="[{'persons':null,'groups':'8a8a8a81227d149c01227d87d93c0005','roles':'40285c8121a0d60c0121a0d813e30005','is_self_dept':false,'is_pcreator':false,'is_up_dept':false,'up_node_person':false,'name':'系统专业人 物资采购组'}]"
+			task="{'name':'执行','description':'执行','process_url':null,'flowConfig':{'name':'我的流程'},'nodeVariables':[{'variable':{'name':'c','name_cn':'C','kind':'flowVariable'},'isNeed':true,'value':'value'}],'flowOperations':[{'name':'添加','mark':'btnAdd'},{'name':'修改','mark':''}],'nodePermission':{'name':'系统专业人 物资采购组|','processMode':'1','processKind':'multi','isChooseActor':true,'isOneProcessActor':false,'expression':&quot;[{'persons':null,'groups':'8a8a8a81227d149c01227d87d93c0005','roles':'40285c8121a0d60c0121a0d813e30005','is_self_dept':false,'is_pcreator':false,'is_up_dept':false,'up_node_person':false,'name':'系统专业人 物资采购组'}]&quot;}}"
+			id="7">
+			<mxCell vertex="1" parent="1">
+				<mxGeometry x="300" y="210" width="72" height="32"
+					as="geometry" />
+			</mxCell>
+		</task>
+		<task label="系统会签" 任务名称="环节" 任务说明="" 操作链接="" 任务参与者="" 节点变量=""
+			name="系统会签" description="系统会签" process_url=""
+			taskVariable="[{'name':'a','name_cn':'A','value':'5000','kind':'flowVariable','isNeed':true,'flag':false},{'name':'','name_cn':'','value':'','kind':'','isNeed':'','flag':undefined}]"
+			taskOperate="[{'name':'修改','mark':'btnModify'},{'name':'','mark':''}]"
+			event="[{'eventName':'beforeTask','proceClass':'','proceScript':''},{'eventName':'enterTask','proceClass':'','proceScript':''},{'eventName':'leaveTask','proceClass':'','proceScript':''}]"
+			processMode="0" processKind="multi" isChooseActor="1"
+			isOneProcessActor="0"
+			taskPower="[{'persons':null,'groups':'40288ac4223e102c01223e68e0460003','roles':'40285c8121a0d60c0121a0d840760006,40288ac4223e102c01223e6917150005','is_self_dept':false,'is_pcreator':false,'is_up_dept':true,'up_node_person':false,'name':'运方专业人 新建角色 新建组织'},{'persons':null,'groups':'40288ac4223e102c01223e68e0460003','roles':'40285c8121a0d60c0121a0d7e8360004','is_self_dept':false,'is_pcreator':false,'is_up_dept':false,'up_node_person':false,'name':'保护专业人 新建组织'}]"
+			task="{'name':'系统会签','description':'系统会签','process_url':null,'flowConfig':{'name':'我的流程'},'nodeVariables':[{'variable':{'name':'a','name_cn':'A','kind':'flowVariable'},'isNeed':true,'value':'5000'}],'flowOperations':[{'name':'修改','mark':'btnModify'},{'name':'添加','mark':''}],'nodePermission':{'name':'运方专业人 新建角色 新建组织|保护专业人 新建组织|','processMode':'0','processKind':'multi','isChooseActor':true,'isOneProcessActor':false,'expression':&quot;[{'persons':null,'groups':'40288ac4223e102c01223e68e0460003','roles':'40285c8121a0d60c0121a0d840760006,40288ac4223e102c01223e6917150005','is_self_dept':false,'is_pcreator':false,'is_up_dept':true,'up_node_person':false,'name':'运方专业人 新建角色 新建组织'},{'persons':null,'groups':'40288ac4223e102c01223e68e0460003','roles':'40285c8121a0d60c0121a0d7e8360004','is_self_dept':false,'is_pcreator':false,'is_up_dept':false,'up_node_person':false,'name':'保护专业人 新建组织'}]&quot;}}"
+			id="8">
+			<mxCell vertex="1" parent="1">
+				<mxGeometry x="300" y="300" width="72" height="32"
+					as="geometry" />
+			</mxCell>
+		</task>
+		<task label="归档" 任务名称="环节" 任务说明="" 操作链接="" 任务参与者="" 节点变量=""
+			name="归档" description="归档" process_url=""
+			taskVariable="[{'name':'','name_cn':'','value':'','kind':'','isNeed':'','flag':false}]"
+			taskOperate="[{'name':'修改','mark':'btnModify'},{'name':'','mark':''}]"
+			event="[{'eventName':'beforeTask','proceClass':'','proceScript':''},{'eventName':'enterTask','proceClass':'','proceScript':''},{'eventName':'leaveTask','proceClass':'','proceScript':''}]"
+			processMode="1" processKind="single" isChooseActor="1"
+			isOneProcessActor="0"
+			taskPower="[{'persons':null,'groups':'8a8a8a81227d149c01227d87d93c0005','roles':'40285c8121a0d60c0121a0d799b40003,40288ab821a92f030121a9349b1f000e','is_self_dept':false,'is_pcreator':false,'is_up_dept':false,'up_node_person':false,'name':'复核人 新建角色 物资采购组'}]"
+			task="{'name':'归档','description':'归档','process_url':null,'flowConfig':{'name':'我的流程'},'nodeVariables':[],'flowOperations':[{'name':'修改','mark':'btnModify'},{'name':'','mark':''}],'nodePermission':{'name':'复核人 新建角色 物资采购组|','processMode':'1','processKind':'single','isChooseActor':true,'isOneProcessActor':false,'expression':&quot;[{'persons':null,'groups':'8a8a8a81227d149c01227d87d93c0005','roles':'40285c8121a0d60c0121a0d799b40003,40288ab821a92f030121a9349b1f000e','is_self_dept':false,'is_pcreator':false,'is_up_dept':false,'up_node_person':false,'name':'复核人 新建角色 物资采购组'}]&quot;}}"
+			id="9">
+			<mxCell vertex="1" parent="1">
+				<mxGeometry x="300" y="390" width="72" height="32"
+					as="geometry" />
+			</mxCell>
+		</task>
+		<Edge label="" description="" connName="流程开始" connDesc="流程开始"
+			aimTask="" chkIsUse="0" chkIsDefault="0" connCondition=""
+			router="{'name':'流程开始','description':'流程开始','is_default_route':false,'condition':null}"
+			id="10">
+			<mxCell style="straightEdge" edge="1" parent="1" source="2"
+				target="4">
+				<mxGeometry relative="1" as="geometry" />
+			</mxCell>
+		</Edge>
+		<Edge label="a=100" description="" connName="a等于100"
+			connDesc="a等于100" aimTask="" chkIsUse="1" chkIsDefault="1"
+			connCondition="a=100"
+			router="{'name':'a等于100','description':'a等于100','is_default_route':false,'condition':'a=100'}"
+			id="11">
+			<mxCell style="straightEdge" edge="1" parent="1" source="4"
+				target="5">
+				<mxGeometry relative="1" as="geometry" />
+			</mxCell>
+		</Edge>
+		<Edge label="b=100" description="" connName="b等于100"
+			connDesc="b等于100" aimTask="" chkIsUse="1" chkIsDefault="0"
+			connCondition="b=100"
+			router="{'name':'b等于100','description':'b等于100','is_default_route':false,'condition':'b=100'}"
+			id="12">
+			<mxCell style="straightEdge" edge="1" parent="1" source="4"
+				target="6">
+				<mxGeometry relative="1" as="geometry" />
+			</mxCell>
+		</Edge>
+		<Edge label="" description="" connName="从副总到执行"
+			connDesc="从副总到执行" aimTask="" chkIsUse="0" chkIsDefault="0"
+			connCondition=""
+			router="{'name':'从副总到执行','description':'从副总到执行','is_default_route':false,'condition':null}"
+			id="13">
+			<mxCell style="straightEdge" edge="1" parent="1" source="6"
+				target="7">
+				<mxGeometry relative="1" as="geometry" />
+			</mxCell>
+		</Edge>
+		<Edge label="" description="" connName="从部门到执行"
+			connDesc="从部门到执行" aimTask="" chkIsUse="0" chkIsDefault="0"
+			connCondition=""
+			router="{'name':'从部门到执行','description':'从部门到执行','is_default_route':false,'condition':null}"
+			id="14">
+			<mxCell style="straightEdge" edge="1" parent="1" source="5"
+				target="7">
+				<mxGeometry relative="1" as="geometry" />
+			</mxCell>
+		</Edge>
+		<Edge label="" description="" connName="" connDesc="" aimTask=""
+			chkIsUse="0" chkIsDefault="0" connCondition="" router="" id="15">
+			<mxCell style="straightEdge" edge="1" parent="1" source="7"
+				target="8">
+				<mxGeometry relative="1" as="geometry" />
+			</mxCell>
+		</Edge>
+		<Edge label="会签通过" description="" connName="会签通过"
+			connDesc="会签通过" aimTask="" chkIsUse="0" chkIsDefault="0"
+			connCondition=""
+			router="{'name':'会签通过','description':'会签通过','is_default_route':false,'condition':null}"
+			id="16">
+			<mxCell style="straightEdge" edge="1" parent="1" source="8"
+				target="9">
+				<mxGeometry relative="1" as="geometry" />
+			</mxCell>
+		</Edge>
+		<Edge label="" description="" connName="到结束" connDesc="到结束"
+			aimTask="" chkIsUse="0" chkIsDefault="0" connCondition=""
+			router="{'name':'到结束','description':'到结束','is_default_route':false,'condition':null}"
+			id="17">
+			<mxCell style="straightEdge" edge="1" parent="1" source="9"
+				target="3">
+				<mxGeometry relative="1" as="geometry" />
+			</mxCell>
+		</Edge>
+		<Edge label="拒绝会签" description="" connName="拒绝会签"
+			connDesc="拒绝会签" aimTask="" chkIsUse="1" chkIsDefault="0"
+			connCondition="a=4000"
+			router="{'name':'拒绝会签','description':'拒绝会签','is_default_route':false,'condition':'a=4000'}"
+			id="18">
+			<mxCell edge="1" parent="1" source="8" target="7">
+				<mxGeometry relative="1" as="geometry">
+					<Array as="points">
+						<mxPoint x="450" y="320" />
+					</Array>
+				</mxGeometry>
+			</mxCell>
+		</Edge>
+	</root>
+</mxGraphModel>

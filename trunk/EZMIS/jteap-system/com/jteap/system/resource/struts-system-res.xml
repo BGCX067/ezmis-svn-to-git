@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+	
+	<!-- 模块动作 -->
+	<package name="jteap.system.resource" namespace="/jteap/system/resource" extends="jteap-actions">
+		<action name="ModuleAction" class="system_ModuleAction"/>
+		<action name="ResourceAction" class="system_ResourceAction"/>
+		<action name="OperationAction" class="system_OperationAction"/>
+		<action name="ResourcesUsersAction" class="system_ResourcesUsersAction" />
+	</package>
+	
+	
+	
+	
+</struts>

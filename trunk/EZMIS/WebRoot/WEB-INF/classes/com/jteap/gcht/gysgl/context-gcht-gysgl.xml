@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd"
+	default-autowire="byName" default-lazy-init="true">
+	
+	<bean id="gysCatalogManager" class="com.jteap.gcht.gysgl.manager.GysCatalogManager" />
+	<bean id="gysglManager" class="com.jteap.gcht.gysgl.manager.GysglManager" />
+	
+	<bean id="gcht_GysCatalogAction" class="com.jteap.gcht.gysgl.web.GysCatalogAction" scope="prototype"></bean>
+	<bean id="gcht_GysglAction" class="com.jteap.gcht.gysgl.web.GysglAction" scope="prototype"></bean>
+	
+</beans>

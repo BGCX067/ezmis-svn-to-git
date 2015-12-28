@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+<!--物资-->
+	<include file="com/jteap/wz/ckgl/struts-wz-ckgl.xml"/>
+	<include file="com/jteap/wz/gysda/struts-wz-gysda.xml"/>
+	<include file="com/jteap/wz/cgjhgl/struts-wz-cgjhgl.xml"/>
+	<include file="com/jteap/wz/cgjhmx/struts-wz-cgjhmx.xml"/>
+	
+	<include file="com/jteap/wz/kwwh/struts-wz-kwwh.xml"/>
+	<include file="com/jteap/wz/ckgl/struts-wz-ckgl.xml"/>	
+	<include file="com/jteap/wz/wzlb/struts-wz-wzlb.xml"/>	
+	<include file="com/jteap/wz/wzda/struts-wz-wzda.xml"/>
+	<include file="com/jteap/wz/xqjhsq/struts-wz-xqjhsq.xml"/>	
+	<include file="com/jteap/wz/ckgl/struts-wz-ckgl.xml"/>
+	<include file="com/jteap/wz/gysda/struts-wz-gysda.xml"/>
+	<include file="com/jteap/wz/cgjhgl/struts-wz-cgjhgl.xml"/>
+	<include file="com/jteap/wz/cgjhmx/struts-wz-cgjhmx.xml"/>
+	<include file="com/jteap/wz/kwwh/struts-wz-kwwh.xml"/>
+	<include file="com/jteap/wz/ckgl/struts-wz-ckgl.xml"/>	
+	<include file="com/jteap/wz/wzlb/struts-wz-wzlb.xml"/>	
+	<include file="com/jteap/wz/wzda/struts-wz-wzda.xml"/>
+	<include file="com/jteap/wz/yhdgl/struts-wz-yhdgl.xml"/>
+	<include file="com/jteap/wz/yhdmx/struts-wz-yhdmx.xml"/>
+	<include file="com/jteap/wz/crkrzgl/struts-wz-crkrzgl.xml"/>
+	<include file="com/jteap/wz/lydgl/struts-wz-lydgl.xml"/>
+	<include file="com/jteap/wz/gqjtz/struts-wz-gqjtz.xml"/>
+	<include file="com/jteap/wz/lbptz/struts-wz-lbptz.xml"/>
+	<include file="com/jteap/wz/fjhsdgl/struts-wz-fjhsdgl.xml"/>
+	
+	<include file="com/jteap/wz/sfzjtj/struts-wz-sfzjtj.xml"/>
+	<include file="com/jteap/wz/sfjctj/struts-wz-sfjctj.xml"/>
+	<include file="com/jteap/wz/fytj/struts-wz-fytj.xml"/>
+	
+	<include file="com/jteap/wz/tjrw/struts-wz-tjrw.xml"/>
+	<include file="com/jteap/wz/tjny/struts-wz-tjny.xml"/>
+	
+	<include file="com/jteap/wz/wzlysq/struts-wz-wzlysq.xml"/>		
+
+	<include file="com/jteap/wz/xqjh/struts-wz-xqjh.xml" />
+	
+	<include file="com/jteap/wz/dbdgl/struts-wz-dbdgl.xml" />
+	
+	<include file="com/jteap/wz/tldgl/struts-wz-tldgl.xml" />
+	
+	<include file="com/jteap/wz/wzxsd/struts-wz-wzxsd.xml" />
+
+	<include file="com/jteap/wz/bfdgl/struts-wz-bfdgl.xml" />
+	
+	<include file="com/jteap/wz/kcpd/struts-wz-kcpd.xml" />
+
+	<include file="com/jteap/wz/fjcldgl/struts-wz-fjcldgl.xml" />
+	
+	<include file="com/jteap/wz/gclbgl/struts-wz-gclbgl.xml" />
+	
+	<include file="com/jteap/wz/gcxmgl/struts-wz-gcxmgl.xml" /> 
+
+	<include file="com/jteap/wz/slgl/struts-wz-slgl.xml" /> 
+
+	<include file="com/jteap/wz/tzmgl/struts-wz-tzmgl.xml" /> 
+
+	<include file="com/jteap/wz/gdzc/struts-wz-gdzc.xml" /> 
+
+</struts>

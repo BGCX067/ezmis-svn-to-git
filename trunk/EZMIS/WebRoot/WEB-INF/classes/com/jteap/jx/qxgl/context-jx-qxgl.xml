@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd"
+	default-autowire="byName" default-lazy-init="true">
+
+	<bean id="qxglManager" class="com.jteap.jx.qxgl.manager.QxglManager" />
+	<bean id="jx_QxglAction" class="com.jteap.jx.qxgl.web.QxglAction"  scope="prototype"></bean>
+	
+	<bean id="qxcxManager" class="com.jteap.jx.qxgl.manager.QxcxManager" />
+	<bean id="jx_QxcxAction" class="com.jteap.jx.qxgl.web.QxcxAction"  scope="prototype"></bean>
+	
+	<bean id="qxtjManager" class="com.jteap.jx.qxgl.manager.QxtjManager"></bean>
+	<bean id="jx_QxtjAction" class="com.jteap.jx.qxgl.web.QxtjActoin"  scope="prototype"></bean>
+	
+	<bean id="jx_GroupExtendForJxAction" class="com.jteap.jx.qxgl.web.GroupExtendForJxAction"  scope="prototype"></bean>
+	<bean id="jx_ExportExcelAction" class="com.jteap.jx.qxgl.web.ExportExcelAction"  scope="prototype"></bean>
+</beans>

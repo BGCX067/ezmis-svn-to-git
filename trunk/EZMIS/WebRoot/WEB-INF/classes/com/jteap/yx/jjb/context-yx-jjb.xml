@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd"
+	default-autowire="byName" default-lazy-init="true">
+	
+	<bean id="paiBanManager" class="com.jteap.yx.jjb.manager.PaiBanManager" />
+	<bean id="jiaoJieBanManager" class="com.jteap.yx.jjb.manager.JiaoJieBanManager" />	
+	<bean id="treeDataManager" class="com.jteap.yx.jjb.manager.TreeDataManager" />	
+	
+	<bean id="yx_PaiBanAction" class="com.jteap.yx.jjb.web.PaiBanAction" scope="prototype"></bean>
+	<bean id="yx_JiaoJieBanAction" class="com.jteap.yx.jjb.web.JiaoJieBanAction" scope="prototype"></bean>
+	<bean id="yx_TreeDataAction" class="com.jteap.yx.jjb.web.TreeDataAction" scope="prototype"></bean>
+</beans>

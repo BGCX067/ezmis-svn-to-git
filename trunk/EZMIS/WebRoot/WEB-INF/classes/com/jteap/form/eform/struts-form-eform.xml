@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	
+	<!-- 自定义表单动作-->
+	<package name="jteap.form.eform" namespace="/jteap/form/eform" extends="jteap-actions">
+		<action name="EFormCatalogAction" class="form_EFormCatalogAction"></action>		
+		<action name="EFormAction" class="form_EFormAction">
+			<result name="showExcelFormUpdate">/jteap/form/eform/excelForm.jsp</result>
+		</action>
+		<action name="EFormFjAction" class="form_EFormFjAction"></action>
+	</package>
+		<!-- 附件需要对外网-->
+	<package name="jteap.form.eform.fj" namespace="/" extends="jteap-actions">
+		<action name="EFormFjAction" class="form_EFormFjAction"></action>
+	</package>
+</struts>

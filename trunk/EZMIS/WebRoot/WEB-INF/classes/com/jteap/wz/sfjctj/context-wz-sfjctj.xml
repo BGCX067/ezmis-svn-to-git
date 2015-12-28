@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd"
+	default-autowire="byName" default-lazy-init="true">
+
+	<bean id="sfjcManager" class="com.jteap.wz.sfjctj.manager.SfjcManager" />
+	
+	<bean id="sfjcAction" class="com.jteap.wz.sfjctj.web.SfjcAction" scope="prototype"></bean>
+	
+	<bean id="velocityConfig" class="org.springframework.web.servlet.view.velocity.VelocityConfigurer">
+  		<property name="resourceLoaderPath" value="/jteap/wz/vm/"/>
+  		<property name="overrideLogging" value="false"/>
+	</bean>
+</beans>

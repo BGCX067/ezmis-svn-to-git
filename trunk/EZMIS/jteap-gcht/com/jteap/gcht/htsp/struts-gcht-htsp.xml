@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="jteap.gcht.htsp" namespace="/jteap/gcht/htsp" extends="jteap-actions">
+		<action name="HeTongCatalogAction" class="ht_HeTongCatalogAction"></action>
+		<action name="HeTongShenPiAction" class="ht_HeTongShenPiAction"></action>
+		<action name="HeTongFyxzAction" class="ht_HeTongFyxzAction"></action>
+	</package>
+</struts>

@@ -1,0 +1,6 @@
+﻿2011-01-07
+1.PersonManager中增加findPersonByGroupSns()以及findPersonByRoleSns方法。通过组织和角色的内码来查找属于该组织或者角色的人员。 
+2.角色管理模块中修改角色页面去掉“保存并关闭”按钮。
+3.部门维护和角色管理的查询中添加“清除条件”按钮
+4.Person中增加取得人员所在部门名字方法getMyGroupNames()
+5.LoginAction中登录时将人员所在部门放入session中，前台import.jsp获得session对应的部门名称

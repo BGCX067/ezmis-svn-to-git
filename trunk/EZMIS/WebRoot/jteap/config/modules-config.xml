@@ -1,0 +1,2063 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<modules>
+	<group name="平台模块">
+		<module name='部门维护' url='system/person/index.jsp' icon='resources/icon/user.gif'>
+			<operation name='btnAddGroup' 		text='添加组织' 	icon='icon/icon_1.gif' tip='可添加子组织，也可添加根组织' adminOp='true'/>
+			<operation name='btnModifyGroup'	text='修改组织' 	icon='icon/icon_3.gif' tip='选中需要修改的组织，再执行该操作' adminOp='true'/>
+			<operation name='btnDelGroup' 		text='删除组织' 	icon='icon/icon_2.gif' tip='选中需要删除的组织，再执行该操作' adminOp='true'/>
+			<operation name='btnCreateUser' 	text='新增用户' 	icon='icon/icon_6.gif' tip='' adminOp='true'/>
+			<operation name='btnModifyUser' 	text='修改用户' 	icon='icon/icon_5.gif' tip='选中需要修改的用户，再执行该操作' adminOp='true'/>
+			<operation name='btnDelUser' 		text='删除用户' 	icon='icon/icon_7.gif' tip='选中需要删除的用户，再执行该操作' adminOp='true'/>
+			<operation name='btnRemoveUser' 	text='移除用户' 	icon='icon/icon_7.gif' tip='将选中的用户从当前组织中移除' adminOp='true'/>
+			<operation name='btnSetupAdmin' 	text='设定管理员' icon='icon/icon_13.gif' tip='将选定的人员设置为当前组织的管理人员' adminOp='true'/>
+			<operation name='btnSetupRole' 		text='指定角色' 	icon='icon/icon_14.gif' tip='为选择的人员指定角色' adminOp='true'/>
+			<!--operation name='btnSetupRes' 		text='批量赋权' 	icon='icon/icon_15.gif' tip='为选定的人员授予权限' adminOp='true' showText="false"/ -->
+			<!--operation name='btnClearRes' 		text='清除权限' 	icon='icon/icon_16.gif' tip='清除选中人员所拥有的所有直接授予的权限' adminOp='true' showText="false"/-->
+			<operation name='btnInitPwd' 		text='初始密码'	icon='icon/icon_12.gif' tip='初始化被勾选的用户密码，初始密码：888888' adminOp='true' showText="false"/>
+			<operation name='btnLockUser' 		text='锁定' 		icon='icon/icon_10.gif' tip='锁定用户的状态' adminOp='true' showText="false"/>
+			<operation name='btnUnlockUser' 	text='解锁' 		icon='icon/icon_11.gif' tip='解除锁定用户的状态' adminOp='true' showText="false"/>	
+			<operation name='btnRoleLink'		text='角色关联'	icon='icon/icon_15.gif' tip='关联选择的人，与其具有相同的角色' adminOp="true" />	
+		</module>
+		<module name='角色管理' url='system/role/index.jsp' icon='resources/icon/icon_3.gif'>
+			<operation name='btnAddRole' 		text='添加角色' 	icon='icon/icon_1.gif' tip='' adminOp='true'/>
+			<operation name='btnModiRole' 		text='修改角色' 	icon='icon/icon_3.gif' tip='选中需要修改的角色，再执行该操作' adminOp='true'/>
+			<operation name='btnDelRole' 		text='删除角色' 	icon='icon/icon_2.gif' tip='选中需要删除的角色，再执行该操作' adminOp='true'/>
+			<operation name='btnAddUser' 		text='新增用户' 	icon='icon/icon_3.gif' tip='为当前角色新增用户' adminOp='true'/>
+			<operation name='btnModifyUser' 	text='修改用户' 	icon='icon/icon_5.gif' tip='选中需要修改的用户，再执行该操作' adminOp='true'/>
+			<operation name='btnRemoveUser' 	text='移除用户' 	icon='icon/icon_7.gif' tip='将选中的用户从当前组织中移除' adminOp='true'/>
+			<operation name='btnDelUser' 		text='删除用户' 	icon='icon/icon_2.gif' tip='选中需要删除的用户，再执行该操作' adminOp='true'/>
+			<operation name='btnInitPwd' 		text='初始密码'	icon='icon/icon_12.gif' tip='初始化被勾选的用户密码，初始密码：888888' adminOp='true' showText="false"/>
+			<operation name='btnDataperm' 		text='数据权限' 	icon='icon/pkg.gif' tip='数据权限' adminOp='true'/>
+			<operation name='btnClearDataperm' 	text='清除数据权限' 	icon='icon/icon_12.gif	' tip='清除数据权限' adminOp='true' showText="false"/>
+			<operation name='btnLockUser' 		text='锁定' 		icon='icon/icon_10.gif' tip='锁定用户的状态' adminOp='true' showText="false"/>
+			<operation name='btnUnlockUser' 	text='解锁' 		icon='icon/icon_11.gif' tip='解除锁定用户的状态' adminOp='true' showText="false"/>			
+		</module>
+		
+		<module name='模块管理' url='system/module/index.jsp' icon='resources/icon/icon_3.gif'>
+			<operation name='btnAddModule' 		text='添加模块' 	icon='icon/icon_6.gif' tip=''/>
+			<operation name='btnModiModule'	 	text='修改模块' 	icon='icon/icon_5.gif' tip='选中需要修改的模块，再执行该操作'/>
+			<operation name='btnDelModule' 		text='删除模块' 	icon='icon/icon_2.gif' tip='选中需要删除的模块，再执行该操作'/>		
+		</module>
+		<module name='IP策略' url='system/iplock/index.jsp' icon='resources/icon/icon_3.gif'>
+			<operation name='btnAddIp' 		text='添加IP规则' 	icon='icon/icon_2.gif' tip=''/>
+			<operation name='btnModiIpLock'	 	text='修改规则' 	icon='icon/icon_4.gif' tip='选中需要修改的IP规则，再执行该操作'/>
+			<operation name='btnDelIpLock' 		text='删除规则' 	icon='icon/icon_3.gif' tip='选中需要删除的IP规则，再执行该操作'/>		
+		</module>
+		<module name='数据字典' url='system/dict/index.jsp' icon='resources/icon/icon_3.gif'>
+			<operation name='btnAddDictCatalog' 	text='添加字典类型' 	icon='icon/icon_1.gif' tip=''/>
+			<operation name='btnModiDictCatalog'	text='修改字典类型' 	icon='icon/icon_3.gif' tip='选中需要修改的字典类型，再执行该操作'/>
+			<operation name='btnDelDictCatalog' 	text='删除字典类型' 	icon='icon/icon_2.gif' tip='选中需要删除的字典类型，再执行该操作'/>		
+			<operation name='btnAddDict' 			text='添加字典' 		icon='icon/icon_6.gif' tip=''/>
+			<operation name='btnModiDict'	 		text='修改字典' 		icon='icon/icon_5.gif' tip='选中需要修改的字典类型，再执行该操作'/>
+			<operation name='btnDelDict' 			text='删除字典' 		icon='icon/icon_7.gif' tip='选中需要删除的字典类型，再执行该操作'/>		
+		</module>
+		<module name='系统设置' url='system/syssetup/index.jsp' icon='resources/icon/icon_3.gif'>
+		</module>				
+		<module name='操作日志' url='system/log/index.jsp?type=2' icon='resources/icon/icon_3.gif'>
+			<operation name='btnDelLog'	 		text='删除日志' 		icon='icon/icon_2.gif' tip='删除选中的日志'/>
+			<operation name='btnDelAllLog' 		text='清空日志' 		icon='icon/icon_10.gif' tip='删除所有的日子'/>					
+		</module>	
+		<module name='异常日志' url='system/log/index.jsp?type=3' icon='resources/icon/icon_3.gif'>
+			<operation name='btnDelLog'	 		text='删除日志' 		icon='icon/icon_2.gif' tip='删除选中的日志'/>
+			<operation name='btnDelAllLog' 		text='清空日志' 		icon='icon/icon_10.gif' tip='删除所有的日子'/>							
+		</module>	
+		<module name='机组状态设置' url='index/nowInfo/editForm.jsp' icon='resources/icon/icon_3.gif'>
+		</module>
+		<module name='系统通知' url='index/tongzhi/index2.jsp' icon='resources/icon/icon_3.gif'>
+			<operation name='->' text='->' icon='->' tip='->'/>	
+			<operation name='btnAdd' 	text='添加通知' 	icon='icon/icon_1.gif' tip='添加通知'/>
+			<operation name='btnModi'	text='修改通知' 	icon='icon/icon_3.gif' tip='修改通知'/>
+			<operation name='btnDel' 	text='删除通知' 	icon='icon/icon_2.gif' tip='删除通知'/>		
+		</module>
+	</group>
+	<group name="表单自定义">
+		<module name='表单定义' url='form/cform/index.jsp' icon='resources/icon/icon_3.gif'>
+			<operation name='btnAddCatalog' 	text='添加分类' 	icon='icon/icon_1.gif' tip='新建表单分类项'/>
+			<operation name='btnModiCatalog' 	text='修改分类' 	icon='icon/icon_3.gif' tip='修改选中的分类'/>
+			<operation name='btnDelCatalog' 	text='删除分类' 	icon='icon/icon_2.gif' tip='删除选中的分类'/>
+			<operation name='btnAddExcelCForm' 	text='新建表单' 	icon='icon/icon_5.gif' tip='新建表单'/>
+			<operation name='btnModifyCForm' 	text='修改表单' 	icon='icon/icon_6.gif' tip='修改指定的表单'/>
+			<operation name='btnDelCForm' 	text='删除表单' 	icon='icon/icon_7.gif' tip='删除表单'/>
+		</module>			
+		<module name='数据定义' url='form/dbdef/index.jsp' icon='resources/icon/icon_18.gif'>
+			<operation name='btnAddCatalog' 	text='添加分类' 	icon='icon/icon_1.gif' tip='新建表单分类项'/>
+			<operation name='btnModiCatalog' 	text='修改分类' 	icon='icon/icon_12.gif' tip='修改选中的分类'/>
+			<operation name='btnDelCatalog' 	text='删除分类' 	icon='icon/icon_11.gif' tip='删除选中的分类'/>
+			<operation name='btnAddTable' 	text='添加表' 	icon='icon/icon_2.gif' tip='新建表定义'/>
+			<operation name='btnModiTable'	text='修改表' 	icon='icon/icon_4.gif' tip='修改选中的表定义对象'/>
+			<operation name='btnDelTable' 	text='删除表' 	icon='icon/icon_3.gif' tip='删除选中的表定义对象,其定义字段将会一并删除'/>		
+			<operation name='btnImportTable' 			text='导入物理表' 		icon='icon/icon_10.gif' tip='选择数据库中存在的物理表并将其导入定义表，包括字段定义'/>
+			<operation name='btnRebuildTable'	 		text='重建物理表' 		icon='icon/icon_10.gif' tip='删除已存在的物理表并重建该物理表'/>
+			<operation name='btnQueryTable' 			text='查看表数据' 		icon='icon/icon_10.gif' tip='查看指定表的数据'/>		
+			<operation name='->' text='->' icon='->' tip='->'/>	
+			<operation name='btnAddColumn' 	text='新增字段' 	icon='icon/icon_5.gif' tip='新增字段定义对象'/>
+			<operation name='btnModifyColumn'	text='修改字段' 	icon='icon/icon_7.gif' tip='修改字段定义对象'/>
+			<operation name='btnDelColumn' 	text='删除字段' 	icon='icon/icon_6.gif' tip='删除选中的字段定义对象'/>		
+		</module>
+
+	</group>
+	<group name="EFORM">
+		<module name="表单定义" url="form/eform/index.jsp" icon="resources/icon/icon_3.gif">
+			<operation name='btnAddCatalog' 	text='添加分类' 	icon='icon/icon_1.gif' tip='新建表单分类项'/>
+			<operation name='btnModiCatalog' 	text='修改分类' 	icon='icon/icon_3.gif' tip='修改选中的分类'/>
+			<operation name='btnDelCatalog' 	text='删除分类' 	icon='icon/icon_2.gif' tip='删除选中的分类'/>
+			<operation name='btnAddExcelCForm' 	text='新建表单' 	icon='icon/icon_5.gif' tip='新建表单'/>
+			<operation name='btnModifyCForm' 	text='修改表单' 	icon='icon/icon_6.gif' tip='修改指定的表单'/>
+			<operation name='btnDelCForm' 	text='删除表单' 	icon='icon/icon_7.gif' tip='删除表单'/>
+			<operation name="btnFinalManuscript" text="定稿" icon="icon/icon_13.gif" tip="定稿"></operation>
+		</module>
+	</group>
+	<group name="运行管理子系统">		
+		<module name="技术资料" url="system/doclib/index.jsp?catalogCode=yxgl" icon="resources/icon/icon_3.gif">
+			<operation name='btnAddCatalog' 		text='添加分类' 	icon='icon/icon_1.gif' tip='添加分类'/>
+			<operation name='btnModiCatalog'	 	text='修改分类' 	icon='icon/icon_3.gif' tip='选中需要修改的分类，再执行该操作' adminOp='true'/>
+			<operation name='btnDelCatalog' 		text='删除分类' 	icon='icon/icon_2.gif' tip='选中需要删除的分类，再执行该操作' adminOp='true'/>	
+			<operation name='->' text='->' icon='->' tip='->'/>	
+			<operation name='btnAddDocument' 		text='添加文档' 	icon='icon/icon_11.gif' tip='选中文档分类，添加文档' adminOp='true'/>		
+			<operation name='btnModiDocument' 		text='修改文档' 	icon='icon/icon_4.gif' tip='选中需要修改的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDelDocument' 		text='删除文档' 	icon='icon/icon_12.gif' tip='选中需要删除的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDocumentLevel' 		text='文档级别配置' 	icon='icon/icon_13.gif' tip='文档级别的配置' adminOp='true'/>
+		</module>
+	
+	<!-- 交接班管理 -->
+		<!-- 交接班 -->
+			<module name="值长交接班" url="yx/jjb/job/index.jsp?gwlb=值长" icon='resources/icon/icon_3.gif'>
+			</module>
+			<module name="#1机长交接班" url="yx/jjb/job/index.jsp?gwlb=1" icon='resources/icon/icon_3.gif'>
+			</module>
+			<module name="#2机长交接班" url="yx/jjb/job/index.jsp?gwlb=2" icon='resources/icon/icon_3.gif'>
+			</module>
+			<module name="#3机长交接班" url="yx/jjb/job/index.jsp?gwlb=3" icon='resources/icon/icon_3.gif'>
+			</module>
+			<module name="#4机长交接班" url="yx/jjb/job/index.jsp?gwlb=4" icon='resources/icon/icon_3.gif'>
+			</module>
+			<module name="电气交接班" url="yx/jjb/job/index.jsp?gwlb=电气" icon='resources/icon/icon_3.gif'>
+			</module>
+			<module name="零米交接班" url="yx/jjb/job/index.jsp?gwlb=零米" icon='resources/icon/icon_3.gif'>
+			</module>
+		<module name="交接班日志" url="yx/jjb/log/index.jsp" icon='resources/icon/icon_3.gif'>
+		</module>
+		<module name="排班表" url="yx/jjb/plan/index.jsp" icon='resources/icon/icon_3.gif'>
+		</module>	
+		
+	<!-- 值班记录管理 -->
+		<module name="值长值班记录" url="yx/zbjlgl/record/index.jsp?gwlb=值长&amp;formSn=TB_YX_FORM_ZZJBYXFS" icon='resources/icon/icon_3.gif'>
+			<operation name='btnShangYB' text='上一班' icon='icon/left2.gif' tip='上一班' />
+			<operation name='btnXiaYB' text='下一班' icon='icon/right2.gif' tip='下一班' />
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnLockRecord' text='解锁' icon='' tip='解锁' showText="false" />
+			<operation name='btnAddRecord' text='添加记录' icon='icon/icon_1.gif' tip='添加记录' />
+			<operation name='btnDelRecord' text='删除记录' icon='icon/icon_2.gif' tip='删除记录' />
+			<operation name='btnAddJbyxfs' text='值长交班运行方式' icon='icon/icon_1.gif' tip='值长交班运行方式' />
+			<operation name='btnDiQiGZ' text='定期工作' icon='icon/icon_15.gif' tip='定期工作' />
+			<operation name='btnLingDaoSY' text='领导审阅' icon='icon/icon_13.gif' tip='领导审阅'/>
+		</module>
+		<module name="#1机长值班记录" url="yx/zbjlgl/record/index.jsp?gwlb=1&amp;formSn=TB_YX_FORM_JZJBYXFS_300&amp;jizhangtype=1" icon='resources/icon/icon_3.gif'>
+			<operation name='btnShangYB' text='上一班' icon='icon/left2.gif' tip='上一班' />
+			<operation name='btnXiaYB' text='下一班' icon='icon/right2.gif' tip='下一班' />
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnLockRecord' text='解锁' icon='' tip='解锁' showText="false" />
+			<operation name='btnAddRecord' text='添加记录' icon='icon/icon_1.gif' tip='添加记录' />
+			<operation name='btnDelRecord' text='删除记录' icon='icon/icon_2.gif' tip='删除记录' />
+			<operation name='btnAddJbyxfs' text='#1机长交班运行方式' icon='icon/icon_1.gif' tip='#1机长交班运行方式' />
+			<operation name='btnDiQiGZ' text='定期工作' icon='icon/icon_15.gif' tip='定期工作' />
+			<operation name='btnLingDaoSY' text='领导审阅' icon='icon/icon_13.gif' tip='领导审阅'/>
+		</module>
+		<module name="#2机长值班记录" url="yx/zbjlgl/record/index.jsp?gwlb=2&amp;formSn=TB_YX_FORM_JZJBYXFS_300&amp;jizhangtype=2" icon='resources/icon/icon_3.gif'>
+			<operation name='btnShangYB' text='上一班' icon='icon/left2.gif' tip='上一班' />
+			<operation name='btnXiaYB' text='下一班' icon='icon/right2.gif' tip='下一班' />
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnLockRecord' text='解锁' icon='' tip='解锁' showText="false" />
+			<operation name='btnAddRecord' text='添加记录' icon='icon/icon_1.gif' tip='添加记录' />
+			<operation name='btnDelRecord' text='删除记录' icon='icon/icon_2.gif' tip='删除记录' />
+			<operation name='btnAddJbyxfs' text='#2机长交班运行方式' icon='icon/icon_1.gif' tip='#2机长交班运行方式' />
+			<operation name='btnDiQiGZ' text='定期工作' icon='icon/icon_15.gif' tip='定期工作' />
+			<operation name='btnLingDaoSY' text='领导审阅' icon='icon/icon_13.gif' tip='领导审阅'/>
+		</module>
+		<module name="#3机长值班记录" url="yx/zbjlgl/record/index.jsp?gwlb=3&amp;formSn=TB_YX_FORM_JZJBYXFS_600&amp;jizhangtype=3" icon='resources/icon/icon_3.gif'>
+			<operation name='btnShangYB' text='上一班' icon='icon/left2.gif' tip='上一班' />
+			<operation name='btnXiaYB' text='下一班' icon='icon/right2.gif' tip='下一班' />
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnLockRecord' text='解锁' icon='' tip='解锁' showText="false" />
+			<operation name='btnAddRecord' text='添加记录' icon='icon/icon_1.gif' tip='添加记录' />
+			<operation name='btnDelRecord' text='删除记录' icon='icon/icon_2.gif' tip='删除记录' />
+			<operation name='btnAddJbyxfs' text='#3机长交班运行方式' icon='icon/icon_1.gif' tip='#3机长交班运行方式' />
+			<operation name='btnDiQiGZ' text='定期工作' icon='icon/icon_15.gif' tip='定期工作' />
+			<operation name='btnLingDaoSY' text='领导审阅' icon='icon/icon_13.gif' tip='领导审阅'/>
+		</module>
+		<module name="#4机长值班记录" url="yx/zbjlgl/record/index.jsp?gwlb=4&amp;formSn=TB_YX_FORM_JZJBYXFS_600&amp;jizhangtype=4" icon='resources/icon/icon_3.gif'>
+			<operation name='btnShangYB' text='上一班' icon='icon/left2.gif' tip='上一班' />
+			<operation name='btnXiaYB' text='下一班' icon='icon/right2.gif' tip='下一班' />
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnLockRecord' text='解锁' icon='' tip='解锁' showText="false"/>
+			<operation name='btnAddRecord' text='添加记录' icon='icon/icon_1.gif' tip='添加记录' />
+			<operation name='btnDelRecord' text='删除记录' icon='icon/icon_2.gif' tip='删除记录' />
+			<operation name='btnAddJbyxfs' text='#4机长交班运行方式' icon='icon/icon_1.gif' tip='#4机长交班运行方式' />
+			<operation name='btnDiQiGZ' text='定期工作' icon='icon/icon_15.gif' tip='定期工作' />
+			<operation name='btnLingDaoSY' text='领导审阅' icon='icon/icon_13.gif' tip='领导审阅'/>
+		</module>
+		<!-- 电气值班记录 -->
+		<module name="主控值班记录" url="yx/zbjlgl/record/index.jsp?gwlb=电气&amp;fl=主控&amp;formSn=TB_YX_FORM_DQZKJBYXFS" icon='resources/icon/icon_3.gif'>
+			<operation name='btnShangYB' text='上一班' icon='icon/left2.gif' tip='上一班' />
+			<operation name='btnXiaYB' text='下一班' icon='icon/right2.gif' tip='下一班' />
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnLockRecord' text='解锁' icon='' tip='解锁' showText="false" />
+			<operation name='btnAddRecord' text='添加记录' icon='icon/icon_1.gif' tip='添加记录' />
+			<operation name='btnDelRecord' text='删除记录' icon='icon/icon_2.gif' tip='删除记录' />
+			<operation name='btnAddJbyxfs' text='主控交班运行方式' icon='icon/icon_1.gif' tip='主控交班运行方式' />
+			<operation name='btnDiQiGZ' text='定期工作' icon='icon/icon_15.gif' tip='定期工作' />
+			<operation name='btnLingDaoSY' text='领导审阅' icon='icon/icon_13.gif' tip='领导审阅'/>
+		</module>
+		<module name="600MW副控值班记录" url="yx/zbjlgl/record/index.jsp?gwlb=电气&amp;fl=600MW副控&amp;formSn=TB_YX_FORM_EQDQJBYXFS" icon='resources/icon/icon_3.gif'>
+			<operation name='btnShangYB' text='上一班' icon='icon/left2.gif' tip='上一班' />
+			<operation name='btnXiaYB' text='下一班' icon='icon/right2.gif' tip='下一班' />
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnLockRecord' text='解锁' icon='' tip='解锁' showText="false" />
+			<operation name='btnAddRecord' text='添加记录' icon='icon/icon_1.gif' tip='添加记录' />
+			<operation name='btnDelRecord' text='删除记录' icon='icon/icon_2.gif' tip='删除记录' />
+			<operation name='btnAddJbyxfs' text='副控交班运行方式' icon='icon/icon_1.gif' tip='副控交班运行方式' />
+			<operation name='btnDiQiGZ' text='定期工作' icon='icon/icon_15.gif' tip='定期工作' />
+			<operation name='btnLingDaoSY' text='领导审阅' icon='icon/icon_13.gif' tip='领导审阅'/>
+		</module>
+		<module name="网控值班记录" url="yx/zbjlgl/record/index.jsp?gwlb=电气&amp;fl=网控&amp;formSn=TB_YX_FORM_WKJBYXFS" icon='resources/icon/icon_3.gif'>
+			<operation name='btnShangYB' text='上一班' icon='icon/left2.gif' tip='上一班' />
+			<operation name='btnXiaYB' text='下一班' icon='icon/right2.gif' tip='下一班' />
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAddRecord' text='添加记录' icon='icon/icon_1.gif' tip='添加记录' />
+			<operation name='btnDelRecord' text='删除记录' icon='icon/icon_2.gif' tip='删除记录' />
+			<operation name='btnAddJbyxfs' text='网控交班运行方式' icon='icon/icon_1.gif' tip='网控交班运行方式' />
+			<operation name='btnDiQiGZ' text='定期工作' icon='icon/icon_15.gif' tip='定期工作' />
+			<operation name='btnLingDaoSY' text='领导审阅' icon='icon/icon_13.gif' tip='领导审阅'/>
+		</module>
+		<module name="零米值班记录" url="yx/zbjlgl/record/index.jsp?gwlb=零米" icon='resources/icon/icon_3.gif'>
+			<operation name='btnShangYB' text='上一班' icon='icon/left2.gif' tip='上一班' />F
+			<operation name='btnXiaYB' text='下一班' icon='icon/right2.gif' tip='下一班' />
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnLockRecord' text='解锁' icon='' tip='解锁' showText="false" />
+			<operation name='btnAddRecord' text='添加记录' icon='icon/icon_1.gif' tip='添加记录' />
+			<operation name='btnDelRecord' text='删除记录' icon='icon/icon_2.gif' tip='删除记录' />
+			<operation name='btnTlJbyxfs' text='脱硫交班运行方式' icon='icon/icon_1.gif' tip='脱硫交班运行方式' />
+			<operation name='btnJclJbyxfs' text='精处理交班运行方式' icon='icon/icon_1.gif' tip='精处理交班运行方式' />
+			<operation name='btnDiQiGZ' text='定期工作' icon='icon/icon_15.gif' tip='定期工作' />
+			<operation name='btnLingDaoSY' text='领导审阅' icon='icon/icon_13.gif' tip='领导审阅'/>
+		</module>
+		<module name="值班记录查询" url="yx/zbjlgl/query/index.jsp" icon='resources/icon/icon_3.gif'>
+		</module>
+		<module name="运行方式查询" url="yx/zbjlgl/jbyxfs/index.jsp" icon='resources/icon/icon_3.gif'>
+		</module>
+		
+	<!-- 运行日志管理 -->
+		<module name="运行日志配置" url="yx/runlog/set/index.jsp" icon='resources/icon/icon_3.gif'>
+			<operation name='btnAddCatalog' text='添加分类' icon='icon/icon_1.gif' tip='添加分类' />
+			<operation name='btnModiCatalog' text="修改分类" icon='icon/icon_3.gif' tip='修改分类'/>
+			<operation name='btnDelCatalog' text='删除分类' icon='icon/icon_2.gif' tip='删除分类' />
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAdd' text='添加报表' icon='icon/icon_1.gif' tip='添加报表' />
+			<operation name='btnModi' text="修改报表" icon='icon/icon_3.gif' tip='修改报表'/>
+			<operation name='btnDel' text='删除报表' icon='icon/icon_2.gif' tip='删除报表' />
+		</module>
+		<module name="300MW汽机运行日志" url="yx/runlog/record/index.jsp?tableCode=127856795742143" icon='resources/icon/icon_3.gif'>
+		</module>
+		<module name="300MW锅炉运行日志" url="yx/runlog/record/index.jsp?tableCode=12795008786096" icon='resources/icon/icon_3.gif'>
+		</module>
+		<module name="600MW汽机运行日志" url="yx/runlog/record/index.jsp?tableCode=127950102017114" icon='resources/icon/icon_3.gif'>
+		</module>
+		<module name="600MW锅炉运行日志" url="yx/runlog/record/index.jsp?tableCode=127950107831217" icon='resources/icon/icon_3.gif'>
+		</module>
+		<module name="600MW电气运行日志" url="yx/runlog/record/index.jsp?tableCode=127950109820319" icon='resources/icon/icon_3.gif'>
+		</module>
+		<module name="网控关口电量表" url="yx/runlog/logform/eformRecListIndex.jsp?formSn=TB_YX_FORM_WKGKDLB&amp;formType=02" icon='resources/icon/icon_3.gif'>
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAdd' text='添加电量表' icon='icon/icon_1.gif' tip='添加电量表' />
+		</module>
+		<module name="网控辅助电量表" url="yx/runlog/logform/eformRecListIndex.jsp?formSn=TB_YX_FORM_WKFZDLB&amp;formType=02" icon='resources/icon/icon_3.gif'>
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAdd' text='添加电量表' icon='icon/icon_1.gif' tip='添加电量表' />
+		</module>
+		<module name="供电设备电量统计表" url="yx/runlog/logform/eformRecListIndex.jsp?formSn=TB_YX_FORM_GDSBDLTJB" icon='resources/icon/icon_3.gif'>
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAdd' text='添加统计表' icon='icon/icon_1.gif' tip='添加统计表' />
+		</module>
+		<module name="化学小指标统计报表" url="yx/runlog/logform/eformRecListIndex.jsp?formSn=TB_YX_FORM_HXXZBTJBB" icon='resources/icon/icon_3.gif'>
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAdd' text='添加统计报表' icon='icon/icon_1.gif' tip='添加统计报表' />
+		</module>
+		<module name="尾水电量记录" url="yx/runlog/logform/eformRecListIndex.jsp?formSn=TB_YX_FORM_WSJL" icon='resources/icon/icon_3.gif'>
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAdd' text='添加统计报表' icon='icon/icon_1.gif' tip='添加统计报表' />
+		</module>
+		<module name="电能表综合查询" url="jhtj/dnb/index.jsp" icon='resources/icon/icon_3.gif'></module>
+		
+		<!-- 机组燃料消耗统计表 -->
+		<module name="#1炉燃料统计" url="yx/runlog/form2/index.jsp?formSn=TB_YX_FORM_LRLTJ1" icon='resources/icon/icon_3.gif'>
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnStop' text="停机处理" icon='icon/icon_3.gif' tip='停机处理'/>
+			<operation name='btnAdd' text='添加统计报表' icon='icon/icon_1.gif' tip='添加统计报表' />
+			<operation name='btnModi' text="修改统计报表" icon='icon/icon_3.gif' tip='修改统计报表'/>
+			<operation name='btnDel' text="删除统计报表" icon='icon/icon_3.gif' tip='删除统计报表'/>
+		</module>
+		<module name="#2炉燃料统计" url="yx/runlog/form2/index.jsp?formSn=TB_YX_FORM_LRLTJ2" icon='resources/icon/icon_3.gif'>
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnStop' text="停机处理" icon='icon/icon_3.gif' tip='停机处理'/>
+			<operation name='btnAdd' text='添加统计报表' icon='icon/icon_1.gif' tip='添加统计报表' />
+			<operation name='btnModi' text="修改统计报表" icon='icon/icon_3.gif' tip='修改统计报表'/>
+			<operation name='btnDel' text="删除统计报表" icon='icon/icon_3.gif' tip='删除统计报表'/>
+		</module>
+		<module name="#3炉燃料统计" url="yx/runlog/form2/index.jsp?formSn=TB_YX_FORM_LRLTJ3" icon='resources/icon/icon_3.gif'>
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnStop' text="停机处理" icon='icon/icon_3.gif' tip='停机处理'/>
+			<operation name='btnAdd' text='添加统计报表' icon='icon/icon_1.gif' tip='添加统计报表' />
+			<operation name='btnModi' text="修改统计报表" icon='icon/icon_3.gif' tip='修改统计报表'/>
+			<operation name='btnDel' text="删除统计报表" icon='icon/icon_3.gif' tip='删除统计报表'/>
+		</module>
+		<module name="#4炉燃料统计" url="yx/runlog/form2/index.jsp?formSn=TB_YX_FORM_LRLTJ4" icon='resources/icon/icon_3.gif'>
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnStop' text="停机处理" icon='icon/icon_3.gif' tip='停机处理'/>
+			<operation name='btnAdd' text='添加统计报表' icon='icon/icon_1.gif' tip='添加统计报表' />
+			<operation name='btnModi' text="修改统计报表" icon='icon/icon_3.gif' tip='修改统计报表'/>\
+			<operation name='btnDel' text="删除统计报表" icon='icon/icon_3.gif' tip='删除统计报表'/>
+		</module>
+		<module name="300WM发电统计" url="yx/runlog/form2/index.jsp?formSn=TB_YX_FORM_FDTJ300" icon='resources/icon/icon_3.gif'>
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnStop' text="停机处理" icon='icon/icon_3.gif' tip='停机处理'/>
+			<operation name='btnAdd' text='添加统计报表' icon='icon/icon_1.gif' tip='添加统计报表' />
+			<operation name='btnModi' text="修改统计报表" icon='icon/icon_3.gif' tip='修改统计报表'/>
+			<operation name='btnDel' text="删除统计报表" icon='icon/icon_3.gif' tip='删除统计报表'/>
+		</module>
+		<module name="600WM发电统计" url="yx/runlog/form2/index.jsp?formSn=TB_YX_FORM_FDTJ600" icon='resources/icon/icon_3.gif'>
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnStop' text="停机处理" icon='icon/icon_3.gif' tip='停机处理'/>
+			<operation name='btnAdd' text='添加统计报表' icon='icon/icon_1.gif' tip='添加统计报表' />
+			<operation name='btnModi' text="修改统计报表" icon='icon/icon_3.gif' tip='修改统计报表'/>
+			<operation name='btnDel' text="删除统计报表" icon='icon/icon_3.gif' tip='删除统计报表'/>
+		</module>
+		<!-- 生技部指标 -->
+		<module name="可靠性事件录入表" url="yx/runlog/sjbFXBRecord/index.jsp?formSn=TB_FORM_SJBZB_FXB" icon='resources/icon/icon_3.gif'>
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAdd' text='添加统计报表' icon='icon/icon_1.gif' tip='添加统计报表' />
+			<operation name='btnModi' text='修改统计报表' icon='icon/icon_1.gif' tip='修改统计报表' />
+			<operation name='btnDel' text='删除统计报表' icon='icon/icon_1.gif' tip='删除统计报表' />
+		</module>
+		<module name="被考核电量统计表" url="yx/runlog/bkhdltjbRecord/index.jsp?formSn=TB_FORM_SJBZB_BKHDLTJ" icon='resources/icon/icon_3.gif'>
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAdd' text='添加统计报表' icon='icon/icon_1.gif' tip='添加统计报表' />
+			<operation name='btnModi' text='修改统计报表' icon='icon/icon_1.gif' tip='修改统计报表' />
+			<operation name='btnDel' text='删除统计报表' icon='icon/icon_1.gif' tip='删除统计报表' />
+		</module>
+		<module name="一期辅机电量统计表" url="yx/runlog/fjdltjRecord/index.jsp?formSn=TB_FORM_SJBZB_YQFJDL" icon='resources/icon/icon_3.gif'>
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAdd' text='添加统计报表' icon='icon/icon_1.gif' tip='添加统计报表' />
+			<operation name='btnModi' text='修改统计报表' icon='icon/icon_1.gif' tip='修改统计报表' />
+			<operation name='btnDel' text='删除统计报表' icon='icon/icon_1.gif' tip='删除统计报表' />
+		</module>
+		<module name="二期辅机电量统计表" url="yx/runlog/fjdltjRecord/index.jsp?formSn=TB_FORM_SJBZB_FJFDLTJ" icon='resources/icon/icon_3.gif'>
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAdd' text='添加统计报表' icon='icon/icon_1.gif' tip='添加统计报表' />
+			<operation name='btnModi' text='修改统计报表' icon='icon/icon_1.gif' tip='修改统计报表' />
+			<operation name='btnDel' text='删除统计报表' icon='icon/icon_1.gif' tip='删除统计报表' />
+		</module>
+			<module name="共用分摊电量统计" url="yx/runlog/fjdltjRecord/index.jsp?formSn=TB_FORM_SJBZB_GYFTDL" icon='resources/icon/icon_3.gif'>
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAdd' text='添加统计报表' icon='icon/icon_1.gif' tip='添加统计报表' />
+			<operation name='btnModi' text='修改统计报表' icon='icon/icon_1.gif' tip='修改统计报表' />
+			<operation name='btnDel' text='删除统计报表' icon='icon/icon_1.gif' tip='删除统计报表' />
+		</module>
+		
+	<!-- 化学监督 -->
+		<!-- 油 -->
+		<module name="进厂燃油油质分析报表" url="yx/hxjd/index.jsp?formSn=TB_YX_FORM_JCRYYZFXBB" icon='resources/icon/icon_3.gif'>
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAdd' text='添加报表' icon='icon/icon_1.gif' tip='添加报表' />
+			<operation name='btnModi' text='修改报表' icon='icon/icon_1.gif' tip='修改报表' />
+			<operation name='btnDel' text='删除报表' icon='icon/icon_1.gif' tip='删除报表' />
+			<operation name='btnShenYue' text='审阅报表' icon='icon/icon_13.gif' tip='审阅报表' />
+		</module>
+		<module name="变压器油质分析报表" url="yx/hxjd/index.jsp?formSn=TB_YX_FORM_BYQYZFXBB" icon='resources/icon/icon_3.gif'>
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAdd' text='添加报表' icon='icon/icon_1.gif' tip='添加报表' />
+			<operation name='btnModi' text='修改报表' icon='icon/icon_1.gif' tip='修改报表' />
+			<operation name='btnDel' text='删除报表' icon='icon/icon_1.gif' tip='删除报表' />
+			<operation name='btnShenYue' text='审阅报表' icon='icon/icon_13.gif' tip='审阅报表' />
+		</module>
+		<module name="抗燃油油质分析报表" url="yx/hxjd/index.jsp?formSn=TB_YX_FORM_KRYYZFXBB" icon='resources/icon/icon_3.gif'>
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAdd' text='添加报表' icon='icon/icon_1.gif' tip='添加报表' />
+			<operation name='btnModi' text='修改报表' icon='icon/icon_1.gif' tip='修改报表' />
+			<operation name='btnDel' text='删除报表' icon='icon/icon_1.gif' tip='删除报表' />
+			<operation name='btnShenYue' text='审阅报表' icon='icon/icon_13.gif' tip='审阅报表' />
+		</module>
+		<module name="汽轮机油分析报告" url="yx/hxjd/index.jsp?formSn=TB_YX_FORM_QILUNJYFXBG" icon='resources/icon/icon_3.gif'>
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAdd' text='添加报告' icon='icon/icon_1.gif' tip='添加报告' />
+			<operation name='btnModi' text='修改报表' icon='icon/icon_1.gif' tip='修改报表' />
+			<operation name='btnDel' text='删除报表' icon='icon/icon_1.gif' tip='删除报表' />
+			
+			<operation name='btnShenYue' text='审阅报告' icon='icon/icon_13.gif' tip='审阅报告' />
+		</module>
+		<!--水 -->
+		<module name="机组水、汽日常监督报表" url="yx/hxjd/index.jsp?formSn=TB_YX_FORM_JZSQRCJDBB" icon='resources/icon/icon_3.gif'>
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAdd' text='添加报表' icon='icon/icon_1.gif' tip='添加报表' />
+			<operation name='btnModi' text='修改报表' icon='icon/icon_1.gif' tip='修改报表' />
+			<operation name='btnDel' text='删除报表' icon='icon/icon_1.gif' tip='删除报表' />
+			<operation name='btnShenYue' text='审阅报表' icon='icon/icon_13.gif' tip='审阅报表' />
+		</module>
+		<module name="机组系统查定报表" url="yx/hxjd/index.jsp?formSn=TB_YX_FORM_JZXTCDBB" icon='resources/icon/icon_3.gif'>
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAdd' text='添加报表' icon='icon/icon_1.gif' tip='添加报表' />
+			<operation name='btnModi' text='修改报表' icon='icon/icon_1.gif' tip='修改报表' />
+			<operation name='btnDel' text='删除报表' icon='icon/icon_1.gif' tip='删除报表' />
+			<operation name='btnShenYue' text='审阅报表' icon='icon/icon_13.gif' tip='审阅报表' />
+		</module>
+		<!-- 煤分析 -->
+		<module name="入炉煤日常分析报表" url="yx/hxjd/index.jsp?formSn=TB_YX_FORM_MEIFENXI" icon='resources/icon/icon_3.gif'>
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAdd' text='添加报表' icon='icon/icon_1.gif' tip='添加报表' />
+			<operation name='btnModi' text='修改报表' icon='icon/icon_1.gif' tip='修改报表' />
+			<operation name='btnDel' text='删除报表' icon='icon/icon_1.gif' tip='删除报表' />
+			<operation name='btnShenYue' text='审阅报表' icon='icon/icon_13.gif' tip='审阅报表' />
+		</module>
+		<module name="飞灰、炉渣可燃物日常分析报表" url="yx/hxjd/index.jsp?formSn=TB_YX_FORM_FHLZKRWRCFXBB" icon='resources/icon/icon_3.gif'>
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAdd' text='添加报表' icon='icon/icon_1.gif' tip='添加报表' />
+			<operation name='btnModi' text='修改报表' icon='icon/icon_1.gif' tip='修改报表' />
+			<operation name='btnDel' text='删除报表' icon='icon/icon_1.gif' tip='删除报表' />
+			<operation name='btnShenYue' text='审阅报表' icon='icon/icon_13.gif' tip='审阅报表' />
+		</module>
+		<module name="煤粉细度日常分析报表" url="yx/hxjd/index.jsp?formSn=TB_YX_FORM_MFXDRCFXBB" icon='resources/icon/icon_3.gif'>
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAdd' text='添加报表' icon='icon/icon_1.gif' tip='添加报表' />
+			<operation name='btnModi' text='修改报表' icon='icon/icon_1.gif' tip='修改报表' />
+			<operation name='btnDel' text='删除报表' icon='icon/icon_1.gif' tip='删除报表' />
+			<operation name='btnShenYue' text='审阅报表' icon='icon/icon_13.gif' tip='审阅报表' />
+		</module>
+		<!-- 环境监测 -->
+		<module name="排水水质监测结果报表" url="yx/hxjd/index.jsp?formSn=TB_YX_FORM_PSSZJCJGBB" icon='resources/icon/icon_3.gif'>
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAdd' text='添加报表' icon='icon/icon_1.gif' tip='添加报表' />
+			<operation name='btnModi' text='修改报表' icon='icon/icon_1.gif' tip='修改报表' />
+			<operation name='btnDel' text='删除报表' icon='icon/icon_1.gif' tip='删除报表' />
+			<operation name='btnShenYue' text='审阅报表' icon='icon/icon_13.gif' tip='审阅报表' />
+		</module>
+		<module name="石灰石报表" url="yx/hxjd/index.jsp?formSn=TB_YX_FORM_SHIHUISHIBB" icon='resources/icon/icon_3.gif'>
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAdd' text='添加报表' icon='icon/icon_1.gif' tip='添加报表' />
+			<operation name='btnModi' text='修改报表' icon='icon/icon_1.gif' tip='修改报表' />
+			<operation name='btnDel' text='删除报表' icon='icon/icon_1.gif' tip='删除报表' />
+			<operation name='btnShenYue' text='审阅报表' icon='icon/icon_13.gif' tip='审阅报表' />
+		</module>
+		
+	<!-- 定期工作管理 -->	
+		<module name="定期工作设置" url="yx/dqgzgl/setting/index.jsp" icon='resources/icon/icon_3.gif'>
+			<operation name='btnAddCatalog' text='添加分类' icon='icon/icon_1.gif' tip='添加分类' />
+			<operation name='btnModiCatalog' text="修改分类" icon='icon/icon_3.gif' tip='修改分类'/>
+			<operation name='btnDelCatalog' text='删除分类' icon='icon/icon_2.gif' tip='删除分类' />
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnHanldSend' text='手工发送' icon='icon/icon_13.gif' tip='手工发送' />
+			<operation name='btnAdd' text='添加定期工作' icon='icon/icon_1.gif' tip='添加定期工作' />
+			<operation name='btnModify' text="修改定期工作" icon='icon/icon_3.gif' tip='修改定期工作'/>
+			<operation name='btnDel' text='删除定期工作' icon='icon/icon_2.gif' tip='删除定期工作' />
+		</module>
+		<module name="定期工作处理" url="yx/dqgzgl/handle/index.jsp" icon='resources/icon/icon_3.gif'>
+		</module>
+		<module name="定期工作统计" url="yx/dqgzgl/statistics/index.jsp" icon='resources/icon/icon_3.gif'>
+		</module>
+	
+	<!-- 发电指标分析与考核 -->
+		<module name="小指标设置" url="yx/fdzbfxykh/set/index.jsp">
+			<operation name='btnAddTable' text='添加指标表定义' icon='icon/icon_1.gif' tip='添加指标表定义' />
+			<operation name='btnModiTable' text='修改指标表定义' icon='icon/icon_3.gif' tip='修改指标表定义'/>
+			<operation name='btnDelTable' text='删除指标表定义' icon='icon/icon_2.gif' tip='删除指标表定义' />
+			<operation name='btnRebuildTable' text='同步指标物理表' icon='icon/icon_10.gif' tip='同步指标物理表' />
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAddColumn' text='添加小指标' icon='icon/icon_1.gif' tip='添加小指标' />
+			<operation name='btnModiColumn' text='修改小指标' icon='icon/icon_3.gif' tip='修改小指标'/>
+			<operation name='btnDelColumn' text='删除小指标' icon='icon/icon_2.gif' tip='删除小指标' />
+		</module>
+		<module name="#1机组各值小指标" url="yx/fdzbfxykh/jz/index.jsp?tableCode=JZGZXZB_1">
+			<operation name='btnGetData' text='取数' icon='icon/icon_10.gif' tip='取数' />
+		</module>
+		<module name="#2机组各值小指标" url="yx/fdzbfxykh/jz/index.jsp?tableCode=JZGZXZB_2">
+			<operation name='btnGetData' text='取数' icon='icon/icon_10.gif' tip='取数' />
+		</module>
+		<module name="#3机组各值小指标" url="yx/fdzbfxykh/jz/index.jsp?tableCode=JZGZXZB_3">
+			<operation name='btnGetData' text='取数' icon='icon/icon_10.gif' tip='取数' />
+		</module>
+		<module name="#4机组各值小指标" url="yx/fdzbfxykh/jz/index.jsp?tableCode=JZGZXZB_4">
+			<operation name='btnGetData' text='取数' icon='icon/icon_10.gif' tip='取数' />
+		</module>
+		<module name="小指标考核汇总" url="yx/fdzbfxykh/hz/index.jsp">
+		</module>
+		
+		<!-- 运行台账 -->
+		<module name="220KV开关分合闸记录" url="yx/tz/kgfhzjl/index.jsp"  icon='resources/icon/icon_3.gif'>
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAdd' text='添加记录' icon='icon/icon_1.gif' tip='添加记录' />
+			<operation name='btnModi' text='修改记录' icon='icon/icon_2.gif' tip='选中一条记录，执行操作记录'/>
+			<operation name='btnDel' text='删除记录' icon='icon/icon_3.gif' tip='选中一条或多条记录，执行删除操作' />
+		</module>
+		<module name="电气设备保护加用、停用记录" url="yx/tz/dqsbbhjl/index.jsp"  icon='resources/icon/icon_3.gif'>
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAdd' text='添加记录' icon='icon/icon_1.gif' tip='添加记录' />
+			<operation name='btnModi' text='修改记录' icon='icon/icon_2.gif' tip='选中一条记录，执行操作记录'/>
+			<operation name='btnDel' text='删除记录' icon='icon/icon_3.gif' tip='选中一条或多条记录，执行删除操作' />
+		</module>
+		<module name="接地线拆、装记录" url="yx/tz/jdxjl/index.jsp"  icon='resources/icon/icon_3.gif'>
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAdd' text='添加记录' icon='icon/icon_1.gif' tip='添加记录' />
+			<operation name='btnModi' text='修改记录' icon='icon/icon_2.gif' tip='选中一条记录，执行操作记录'/>
+			<operation name='btnDel' text='删除记录' icon='icon/icon_3.gif' tip='选中一条或多条记录，执行删除操作' />
+		</module>
+		<module name="电气钥匙借用记录" url="yx/tz/dqysjyjl/index.jsp"  icon='resources/icon/icon_3.gif'>
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAdd' text='添加记录' icon='icon/icon_1.gif' tip='添加记录' />
+			<operation name='btnModi' text='修改记录' icon='icon/icon_2.gif' tip='选中一条记录，执行操作记录'/>
+			<operation name='btnDel' text='删除记录' icon='icon/icon_3.gif' tip='选中一条或多条记录，执行删除操作' />
+		</module>
+		<module name="设备绝缘测量记录" url="yx/tz/sbjycljl/index.jsp"  icon='resources/icon/icon_3.gif'>
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAdd' text='添加记录' icon='icon/icon_1.gif' tip='添加记录' />
+			<operation name='btnModi' text='修改记录' icon='icon/icon_2.gif' tip='选中一条记录，执行操作记录'/>
+			<operation name='btnDel' text='删除记录' icon='icon/icon_3.gif' tip='选中一条或多条记录，执行删除操作' />
+		</module>
+		<module name="漏氢量记录" url="yx/tz/lqljl/index.jsp"  icon='resources/icon/icon_3.gif'>
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAdd' text='添加记录' icon='icon/icon_1.gif' tip='添加记录' />
+			<operation name='btnModi' text='修改记录' icon='icon/icon_2.gif' tip='选中一条记录，执行操作记录'/>
+			<operation name='btnDel' text='删除记录' icon='icon/icon_3.gif' tip='选中一条或多条记录，执行删除操作' />
+		</module>
+		<!--  
+		<module name="漏氢量记录(600MW)" url="yx/tz/lqljl600/index.jsp"  icon='resources/icon/icon_3.gif'>
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAdd' text='添加记录' icon='icon/icon_1.gif' tip='添加记录' />
+			<operation name='btnModi' text='修改记录' icon='icon/icon_2.gif' tip='选中一条记录，执行操作记录'/>
+			<operation name='btnDel' text='删除记录' icon='icon/icon_3.gif' tip='选中一条或多条记录，执行删除操作' />
+		</module>
+		-->
+		<module name="保护定值修改记录" url="yx/tz/bhdzxgjl/index.jsp"  icon='resources/icon/icon_3.gif'>
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAdd' text='添加记录' icon='icon/icon_1.gif' tip='添加记录' />
+			<operation name='btnModi' text='修改记录' icon='icon/icon_2.gif' tip='选中一条记录，执行操作记录'/>
+			<operation name='btnDel' text='删除记录' icon='icon/icon_3.gif' tip='选中一条或多条记录，执行删除操作' />
+		</module>
+		<module name="保护及自动装置动作记录" url="yx/tz/bhzddzjl/index.jsp"  icon='resources/icon/icon_3.gif'>
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAdd' text='添加记录' icon='icon/icon_1.gif' tip='添加记录' />
+			<operation name='btnModi' text='修改记录' icon='icon/icon_2.gif' tip='选中一条记录，执行操作记录'/>
+			<operation name='btnDel' text='删除记录' icon='icon/icon_3.gif' tip='选中一条或多条记录，执行删除操作' />
+		</module>
+		<!-- 台账表单 -->
+		<module name="厂用电统计(300MW)" url="yx/tz/cydtj300/index.jsp" icon='resources/icon/icon_3.gif'>
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAdd' text='添加记录' icon='icon/icon_1.gif' tip='添加记录' />
+			<operation name='btnModi' text='修改记录' icon='icon/icon_3.gif' tip='修改记录'/>
+			<operation name='btnDel' text='删除记录' icon='icon/icon_2.gif' tip='删除记录' />
+		</module>
+		<module name="厂用电统计(600MW)" url="yx/tz/cydtj600/index.jsp" icon='resources/icon/icon_3.gif'>
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAdd' text='添加记录' icon='icon/icon_1.gif' tip='添加记录' />
+			<operation name='btnModi' text='修改记录' icon='icon/icon_3.gif' tip='修改记录'/>
+			<operation name='btnDel' text='删除记录' icon='icon/icon_2.gif' tip='删除记录' />
+		</module>
+		<module name="避雷器动作记录(300MW)" url="yx/tz/blqdzjl300/index.jsp" icon='resources/icon/icon_3.gif'>
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAdd' text='添加记录' icon='icon/icon_1.gif' tip='添加记录' />
+			<operation name='btnModi' text='修改记录' icon='icon/icon_3.gif' tip='修改记录'/>
+			<operation name='btnDel' text='删除记录' icon='icon/icon_2.gif' tip='删除记录' />
+		</module>
+		<module name="避雷器动作记录(600MW)" url="yx/tz/blqdzjl600/index.jsp" icon='resources/icon/icon_3.gif'>
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAdd' text='添加记录' icon='icon/icon_1.gif' tip='添加记录' />
+			<operation name='btnModi' text='修改记录' icon='icon/icon_3.gif' tip='修改记录'/>
+			<operation name='btnDel' text='删除记录' icon='icon/icon_2.gif' tip='删除记录' />
+		</module>
+		<module name="电气工作票" url="yx/tz/dqgzp/index.jsp" icon='resources/icon/icon_3.gif'>
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAdd' text='添加记录' icon='icon/icon_1.gif' tip='添加记录' />
+			<operation name='btnModi' text='工作票填写' icon='icon/icon_3.gif' tip='选中一条记录，按步骤填写数据'/>
+			<operation name='btnModiAll' text='修改记录' icon='icon/icon_4.gif' tip='选中一条记录，可以修改全部数据'/>
+			<operation name='btnDel' text='删除记录' icon='icon/icon_2.gif' tip='删除记录' />
+		</module>
+		
+		
+		<module name="一期机组能耗指标对标" url="yx/aqyxfx/index.jsp?formSn=TB_AQJJFX_YQJZNHZB" icon='resources/icon/icon_3.gif'>
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAdd' text='新建统计报表' icon='icon/icon_1.gif' tip='新建统计报表' />
+			<operation name='btnModi' text='修改统计报表' icon='icon/icon_1.gif' tip='修改统计报表' />
+			<operation name='btnDel' text='删除统计报表' icon='icon/icon_1.gif' tip='删除统计报表' />
+		</module>
+		
+		<module name="二期机组能耗指标对标" url="yx/aqyxfx/index.jsp?formSn=TB_AQJJFX_EQJZNHZB" icon='resources/icon/icon_3.gif'>
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAdd' text='新建统计报表' icon='icon/icon_1.gif' tip='新建统计报表' />
+			<operation name='btnModi' text='修改统计报表' icon='icon/icon_1.gif' tip='修改统计报表' />
+			<operation name='btnDel' text='删除统计报表' icon='icon/icon_1.gif' tip='删除统计报表' />
+		</module>
+
+		<module name="一期可靠性指标对标" url="yx/aqyxfx/index.jsp?formSn=TB_AQJJFX_YQKKXZB" icon='resources/icon/icon_3.gif'>
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAdd' text='新建统计报表' icon='icon/icon_1.gif' tip='新建统计报表' />
+			<operation name='btnModi' text='修改统计报表' icon='icon/icon_1.gif' tip='修改统计报表' />
+			<operation name='btnDel' text='删除统计报表' icon='icon/icon_1.gif' tip='删除统计报表' />
+		</module>
+
+		<module name="二期可靠性指标对标" url="yx/aqyxfx/index.jsp?formSn=TB_AQJJFX_EQKKXZB" icon='resources/icon/icon_3.gif'>
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAdd' text='新建统计报表' icon='icon/icon_1.gif' tip='新建统计报表' />
+			<operation name='btnModi' text='修改统计报表' icon='icon/icon_1.gif' tip='修改统计报表' />
+			<operation name='btnDel' text='删除统计报表' icon='icon/icon_1.gif' tip='删除统计报表' />
+		</module>
+						
+		<module name="非计划降出力统计" url="yx/aqyxfx/fjhjcl/index.jsp?formSn=TB_FORM_SJBZB_FJHJCLFXB" icon='resources/icon/icon_3.gif'>
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAdd' text='新建统计报表' icon='icon/icon_1.gif' tip='新建统计报表' />
+			<operation name='btnModi' text='修改统计报表' icon='icon/icon_1.gif' tip='修改统计报表' />
+			<operation name='btnDel' text='删除统计报表' icon='icon/icon_1.gif' tip='删除统计报表' />
+		</module>
+		<module name="非计划停运分析" url="yx/aqyxfx/fjhjcl/index.jsp?formSn=TB_AQJJFX_FJHTY" icon='resources/icon/icon_3.gif'>
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAdd' text='新建统计报表' icon='icon/icon_1.gif' tip='新建统计报表' />
+			<operation name='btnModi' text='修改统计报表' icon='icon/icon_1.gif' tip='修改统计报表' />
+			<operation name='btnDel' text='删除统计报表' icon='icon/icon_1.gif' tip='删除统计报表' />
+		</module>
+		
+	</group>
+<!-- 班组管理子系统 -->
+	<group name="班组管理子系统">
+		<module name="文明生产" icon="resources/icon/icon_3.gif" url="bz/gzzd/index.jsp?formSn=TB_FORM_GZZD">
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAdd' text='新增记录' icon='icon/icon_1.gif' tip='新增记录' />
+			<operation name='btnModi' text='修改记录' icon='icon/icon_1.gif' tip='修改记录' />
+			<operation name='btnDel' text='删除记录' icon='icon/icon_1.gif' tip='删除记录' />
+		</module>
+		<module name="精神文明" icon="resources/icon/icon_3.gif" url="bz/gzzd/index.jsp?formSn=TB_FORM_JSWM">
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAdd' text='新增记录' icon='icon/icon_1.gif' tip='新增记录' />
+			<operation name='btnModi' text='修改记录' icon='icon/icon_1.gif' tip='修改记录' />
+			<operation name='btnDel' text='删除记录' icon='icon/icon_1.gif' tip='删除记录' />
+		</module>
+		<module name="安全管理" icon="resources/icon/icon_3.gif" url="bz/gzzd/index.jsp?formSn=TB_FORM_AQGL">
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAdd' text='新增记录' icon='icon/icon_1.gif' tip='新增记录' />
+			<operation name='btnModi' text='修改记录' icon='icon/icon_1.gif' tip='修改记录' />
+			<operation name='btnDel' text='删除记录' icon='icon/icon_1.gif' tip='删除记录' />
+		</module>
+		<module name="专业基础" icon="resources/icon/icon_3.gif" url="bz/gzzd/index.jsp?formSn=TB_FORM_ZYJC">
+		<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAdd' text='新增记录' icon='icon/icon_1.gif' tip='新增记录' />
+			<operation name='btnModi' text='修改记录' icon='icon/icon_1.gif' tip='修改记录' />
+			<operation name='btnDel' text='删除记录' icon='icon/icon_1.gif' tip='删除记录' />
+		</module>
+	</group>
+	
+<!-- 设备管理子系统 -->	
+	<group name="设备管理子系统">
+		<!-- 设备台帐管理 -->
+		<module name="基础台帐" url="sb/sbtzgl/jctz/index.jsp" icon='jteap/sb/images/sbtzgl01.png'>
+			<operation name='btnAddCatalog' text='添加分类' icon='icon/icon_1.gif' tip='添加分类' />
+			<operation name='btnModiCatalog' text="修改分类" icon='icon/icon_3.gif' tip='修改分类'/>
+			<operation name='btnDelCatalog' text='删除分类' icon='icon/icon_2.gif' tip='删除分类' />
+			<operation name="->" text="->" icon="->" tip="->" />
+			<operation name='btnAdd' text='添加基础台帐' icon='icon/icon_1.gif' tip='添加定期工作' />
+			<operation name='btnModify' text="修改基础台帐" icon='icon/icon_3.gif' tip='修改定期工作'/>
+			<operation name='btnDel' text='删除基础台帐' icon='icon/icon_2.gif' tip='删除定期工作' />
+		</module>
+		<!-- 运行台帐管理 -->
+		<module name="运行台帐" url="sb/sbtzgl/jctz/index.jsp" icon='jteap/sb/images/sbtzgl02.png'>
+			<operation name='btnYxtz' text='运行台帐' icon='icon/icon_1.gif' tip='运行台帐' />
+		</module>
+		<!-- 设备评级管理 -->
+		<module name="评级信息" url="sb/sbpjgl/pjxx/index.jsp" icon='jteap/sb/images/sbpjgl01.png'>
+			<operation name='btnAddCatalog' text='添加分类' icon='icon/icon_1.gif' tip='添加分类' />
+			<operation name='btnModiCatalog' text="修改分类" icon='icon/icon_3.gif' tip='修改分类'/>
+			<operation name='btnDelCatalog' text='删除分类' icon='icon/icon_2.gif' tip='删除分类' />
+			<operation name="->" text="->" icon="->" tip="->" />
+			<operation name='btnPj' text='评级' icon='icon/icon_1.gif' tip='评级' />
+			<operation name='btnAddPj' text="添加评级设备" icon='icon/icon_3.gif' tip='添加评级设备'/>
+			<operation name='btnDelPj' text='删除评级设备' icon='icon/icon_2.gif' tip='删除评级设备' />
+		</module>
+		<module name="评级报表" url="sb/sbpjgl/pjbb/index.jsp" icon='jteap/sb/images/sbpjgl02.png'>
+		</module>
+		<module name="评级构成" url="sb/sbpjgl/pjgc/index.jsp" icon='jteap/sb/images/sbpjgl03.png'>
+		</module>
+		<!-- 设备异动管理 -->
+		<module name="设备异动报告" url="sb/sbydgl/ydbg/index.jsp" icon='jteap/sb/images/sbydgl01.png'>
+			<operation name='->' text='->' icon='icon/icon_1.gif' tip='->' />
+			<operation name='btnAddSq' 		text='申请' 	icon='icon/icon_6.gif' tip='申请流程'/>
+			<operation name='btnProcess'	text='处理' 	icon='icon/icon_5.gif' tip='处理流程'/>
+			<operation name='btnUndo'	 	text='撤销' 	icon='icon/icon_5.gif' tip='撤销流程'/>
+			<operation name='btnCancel'	 	text='作废' 	icon='icon/icon_5.gif' tip='作废流程'/>
+			<operation name='btnDelSq'	 	text='删除' 	icon='icon/icon_5.gif' tip='删除流程'/>
+		</module>
+		<!-- 设备异动通知单 -->
+		<module name="设备异动通知单" url="sb/sbydgl/ydtzd/index.jsp" icon='jteap/sb/images/sbydgl02.png'>
+			<operation name='->' text='->' icon='icon/icon_1.gif' tip='->' />
+			<operation name='btnAddSq' 		text='申请' 	icon='icon/icon_6.gif' tip='申请流程'/>
+			<operation name='btnProcess'	text='处理' 	icon='icon/icon_5.gif' tip='处理流程'/>
+			<operation name='btnUndo'	 	text='撤销' 	icon='icon/icon_5.gif' tip='撤销流程'/>
+			<operation name='btnCancel'	 	text='作废' 	icon='icon/icon_5.gif' tip='作废流程'/>
+			<operation name='btnDelSq'	 	text='删除' 	icon='icon/icon_5.gif' tip='删除流程'/>
+		</module>
+		<!-- 异动查询 -->
+		<module name="异动查询" url="sb/sbydgl/ydcx/index.jsp" icon='jteap/sb/images/sbydgl03.png'>
+		</module>
+		<!-- 设备台帐查询-->
+		<module name="设备台帐查询" url="sb/sbcx/sbtzcx/index.jsp" icon='jteap/sb/images/sbcx01.png'>
+		</module>
+		<!-- 设备位置查询 -->
+		<module name="设备位置查询" url="sb/sbcx/sbwzcx/index.jsp" icon='jteap/sb/images/sbcx02.png'>
+		</module>
+		<!-- 设备停复役管理 -->
+		<module name="设备停复役管理" url="sb/sbtfygl/index.jsp" icon='jteap/sb/images/sbtfygl01.png'>
+			<operation name='btnSave' text='保存' icon='icon/icon_1.gif' tip='保存' />
+			<operation name='btnDqkgl' text="读取开关量" icon='icon/icon_3.gif' tip='读取开关量'/>
+		</module>
+	</group>
+	
+	
+<!-- 检修管理 -->
+	<group name="检修管理">
+		<module name="设备缺陷管理" url="jx/qxgl/qxsq/index.jsp?jxbm=SB">
+			<operation name='->' text='->' icon='icon/icon_1.gif' tip='->' />
+			<operation name='btnAddSq' text='申请' icon='icon/icon_1.gif' tip='添加申请单' />
+			<operation name='btnProcess' text='处理' icon='icon/icon_1.gif' tip='处理缺陷单' />
+			<operation name='btnUndo' text='撤销' icon='icon/icon_1.gif' tip='撤销缺陷单' />
+			<operation name='btnCancel' text='作废' icon='icon/icon_1.gif' tip='作废缺陷单' />
+			<operation name='btnDelSq' text='删除' icon='icon/icon_1.gif' tip='删除缺陷单' />
+		</module>
+		<module name="土建缺陷管理" url="jx/qxgl/qxsq/index.jsp?jxbm=TJ">
+			<operation name='->' text='->' icon='icon/icon_1.gif' tip='->' />
+			<operation name='btnAddSq' text='申请' icon='icon/icon_1.gif' tip='添加申请单' />
+			<operation name='btnProcess' text='处理' icon='icon/icon_1.gif' tip='处理缺陷单' />
+			<operation name='btnUndo' text='撤销' icon='icon/icon_1.gif' tip='撤销缺陷单' />
+			<operation name='btnCancel' text='作废' icon='icon/icon_1.gif' tip='作废缺陷单' />
+			<operation name='btnDelSq' text='删除' icon='icon/icon_1.gif' tip='删除缺陷单' />
+		</module>
+		<module name="燃运缺陷管理" url="jx/qxgl/qxsq/index.jsp?jxbm=RY">
+			<operation name='->' text='->' icon='icon/icon_1.gif' tip='->' />
+			<operation name='btnAddSq' text='申请' icon='icon/icon_1.gif' tip='添加申请单' />
+			<operation name='btnProcess' text='处理' icon='icon/icon_1.gif' tip='处理缺陷单' />
+			<operation name='btnUndo' text='撤销' icon='icon/icon_1.gif' tip='撤销缺陷单' />
+			<operation name='btnCancel' text='作废' icon='icon/icon_1.gif' tip='作废缺陷单' />
+			<operation name='btnDelSq' text='删除' icon='icon/icon_1.gif' tip='删除缺陷单' />
+		</module>
+		<module name="缺陷查询" url="jx/qxgl/qxcx/index.jsp">
+		</module>
+		<module name="缺陷统计" url="jx/qxgl/qxtj/index.jsp">
+			<operation name='->' text='->' icon='icon/icon_1.gif' tip='->' />
+			<operation name='btnAddQxtj' text='新建统计单' icon='icon/icon_1.gif' tip='添加缺陷统计' />
+			<operation name='btnExpQxcx' text='导出本期缺陷查询' icon='icon/icon_1.gif' tip='导出本期缺陷查询' />
+		</module>
+		<module name="缺陷详情统计" url="jx/qxgl/qxxqtj/index.jsp">
+			<operation name='->' text='->' icon='icon/icon_1.gif' tip='->' />
+			<operation name='btnAddQxtj' text='新建统计单' icon='icon/icon_1.gif' tip='进行缺陷详情统计' />
+		</module>
+		<module name="机组检修计划" url="jx/dxxgl/jzjxjh/index.jsp">
+			<operation name='->' text='->' icon='icon/icon_1.gif' tip='->' />
+			<operation name='btnAddJh' text='添加计划' icon='icon/icon_1.gif' tip='添加机组检修计划' />
+			<operation name='btnModiJh' text='修改计划' icon='icon/icon_1.gif' tip='选中一条记录，然后修改机组检修计划' />
+			<operation name='btnDelJh' text='删除计划' icon='icon/icon_1.gif' tip='选中记录，然后删除积聚在检修计划' />
+		</module>
+		<module name="机组检修项目" url="jx/dxxgl/jzjxxm/index.jsp">
+			<operation name='->' text='->' icon='icon/icon_1.gif' tip='->' />
+			<operation name='btnAddXm' text='添加项目' icon='icon/icon_1.gif' tip='添加机组检修项目' />
+			<operation name='btnModiXm' text='修改项目' icon='icon/icon_1.gif' tip='选中一条记录，然后修改机组检修项目' />
+			<operation name='btnDelXm' text='删除项目' icon='icon/icon_1.gif' tip='选中记录，然后删除积聚在检修项目' />
+			<operation name='btnExport' text='Excel导出' icon='icon/icon_1.gif' tip='导出记录，生成机组检修报表' />
+		</module>
+		<module name="检修总结报告" url="jx/dxxgl/jxzjbg/index.jsp">
+			<operation name='->' text='->' icon='icon/icon_1.gif' tip='->' />
+			<operation name='btnSaveBg' text='保存报告' icon='icon/icon_1.gif' tip='保存编辑的报告' />
+			<operation name='btnEditBg' text='编辑报告' icon='icon/icon_1.gif' tip='点击后，可以编辑报告' />
+			<operation name='btnDelBg' text='删除报告' icon='icon/icon_1.gif' tip='删除报告' />
+		</module>
+		<module name="检修综合查询" url="jx/dxxgl/jxzhcx/index.jsp">
+			<operation name='->' text='->' icon='icon/icon_1.gif' tip='->' />
+			<operation name='btnShowJh' text='检修计划' icon='icon/icon_1.gif' tip='查看检修计划详细信息' />
+			<operation name='btnShowXm' text='检修项目' icon='icon/icon_1.gif' tip='查看检修项目' />
+			<operation name='btnShowZj' text='检修总结' icon='icon/icon_1.gif' tip='查看检修总结报告详细信息' />
+		</module>
+		<module name="检修设备台账" url="jx/dxxgl/jxsbgl/index.jsp">
+			<operation name='->' text='->' icon='icon/icon_1.gif' tip='->' />
+			<operation name='btnAddJxsb' text='添加设备' icon='icon/icon_1.gif' tip='添加设备' />
+			<operation name='btnModiJxsb' text='修改设备' icon='icon/icon_1.gif' tip='修改设备' />
+			<operation name='btnDelJxsb' text='删除设备' icon='icon/icon_1.gif' tip='删除设备' />
+		</module>
+		<module name="检修资料管理" url="system/doclib/index.jsp?catalogCode=jxzlgl" icon='jteap/jx/images/jxzlgl01.png'>
+			<operation name='btnAddCatalog' 		text='添加分类' 	icon='icon/icon_1.gif' tip=''/>
+			<operation name='btnModiCatalog'	 	text='修改分类' 	icon='icon/icon_3.gif' tip='选中需要修改的分类，再执行该操作' adminOp='true'/>
+			<operation name='btnDelCatalog' 		text='删除分类' 	icon='icon/icon_2.gif' tip='选中需要删除的分类，再执行该操作' adminOp='true'/>		
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAddDocument' 		text='添加文档' 	icon='icon/icon_11.gif' tip='选中文档分类，添加文档' adminOp='true'/>		
+			<operation name='btnModiDocument' 		text='修改文档' 	icon='icon/icon_4.gif' tip='选中需要修改的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDelDocument' 		text='删除文档' 	icon='icon/icon_12.gif' tip='选中需要删除的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDocumentLevel' 		text='文档级别配置' 	icon='icon/icon_13.gif' tip='文档级别的配置' adminOp='true'/>	
+		</module>
+		<module name="公用系统检修计划" url="jx/dxxgl/gyxtjxjh/index.jsp">
+			<operation name='btnSign' text='标记' icon='icon/icon_1.gif' tip='为月份添加标记' />
+			<operation name='btnRecord' text='记录' icon='icon/icon_1.gif' tip='为月份增加详细记录' />
+		</module>
+		<module name="备品备件信息管理" url="jx/bpbjgl/bpbjxx/index.jsp">
+			<operation name='btnAddZyfl' text='添加专业' icon='icon/icon_1.gif' tip='添加专业分类' />
+			<operation name='btnModiZyfl' text='修改专业' icon='icon/icon_1.gif' tip='修改专业分类' />
+			<operation name='btnDelZyfl' text='删除专业' icon='icon/icon_1.gif' tip='删除专业分类' />
+			<operation name='->' text='->' icon='icon/icon_1.gif' tip='->' />
+			<operation name='btnAddBpbj' text='添加' icon='icon/icon_1.gif' tip='添加备品备件信息' />
+			<operation name='btnModiBpbj' text='修改' icon='icon/icon_1.gif' tip='修改备品备件信息' />
+			<operation name='btnDelBpbj' text='删除' icon='icon/icon_1.gif' tip='删除备品备件信息' />
+			<operation name='btnWzsq' text='物资申请' icon='icon/icon_1.gif' tip='物资申请' />
+		</module>
+	</group>
+	<group name="党工团管理">
+		<module name="党工团首页" url="dgt/index.jsp" icon='resources/icon/icon_3.gif'/>
+		<module name="党员信息管理" url="dgt/dyxxgl/index.jsp" icon='resources/icon/icon_3.gif'>
+			<operation name='btnAddDzz' text="新建党组织" icon='icon/icon_3.gif' tip='新建党组织'/>
+			<operation name='btnModDzz' text="修改党组织" icon='icon/icon_3.gif' tip='修改党组织'/>
+			<operation name='btnDelDzz' text="删除党组织" icon='icon/icon_3.gif' tip='删除党组织'/>
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAddDy' text="新建党员" icon='icon/icon_3.gif' tip='新建党员'/>
+			<operation name='btnModDy' text="修改党员" icon='icon/icon_3.gif' tip='修改党员'/>
+			<operation name='btnDelDy' text="删除党员" icon='icon/icon_3.gif' tip='删除党员'/>
+		</module>
+		<module name="党费管理" url="system/doclib/index.jsp?catalogCode=dfgl" icon='resources/icon/icon_3.gif'>
+			<operation name='btnAddCatalog' 		text='添加分类' 	icon='icon/icon_1.gif' tip=''/>
+			<operation name='btnModiCatalog'	 	text='修改分类' 	icon='icon/icon_3.gif' tip='选中需要修改的分类，再执行该操作' adminOp='true'/>
+			<operation name='btnDelCatalog' 		text='删除分类' 	icon='icon/icon_2.gif' tip='选中需要删除的分类，再执行该操作' adminOp='true'/>		
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAddDocument' 		text='添加文档' 	icon='icon/icon_11.gif' tip='选中文档分类，添加文档' adminOp='true'/>		
+			<operation name='btnModiDocument' 		text='修改文档' 	icon='icon/icon_4.gif' tip='选中需要修改的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDelDocument' 		text='删除文档' 	icon='icon/icon_12.gif' tip='选中需要删除的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDocumentLevel' 		text='文档级别配置' 	icon='icon/icon_13.gif' tip='文档级别的配置' adminOp='true'/>	
+		</module>
+		<module name="宣传工作要点" url="system/doclib/index.jsp?catalogCode=xcyd" icon='resources/icon/icon_3.gif'>
+			<operation name='btnAddCatalog' 		text='添加分类' 	icon='icon/icon_1.gif' tip=''/>
+			<operation name='btnModiCatalog'	 	text='修改分类' 	icon='icon/icon_3.gif' tip='选中需要修改的分类，再执行该操作' adminOp='true'/>
+			<operation name='btnDelCatalog' 		text='删除分类' 	icon='icon/icon_2.gif' tip='选中需要删除的分类，再执行该操作' adminOp='true'/>		
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAddDocument' 		text='添加文档' 	icon='icon/icon_11.gif' tip='选中文档分类，添加文档' adminOp='true'/>		
+			<operation name='btnModiDocument' 		text='修改文档' 	icon='icon/icon_4.gif' tip='选中需要修改的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDelDocument' 		text='删除文档' 	icon='icon/icon_12.gif' tip='选中需要删除的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDocumentLevel' 		text='文档级别配置' 	icon='icon/icon_13.gif' tip='文档级别的配置' adminOp='true'/>	
+		</module>
+		<module name="党委工作要点" url="system/doclib/index.jsp?catalogCode=dwgzzd" icon='resources/icon/icon_3.gif'>
+			<operation name='btnAddCatalog' 		text='添加分类' 	icon='icon/icon_1.gif' tip=''/>
+			<operation name='btnModiCatalog'	 	text='修改分类' 	icon='icon/icon_3.gif' tip='选中需要修改的分类，再执行该操作' adminOp='true'/>
+			<operation name='btnDelCatalog' 		text='删除分类' 	icon='icon/icon_2.gif' tip='选中需要删除的分类，再执行该操作' adminOp='true'/>		
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAddDocument' 		text='添加文档' 	icon='icon/icon_11.gif' tip='选中文档分类，添加文档' adminOp='true'/>		
+			<operation name='btnModiDocument' 		text='修改文档' 	icon='icon/icon_4.gif' tip='选中需要修改的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDelDocument' 		text='删除文档' 	icon='icon/icon_12.gif' tip='选中需要删除的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDocumentLevel' 		text='文档级别配置' 	icon='icon/icon_13.gif' tip='文档级别的配置' adminOp='true'/>	
+		</module>
+		<module name="月度工作计划" url="system/doclib/index.jsp?catalogCode=ydgzjh" icon='resources/icon/icon_3.gif'>
+			<operation name='btnAddCatalog' 		text='添加分类' 	icon='icon/icon_1.gif' tip=''/>
+			<operation name='btnModiCatalog'	 	text='修改分类' 	icon='icon/icon_3.gif' tip='选中需要修改的分类，再执行该操作' adminOp='true'/>
+			<operation name='btnDelCatalog' 		text='删除分类' 	icon='icon/icon_2.gif' tip='选中需要删除的分类，再执行该操作' adminOp='true'/>		
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAddDocument' 		text='添加文档' 	icon='icon/icon_11.gif' tip='选中文档分类，添加文档' adminOp='true'/>		
+			<operation name='btnModiDocument' 		text='修改文档' 	icon='icon/icon_4.gif' tip='选中需要修改的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDelDocument' 		text='删除文档' 	icon='icon/icon_12.gif' tip='选中需要删除的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDocumentLevel' 		text='文档级别配置' 	icon='icon/icon_13.gif' tip='文档级别的配置' adminOp='true'/>	
+		</module>
+		<module name="党委中心组学习计划" url="system/doclib/index.jsp?catalogCode=dwzxzxljh" icon='resources/icon/icon_3.gif'>
+			<operation name='btnAddCatalog' 		text='添加分类' 	icon='icon/icon_1.gif' tip=''/>
+			<operation name='btnModiCatalog'	 	text='修改分类' 	icon='icon/icon_3.gif' tip='选中需要修改的分类，再执行该操作' adminOp='true'/>
+			<operation name='btnDelCatalog' 		text='删除分类' 	icon='icon/icon_2.gif' tip='选中需要删除的分类，再执行该操作' adminOp='true'/>		
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAddDocument' 		text='添加文档' 	icon='icon/icon_11.gif' tip='选中文档分类，添加文档' adminOp='true'/>		
+			<operation name='btnModiDocument' 		text='修改文档' 	icon='icon/icon_4.gif' tip='选中需要修改的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDelDocument' 		text='删除文档' 	icon='icon/icon_12.gif' tip='选中需要删除的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDocumentLevel' 		text='文档级别配置' 	icon='icon/icon_13.gif' tip='文档级别的配置' adminOp='true'/>	
+		</module>
+		<module name="党委中心组学习交流" url="system/doclib/index.jsp?catalogCode=dwzxzxxjl" icon='resources/icon/icon_3.gif'>
+			<operation name='btnAddCatalog' 		text='添加分类' 	icon='icon/icon_1.gif' tip=''/>
+			<operation name='btnModiCatalog'	 	text='修改分类' 	icon='icon/icon_3.gif' tip='选中需要修改的分类，再执行该操作' adminOp='true'/>
+			<operation name='btnDelCatalog' 		text='删除分类' 	icon='icon/icon_2.gif' tip='选中需要删除的分类，再执行该操作' adminOp='true'/>		
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAddDocument' 		text='添加文档' 	icon='icon/icon_11.gif' tip='选中文档分类，添加文档' adminOp='true'/>		
+			<operation name='btnModiDocument' 		text='修改文档' 	icon='icon/icon_4.gif' tip='选中需要修改的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDelDocument' 		text='删除文档' 	icon='icon/icon_12.gif' tip='选中需要删除的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDocumentLevel' 		text='文档级别配置' 	icon='icon/icon_13.gif' tip='文档级别的配置' adminOp='true'/>	
+		</module>
+		<module name="工作制度及文件" url="system/doclib/index.jsp?catalogCode=gzzdjwj" icon='resources/icon/icon_3.gif'>
+			<operation name='btnAddCatalog' 		text='添加分类' 	icon='icon/icon_1.gif' tip=''/>
+			<operation name='btnModiCatalog'	 	text='修改分类' 	icon='icon/icon_3.gif' tip='选中需要修改的分类，再执行该操作' adminOp='true'/>
+			<operation name='btnDelCatalog' 		text='删除分类' 	icon='icon/icon_2.gif' tip='选中需要删除的分类，再执行该操作' adminOp='true'/>		
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAddDocument' 		text='添加文档' 	icon='icon/icon_11.gif' tip='选中文档分类，添加文档' adminOp='true'/>		
+			<operation name='btnModiDocument' 		text='修改文档' 	icon='icon/icon_4.gif' tip='选中需要修改的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDelDocument' 		text='删除文档' 	icon='icon/icon_12.gif' tip='选中需要删除的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDocumentLevel' 		text='文档级别配置' 	icon='icon/icon_13.gif' tip='文档级别的配置' adminOp='true'/>	
+		</module>
+		
+		<module name="来信来访管理" url="system/doclib/index.jsp?catalogCode=lxlfgl" icon='resources/icon/icon_3.gif'>
+			<operation name='btnAddCatalog' 		text='添加分类' 	icon='icon/icon_1.gif' tip=''/>
+			<operation name='btnModiCatalog'	 	text='修改分类' 	icon='icon/icon_3.gif' tip='选中需要修改的分类，再执行该操作' adminOp='true'/>
+			<operation name='btnDelCatalog' 		text='删除分类' 	icon='icon/icon_2.gif' tip='选中需要删除的分类，再执行该操作' adminOp='true'/>		
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAddDocument' 		text='添加文档' 	icon='icon/icon_11.gif' tip='选中文档分类，添加文档' adminOp='true'/>		
+			<operation name='btnModiDocument' 		text='修改文档' 	icon='icon/icon_4.gif' tip='选中需要修改的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDelDocument' 		text='删除文档' 	icon='icon/icon_12.gif' tip='选中需要删除的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDocumentLevel' 		text='文档级别配置' 	icon='icon/icon_13.gif' tip='文档级别的配置' adminOp='true'/>
+		</module>
+		<module name="监察信访管理" url="system/doclib/index.jsp?catalogCode=jcxfgl" icon='resources/icon/icon_3.gif'>
+			<operation name='btnAddCatalog' 		text='添加分类' 	icon='icon/icon_1.gif' tip=''/>
+			<operation name='btnModiCatalog'	 	text='修改分类' 	icon='icon/icon_3.gif' tip='选中需要修改的分类，再执行该操作' adminOp='true'/>
+			<operation name='btnDelCatalog' 		text='删除分类' 	icon='icon/icon_2.gif' tip='选中需要删除的分类，再执行该操作' adminOp='true'/>		
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAddDocument' 		text='添加文档' 	icon='icon/icon_11.gif' tip='选中文档分类，添加文档' adminOp='true'/>		
+			<operation name='btnModiDocument' 		text='修改文档' 	icon='icon/icon_4.gif' tip='选中需要修改的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDelDocument' 		text='删除文档' 	icon='icon/icon_12.gif' tip='选中需要删除的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDocumentLevel' 		text='文档级别配置' 	icon='icon/icon_13.gif' tip='文档级别的配置' adminOp='true'/>
+		</module>
+		<module name="效能监察管理" url="system/doclib/index.jsp?catalogCode=xnjcgl" icon='resources/icon/icon_3.gif'>
+			<operation name='btnAddCatalog' 		text='添加分类' 	icon='icon/icon_1.gif' tip=''/>
+			<operation name='btnModiCatalog'	 	text='修改分类' 	icon='icon/icon_3.gif' tip='选中需要修改的分类，再执行该操作' adminOp='true'/>
+			<operation name='btnDelCatalog' 		text='删除分类' 	icon='icon/icon_2.gif' tip='选中需要删除的分类，再执行该操作' adminOp='true'/>		
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAddDocument' 		text='添加文档' 	icon='icon/icon_11.gif' tip='选中文档分类，添加文档' adminOp='true'/>		
+			<operation name='btnModiDocument' 		text='修改文档' 	icon='icon/icon_4.gif' tip='选中需要修改的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDelDocument' 		text='删除文档' 	icon='icon/icon_12.gif' tip='选中需要删除的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDocumentLevel' 		text='文档级别配置' 	icon='icon/icon_13.gif' tip='文档级别的配置' adminOp='true'/>
+		</module>
+		<module name="纪检工作要点" url="system/doclib/index.jsp?catalogCode=jjgzyd" icon='resources/icon/icon_3.gif'>
+			<operation name='btnAddCatalog' 		text='添加分类' 	icon='icon/icon_1.gif' tip=''/>
+			<operation name='btnModiCatalog'	 	text='修改分类' 	icon='icon/icon_3.gif' tip='选中需要修改的分类，再执行该操作' adminOp='true'/>
+			<operation name='btnDelCatalog' 		text='删除分类' 	icon='icon/icon_2.gif' tip='选中需要删除的分类，再执行该操作' adminOp='true'/>		
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAddDocument' 		text='添加文档' 	icon='icon/icon_11.gif' tip='选中文档分类，添加文档' adminOp='true'/>		
+			<operation name='btnModiDocument' 		text='修改文档' 	icon='icon/icon_4.gif' tip='选中需要修改的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDelDocument' 		text='删除文档' 	icon='icon/icon_12.gif' tip='选中需要删除的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDocumentLevel' 		text='文档级别配置' 	icon='icon/icon_13.gif' tip='文档级别的配置' adminOp='true'/>
+		</module>
+		<module name="工作制度及文件" url="system/doclib/index.jsp?catalogCode=jzgzzdjwj" icon='resources/icon/icon_3.gif'>
+			<operation name='btnAddCatalog' 		text='添加分类' 	icon='icon/icon_1.gif' tip=''/>
+			<operation name='btnModiCatalog'	 	text='修改分类' 	icon='icon/icon_3.gif' tip='选中需要修改的分类，再执行该操作' adminOp='true'/>
+			<operation name='btnDelCatalog' 		text='删除分类' 	icon='icon/icon_2.gif' tip='选中需要删除的分类，再执行该操作' adminOp='true'/>		
+			<operation name='->' text='->' icon='->' tip='->'/>			
+			<operation name='btnAddDocument' 		text='添加文档' 	icon='icon/icon_11.gif' tip='选中文档分类，添加文档' adminOp='true'/>		
+			<operation name='btnModiDocument' 		text='修改文档' 	icon='icon/icon_4.gif' tip='选中需要修改的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDelDocument' 		text='删除文档' 	icon='icon/icon_12.gif' tip='选中需要删除的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDocumentLevel' 		text='文档级别配置' 	icon='icon/icon_13.gif' tip='文档级别的配置' adminOp='true'/>
+		</module>
+
+		<module name="团员信息管理" url="dgt/tyxxgl/index.jsp" icon='resources/icon/icon_3.gif'>
+			<operation name="btnAdd" text="增加团员" icon='icon/icon_3.gif' tip='增加团员' ></operation>
+			<operation name="btnMod" text="修改团员" icon='icon/icon_3.gif' tip='修改团员' ></operation>
+			<operation name="btnDel" text="删除团员" icon='icon/icon_3.gif' tip='删除团员' ></operation>
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name="btnLtgl" text="离团人员整理" icon='icon/icon_3.gif' tip='离团人员整理' ></operation>
+			<operation name="btnLt" text="离团" icon='icon/icon_3.gif' tip='离团' ></operation>
+		</module>
+	
+		<module name="团青推优管理" url="dgt/tqty/index.jsp" icon='resources/icon/icon_3.gif'>
+			<operation name="btnAdd" text="新增" icon='icon/icon_3.gif' tip='新增' ></operation>
+			<operation name="btnMod" text="修改" icon='icon/icon_3.gif' tip='修改' ></operation>
+			<operation name="btnDel" text="删除" icon='icon/icon_3.gif' tip='删除' ></operation>
+		</module>
+		<module name="团青工作要点" url="system/doclib/index.jsp?catalogCode=tqgzyd" icon='resources/icon/icon_3.gif'>
+			<operation name='btnAddCatalog' 		text='添加分类' 	icon='icon/icon_1.gif' tip=''/>
+			<operation name='btnModiCatalog'	 	text='修改分类' 	icon='icon/icon_3.gif' tip='选中需要修改的分类，再执行该操作' adminOp='true'/>
+			<operation name='btnDelCatalog' 		text='删除分类' 	icon='icon/icon_2.gif' tip='选中需要删除的分类，再执行该操作' adminOp='true'/>		
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAddDocument' 		text='添加文档' 	icon='icon/icon_11.gif' tip='选中文档分类，添加文档' adminOp='true'/>		
+			<operation name='btnModiDocument' 		text='修改文档' 	icon='icon/icon_4.gif' tip='选中需要修改的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDelDocument' 		text='删除文档' 	icon='icon/icon_12.gif' tip='选中需要删除的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDocumentLevel' 		text='文档级别配置' 	icon='icon/icon_13.gif' tip='文档级别的配置' adminOp='true'/>
+		</module>
+		<module name="工作制度及文件" url="system/doclib/index.jsp?catalogCode=tqzd" icon='resources/icon/icon_3.gif'>
+			<operation name='btnAddCatalog' 		text='添加分类' 	icon='icon/icon_1.gif' tip=''/>
+			<operation name='btnModiCatalog'	 	text='修改分类' 	icon='icon/icon_3.gif' tip='选中需要修改的分类，再执行该操作' adminOp='true'/>
+			<operation name='btnDelCatalog' 		text='删除分类' 	icon='icon/icon_2.gif' tip='选中需要删除的分类，再执行该操作' adminOp='true'/>		
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAddDocument' 		text='添加文档' 	icon='icon/icon_11.gif' tip='选中文档分类，添加文档' adminOp='true'/>		
+			<operation name='btnModiDocument' 		text='修改文档' 	icon='icon/icon_4.gif' tip='选中需要修改的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDelDocument' 		text='删除文档' 	icon='icon/icon_12.gif' tip='选中需要删除的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDocumentLevel' 		text='文档级别配置' 	icon='icon/icon_13.gif' tip='文档级别的配置' adminOp='true'/>
+		</module>
+		<module name="通知专栏" url="bz/bztzzl/index.jsp" icon='resources/icon/icon_3.gif'>
+			<operation name="btnAdd" text="新增" icon='icon/icon_3.gif' tip='新增' ></operation>
+			<operation name="btnMod" text="修改" icon='icon/icon_3.gif' tip='修改' ></operation>
+			<operation name="btnDel" text="删除" icon='icon/icon_3.gif' tip='删除' ></operation>
+		</module>
+		<module name="班组统计" url="bz/bztj/index.jsp" icon='resources/icon/icon_3.gif'>
+			<operation name="btnAdd" text="新增统计" icon='icon/icon_3.gif' tip='新增' ></operation>
+		</module>
+		<module name="分季度工作统计" url="dgt/fjdgztj/tongji/index.jsp" icon='resources/icon/icon_3.gif'>
+			<operation name="btnAdd" text="录入" icon='icon/icon_3.gif' tip='录入' ></operation>
+			<operation name="btnMod" text="修改" icon='icon/icon_3.gif' tip='修改' ></operation>
+			<operation name="btnDel" text="删除" icon='icon/icon_3.gif' tip='删除' ></operation>
+		</module>
+		<module name="工会简介" url="system/doclib/index.jsp?catalogCode=ghjj" icon='resources/icon/icon_3.gif'>
+			<operation name='btnAddCatalog' 		text='添加分类' 	icon='icon/icon_1.gif' tip=''/>
+			<operation name='btnModiCatalog'	 	text='修改分类' 	icon='icon/icon_3.gif' tip='选中需要修改的分类，再执行该操作' adminOp='true'/>
+			<operation name='btnDelCatalog' 		text='删除分类' 	icon='icon/icon_2.gif' tip='选中需要删除的分类，再执行该操作' adminOp='true'/>		
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAddDocument' 		text='添加文档' 	icon='icon/icon_11.gif' tip='选中文档分类，添加文档' adminOp='true'/>		
+			<operation name='btnModiDocument' 		text='修改文档' 	icon='icon/icon_4.gif' tip='选中需要修改的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDelDocument' 		text='删除文档' 	icon='icon/icon_12.gif' tip='选中需要删除的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDocumentLevel' 		text='文档级别配置' 	icon='icon/icon_13.gif' tip='文档级别的配置' adminOp='true'/>
+		</module>
+		<module name="工会文件" url="system/doclib/index.jsp?catalogCode=ghwj" icon='resources/icon/icon_3.gif'>
+			<operation name='btnAddCatalog' 		text='添加分类' 	icon='icon/icon_1.gif' tip=''/>
+			<operation name='btnModiCatalog'	 	text='修改分类' 	icon='icon/icon_3.gif' tip='选中需要修改的分类，再执行该操作' adminOp='true'/>
+			<operation name='btnDelCatalog' 		text='删除分类' 	icon='icon/icon_2.gif' tip='选中需要删除的分类，再执行该操作' adminOp='true'/>		
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAddDocument' 		text='添加文档' 	icon='icon/icon_11.gif' tip='选中文档分类，添加文档' adminOp='true'/>		
+			<operation name='btnModiDocument' 		text='修改文档' 	icon='icon/icon_4.gif' tip='选中需要修改的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDelDocument' 		text='删除文档' 	icon='icon/icon_12.gif' tip='选中需要删除的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDocumentLevel' 		text='文档级别配置' 	icon='icon/icon_13.gif' tip='文档级别的配置' adminOp='true'/>
+		</module>
+		<module name="组织建设" url="system/doclib/index.jsp?catalogCode=zzjs" icon='resources/icon/icon_3.gif'>
+			<operation name='btnAddCatalog' 		text='添加分类' 	icon='icon/icon_1.gif' tip=''/>
+			<operation name='btnModiCatalog'	 	text='修改分类' 	icon='icon/icon_3.gif' tip='选中需要修改的分类，再执行该操作' adminOp='true'/>
+			<operation name='btnDelCatalog' 		text='删除分类' 	icon='icon/icon_2.gif' tip='选中需要删除的分类，再执行该操作' adminOp='true'/>		
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAddDocument' 		text='添加文档' 	icon='icon/icon_11.gif' tip='选中文档分类，添加文档' adminOp='true'/>		
+			<operation name='btnModiDocument' 		text='修改文档' 	icon='icon/icon_4.gif' tip='选中需要修改的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDelDocument' 		text='删除文档' 	icon='icon/icon_12.gif' tip='选中需要删除的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDocumentLevel' 		text='文档级别配置' 	icon='icon/icon_13.gif' tip='文档级别的配置' adminOp='true'/>
+		</module>
+		<module name="工会制度" url="system/doclib/index.jsp?catalogCode=ghzd" icon='resources/icon/icon_3.gif'>
+			<operation name='btnAddCatalog' 		text='添加分类' 	icon='icon/icon_1.gif' tip=''/>
+			<operation name='btnModiCatalog'	 	text='修改分类' 	icon='icon/icon_3.gif' tip='选中需要修改的分类，再执行该操作' adminOp='true'/>
+			<operation name='btnDelCatalog' 		text='删除分类' 	icon='icon/icon_2.gif' tip='选中需要删除的分类，再执行该操作' adminOp='true'/>		
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAddDocument' 		text='添加文档' 	icon='icon/icon_11.gif' tip='选中文档分类，添加文档' adminOp='true'/>		
+			<operation name='btnModiDocument' 		text='修改文档' 	icon='icon/icon_4.gif' tip='选中需要修改的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDelDocument' 		text='删除文档' 	icon='icon/icon_12.gif' tip='选中需要删除的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDocumentLevel' 		text='文档级别配置' 	icon='icon/icon_13.gif' tip='文档级别的配置' adminOp='true'/>
+		</module>
+		<module name="民主管理" url="system/doclib/index.jsp?catalogCode=mzgl" icon='resources/icon/icon_3.gif'>
+			<operation name='btnAddCatalog' 		text='添加分类' 	icon='icon/icon_1.gif' tip=''/>
+			<operation name='btnModiCatalog'	 	text='修改分类' 	icon='icon/icon_3.gif' tip='选中需要修改的分类，再执行该操作' adminOp='true'/>
+			<operation name='btnDelCatalog' 		text='删除分类' 	icon='icon/icon_2.gif' tip='选中需要删除的分类，再执行该操作' adminOp='true'/>		
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAddDocument' 		text='添加文档' 	icon='icon/icon_11.gif' tip='选中文档分类，添加文档' adminOp='true'/>		
+			<operation name='btnModiDocument' 		text='修改文档' 	icon='icon/icon_4.gif' tip='选中需要修改的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDelDocument' 		text='删除文档' 	icon='icon/icon_12.gif' tip='选中需要删除的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDocumentLevel' 		text='文档级别配置' 	icon='icon/icon_13.gif' tip='文档级别的配置' adminOp='true'/>
+		</module>
+		<module name="会员风采" url="system/doclib/index.jsp?catalogCode=hyfc" icon='resources/icon/icon_3.gif'>
+			<operation name='btnAddCatalog' 		text='添加分类' 	icon='icon/icon_1.gif' tip=''/>
+			<operation name='btnModiCatalog'	 	text='修改分类' 	icon='icon/icon_3.gif' tip='选中需要修改的分类，再执行该操作' adminOp='true'/>
+			<operation name='btnDelCatalog' 		text='删除分类' 	icon='icon/icon_2.gif' tip='选中需要删除的分类，再执行该操作' adminOp='true'/>		
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAddDocument' 		text='添加文档' 	icon='icon/icon_11.gif' tip='选中文档分类，添加文档' adminOp='true'/>		
+			<operation name='btnModiDocument' 		text='修改文档' 	icon='icon/icon_4.gif' tip='选中需要修改的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDelDocument' 		text='删除文档' 	icon='icon/icon_12.gif' tip='选中需要删除的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDocumentLevel' 		text='文档级别配置' 	icon='icon/icon_13.gif' tip='文档级别的配置' adminOp='true'/>
+		</module>
+		<module name="工会计划" url="system/doclib/index.jsp?catalogCode=ghjh" icon='resources/icon/icon_3.gif'>
+			<operation name='btnAddCatalog' 		text='添加分类' 	icon='icon/icon_1.gif' tip=''/>
+			<operation name='btnModiCatalog'	 	text='修改分类' 	icon='icon/icon_3.gif' tip='选中需要修改的分类，再执行该操作' adminOp='true'/>
+			<operation name='btnDelCatalog' 		text='删除分类' 	icon='icon/icon_2.gif' tip='选中需要删除的分类，再执行该操作' adminOp='true'/>		
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAddDocument' 		text='添加文档' 	icon='icon/icon_11.gif' tip='选中文档分类，添加文档' adminOp='true'/>		
+			<operation name='btnModiDocument' 		text='修改文档' 	icon='icon/icon_4.gif' tip='选中需要修改的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDelDocument' 		text='删除文档' 	icon='icon/icon_12.gif' tip='选中需要删除的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDocumentLevel' 		text='文档级别配置' 	icon='icon/icon_13.gif' tip='文档级别的配置' adminOp='true'/>
+		</module>
+		<module name="活动剪影" url="dgt/fjdgztj/jyfc/index.jsp" icon='resources/icon/icon_3.gif'>
+			<operation name='btnAddCatalog' 		text='录入' 	icon='icon/icon_1.gif' tip=''/>
+			<operation name='btnModiCatalog'	 	text='修改' 	icon='icon/icon_3.gif' tip='选中需要修改的分类，再执行该操作' adminOp='true'/>
+			<operation name='btnDelCatalog' 		text='删除' 	icon='icon/icon_2.gif' tip='选中需要删除的分类，再执行该操作' adminOp='true'/>		
+		</module>
+		<module name="导师带徒活动专栏" url="system/doclib/index.jsp?catalogCode=dsdt" icon='resources/icon/icon_3.gif'>
+			<operation name='btnAddCatalog' 		text='添加分类' 	icon='icon/icon_1.gif' tip=''/>
+			<operation name='btnModiCatalog'	 	text='修改分类' 	icon='icon/icon_3.gif' tip='选中需要修改的分类，再执行该操作' adminOp='true'/>
+			<operation name='btnDelCatalog' 		text='删除分类' 	icon='icon/icon_2.gif' tip='选中需要删除的分类，再执行该操作' adminOp='true'/>		
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAddDocument' 		text='添加文档' 	icon='icon/icon_11.gif' tip='选中文档分类，添加文档' adminOp='true'/>		
+			<operation name='btnModiDocument' 		text='修改文档' 	icon='icon/icon_4.gif' tip='选中需要修改的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDelDocument' 		text='删除文档' 	icon='icon/icon_12.gif' tip='选中需要删除的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDocumentLevel' 		text='文档级别配置' 	icon='icon/icon_13.gif' tip='文档级别的配置' adminOp='true'/>
+		</module>
+		<module name="工会110专栏" url="system/doclib/index.jsp?catalogCode=gz110zl" icon='resources/icon/icon_3.gif'>
+			<operation name='btnAddCatalog' 		text='添加分类' 	icon='icon/icon_1.gif' tip=''/>
+			<operation name='btnModiCatalog'	 	text='修改分类' 	icon='icon/icon_3.gif' tip='选中需要修改的分类，再执行该操作' adminOp='true'/>
+			<operation name='btnDelCatalog' 		text='删除分类' 	icon='icon/icon_2.gif' tip='选中需要删除的分类，再执行该操作' adminOp='true'/>		
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAddDocument' 		text='添加文档' 	icon='icon/icon_11.gif' tip='选中文档分类，添加文档' adminOp='true'/>		
+			<operation name='btnModiDocument' 		text='修改文档' 	icon='icon/icon_4.gif' tip='选中需要修改的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDelDocument' 		text='删除文档' 	icon='icon/icon_12.gif' tip='选中需要删除的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDocumentLevel' 		text='文档级别配置' 	icon='icon/icon_13.gif' tip='文档级别的配置' adminOp='true'/>
+		</module>
+	</group>
+	
+	<group name="安监系统">
+		<module name="安监报表管理" url="system/doclib/index.jsp?catalogCode=aqbb" icon="resources/icon/icon_3.gif">
+			<operation name='btnAddCatalog' 		text='添加分类' 	icon='icon/icon_1.gif' tip='' />
+			<operation name='btnModiCatalog'	 	text='修改分类' 	icon='icon/icon_3.gif' tip='选中需要修改的分类，再执行该操作' adminOp='true'/>
+			<operation name='btnDelCatalog' 		text='删除分类' 	icon='icon/icon_2.gif' tip='选中需要删除的分类，再执行该操作' adminOp='true'/>		
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAddDocument' 		text='添加文档' 	icon='icon/icon_11.gif' tip='选中文档分类，添加文档' adminOp='true'/>		
+			<operation name='btnModiDocument' 		text='修改文档' 	icon='icon/icon_4.gif' tip='选中需要修改的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDelDocument' 		text='删除文档' 	icon='icon/icon_12.gif' tip='选中需要删除的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDocumentLevel' 		text='文档级别配置' 	icon='icon/icon_13.gif' tip='文档级别的配置' adminOp='true'/>
+		</module>
+		<module name="安全事件管理" url="system/doclib/index.jsp?catalogCode=aqsj" icon="resources/icon/icon_3.gif">
+			<operation name='btnAddCatalog' 		text='添加分类' 	icon='icon/icon_1.gif' tip='' />
+			<operation name='btnModiCatalog'	 	text='修改分类' 	icon='icon/icon_3.gif' tip='选中需要修改的分类，再执行该操作' adminOp='true'/>
+			<operation name='btnDelCatalog' 		text='删除分类' 	icon='icon/icon_2.gif' tip='选中需要删除的分类，再执行该操作' adminOp='true'/>		
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAddDocument' 		text='添加文档' 	icon='icon/icon_11.gif' tip='选中文档分类，添加文档' adminOp='true'/>		
+			<operation name='btnModiDocument' 		text='修改文档' 	icon='icon/icon_4.gif' tip='选中需要修改的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDelDocument' 		text='删除文档' 	icon='icon/icon_12.gif' tip='选中需要删除的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDocumentLevel' 		text='文档级别配置' 	icon='icon/icon_13.gif' tip='文档级别的配置' adminOp='true'/>
+		</module>
+		<module name="安全综合管理" url="system/doclib/index.jsp?catalogCode=aqzh" icon="resources/icon/icon_3.gif">
+			<operation name='btnAddCatalog' 		text='添加分类' 	icon='icon/icon_1.gif' tip='' />
+			<operation name='btnModiCatalog'	 	text='修改分类' 	icon='icon/icon_3.gif' tip='选中需要修改的分类，再执行该操作' adminOp='true'/>
+			<operation name='btnDelCatalog' 		text='删除分类' 	icon='icon/icon_2.gif' tip='选中需要删除的分类，再执行该操作' adminOp='true'/>		
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAddDocument' 		text='添加文档' 	icon='icon/icon_11.gif' tip='选中文档分类，添加文档' adminOp='true'/>		
+			<operation name='btnModiDocument' 		text='修改文档' 	icon='icon/icon_4.gif' tip='选中需要修改的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDelDocument' 		text='删除文档' 	icon='icon/icon_12.gif' tip='选中需要删除的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDocumentLevel' 		text='文档级别配置' 	icon='icon/icon_13.gif' tip='文档级别的配置' adminOp='true'/>
+		</module>
+		<module name="安全监督例行工作" url="system/doclib/index.jsp?catalogCode=aqlxgz" icon="resources/icon/icon_3.gif">
+			<operation name='btnAddCatalog' 		text='添加分类' 	icon='icon/icon_1.gif' tip='' />
+			<operation name='btnModiCatalog'	 	text='修改分类' 	icon='icon/icon_3.gif' tip='选中需要修改的分类，再执行该操作' adminOp='true'/>
+			<operation name='btnDelCatalog' 		text='删除分类' 	icon='icon/icon_2.gif' tip='选中需要删除的分类，再执行该操作' adminOp='true'/>		
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAddDocument' 		text='添加文档' 	icon='icon/icon_11.gif' tip='选中文档分类，添加文档' adminOp='true'/>		
+			<operation name='btnModiDocument' 		text='修改文档' 	icon='icon/icon_4.gif' tip='选中需要修改的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDelDocument' 		text='删除文档' 	icon='icon/icon_12.gif' tip='选中需要删除的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDocumentLevel' 		text='文档级别配置' 	icon='icon/icon_13.gif' tip='文档级别的配置' adminOp='true'/>
+		</module>
+		<module name="安全培训管理" url="system/doclib/index.jsp?catalogCode=aqpx" icon="resources/icon/icon_3.gif">
+			<operation name='btnAddCatalog' 		text='添加分类' 	icon='icon/icon_1.gif' tip='' />
+			<operation name='btnModiCatalog'	 	text='修改分类' 	icon='icon/icon_3.gif' tip='选中需要修改的分类，再执行该操作' adminOp='true'/>
+			<operation name='btnDelCatalog' 		text='删除分类' 	icon='icon/icon_2.gif' tip='选中需要删除的分类，再执行该操作' adminOp='true'/>		
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAddDocument' 		text='添加文档' 	icon='icon/icon_11.gif' tip='选中文档分类，添加文档' adminOp='true'/>		
+			<operation name='btnModiDocument' 		text='修改文档' 	icon='icon/icon_4.gif' tip='选中需要修改的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDelDocument' 		text='删除文档' 	icon='icon/icon_12.gif' tip='选中需要删除的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDocumentLevel' 		text='文档级别配置' 	icon='icon/icon_13.gif' tip='文档级别的配置' adminOp='true'/>
+		</module>
+		<module name="资料库管理" url="system/doclib/index.jsp?catalogCode=zlk" icon="resources/icon/icon_3.gif">
+			<operation name='btnAddCatalog' 		text='添加分类' 	icon='icon/icon_1.gif' tip='' />
+			<operation name='btnModiCatalog'	 	text='修改分类' 	icon='icon/icon_3.gif' tip='选中需要修改的分类，再执行该操作' adminOp='true'/>
+			<operation name='btnDelCatalog' 		text='删除分类' 	icon='icon/icon_2.gif' tip='选中需要删除的分类，再执行该操作' adminOp='true'/>		
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAddDocument' 		text='添加文档' 	icon='icon/icon_11.gif' tip='选中文档分类，添加文档' adminOp='true'/>		
+			<operation name='btnModiDocument' 		text='修改文档' 	icon='icon/icon_4.gif' tip='选中需要修改的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDelDocument' 		text='删除文档' 	icon='icon/icon_12.gif' tip='选中需要删除的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDocumentLevel' 		text='文档级别配置' 	icon='icon/icon_13.gif' tip='文档级别的配置' adminOp='true'/>
+		</module>
+	</group>
+	<group name="两票管理">
+		<module name="票库管理" url="lp/pkgl/index.jsp">
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name="btnMakeBz" text='生成标准票' icon='icon/icon_1.gif' tip='将待标准票转换为标准票'/>
+			<operation name="btnAddPz" text='添加票' icon='icon/icon_2.gif' tip='添加一张新的票种'/>
+			<operation name="btnModiPz" text='修改票' icon='icon/icon_3.gif' tip='选中一张票种，再执行该操作'/>
+			<operation name="btnDelPz" text='删除票' icon='icon/icon_4.gif' tip='选中一张或者多张票，再执行该操作'/>
+		</module>
+		<module name="工作票管理" url="lp/gzpgl/index.jsp">
+			<operation name='->' text='->' icon='' tip='->' />
+			<operation name='btnImpHistory' text='历史票导入' icon='icon/icon_1.gif' tip='从已完工的历史票中导入，作为新的工作票启用' />
+			<operation name='btnAddBzp' text='申请标准票' icon='icon/icon_2.gif' tip='添加标准工作票' />
+			<operation name='btnProcess' text='处理' icon='icon/icon_3.gif' tip='选中一张工作票，进行处理操作' />
+			<operation name='btnUndo' text='撤销' icon='icon/icon_4.gif' tip='选中一张已处理的工作票，撤销操作' />
+			<operation name='btnDelSq' text='删除' icon='icon/icon_5.gif' tip='选中需要删除的工作票，再执行该操作' />
+			<operation name='btnCancel' text='作废' icon='icon/icon_6.gif' tip='选中需要作废的工作票，再执行该操作' />
+		</module>
+		<module name="操作票管理" url="lp/czpgl/index.jsp">
+			<operation name='->' text='->' icon='' tip='->' />
+			<operation name='btnImpHistory' text='历史票导入' icon='icon/icon_1.gif' tip='从已完工的历史票中导入，作为新的操作票启用' />
+			<operation name='btnAddBzp' text='申请标准票' icon='icon/icon_2.gif' tip='添加标准操作票' />
+			<operation name='btnProcess' text='处理' icon='icon/icon_3.gif' tip='选中一张操作票，进行处理操作' />
+			<operation name='btnUndo' text='撤销' icon='icon/icon_4.gif' tip='选中一张已处理的操作票，撤销操作' />
+			<operation name='btnDelSq' text='删除' icon='icon/icon_5.gif' tip='选中需要删除的操作票，再执行该操作' />
+			<operation name='btnCancel' text='作废' icon='icon/icon_6.gif' tip='选中需要作废的操作票，再执行该操作' />
+		</module>
+			<module name="临时票管理" url="lp/lspgl/index.jsp">
+			<operation name='->' text='->' icon='' tip='->' />
+			<operation name='btnImpHistory' text='历史票导入' icon='icon/icon_1.gif' tip='从已完工的历史票中导入，作为新的工作票启用' />
+			<operation name='btnAddBzp' text='申请标准票' icon='icon/icon_2.gif' tip='添加标准临时票' />
+			<operation name='btnProcess' text='处理' icon='icon/icon_3.gif' tip='选中一张临时票，进行处理操作' />
+			<operation name='btnUndo' text='撤销' icon='icon/icon_4.gif' tip='选中一张已处理的临时票，撤销操作' />
+			<operation name='btnDelSq' text='删除' icon='icon/icon_5.gif' tip='选中需要删除的临时票，再执行该操作' />
+			<operation name='btnCancel' text='作废' icon='icon/icon_6.gif' tip='选中需要作废的临时票，再执行该操作' />
+		</module>
+		<module name="两票审核管理" url="lp/lpsh/index.jsp">
+			<operation name='->' text='->' icon='' tip='->' />
+			<operation name='btnCkpmxx' text='查看票面信息' icon='icon/icon_1.gif' tip='选中一条记录，查看票面信息' />
+			<operation name='btnSh' text='审核' icon='icon/icon_2.gif' tip='选中一条记录，进行审核' />
+		</module>
+		<module name="两票综合查询" url="lp/lpzhcx/index.jsp">
+		</module>
+		<module name="安全措施管理" url="lp/lpxxgl/index.jsp">
+			<operation name='btnAddAqcsCatalog' text='增加措施分类' icon='icon/icon_1.gif' tip='' />
+			<operation name='btnModiAqcsCatalog' text='修改措施分类' icon='icon/icon_2.gif' tip='选中需要修改的安措分类，再执行该操作' />
+			<operation name='btnDelAqcsCatalog' text='删除措施分类' icon='icon/icon_3.gif' tip='选中需要删除的安措分类，再执行该操作' />
+			<operation name='->' text='->' icon='icon/icon_1.gif' tip='->' />
+			<operation name='btnAddAqcs' text='增加措施' icon='icon/icon_4.gif' tip='' />
+			<operation name='btnModiAqcs' text='修改措施' icon='icon/icon_5.gif' tip='选中需要修改的安全措施，再执行该操作' />
+			<operation name='btnDelAqcs' text='删除措施' icon='icon/icon_6.gif' tip='选中需要删除的安全措施，再执行该操作' />
+		</module>
+		<module name="部门两票合格率" url="lp/lptjgl/bmlptj/index.jsp">
+		</module>
+		<module name="班组两票合格率" url="lp/lptjgl/bzlptj/index.jsp">
+		</module>
+		<module name="两票不合格清单" url="lp/lptjgl/lpbhgqd/index.jsp">
+		</module>
+		<module name="票种统计" url="lp/lptjgl/pztj/index.jsp">
+		</module>
+	</group>
+	<group name="物资管理系统">
+		<module name='税率维护' url='wz/slwh/index.jsp' icon='resources/icon/icon_3.gif'>
+			<operation name='btnAdd' 		text='新增' 	icon='icon/icon_6.gif' tip=''/>
+			<operation name='btnModify'	 	text='修改' 	icon='icon/icon_5.gif' tip='选中需要修改的记录，再执行该操作'/>
+			<operation name='btnDel' 		text='删除' 	icon='icon/icon_2.gif' tip='选中需要删除的记录，再执行该操作'/>		
+		</module>
+		<module name='物资统计码维护' url='wz/tzmgl/index.jsp' icon='resources/icon/icon_3.gif'>
+			<operation name='btnAdd' 		text='新增' 	icon='icon/icon_6.gif' tip=''/>
+			<operation name='btnModify'	 	text='修改' 	icon='icon/icon_5.gif' tip='选中需要修改的记录，再执行该操作'/>
+			<operation name='btnDel' 		text='删除' 	icon='icon/icon_2.gif' tip='选中需要删除的记录，再执行该操作'/>		
+		</module>
+		<module name='仓库管理' url='wz/ckgl/index.jsp' icon='resources/icon/icon_3.gif'>
+			<operation name='btnAdd' 		text='增加' 	icon='icon/icon_6.gif' tip=''/>
+			<operation name='btnModify'	 	text='修改' 	icon='icon/icon_5.gif' tip='选中需要修改的记录，再执行该操作'/>
+			<operation name='btnDel' 		text='删除' 	icon='icon/icon_2.gif' tip='选中需要删除的记录，再执行该操作'/>		
+		</module>
+		<module name='工程类别管理' url='wz/gclbgl/index.jsp' icon='resources/icon/icon_3.gif'>
+			<operation name='btnAdd' 		text='增加' 	icon='icon/icon_6.gif' tip=''/>
+			<operation name='btnModify'	 	text='修改' 	icon='icon/icon_5.gif' tip='选中需要修改的记录，再执行该操作'/>
+			<operation name='btnDel' 		text='删除' 	icon='icon/icon_2.gif' tip='选中需要删除的记录，再执行该操作'/>		
+		</module>
+		<module name='库位维护' url='wz/kwwh/index.jsp' icon='resources/icon/icon_3.gif'>
+			<operation name='btnAddModule' 		text='新增' 	icon='icon/icon_2.gif' tip=''/>
+			<operation name='btnModiModule'	 	text='修改' 	icon='icon/icon_5.gif' tip='选中需要修改的记录，再执行该操作'/>
+			<operation name='btnDelModule' 		text='删除' 	icon='icon/icon_6.gif' tip='选中需要删除的记录，再执行该操作'/>		
+		</module>
+		<module name='工程项目管理' url='wz/gcxmgl/index.jsp' icon='resources/icon/icon_3.gif'>
+			<operation name='btnAddModule' 		text='新增' 	icon='icon/icon_2.gif' tip=''/>
+			<operation name='btnModiModule'	 	text='修改' 	icon='icon/icon_5.gif' tip='选中需要修改的记录，再执行该操作'/>
+			<operation name='btnDelModule' 		text='删除' 	icon='icon/icon_6.gif' tip='选中需要删除的记录，再执行该操作'/>		
+		</module>
+		<module name='物资类别与物资档案管理' url='wz/wzlb/index.jsp' icon='resources/icon/icon_3.gif'>
+			<operation name='btnAddLBModule' 		text='添加类别' 	icon='icon/icon_2.gif' tip=''/>
+			<operation name='btnModiLBModule'	 	text='修改类别' 	icon='icon/icon_5.gif' tip=''/>
+			<operation name='btnDelLBModule' 		text='删除类别' 	icon='icon/icon_6.gif' tip='选中需要删除的模块，再执行该操作'/>
+			
+			<operation name='btnAddDAModule' 		text='添加档案' 	icon='icon/icon_2.gif' tip=''/>
+			<operation name='btnModiDAModule'	 	text='修改档案' 	icon='icon/icon_5.gif' tip=''/>
+			<operation name='btnDelDAModule' 		text='删除档案' 	icon='icon/icon_6.gif' tip='选中需要删除的模块，再执行该操作'/>
+			
+			<operation name='btnGGLB' 		text='更改类别' 	icon='icon/icon_2.gif' tip=''/>
+			<operation name='btnZDKW' 		text='指定库位' 	icon='icon/icon_2.gif' tip=''/>
+			<operation name='btnTsfl' 		text='更改特殊分类' 	icon='icon/icon_2.gif' tip=''/>
+			<operation name='btnKcl' 		text='更改库存量' 	icon='icon/icon_2.gif' tip=''/>
+
+			<operation name='btnExportCard' 		text='导出选项卡' 	icon='icon/icon_2.gif' tip=''/>			
+		</module>
+		<module name='供应商档案' url='wz/gysda/index.jsp' icon='resources/icon/icon_3.gif'>
+			<operation name='btnAdd' 		text='增加' 	icon='icon/icon_6.gif' tip=''/>
+			<operation name='btnModify'	 	text='修改' 	icon='icon/icon_5.gif' tip='选中需要修改的记录，再执行该操作'/>
+			<operation name='btnDel' 		text='删除' 	icon='icon/icon_2.gif' tip='选中需要删除的记录，再执行该操作'/>
+			<operation name='btnMoneySum' 	text='供应额统计' 	icon='icon/icon_4.gif' tip='统计供应商的供应额'/>		
+		</module>
+		<module name='物资需求计划申请' url='wz/wzxqjhsq/index.jsp' icon='resources/icon/icon_3.gif'>
+			<operation name='btnAddSq' 		text='申请' 	icon='icon/icon_6.gif' tip='申请流程'/>
+			<operation name='btnProcess'	text='处理' 	icon='icon/icon_5.gif' tip='处理流程'/>
+			<operation name='btnUndo'	 	text='撤销' 	icon='icon/icon_5.gif' tip='撤销流程'/>
+			<operation name='btnCancel'	 	text='作废' 	icon='icon/icon_5.gif' tip='作废流程'/>
+			<operation name='btnDelSq'	 	text='删除' 	icon='icon/icon_5.gif' tip='删除流程'/>
+		</module>
+		<module name='物资补料计划申请' url='wz/wzbljhsq/index.jsp' icon='resources/icon/icon_3.gif'>
+			<operation name='btnAddSq' 		text='申请' 	icon='icon/icon_6.gif' tip='申请流程'/>
+			<operation name='btnProcess'	text='处理' 	icon='icon/icon_5.gif' tip='处理流程'/>
+			<operation name='btnUndo'	 	text='撤销' 	icon='icon/icon_5.gif' tip='撤销流程'/>
+			<operation name='btnCancel'	 	text='作废' 	icon='icon/icon_5.gif' tip='作废流程'/>
+			<operation name='btnDelSq'	 	text='删除' 	icon='icon/icon_5.gif' tip='删除流程'/>
+		</module>
+		<module name='物资领用申请' url='wz/wzlysq/index.jsp' icon='resources/icon/icon_3.gif'>
+			<operation name='btnAddSq' 		text='申请' 	icon='icon/icon_6.gif' tip='申请流程'/>
+			<operation name='btnProcess'	text='处理' 	icon='icon/icon_5.gif' tip='处理流程'/>
+			<operation name='btnUndo'	 	text='撤销' 	icon='icon/icon_5.gif' tip='撤销流程'/>
+			<operation name='btnCancel'	 	text='作废' 	icon='icon/icon_5.gif' tip='作废流程'/>
+			<operation name='btnDelSq'	 	text='删除' 	icon='icon/icon_5.gif' tip='删除流程'/>
+		</module>
+		<module name='物资借料申请' url='wz/wzjlsq/index.jsp' icon='resources/icon/icon_3.gif'>
+			<operation name='btnAddSq' 		text='申请' 	icon='icon/icon_6.gif' tip='申请流程'/>
+			<operation name='btnProcess'	text='处理' 	icon='icon/icon_5.gif' tip='处理流程'/>
+			<operation name='btnUndo'	 	text='撤销' 	icon='icon/icon_5.gif' tip='撤销流程'/>
+			<operation name='btnCancel'	 	text='作废' 	icon='icon/icon_5.gif' tip='作废流程'/>
+			<operation name='btnDelSq'	 	text='删除' 	icon='icon/icon_5.gif' tip='删除流程'/>
+		</module>
+		<module name='固定资产登记申请' url='wz/gdzcdjsq/index.jsp' icon='resources/icon/icon_3.gif'>
+			<operation name='btnAddSq' 		text='申请' 	icon='icon/icon_6.gif' tip='申请流程'/>
+			<operation name='btnProcess'	text='处理' 	icon='icon/icon_5.gif' tip='处理流程'/>
+			<operation name='btnUndo'	 	text='撤销' 	icon='icon/icon_5.gif' tip='撤销流程'/>
+			<operation name='btnCancel'	 	text='作废' 	icon='icon/icon_5.gif' tip='作废流程'/>
+			<operation name='btnDelSq'	 	text='删除' 	icon='icon/icon_5.gif' tip='删除流程'/>
+		</module>
+		<module name="物资需求计划申请查询" url="wz/wzxqjhsq/xqjhsqcx/index.jsp" icon='resources/icon/icon_3.gif'>
+		</module>
+		<module name="物资补料计划申请查询" url="wz/wzbljhsq/bljhsqcx/index.jsp" icon='resources/icon/icon_3.gif'>
+		</module>
+		<module name="物资领用申请查询" url="wz/wzlysq/wzlysqcx/index.jsp" icon='resources/icon/icon_3.gif'>
+		</module>
+		<module name="物资借料申请查询" url="wz/wzjlsq/wzjlsqcx/index.jsp" icon='resources/icon/icon_3.gif'>
+		</module>
+		<module name='需求计划申请分配' url='wz/wzxqjhsq/xqjhsqfp/index.jsp' icon='resources/icon/icon_3.gif'>
+			<operation name='btnFp' 		text='分配' 	icon='icon/icon_6.gif' tip=''/>
+		</module>
+		<module name="需求计划申请分配查询" url="wz/wzxqjhsq/xqjhsqfpcx/index.jsp" icon='resources/icon/icon_3.gif'>
+		</module>
+		<module name='需求计划申请生效' url='wz/wzxqjhsq/xqjhsqsx/index.jsp' icon='resources/icon/icon_3.gif'>
+			<operation name='btnXwzcl' 		text='新物资处理' 	icon='icon/icon_6.gif' tip='新增或关联物资'/>
+			<operation name='btnHtzjhzg'	 	text='回退至计划主管' 	icon='icon/icon_5.gif' tip='回退给计划主管'/>
+			<operation name='btnSx' 		text='生效' 	icon='icon/icon_5.gif' tip='需求计划生效'/>		
+		</module>
+		<module name='需求计划处理' url='wz/wzxqjh/index.jsp' icon='resources/icon/icon_3.gif'>
+			<operation name='btnQuerySq' 	text='查看申请' 	icon='icon/icon_5.gif' tip=''/>
+			<operation name='btnSlfp'	 	text='数量分配' 	icon='icon/icon_5.gif' tip=''/>
+			<operation name='btnWzhz' 		text='物资汇总' 	icon='icon/icon_5.gif' tip=''/>
+			<operation name='btnSccg' 		text='生成采购' 	icon='icon/icon_5.gif' tip=''/>
+			<operation name='btnRb' 		text='回退' 	icon='icon/icon_5.gif' tip='回退至需求计划申请生效'/>				
+		</module>
+		<module name='采购计划管理' url='wz/cgjhgl/index.jsp' icon='resources/icon/icon_3.gif'>
+			<operation name='btnAdd' 		text='增加' 	icon='icon/icon_6.gif' tip=''/>
+			<operation name='btnModify'	 	text='修改' 	icon='icon/icon_5.gif' tip='选中需要修改的记录，再执行该操作'/>
+			<operation name='btnDel' 		text='删除' 	icon='icon/icon_2.gif' tip='选中需要删除的记录，再执行该操作'/>
+			<operation name='btnQuery' 		text='查询' 	icon='icon/icon_4.gif' tip=''/>	
+			<operation name='btnEnable' 	text='生效' 	icon='icon/icon_4.gif' tip='选中需要生效的记录，再执行该操作'/>	
+			<!-- <operation name='btnWzSum' 	text='物资汇总' 	icon='icon/icon_4.gif' tip=''/>-->
+			<operation name='btnPrint' 	text='打印计划单' 	icon='icon/icon_4.gif' tip='选中需要打印的记录，再执行该操作'/>
+		</module>
+		<module name='待验收管理' url='wz/yhdgl/index.jsp' icon='resources/icon/icon_3.gif'>
+			<operation name='btnAdd' 		text='新增' 	icon='icon/icon_6.gif' tip=''/>
+			<operation name='btnModify'	 	text='修改' 	icon='icon/icon_5.gif' tip='选中需要修改的记录，再执行该操作'/>
+			<operation name='btnDel' 		text='删除' 	icon='icon/icon_2.gif' tip='选中需要删除的记录，再执行该操作'/>
+			<operation name='btnEnable' 	text='生效' 	icon='icon/icon_4.gif' tip='选中需要生效的记录，再执行该操作'/>	
+		</module>
+		<module name='验货入库' url='wz/yhrk/index.jsp' icon='resources/icon/icon_3.gif'>
+
+			<!-- <operation name='btnAdd' 		text='新增' 	icon='icon/icon_6.gif' tip=''/> -->
+			<operation name='btnModify'	 	text='修改' 	icon='icon/icon_5.gif' tip='选中需要修改的记录，再执行该操作'/>
+			<operation name='btnDel' 		text='删除' 	icon='icon/icon_2.gif' tip='选中需要删除的记录，再执行该操作'/>
+			<operation name='btnEnable' 	text='生效' 	icon='icon/icon_4.gif' tip='选中需要生效的记录，再执行该操作'/>		
+		</module>
+		<module name='验货查询' url='wz/yhrkmx/index.jsp' icon='resources/icon/icon_3.gif'>
+			<!-- <operation name='btnAdd' 		text='新增' 	icon='icon/icon_6.gif' tip=''/> -->
+			<operation name='btnExce'	 	text='导出Excel' 	icon='icon/icon_5.gif' tip='导出Exccel'/>
+			<operation name='btnZDKW'	 	text='指定库位' 	icon='icon/icon_5.gif' tip='指定库位'/>
+			<operation name='btnXgdj'	 	text='修改单价' 	icon='icon/icon_5.gif' tip='修改单价'/> 
+			<!--<operation name='btnDel' 		text='删除' 	icon='icon/icon_2.gif' tip='选中需要删除的记录，再执行该操作'/>-->
+		</module>
+		<module name='领料管理' url='wz/lydgl/index.jsp' icon='resources/icon/icon_3.gif'>
+			<!--<operation name='btnAdd' 		text='新增' 	icon='icon/icon_6.gif' tip=''/>-->
+			<operation name='btnModify'	 	text='修改' 	icon='icon/icon_5.gif' tip='选中需要修改的记录，再执行该操作'/>
+			<operation name='btnZf' 		text='作废' 	icon='icon/icon_2.gif' tip='选中需要作废的记录，再执行该操作'/>
+			<operation name='btnEnable' 	text='生效' 	icon='icon/icon_4.gif' tip='选中需要生效的记录，再执行该操作'/>		
+			<operation name='btnYzf' 		text='已作废领料单' 	icon='icon/icon_4.gif' tip='查询已作废领料单'/>
+			<operation name='btnDel' 		text='删除' 	icon='icon/icon_2.gif' tip='选中需要删除的记录，再执行该操作'/>
+		</module>
+		<module name='领料查询' url='wz/lydglmx/index.jsp' icon='resources/icon/icon_3.gif'>
+			<!-- <operation name='btnAdd' 		text='新增' 	icon='icon/icon_6.gif' tip=''/> -->
+			<operation name='btnZDXM'	 	text='指定项目' 	icon='icon/icon_5.gif' tip='指定项目'/>
+			<!--<operation name='btnDel' 		text='删除' 	icon='icon/icon_2.gif' tip='选中需要删除的记录，再执行该操作'/>-->
+		</module>
+		<module name='调拨出库' url='wz/dbck/index.jsp' icon='resources/icon/icon_3.gif'>
+			<operation name='btnAdd' 		text='新增' 	icon='icon/icon_6.gif' tip=''/>
+			<operation name='btnModify'	 	text='修改' 	icon='icon/icon_5.gif' tip='选中需要修改的记录，再执行该操作'/>
+			<operation name='btnDel' 		text='删除' 	icon='icon/icon_2.gif' tip='选中需要删除的记录，再执行该操作'/>
+			<operation name='btnEnable' 	text='生效' 	icon='icon/icon_4.gif' tip='选中需要生效的记录，再执行该操作'/>				
+		</module>
+		<module name='调拨入库' url='wz/dbrk/index.jsp' icon='resources/icon/icon_3.gif'>
+			<operation name='btnAdd' 		text='新增' 	icon='icon/icon_6.gif' tip=''/>
+			<operation name='btnModify'	 	text='修改' 	icon='icon/icon_5.gif' tip='选中需要修改的记录，再执行该操作'/>
+			<operation name='btnDel' 		text='删除' 	icon='icon/icon_2.gif' tip='选中需要删除的记录，再执行该操作'/>
+			<operation name='btnEnable' 	text='生效' 	icon='icon/icon_4.gif' tip='选中需要生效的记录，再执行该操作'/>				
+		</module>
+		<module name='退料管理' url='wz/tldgl/index.jsp' icon='resources/icon/icon_3.gif'>
+			<operation name='btnAdd' 		text='新增' 	icon='icon/icon_6.gif' tip=''/>
+			<operation name='btnModify'	 	text='修改' 	icon='icon/icon_5.gif' tip='选中需要修改的记录，再执行该操作'/>
+			<operation name='btnDel' 		text='删除' 	icon='icon/icon_2.gif' tip='选中需要删除的记录，再执行该操作'/>
+			<operation name='btnEnable' 	text='生效' 	icon='icon/icon_4.gif' tip='选中需要生效的记录，再执行该操作'/>				
+		</module>
+		<module name='库存盘点' url='wz/kcpd/index.jsp' icon='resources/icon/icon_3.gif'>
+			<operation name='btnAdd' 		text='新增' 	icon='icon/icon_6.gif' tip=''/>
+			<operation name='btnDel' 		text='删除' 	icon='icon/icon_2.gif' tip='选中需要删除的记录，再执行该操作'/>
+			<operation name='btnEnable' 	text='生效' 	icon='icon/icon_4.gif' tip='选中需要生效的记录，再执行该操作'/>				
+		</module>
+		<module name='物资盘点' url='wz/wzpd/index.jsp' icon='resources/icon/icon_3.gif'>
+			<operation name='btnExport' 		text='导出excel' 	icon='icon/icon_6.gif' tip=''/>
+		</module>
+		<module name='物资销售管理' url='wz/wzxsgl/index.jsp' icon='resources/icon/icon_3.gif'>
+			<operation name='btnAdd' 		text='新增' 	icon='icon/icon_6.gif' tip=''/>
+			<operation name='btnModify'	 	text='修改' 	icon='icon/icon_5.gif' tip='选中需要修改的记录，再执行该操作'/>
+			<operation name='btnDel' 		text='删除' 	icon='icon/icon_2.gif' tip='选中需要删除的记录，再执行该操作'/>
+			<operation name='btnEnable' 	text='生效' 	icon='icon/icon_4.gif' tip='选中需要生效的记录，再执行该操作'/>				
+		</module>
+		<module name='报废管理' url='wz/bfgl/index.jsp' icon='resources/icon/icon_3.gif'>
+			<operation name='btnAdd' 		text='新增' 	icon='icon/icon_6.gif' tip=''/>
+			<operation name='btnModify'	 	text='修改' 	icon='icon/icon_5.gif' tip='选中需要修改的记录，再执行该操作'/>
+			<operation name='btnDel' 		text='删除' 	icon='icon/icon_2.gif' tip='选中需要删除的记录，再执行该操作'/>
+			<operation name='btnEnable' 	text='生效' 	icon='icon/icon_4.gif' tip='选中需要生效的记录，再执行该操作'/>				
+		</module>
+		<module name='个人工器具台账' url='wz/grgqjtz/index.jsp' icon='resources/icon/icon_3.gif'>
+			<operation name='btnAdd' 		text='新增' 	icon='icon/icon_6.gif' tip=''/>
+			<operation name='btnModify'	 	text='修改' 	icon='icon/icon_5.gif' tip='选中需要修改的记录，再执行该操作'/>
+			<operation name='btnDel' 		text='删除' 	icon='icon/icon_2.gif' tip='选中需要删除的记录，再执行该操作'/>		
+		</module>
+		<module name='公用工器具台账' url='wz/gygqjtz/index.jsp' icon='resources/icon/icon_3.gif'>
+			<operation name='btnAdd' 		text='新增' 	icon='icon/icon_6.gif' tip=''/>
+			<operation name='btnModify'	 	text='修改' 	icon='icon/icon_5.gif' tip='选中需要修改的记录，再执行该操作'/>
+			<operation name='btnDel' 		text='删除' 	icon='icon/icon_2.gif' tip='选中需要删除的记录，再执行该操作'/>		
+		</module>
+		<module name='个人劳保用品台账' url='wz/grlbyptz/index.jsp' icon='resources/icon/icon_3.gif'>
+			<operation name='btnAdd' 		text='新增' 	icon='icon/icon_6.gif' tip=''/>
+			<operation name='btnModify'	 	text='修改' 	icon='icon/icon_5.gif' tip='选中需要修改的记录，再执行该操作'/>
+			<operation name='btnDel' 		text='删除' 	icon='icon/icon_2.gif' tip='选中需要删除的记录，再执行该操作'/>		
+		</module>
+		<module name='公用劳保用品台账' url='wz/gylbyptz/index.jsp' icon='resources/icon/icon_3.gif'>
+			<operation name='btnAdd' 		text='新增' 	icon='icon/icon_6.gif' tip=''/>
+			<operation name='btnModify'	 	text='修改' 	icon='icon/icon_5.gif' tip='选中需要修改的记录，再执行该操作'/>
+			<operation name='btnDel' 		text='删除' 	icon='icon/icon_2.gif' tip='选中需要删除的记录，再执行该操作'/>		
+		</module>
+		<module name='物资信息查询' url='wz/zhcx/wzcx/wzdaQueryIndex.jsp' icon='resources/icon/icon_3.gif'>
+		</module>
+		<module name='物资混合查询' url='wz/wzhhcx/index.jsp' icon='resources/icon/icon_3.gif'>
+		</module>
+		<module name='按类别查询' url='wz/zhcx/lbcx/wzdaQueryIndex.jsp' icon='resources/icon/icon_3.gif'>
+		</module>
+		<module name='按库位查询' url='wz/zhcx/kwcx/wzdaQueryIndex.jsp' icon='resources/icon/icon_3.gif'>
+		</module>
+		<module name='入库日志查询' url='wz/zhcx/rkcx/index.jsp' icon='resources/icon/icon_3.gif'>
+		</module>
+		<module name='出库日志查询' url='wz/zhcx/ckcx/index.jsp' icon='resources/icon/icon_3.gif'>
+		</module>
+		<module name='物资收发资金动态表' url='wz/sfzjtj/index.jsp' icon='resources/icon/icon_3.gif'>
+			<operation name='btnAdd' 		text='新增统计' 	icon='icon/icon_6.gif' tip=''/>
+			<operation name='btnDel' 		text='删除统计' 	icon='icon/icon_2.gif' tip=''/>
+			<operation name='btnExce'	 	text='导出统计' 	icon='icon/icon_5.gif' tip=''/>
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnEndYear'	text='年终统计' 	icon='icon/icon_5.gif' tip=''/>
+		</module>
+		<module name='物资收发明细结存表' url='wz/sfjctj/index.jsp' icon='resources/icon/icon_3.gif'>
+			<operation name='btnAdd' 		text='新增统计' 	icon='icon/icon_6.gif' tip=''/>
+			<operation name='btnDel'	 	text='删除统计' 	icon='icon/icon_5.gif' tip=''/>
+			<operation name='btnExce' 		text='导出统计' 	icon='icon/icon_2.gif' tip=''/>
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnSscx' 		text='物资实时查询' 	icon='icon/icon_2.gif' tip='物资实时查询'/>
+			<operation name='btnCrkkc' 		text='有出入库记录及有库存的物资' 	icon='icon/icon_2.gif' tip='查询有出入库记录及有库存的物资'/>
+			<operation name='btnKc' 		text='有库存的物资' 	icon='icon/icon_2.gif' tip='查询有库存的物资'/>
+			<operation name='btnNcrk' 		text='没有出入库记录的物资' 	icon='icon/icon_2.gif' tip='查询没有出入库记录的物资'/>
+			<operation name='btnNkc' 		text='月末库存为负的物资' 	icon='icon/icon_2.gif' tip='查询月末库存为负的物资'/>
+		</module>
+		<module name='物资费用统计月报表' url='wz/fytj/index.jsp' icon='resources/icon/icon_3.gif'>
+			<operation name='btnAdd' 		text='新增统计' 	icon='icon/icon_6.gif' tip=''/>
+			<operation name='btnDel'	 	text='删除统计' 	icon='icon/icon_5.gif' tip=''/>
+			<operation name='btnExce' 		text='导出统计' 	icon='icon/icon_2.gif' tip=''/>
+		</module>
+		<module name='库存材料领用分配表' url='wz/kccllyfpb/index.jsp' icon='resources/icon/icon_3.gif'>
+			<operation name='btnAdd' 		text='新增' 	icon='icon/icon_6.gif' tip=''/>
+			<operation name='btnModify'	 	text='修改' 	icon='icon/icon_5.gif' tip='选中需要修改的记录，再执行该操作'/>
+			<operation name='btnDel' 		text='删除' 	icon='icon/icon_2.gif' tip='选中需要删除的记录，再执行该操作'/>		
+		</module>
+		<module name='统计任务' url='wz/tjrw/index.jsp' icon='resources/icon/icon_3.gif'>
+		</module>
+		<module name='老物资迁移数据' url='wz/wzxj/index.jsp' icon='resources/icon/icon_3.gif'>
+		</module>
+		<module name='废旧物资回收' url='wz/fjwzhs/index.jsp' icon='resources/icon/icon_3.gif'>
+			<operation name='btnAdd' 		text='新增' 	icon='icon/icon_6.gif' tip=''/>
+			<operation name='btnModify'	 	text='修改' 	icon='icon/icon_5.gif' tip='选中需要修改的记录，再执行该操作'/>
+			<operation name='btnDel' 		text='删除' 	icon='icon/icon_2.gif' tip='选中需要删除的记录，再执行该操作'/>
+			<operation name='btnEnable' 	text='生效' 	icon='icon/icon_4.gif' tip='选中需要生效的记录，再执行该操作'/>				
+		</module>
+		<module name='废旧物资处理' url='wz/fjwzcl/index.jsp' icon='resources/icon/icon_3.gif'>
+			<operation name='btnAdd' 		text='新增' 	icon='icon/icon_6.gif' tip=''/>
+			<operation name='btnModify'	 	text='修改' 	icon='icon/icon_5.gif' tip='选中需要修改的记录，再执行该操作'/>
+			<operation name='btnDel' 		text='删除' 	icon='icon/icon_2.gif' tip='选中需要删除的记录，再执行该操作'/>
+			<operation name='btnEnable' 	text='生效' 	icon='icon/icon_4.gif' tip='选中需要生效的记录，再执行该操作'/>				
+		</module>
+		<module name='需求到货指定' url='wz/xqdh/index.jsp' icon='resources/icon/icon_3.gif'>
+			<operation name='btnEnable' 	text='指定到货' 	icon='icon/icon_4.gif' tip='选中需要指定的记录，再执行该操作'/>				
+		</module>
+		<module name='需求到货申请查询' url='wz/xqdhcx/index.jsp' icon='resources/icon/icon_3.gif'>
+		</module>
+		<module name='需求到货领用查询' url='wz/xqdhlycx/index.jsp' icon='resources/icon/icon_3.gif'>
+		</module>
+		<module name='废旧物资回收查询' url='wz/fjwzhsmx/index.jsp' icon='resources/icon/icon_3.gif'>
+		</module>
+		<module name='废旧物资处理查询' url='wz/fjwzclmx/index.jsp' icon='resources/icon/icon_3.gif'>
+		</module>
+	</group>
+<!-- 工程合同 -->	
+	<group name="工程合同">
+	<!-- 合同审批 -->
+		<module name="物资合同审批" url="gcht/htsp/index.jsp?formSn=TB_HT_WZHT" icon='resources/icon/icon_3.gif'>
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name="btnXjzHt" text='新增补充合同' tip='新增补充合同' icon='-'/>
+			<operation name="btnQicaoHt" text='起草合同' tip='起草合同' icon='-'/>
+			<operation name="btnShenPiHt" text='审批合同' tip='审批合同' icon='-'/>
+			<operation name="btnCheXiaoShenPi" text='撤销审批' tip='撤销审批' icon='-'/>
+			<operation name="btnZuoFeiHt" text='作废合同' tip='作废合同' icon='-'/>
+			<operation name="btnShanChuHt" text='删除合同' tip='删除合同' icon='-'/>
+		</module>
+		<module name="燃料合同审批" url="gcht/htsp/index.jsp?formSn=TB_HT_RLHT" icon='resources/icon/icon_3.gif'>
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name="btnXjzHt" text='新增补充合同' tip='新增补充合同' icon='-'/>
+			<operation name="btnQicaoHt" text='起草合同' tip='起草合同' icon='-'/>
+			<operation name="btnShenPiHt" text='审批合同' tip='审批合同' icon='-'/>
+			<operation name="btnCheXiaoShenPi" text='撤销审批' tip='撤销审批' icon='-'/>
+			<operation name="btnZuoFeiHt" text='作废合同' tip='作废合同' icon='-'/>
+			<operation name="btnShanChuHt" text='删除合同' tip='删除合同' icon='-'/>
+		</module>
+		<module name="工程合同审批" url="gcht/htsp/index.jsp?formSn=TB_HT_GCHT" icon='resources/icon/icon_3.gif'>
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name="btnXjzHt" text='新增补充合同' tip='新增补充合同' icon='-'/>
+			<operation name="btnQicaoHt" text='起草合同' tip='起草合同' icon='-'/>
+			<operation name="btnShenPiHt" text='审批合同' tip='审批合同' icon='-'/>
+			<operation name="btnCheXiaoShenPi" text='撤销审批' tip='撤销审批' icon='-'/>
+			<operation name="btnZuoFeiHt" text='作废合同' tip='作废合同' icon='-'/>
+			<operation name="btnShanChuHt" text='删除合同' tip='删除合同' icon='-'/>
+		</module>
+		<module name="财务合同审批" url="gcht/htsp/index.jsp?formSn=TB_HT_CWHT" icon='resources/icon/icon_3.gif'>
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name="btnXjzHt" text='新增补充合同' tip='新增补充合同' icon='-'/>
+			<operation name="btnQicaoHt" text='起草合同' tip='起草合同' icon='-'/>
+			<operation name="btnShenPiHt" text='审批合同' tip='审批合同' icon='-'/>
+			<operation name="btnCheXiaoShenPi" text='撤销审批' tip='撤销审批' icon='-'/>
+			<operation name="btnZuoFeiHt" text='作废合同' tip='作废合同' icon='-'/>
+			<operation name="btnShanChuHt" text='删除合同' tip='删除合同' icon='-'/>
+		</module>
+		
+		<module name="经济合同审批" url="gcht/htsp/index.jsp?formSn=TB_HT_JJHT" icon='resources/icon/icon_3.gif'>
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name="btnXjzHt" text='新增补充合同' tip='新增补充合同' icon='-'/>
+			<operation name="btnQicaoHt" text='起草合同' tip='起草合同' icon='-'/>
+			<operation name="btnShenPiHt" text='审批合同' tip='审批合同' icon='-'/>
+			<operation name="btnCheXiaoShenPi" text='撤销审批' tip='撤销审批' icon='-'/>
+			<operation name="btnZuoFeiHt" text='作废合同' tip='作废合同' icon='-'/>
+			<operation name="btnShanChuHt" text='删除合同' tip='删除合同' icon='-'/>
+		</module>
+	
+	<!-- 合同执行 -->		
+		<!-- 合同付款审批 -->
+		<module name="物资合同付款审批" url="gcht/htzx/htfksp/index.jsp?formSn=TB_HT_WZHTFK" icon='resources/icon/icon_3.gif'>
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name="btnQicaoHt" text='起草合同' tip='起草合同' icon='-'/>
+			<operation name="btnShenPiHt" text='审批合同' tip='审批合同' icon='-'/>
+			<operation name="btnCheXiaoShenPi" text='撤销审批' tip='撤销审批' icon='-'/>
+			<operation name="btnZuoFeiHt" text='作废合同' tip='作废合同' icon='-'/>
+			<operation name="btnShanChuHt" text='删除合同' tip='删除合同' icon='-'/>
+		</module>
+		<module name="燃料合同付款审批" url="gcht/htzx/htfksp/index.jsp?formSn=TB_HT_RLHTFK" icon='resources/icon/icon_3.gif'>
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name="btnQicaoHt" text='起草合同' tip='起草合同' icon='-'/>
+			<operation name="btnShenPiHt" text='审批合同' tip='审批合同' icon='-'/>
+			<operation name="btnCheXiaoShenPi" text='撤销审批' tip='撤销审批' icon='-'/>
+			<operation name="btnZuoFeiHt" text='作废合同' tip='作废合同' icon='-'/>
+			<operation name="btnShanChuHt" text='删除合同' tip='删除合同' icon='-'/>
+		</module>
+		<module name="工程合同付款审批" url="gcht/htzx/htfksp/index.jsp?formSn=TB_HT_GCHTFK" icon='resources/icon/icon_3.gif'>
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name="btnQicaoHt" text='起草合同' tip='起草合同' icon='-'/>
+			<operation name="btnShenPiHt" text='审批合同' tip='审批合同' icon='-'/>
+			<operation name="btnCheXiaoShenPi" text='撤销审批' tip='撤销审批' icon='-'/>
+			<operation name="btnZuoFeiHt" text='作废合同' tip='作废合同' icon='-'/>
+			<operation name="btnShanChuHt" text='删除合同' tip='删除合同' icon='-'/>
+		</module>
+		<module name="工程合同已完成项目付款审批" url="gcht/htzx/htfksp/index.jsp?formSn=TB_HT_GCHTFKX" icon='resources/icon/icon_3.gif'>
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name="btnQicaoHt" text='起草合同' tip='起草合同' icon='-'/>
+			<operation name="btnShenPiHt" text='审批合同' tip='审批合同' icon='-'/>
+			<operation name="btnCheXiaoShenPi" text='撤销审批' tip='撤销审批' icon='-'/>
+			<operation name="btnZuoFeiHt" text='作废合同' tip='作废合同' icon='-'/>
+			<operation name="btnShanChuHt" text='删除合同' tip='删除合同' icon='-'/>
+		</module>
+		<module name="支付令" url="gcht/htzx/htfksp/index.jsp?formSn=TB_HT_ZFLFK" icon='resources/icon/icon_3.gif'>
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name="btnQicaoHt" text='起草合同' tip='起草合同' icon='-'/>
+			<operation name="btnShenPiHt" text='审批合同' tip='审批合同' icon='-'/>
+			<operation name="btnCheXiaoShenPi" text='撤销审批' tip='撤销审批' icon='-'/>
+			<operation name="btnZuoFeiHt" text='作废合同' tip='作废合同' icon='-'/>
+			<operation name="btnShanChuHt" text='删除合同' tip='删除合同' icon='-'/>
+		</module>
+		
+		<!-- 合同终结 -->
+		<module name="物资合同终结" url="gcht/htzx/htzj/index.jsp?formSn=TB_HT_WZHT" icon='resources/icon/icon_3.gif'>
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name="btnZhongJie" text='终结合同' tip='终结合同' icon='-'/>
+		</module>
+		<module name="燃料合同终结" url="gcht/htzx/htzj/index.jsp?formSn=TB_HT_RLHT" icon='resources/icon/icon_3.gif'>
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name="btnZhongJie" text='终结合同' tip='终结合同' icon='-'/>
+		</module>
+		<module name="工程合同终结" url="gcht/htzx/htzj/index.jsp?formSn=TB_HT_GCHT" icon='resources/icon/icon_3.gif'>
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name="btnZhongJie" text='终结合同' tip='终结合同' icon='-'/>
+		</module> 
+		<module name="财务合同终结" url="gcht/htzx/htzj/index.jsp?formSn=TB_HT_CWHT" icon='resources/icon/icon_3.gif'>
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name="btnZhongJie" text='终结合同' tip='终结合同' icon='-'/>
+		</module> 
+		<!-- 合同备忘 -->
+		<module name="物资合同备忘" url="gcht/htzx/htbw/index.jsp?formSn=TB_HT_WZHT" icon='resources/icon/icon_3.gif'>
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAdd' text='添加备忘' icon='icon/icon_1.gif' tip='添加备忘' />
+			<operation name='btnModi' text='修改备忘' icon='icon/icon_3.gif' tip='修改备忘'/>
+			<operation name='btnDel' text='删除备忘' icon='icon/icon_2.gif' tip='删除备忘' />
+		</module>
+		<module name="燃料合同备忘" url="gcht/htzx/htbw/index.jsp?formSn=TB_HT_RLHT" icon='resources/icon/icon_3.gif'>
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAdd' text='添加备忘' icon='icon/icon_1.gif' tip='添加备忘' />
+			<operation name='btnModi' text='修改备忘' icon='icon/icon_3.gif' tip='修改备忘'/>
+			<operation name='btnDel' text='删除备忘' icon='icon/icon_2.gif' tip='删除备忘' />
+		</module>
+		<module name="工程合同备忘" url="gcht/htzx/htbw/index.jsp?formSn=TB_HT_GCHT" icon='resources/icon/icon_3.gif'>
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAdd' text='添加备忘' icon='icon/icon_1.gif' tip='添加备忘' />
+			<operation name='btnModi' text='修改备忘' icon='icon/icon_3.gif' tip='修改备忘'/>
+			<operation name='btnDel' text='删除备忘' icon='icon/icon_2.gif' tip='删除备忘' />
+		</module>
+	    <module name="财务合同备忘" url="gcht/htzx/htbw/index.jsp?formSn=TB_HT_CWHT" icon='resources/icon/icon_3.gif'>
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAdd' text='添加备忘' icon='icon/icon_1.gif' tip='添加备忘' />
+			<operation name='btnModi' text='修改备忘' icon='icon/icon_3.gif' tip='修改备忘'/>
+			<operation name='btnDel' text='删除备忘' icon='icon/icon_2.gif' tip='删除备忘' />
+		</module>
+	<!-- 工程项目管理 -->	
+		<!-- 开工立项 -->
+		<module name="一般立项单" url="gcht/gcxmgl/gclx/index.jsp?formSn=TB_HT_YBLXD" icon='resources/icon/icon_3.gif'>
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name="btnQicaoHt" text='起草项目' tip='起草项目' icon='-'/>
+			<operation name="btnShenPiHt" text='审批项目' tip='审批项目' icon='-'/>
+			<operation name="btnCheXiaoShenPi" text='撤销审批' tip='撤销审批' icon='-'/>
+			<operation name="btnZuoFeiHt" text='作废项目' tip='作废项目' icon='-'/>
+			<operation name="btnShanChuHt" text='删除项目' tip='删除项目' icon='-'/>
+		</module>
+		<module name="立项委托单" url="gcht/gcxmgl/gclx/index.jsp?formSn=TB_HT_WTD" icon='resources/icon/icon_3.gif'>
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name="btnQicaoHt" text='起草项目' tip='起草项目' icon='-'/>
+			<operation name="btnShenPiHt" text='审批项目' tip='审批项目' icon='-'/>
+			<operation name="btnCheXiaoShenPi" text='撤销审批' tip='撤销审批' icon='-'/>
+			<operation name="btnZuoFeiHt" text='作废项目' tip='作废项目' icon='-'/>
+			<operation name="btnShanChuHt" text='删除项目' tip='删除项目' icon='-'/>
+		</module>
+		
+		<!--立项单查询 -->
+		<module name="工程立项查询" url="gcht/gcxmgl/gclx/gclxcx/index.jsp" icon='resources/icon/icon_3.gif'>
+		</module>
+		
+		<!--开工签证查询 -->
+		<module name="开工签证查询" url="gcht/gcxmgl/kgqz/kgqzcx/index.jsp" icon='resources/icon/icon_3.gif'>
+		</module>
+		
+		<!--工程验收查询 -->
+		<module name="工程验收查询" url="gcht/gcxmgl/gcys/gcyscx/index.jsp" icon='resources/icon/icon_3.gif'>
+		</module>
+		
+		<!-- 结算支付查询 -->
+		<module name="结算支付单查询" url="gcht/gcxmgl/jszf/jszfcx/index.jsp" icon='resources/icon/icon_3.gif'>
+		</module>
+		
+		<!-- 开工签证 -->
+		<module name="开工签证" url="gcht/gcxmgl/kgqz/index.jsp?formSn=TB_HT_KGQZ" icon='resources/icon/icon_3.gif'>
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name="btnQicaoHt" text='起草项目' tip='起草项目' icon='-'/>
+			<operation name="btnShenPiHt" text='审批项目' tip='审批项目' icon='-'/>
+			<operation name="btnCheXiaoShenPi" text='撤销审批' tip='撤销审批' icon='-'/>
+			<operation name="btnZuoFeiHt" text='作废项目' tip='作废项目' icon='-'/>
+			<operation name="btnShanChuHt" text='删除项目' tip='删除项目' icon='-'/>
+		</module>
+		<!-- 工程验收 -->
+		<module name="工程验收" url="gcht/gcxmgl/gcys/index.jsp?formSn=TB_HT_YSD" icon='resources/icon/icon_3.gif'>
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name="btnQicaoHt" text='起草项目' tip='起草项目' icon='-'/>
+			<operation name="btnShenPiHt" text='审批项目' tip='审批项目' icon='-'/>
+			<operation name="btnCheXiaoShenPi" text='撤销审批' tip='撤销审批' icon='-'/>
+			<operation name="btnZuoFeiHt" text='作废项目' tip='作废项目' icon='-'/>
+			<operation name="btnShanChuHt" text='删除项目' tip='删除项目' icon='-'/>
+		</module>
+		
+		<!-- 工程项目结算支付单 -->
+		<module name="工程项目结算支付单" url="gcht/gcxmgl/jszf/index.jsp?formSn=TB_HT_GCXMJSZFD" icon='resources/icon/icon_3.gif'>
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name="btnQicaoHt" text='起草项目' tip='起草项目' icon='-'/>
+			<operation name="btnShenPiHt" text='审批项目' tip='审批项目' icon='-'/>
+			<operation name="btnCheXiaoShenPi" text='撤销审批' tip='撤销审批' icon='-'/>
+			<operation name="btnZuoFeiHt" text='作废项目' tip='作废项目' icon='-'/>
+			<operation name="btnShanChuHt" text='删除项目' tip='删除项目' icon='-'/>
+		</module>
+		
+		<module name="质量保证金签证单" url="gcht/gcxmgl/zlbzj/index.jsp?formSn=TB_HT_ZLBZJQZD" icon='resources/icon/icon_3.gif'>
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name="btnQicaoHt" text='起草项目' tip='起草项目' icon='-'/>
+			<operation name="btnShenPiHt" text='审批项目' tip='审批项目' icon='-'/>
+			<operation name="btnCheXiaoShenPi" text='撤销审批' tip='撤销审批' icon='-'/>
+			<operation name="btnZuoFeiHt" text='作废项目' tip='作废项目' icon='-'/>
+			<operation name="btnShanChuHt" text='删除项目' tip='删除项目' icon='-'/>
+		</module>
+		
+		<module name="工程预决算书" url="gcht/gcxmgl/gcyjss/index.jsp?formSn=TB_HT_GCYJSS" icon='resources/icon/icon_3.gif'>
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name="btnQicaoHt" text='起草项目' tip='起草项目' icon='-'/>
+			<operation name="btnShenPiHt" text='审批项目' tip='审批项目' icon='-'/>
+			<operation name="btnCheXiaoShenPi" text='撤销审批' tip='撤销审批' icon='-'/>
+			<operation name="btnZuoFeiHt" text='作废项目' tip='作废项目' icon='-'/>
+			<operation name="btnShanChuHt" text='删除项目' tip='删除项目' icon='-'/>
+		</module>
+		
+	<!-- 招投标管理 -->
+		<module name="招标管理" url="gcht/ztbgl/zbgl/index.jsp">
+			<operation name='btnAddCatalog' text='添加类别' icon='icon/icon_1.gif' tip='添加招标类别' />
+			<operation name='btnModiCatalog' text='修改类别' icon='icon/icon_2.gif' tip='修改招标类别' />
+			<operation name='btnDelCatalog' text='删除类别' icon='icon/icon_3.gif' tip='删除招标类别' />
+			<operation name='->' text='->' icon='icon/icon_1.gif' tip='->' />
+			<operation name='btnAddZb' text='添加' icon='icon/icon_4.gif' tip='添加招标信息' />
+			<operation name='btnModifyZb' text='修改' icon='icon/icon_5.gif' tip='修改招标信息' />
+			<operation name='btnDelZb' text='删除' icon='icon/icon_6.gif' tip='删除招标信息' />
+		</module>
+		<module name="中标管理" url="gcht/ztbgl/zhongbgl/index.jsp">
+			<operation name='->' text='->' icon='icon/icon_1.gif' tip='->' />
+			<operation name='btnAddZhb' text='添加' icon='icon/icon_1.gif' tip='添加中标信息' />
+			<operation name='btnModifyZhb' text='修改' icon='icon/icon_2.gif' tip='修改中标信息' />
+			<operation name='btnDelZhb' text='删除' icon='icon/icon_3.gif' tip='删除中标信息' />
+		</module>
+		
+	<!-- 供应商管理 -->
+		<module name="承接单位管理" url="gcht/gysgl/index.jsp">
+			<operation name='btnAddCatalog' text='添加类别' icon='icon/icon_1.gif' tip='添加供应商类别' />
+			<operation name='btnModiCatalog' text='修改类别' icon='icon/icon_2.gif' tip='修改供应商类别' />
+			<operation name='btnDelCatalog' text='删除类别' icon='icon/icon_3.gif' tip='删除供应商类别' />
+			<operation name='->' text='->' icon='icon/icon_1.gif' tip='->' />
+			<operation name='btnAddGys' text='添加' icon='icon/icon_4.gif' tip='添加供应商信息' />
+			<operation name='btnModifyGys' text='修改' icon='icon/icon_5.gif' tip='修改供应商信息' />
+			<operation name='btnDelGys' text='删除' icon='icon/icon_6.gif' tip='删除供应商信息' />
+		</module>
+		
+	<!-- 工程合同综合查询 -->
+		<module name="燃料合同查询" url="gcht/zhcx/jbxxcx/rlhtcx/index.jsp">
+			<operation name='->' text='->' icon='icon/icon_1.gif' tip='->' />
+			<operation name='btnTotal' text='合同年统计' icon='icon/icon_1.gif' tip='选择一条记录，查看合同年统计' />
+		</module>
+		<module name="物资合同查询" url="gcht/zhcx/jbxxcx/wzhtcx/index.jsp">
+			<operation name='->' text='->' icon='icon/icon_1.gif' tip='->' />
+			<operation name='btnTotal' text='合同年统计' icon='icon/icon_1.gif' tip='选择一条记录，查看合同年统计' />
+		</module>
+		<module name="工程合同查询" url="gcht/zhcx/jbxxcx/gchtcx/index.jsp">
+			<operation name='->' text='->' icon='icon/icon_1.gif' tip='->' />
+			<operation name='btnTotal' text='合同年统计' icon='icon/icon_1.gif' tip='选择一条记录，查看合同年统计' />
+		</module>
+		<module name="招标信息查询" url="gcht/zhcx/jbxxcx/zbxxcx/index.jsp">
+		</module>
+		<module name="中标信息查询" url="gcht/zhcx/jbxxcx/zhongbxxcx/index.jsp">
+		</module>
+		<module name="供应商信息查询" url="gcht/zhcx/jbxxcx/gysxxcx/index.jsp">
+		</module>
+		<module name="合同执行情况查询" url="gcht/zhcx/htzxqkcx/index.jsp">
+		</module>
+		<module name="工程项目查询" url="gcht/zhcx/gcxmcx/index.jsp">
+		</module>
+		<module name="合同统计查询" url="gcht/zhcx/httjcx/index.jsp">
+		</module>
+	</group>
+	
+	<group name="生产技术管理">
+		<module name="生产技术首页" url="scjs/index2.jsp" icon="resources/icon/icon_3.gif">
+		</module>
+	<!-- 节能监督 -->
+		<module name="基础管理" url="system/doclib/index.jsp?catalogCode=jnjcgl" icon="resources/icon/icon_3.gif">
+			<operation name='btnAddCatalog' 		text='添加分类' 	icon='icon/icon_1.gif' tip='' />
+			<operation name='btnModiCatalog'	 	text='修改分类' 	icon='icon/icon_3.gif' tip='选中需要修改的分类，再执行该操作' adminOp='true'/>
+			<operation name='btnDelCatalog' 		text='删除分类' 	icon='icon/icon_2.gif' tip='选中需要删除的分类，再执行该操作' adminOp='true'/>		
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAddDocument' 		text='添加文档' 	icon='icon/icon_11.gif' tip='选中文档分类，添加文档' adminOp='true'/>		
+			<operation name='btnModiDocument' 		text='修改文档' 	icon='icon/icon_4.gif' tip='选中需要修改的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDelDocument' 		text='删除文档' 	icon='icon/icon_12.gif' tip='选中需要删除的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDocumentLevel' 		text='文档级别配置' 	icon='icon/icon_13.gif' tip='文档级别的配置' adminOp='true'/>
+		</module>
+		<module name="报表管理" url="system/doclib/index.jsp?catalogCode=jnbbgl" icon="resources/icon/icon_3.gif">
+			<operation name='btnAddCatalog' 		text='添加分类' 	icon='icon/icon_1.gif' tip='' />
+			<operation name='btnModiCatalog'	 	text='修改分类' 	icon='icon/icon_3.gif' tip='选中需要修改的分类，再执行该操作' adminOp='true'/>
+			<operation name='btnDelCatalog' 		text='删除分类' 	icon='icon/icon_2.gif' tip='选中需要删除的分类，再执行该操作' adminOp='true'/>		
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAddDocument' 		text='添加文档' 	icon='icon/icon_11.gif' tip='选中文档分类，添加文档' adminOp='true'/>		
+			<operation name='btnModiDocument' 		text='修改文档' 	icon='icon/icon_4.gif' tip='选中需要修改的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDelDocument' 		text='删除文档' 	icon='icon/icon_12.gif' tip='选中需要删除的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDocumentLevel' 		text='文档级别配置' 	icon='icon/icon_13.gif' tip='文档级别的配置' adminOp='true'/>
+		</module>
+	<!-- 环保监督 -->
+		<module name="基础管理" url="system/doclib/index.jsp?catalogCode=hbjcgl" icon="resources/icon/icon_3.gif">
+			<operation name='btnAddCatalog' 		text='添加分类' 	icon='icon/icon_1.gif' tip='' />
+			<operation name='btnModiCatalog'	 	text='修改分类' 	icon='icon/icon_3.gif' tip='选中需要修改的分类，再执行该操作' adminOp='true'/>
+			<operation name='btnDelCatalog' 		text='删除分类' 	icon='icon/icon_2.gif' tip='选中需要删除的分类，再执行该操作' adminOp='true'/>		
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAddDocument' 		text='添加文档' 	icon='icon/icon_11.gif' tip='选中文档分类，添加文档' adminOp='true'/>		
+			<operation name='btnModiDocument' 		text='修改文档' 	icon='icon/icon_4.gif' tip='选中需要修改的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDelDocument' 		text='删除文档' 	icon='icon/icon_12.gif' tip='选中需要删除的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDocumentLevel' 		text='文档级别配置' 	icon='icon/icon_13.gif' tip='文档级别的配置' adminOp='true'/>
+		</module>
+		<module name="报表管理" url="system/doclib/index.jsp?catalogCode=hbbbgl" icon="resources/icon/icon_3.gif">
+			<operation name='btnAddCatalog' 		text='添加分类' 	icon='icon/icon_1.gif' tip='' />
+			<operation name='btnModiCatalog'	 	text='修改分类' 	icon='icon/icon_3.gif' tip='选中需要修改的分类，再执行该操作' adminOp='true'/>
+			<operation name='btnDelCatalog' 		text='删除分类' 	icon='icon/icon_2.gif' tip='选中需要删除的分类，再执行该操作' adminOp='true'/>		
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAddDocument' 		text='添加文档' 	icon='icon/icon_11.gif' tip='选中文档分类，添加文档' adminOp='true'/>		
+			<operation name='btnModiDocument' 		text='修改文档' 	icon='icon/icon_4.gif' tip='选中需要修改的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDelDocument' 		text='删除文档' 	icon='icon/icon_12.gif' tip='选中需要删除的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDocumentLevel' 		text='文档级别配置' 	icon='icon/icon_13.gif' tip='文档级别的配置' adminOp='true'/>
+		</module>
+	<!-- 金属监督 -->
+		<module name="基础管理" url="system/doclib/index.jsp?catalogCode=jcgl" icon="resources/icon/icon_3.gif">
+			<operation name='btnAddCatalog' 		text='添加分类' 	icon='icon/icon_1.gif' tip='' />
+			<operation name='btnModiCatalog'	 	text='修改分类' 	icon='icon/icon_3.gif' tip='选中需要修改的分类，再执行该操作' adminOp='true'/>
+			<operation name='btnDelCatalog' 		text='删除分类' 	icon='icon/icon_2.gif' tip='选中需要删除的分类，再执行该操作' adminOp='true'/>		
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAddDocument' 		text='添加文档' 	icon='icon/icon_11.gif' tip='选中文档分类，添加文档' adminOp='true'/>		
+			<operation name='btnModiDocument' 		text='修改文档' 	icon='icon/icon_4.gif' tip='选中需要修改的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDelDocument' 		text='删除文档' 	icon='icon/icon_12.gif' tip='选中需要删除的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDocumentLevel' 		text='文档级别配置' 	icon='icon/icon_13.gif' tip='文档级别的配置' adminOp='true'/>
+		</module>
+		<module name="金监设备" url="system/doclib/index.jsp?catalogCode=jjsb" icon="resources/icon/icon_3.gif">
+			<operation name='btnAddCatalog' 		text='添加分类' 	icon='icon/icon_1.gif' tip='' />
+			<operation name='btnModiCatalog'	 	text='修改分类' 	icon='icon/icon_3.gif' tip='选中需要修改的分类，再执行该操作' adminOp='true'/>
+			<operation name='btnDelCatalog' 		text='删除分类' 	icon='icon/icon_2.gif' tip='选中需要删除的分类，再执行该操作' adminOp='true'/>		
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAddDocument' 		text='添加文档' 	icon='icon/icon_11.gif' tip='选中文档分类，添加文档' adminOp='true'/>		
+			<operation name='btnModiDocument' 		text='修改文档' 	icon='icon/icon_4.gif' tip='选中需要修改的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDelDocument' 		text='删除文档' 	icon='icon/icon_12.gif' tip='选中需要删除的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDocumentLevel' 		text='文档级别配置' 	icon='icon/icon_13.gif' tip='文档级别的配置' adminOp='true'/>
+		</module>
+		<module name="锅监管理" url="system/doclib/index.jsp?catalogCode=gjgl" icon="resources/icon/icon_3.gif">
+			<operation name='btnAddCatalog' 		text='添加分类' 	icon='icon/icon_1.gif' tip='' />
+			<operation name='btnModiCatalog'	 	text='修改分类' 	icon='icon/icon_3.gif' tip='选中需要修改的分类，再执行该操作' adminOp='true'/>
+			<operation name='btnDelCatalog' 		text='删除分类' 	icon='icon/icon_2.gif' tip='选中需要删除的分类，再执行该操作' adminOp='true'/>		
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAddDocument' 		text='添加文档' 	icon='icon/icon_11.gif' tip='选中文档分类，添加文档' adminOp='true'/>		
+			<operation name='btnModiDocument' 		text='修改文档' 	icon='icon/icon_4.gif' tip='选中需要修改的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDelDocument' 		text='删除文档' 	icon='icon/icon_12.gif' tip='选中需要删除的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDocumentLevel' 		text='文档级别配置' 	icon='icon/icon_13.gif' tip='文档级别的配置' adminOp='true'/>
+		</module>
+		<module name="报表管理" url="system/doclib/index.jsp?catalogCode=bbgl" icon="resources/icon/icon_3.gif">
+			<operation name='btnAddCatalog' 		text='添加分类' 	icon='icon/icon_1.gif' tip='' />
+			<operation name='btnModiCatalog'	 	text='修改分类' 	icon='icon/icon_3.gif' tip='选中需要修改的分类，再执行该操作' adminOp='true'/>
+			<operation name='btnDelCatalog' 		text='删除分类' 	icon='icon/icon_2.gif' tip='选中需要删除的分类，再执行该操作' adminOp='true'/>		
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAddDocument' 		text='添加文档' 	icon='icon/icon_11.gif' tip='选中文档分类，添加文档' adminOp='true'/>		
+			<operation name='btnModiDocument' 		text='修改文档' 	icon='icon/icon_4.gif' tip='选中需要修改的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDelDocument' 		text='删除文档' 	icon='icon/icon_12.gif' tip='选中需要删除的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDocumentLevel' 		text='文档级别配置' 	icon='icon/icon_13.gif' tip='文档级别的配置' adminOp='true'/>
+		</module>
+	<!-- 热工监督 -->
+		<module name="基础管理" url="system/doclib/index.jsp?catalogCode=rgjcgl" icon="resources/icon/icon_3.gif">
+			<operation name='btnAddCatalog' 		text='添加分类' 	icon='icon/icon_1.gif' tip='' />
+			<operation name='btnModiCatalog'	 	text='修改分类' 	icon='icon/icon_3.gif' tip='选中需要修改的分类，再执行该操作' adminOp='true'/>
+			<operation name='btnDelCatalog' 		text='删除分类' 	icon='icon/icon_2.gif' tip='选中需要删除的分类，再执行该操作' adminOp='true'/>		
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAddDocument' 		text='添加文档' 	icon='icon/icon_11.gif' tip='选中文档分类，添加文档' adminOp='true'/>		
+			<operation name='btnModiDocument' 		text='修改文档' 	icon='icon/icon_4.gif' tip='选中需要修改的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDelDocument' 		text='删除文档' 	icon='icon/icon_12.gif' tip='选中需要删除的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDocumentLevel' 		text='文档级别配置' 	icon='icon/icon_13.gif' tip='文档级别的配置' adminOp='true'/>
+		</module>
+		<module name="DAS测点台帐" url="system/doclib/index.jsp?catalogCode=rgcdtz" icon="resources/icon/icon_3.gif">
+			<operation name='btnAddCatalog' 		text='添加分类' 	icon='icon/icon_1.gif' tip='' />
+			<operation name='btnModiCatalog'	 	text='修改分类' 	icon='icon/icon_3.gif' tip='选中需要修改的分类，再执行该操作' adminOp='true'/>
+			<operation name='btnDelCatalog' 		text='删除分类' 	icon='icon/icon_2.gif' tip='选中需要删除的分类，再执行该操作' adminOp='true'/>		
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAddDocument' 		text='添加文档' 	icon='icon/icon_11.gif' tip='选中文档分类，添加文档' adminOp='true'/>		
+			<operation name='btnModiDocument' 		text='修改文档' 	icon='icon/icon_4.gif' tip='选中需要修改的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDelDocument' 		text='删除文档' 	icon='icon/icon_12.gif' tip='选中需要删除的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDocumentLevel' 		text='文档级别配置' 	icon='icon/icon_13.gif' tip='文档级别的配置' adminOp='true'/>
+		</module>
+		<module name="报表管理" url="system/doclib/index.jsp?catalogCode=rgbbgl" icon="resources/icon/icon_3.gif">
+			<operation name='btnAddCatalog' 		text='添加分类' 	icon='icon/icon_1.gif' tip='' />
+			<operation name='btnModiCatalog'	 	text='修改分类' 	icon='icon/icon_3.gif' tip='选中需要修改的分类，再执行该操作' adminOp='true'/>
+			<operation name='btnDelCatalog' 		text='删除分类' 	icon='icon/icon_2.gif' tip='选中需要删除的分类，再执行该操作' adminOp='true'/>		
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAddDocument' 		text='添加文档' 	icon='icon/icon_11.gif' tip='选中文档分类，添加文档' adminOp='true'/>		
+			<operation name='btnModiDocument' 		text='修改文档' 	icon='icon/icon_4.gif' tip='选中需要修改的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDelDocument' 		text='删除文档' 	icon='icon/icon_12.gif' tip='选中需要删除的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDocumentLevel' 		text='文档级别配置' 	icon='icon/icon_13.gif' tip='文档级别的配置' adminOp='true'/>
+		</module>
+	<!-- 化学监督 -->
+		<module name="基础管理" url="system/doclib/index.jsp?catalogCode=hxjcgl" icon="resources/icon/icon_3.gif">
+			<operation name='btnAddCatalog' 		text='添加分类' 	icon='icon/icon_1.gif' tip='' />
+			<operation name='btnModiCatalog'	 	text='修改分类' 	icon='icon/icon_3.gif' tip='选中需要修改的分类，再执行该操作' adminOp='true'/>
+			<operation name='btnDelCatalog' 		text='删除分类' 	icon='icon/icon_2.gif' tip='选中需要删除的分类，再执行该操作' adminOp='true'/>		
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAddDocument' 		text='添加文档' 	icon='icon/icon_11.gif' tip='选中文档分类，添加文档' adminOp='true'/>		
+			<operation name='btnModiDocument' 		text='修改文档' 	icon='icon/icon_4.gif' tip='选中需要修改的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDelDocument' 		text='删除文档' 	icon='icon/icon_12.gif' tip='选中需要删除的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDocumentLevel' 		text='文档级别配置' 	icon='icon/icon_13.gif' tip='文档级别的配置' adminOp='true'/>
+		</module>
+		<module name="报表管理" url="system/doclib/index.jsp?catalogCode=hxbbgl" icon="resources/icon/icon_3.gif">
+			<operation name='btnAddCatalog' 		text='添加分类' 	icon='icon/icon_1.gif' tip='' />
+			<operation name='btnModiCatalog'	 	text='修改分类' 	icon='icon/icon_3.gif' tip='选中需要修改的分类，再执行该操作' adminOp='true'/>
+			<operation name='btnDelCatalog' 		text='删除分类' 	icon='icon/icon_2.gif' tip='选中需要删除的分类，再执行该操作' adminOp='true'/>		
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAddDocument' 		text='添加文档' 	icon='icon/icon_11.gif' tip='选中文档分类，添加文档' adminOp='true'/>		
+			<operation name='btnModiDocument' 		text='修改文档' 	icon='icon/icon_4.gif' tip='选中需要修改的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDelDocument' 		text='删除文档' 	icon='icon/icon_12.gif' tip='选中需要删除的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDocumentLevel' 		text='文档级别配置' 	icon='icon/icon_13.gif' tip='文档级别的配置' adminOp='true'/>
+		</module>
+	<!-- 电测监督 -->
+		<module name="基础管理" url="system/doclib/index.jsp?catalogCode=dcjcgl" icon="resources/icon/icon_3.gif">
+			<operation name='btnAddCatalog' 		text='添加分类' 	icon='icon/icon_1.gif' tip='' />
+			<operation name='btnModiCatalog'	 	text='修改分类' 	icon='icon/icon_3.gif' tip='选中需要修改的分类，再执行该操作' adminOp='true'/>
+			<operation name='btnDelCatalog' 		text='删除分类' 	icon='icon/icon_2.gif' tip='选中需要删除的分类，再执行该操作' adminOp='true'/>		
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAddDocument' 		text='添加文档' 	icon='icon/icon_11.gif' tip='选中文档分类，添加文档' adminOp='true'/>		
+			<operation name='btnModiDocument' 		text='修改文档' 	icon='icon/icon_4.gif' tip='选中需要修改的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDelDocument' 		text='删除文档' 	icon='icon/icon_12.gif' tip='选中需要删除的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDocumentLevel' 		text='文档级别配置' 	icon='icon/icon_13.gif' tip='文档级别的配置' adminOp='true'/>
+		</module>
+		<module name="报表管理" url="system/doclib/index.jsp?catalogCode=dcbbgl" icon="resources/icon/icon_3.gif">
+			<operation name='btnAddCatalog' 		text='添加分类' 	icon='icon/icon_1.gif' tip='' />
+			<operation name='btnModiCatalog'	 	text='修改分类' 	icon='icon/icon_3.gif' tip='选中需要修改的分类，再执行该操作' adminOp='true'/>
+			<operation name='btnDelCatalog' 		text='删除分类' 	icon='icon/icon_2.gif' tip='选中需要删除的分类，再执行该操作' adminOp='true'/>		
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAddDocument' 		text='添加文档' 	icon='icon/icon_11.gif' tip='选中文档分类，添加文档' adminOp='true'/>		
+			<operation name='btnModiDocument' 		text='修改文档' 	icon='icon/icon_4.gif' tip='选中需要修改的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDelDocument' 		text='删除文档' 	icon='icon/icon_12.gif' tip='选中需要删除的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDocumentLevel' 		text='文档级别配置' 	icon='icon/icon_13.gif' tip='文档级别的配置' adminOp='true'/>
+		</module>
+	<!-- 计量监督 -->
+		<module name="基础管理" url="system/doclib/index.jsp?catalogCode=jljcgl" icon="resources/icon/icon_3.gif">
+			<operation name='btnAddCatalog' 		text='添加分类' 	icon='icon/icon_1.gif' tip='' />
+			<operation name='btnModiCatalog'	 	text='修改分类' 	icon='icon/icon_3.gif' tip='选中需要修改的分类，再执行该操作' adminOp='true'/>
+			<operation name='btnDelCatalog' 		text='删除分类' 	icon='icon/icon_2.gif' tip='选中需要删除的分类，再执行该操作' adminOp='true'/>		
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAddDocument' 		text='添加文档' 	icon='icon/icon_11.gif' tip='选中文档分类，添加文档' adminOp='true'/>		
+			<operation name='btnModiDocument' 		text='修改文档' 	icon='icon/icon_4.gif' tip='选中需要修改的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDelDocument' 		text='删除文档' 	icon='icon/icon_12.gif' tip='选中需要删除的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDocumentLevel' 		text='文档级别配置' 	icon='icon/icon_13.gif' tip='文档级别的配置' adminOp='true'/>
+		</module>
+		<module name="报表管理" url="system/doclib/index.jsp?catalogCode=jlbbgl" icon="resources/icon/icon_3.gif">
+			<operation name='btnAddCatalog' 		text='添加分类' 	icon='icon/icon_1.gif' tip='' />
+			<operation name='btnModiCatalog'	 	text='修改分类' 	icon='icon/icon_3.gif' tip='选中需要修改的分类，再执行该操作' adminOp='true'/>
+			<operation name='btnDelCatalog' 		text='删除分类' 	icon='icon/icon_2.gif' tip='选中需要删除的分类，再执行该操作' adminOp='true'/>		
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAddDocument' 		text='添加文档' 	icon='icon/icon_11.gif' tip='选中文档分类，添加文档' adminOp='true'/>		
+			<operation name='btnModiDocument' 		text='修改文档' 	icon='icon/icon_4.gif' tip='选中需要修改的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDelDocument' 		text='删除文档' 	icon='icon/icon_12.gif' tip='选中需要删除的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDocumentLevel' 		text='文档级别配置' 	icon='icon/icon_13.gif' tip='文档级别的配置' adminOp='true'/>
+		</module>
+	<!-- 绝缘监督 -->
+		<module name="基础管理" url="system/doclib/index.jsp?catalogCode=jyjcgl" icon="resources/icon/icon_3.gif">
+			<operation name='btnAddCatalog' 		text='添加分类' 	icon='icon/icon_1.gif' tip='' />
+			<operation name='btnModiCatalog'	 	text='修改分类' 	icon='icon/icon_3.gif' tip='选中需要修改的分类，再执行该操作' adminOp='true'/>
+			<operation name='btnDelCatalog' 		text='删除分类' 	icon='icon/icon_2.gif' tip='选中需要删除的分类，再执行该操作' adminOp='true'/>		
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAddDocument' 		text='添加文档' 	icon='icon/icon_11.gif' tip='选中文档分类，添加文档' adminOp='true'/>		
+			<operation name='btnModiDocument' 		text='修改文档' 	icon='icon/icon_4.gif' tip='选中需要修改的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDelDocument' 		text='删除文档' 	icon='icon/icon_12.gif' tip='选中需要删除的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDocumentLevel' 		text='文档级别配置' 	icon='icon/icon_13.gif' tip='文档级别的配置' adminOp='true'/>
+		</module>
+		<module name="报表管理" url="system/doclib/index.jsp?catalogCode=jybbgl" icon="resources/icon/icon_3.gif">
+			<operation name='btnAddCatalog' 		text='添加分类' 	icon='icon/icon_1.gif' tip='' />
+			<operation name='btnModiCatalog'	 	text='修改分类' 	icon='icon/icon_3.gif' tip='选中需要修改的分类，再执行该操作' adminOp='true'/>
+			<operation name='btnDelCatalog' 		text='删除分类' 	icon='icon/icon_2.gif' tip='选中需要删除的分类，再执行该操作' adminOp='true'/>		
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAddDocument' 		text='添加文档' 	icon='icon/icon_11.gif' tip='选中文档分类，添加文档' adminOp='true'/>		
+			<operation name='btnModiDocument' 		text='修改文档' 	icon='icon/icon_4.gif' tip='选中需要修改的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDelDocument' 		text='删除文档' 	icon='icon/icon_12.gif' tip='选中需要删除的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDocumentLevel' 		text='文档级别配置' 	icon='icon/icon_13.gif' tip='文档级别的配置' adminOp='true'/>
+		</module>
+	<!-- 继电监督 -->
+		<module name="基础管理" url="system/doclib/index.jsp?catalogCode=jdjcgl" icon="resources/icon/icon_3.gif">
+			<operation name='btnAddCatalog' 		text='添加分类' 	icon='icon/icon_1.gif' tip='' />
+			<operation name='btnModiCatalog'	 	text='修改分类' 	icon='icon/icon_3.gif' tip='选中需要修改的分类，再执行该操作' adminOp='true'/>
+			<operation name='btnDelCatalog' 		text='删除分类' 	icon='icon/icon_2.gif' tip='选中需要删除的分类，再执行该操作' adminOp='true'/>		
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAddDocument' 		text='添加文档' 	icon='icon/icon_11.gif' tip='选中文档分类，添加文档' adminOp='true'/>		
+			<operation name='btnModiDocument' 		text='修改文档' 	icon='icon/icon_4.gif' tip='选中需要修改的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDelDocument' 		text='删除文档' 	icon='icon/icon_12.gif' tip='选中需要删除的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDocumentLevel' 		text='文档级别配置' 	icon='icon/icon_13.gif' tip='文档级别的配置' adminOp='true'/>
+		</module>
+		<module name="报表管理" url="system/doclib/index.jsp?catalogCode=jdbbgl" icon="resources/icon/icon_3.gif">
+			<operation name='btnAddCatalog' 		text='添加分类' 	icon='icon/icon_1.gif' tip='' />
+			<operation name='btnModiCatalog'	 	text='修改分类' 	icon='icon/icon_3.gif' tip='选中需要修改的分类，再执行该操作' adminOp='true'/>
+			<operation name='btnDelCatalog' 		text='删除分类' 	icon='icon/icon_2.gif' tip='选中需要删除的分类，再执行该操作' adminOp='true'/>		
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAddDocument' 		text='添加文档' 	icon='icon/icon_11.gif' tip='选中文档分类，添加文档' adminOp='true'/>		
+			<operation name='btnModiDocument' 		text='修改文档' 	icon='icon/icon_4.gif' tip='选中需要修改的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDelDocument' 		text='删除文档' 	icon='icon/icon_12.gif' tip='选中需要删除的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDocumentLevel' 		text='文档级别配置' 	icon='icon/icon_13.gif' tip='文档级别的配置' adminOp='true'/>
+		</module>
+	<!-- 励磁及电压质量监督 -->
+		<module name="基础管理" url="system/doclib/index.jsp?catalogCode=lcjcgl" icon="resources/icon/icon_3.gif">
+			<operation name='btnAddCatalog' 		text='添加分类' 	icon='icon/icon_1.gif' tip='' />
+			<operation name='btnModiCatalog'	 	text='修改分类' 	icon='icon/icon_3.gif' tip='选中需要修改的分类，再执行该操作' adminOp='true'/>
+			<operation name='btnDelCatalog' 		text='删除分类' 	icon='icon/icon_2.gif' tip='选中需要删除的分类，再执行该操作' adminOp='true'/>		
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAddDocument' 		text='添加文档' 	icon='icon/icon_11.gif' tip='选中文档分类，添加文档' adminOp='true'/>		
+			<operation name='btnModiDocument' 		text='修改文档' 	icon='icon/icon_4.gif' tip='选中需要修改的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDelDocument' 		text='删除文档' 	icon='icon/icon_12.gif' tip='选中需要删除的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDocumentLevel' 		text='文档级别配置' 	icon='icon/icon_13.gif' tip='文档级别的配置' adminOp='true'/>
+		</module>
+		<module name="报表管理" url="system/doclib/index.jsp?catalogCode=lcbbgl" icon="resources/icon/icon_3.gif">
+			<operation name='btnAddCatalog' 		text='添加分类' 	icon='icon/icon_1.gif' tip='' />
+			<operation name='btnModiCatalog'	 	text='修改分类' 	icon='icon/icon_3.gif' tip='选中需要修改的分类，再执行该操作' adminOp='true'/>
+			<operation name='btnDelCatalog' 		text='删除分类' 	icon='icon/icon_2.gif' tip='选中需要删除的分类，再执行该操作' adminOp='true'/>		
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAddDocument' 		text='添加文档' 	icon='icon/icon_11.gif' tip='选中文档分类，添加文档' adminOp='true'/>		
+			<operation name='btnModiDocument' 		text='修改文档' 	icon='icon/icon_4.gif' tip='选中需要修改的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDelDocument' 		text='删除文档' 	icon='icon/icon_12.gif' tip='选中需要删除的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDocumentLevel' 		text='文档级别配置' 	icon='icon/icon_13.gif' tip='文档级别的配置' adminOp='true'/>
+		</module>
+	<!-- 综合管理 -->
+		<module name="12项监督网络图" url="system/doclib/index.jsp?catalogCode=jdwlt" icon="resources/icon/icon_3.gif">
+			<operation name='btnAddCatalog' 		text='添加分类' 	icon='icon/icon_1.gif' tip='' />
+			<operation name='btnModiCatalog'	 	text='修改分类' 	icon='icon/icon_3.gif' tip='选中需要修改的分类，再执行该操作' adminOp='true'/>
+			<operation name='btnDelCatalog' 		text='删除分类' 	icon='icon/icon_2.gif' tip='选中需要删除的分类，再执行该操作' adminOp='true'/>		
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAddDocument' 		text='添加文档' 	icon='icon/icon_11.gif' tip='选中文档分类，添加文档' adminOp='true'/>		
+			<operation name='btnModiDocument' 		text='修改文档' 	icon='icon/icon_4.gif' tip='选中需要修改的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDelDocument' 		text='删除文档' 	icon='icon/icon_12.gif' tip='选中需要删除的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDocumentLevel' 		text='文档级别配置' 	icon='icon/icon_13.gif' tip='文档级别的配置' adminOp='true'/>
+		</module>
+		<module name="12项监督月报" url="system/doclib/index.jsp?catalogCode=jdyb" icon="resources/icon/icon_3.gif">
+			<operation name='btnAddCatalog' 		text='添加分类' 	icon='icon/icon_1.gif' tip='' />
+			<operation name='btnModiCatalog'	 	text='修改分类' 	icon='icon/icon_3.gif' tip='选中需要修改的分类，再执行该操作' adminOp='true'/>
+			<operation name='btnDelCatalog' 		text='删除分类' 	icon='icon/icon_2.gif' tip='选中需要删除的分类，再执行该操作' adminOp='true'/>		
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAddDocument' 		text='添加文档' 	icon='icon/icon_11.gif' tip='选中文档分类，添加文档' adminOp='true'/>		
+			<operation name='btnModiDocument' 		text='修改文档' 	icon='icon/icon_4.gif' tip='选中需要修改的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDelDocument' 		text='删除文档' 	icon='icon/icon_12.gif' tip='选中需要删除的文档，再执行该操作' adminOp='true'/>		
+			<operation name='btnDocumentLevel' 		text='文档级别配置' 	icon='icon/icon_13.gif' tip='文档级别的配置' adminOp='true'/>
+		</module>
+	</group>	
+	<group name="计划统计">
+		<module name="数据维护" url="jhtj/sjwh/index.jsp" icon="resources/icon/icon_3.gif">
+			<operation name='btnAddCatalog' 		text='增加' 	icon='icon/icon_1.gif' tip='增加数据' />
+			<operation name='btnModiCatalog'	 	text='修改' 	icon='icon/icon_3.gif' tip='修改数据' />
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnloadDate'	 	text='补录数据' 	icon='icon/icon_1.gif' tip='补录数据' />
+		</module>
+	</group>
+	<group name="综合查询">
+		<module name="综合查询首页" url="zhcx/index2.jsp" icon="resources/icon/icon_3.gif">
+		</module>
+		<module name="日报(全厂)" url="zhcx/bbcx/index.jsp?bblx=RB_ZONG" icon="resources/icon/icon_3.gif">
+			<operation name='btnFindCatalog' text='报表查看' 	icon='icon/icon_16.gif' tip='报表查看' adminOp='true'/>
+		</module>
+		<module name="日报(一期)" url="zhcx/bbcx/index.jsp?bblx=RB_YQ" icon="resources/icon/icon_3.gif">
+			<operation name='btnFindCatalog' text='报表查看' 	icon='icon/icon_16.gif' tip='报表查看' adminOp='true'/>
+		</module>
+		<module name="日报(二期)" url="zhcx/bbcx/index.jsp?bblx=RB_EQ" icon="resources/icon/icon_3.gif">
+			<operation name='btnFindCatalog' text='报表查看' 	icon='icon/icon_16.gif' tip='报表查看' adminOp='true'/>
+		</module>
+		<module name="被考核电量统计" url="zhcx/bkhdltj/index.jsp" icon="resources/icon/icon_3.gif">
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAdd' text='新建统计报表' icon='icon/icon_1.gif' tip='新建统计报表' />
+			<operation name='btnMod' text='修改统计报表' icon='icon/icon_1.gif' tip='修改统计报表' />
+			<operation name='btnDel' text='删除统计报表' icon='icon/icon_1.gif' tip='删除统计报表' />
+		</module>
+		<module name="用油情况分析" url="zhcx/yyqkfx/index.jsp" icon="resources/icon/icon_3.gif">
+			<operation name='->' text='->' icon='->' tip='->'/>
+			<operation name='btnAdd' text='新建统计报表' icon='icon/icon_1.gif' tip='新建统计报表' />
+			<operation name='btnMod' text='修改统计报表' icon='icon/icon_1.gif' tip='修改统计报表' />
+			<operation name='btnDel' text='删除统计报表' icon='icon/icon_1.gif' tip='删除统计报表' />
+		</module>
+		
+	</group>
+	
+</modules>

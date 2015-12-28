@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd"
+	default-autowire="byName" default-lazy-init="true">
+	
+	<bean id="directiveColumnInfoManager" class="com.jteap.yx.fdzbfxykh.manager.DirectiveColumnInfoManager" />
+	<bean id="directiveTableInfoManager" class="com.jteap.yx.fdzbfxykh.manager.DirectiveTableInfoManager" />
+	<bean id="directivePhysicManager" class="com.jteap.yx.fdzbfxykh.manager.DirectivePhysicManager" />
+	
+	<bean id="yx_DirectiveColumnInfoAction" class="com.jteap.yx.fdzbfxykh.web.DirectiveColumnInfoAction" scope="prototype"></bean>
+	<bean id="yx_DirectiveTableInfoAction" class="com.jteap.yx.fdzbfxykh.web.DirectiveTableInfoAction" scope="prototype"></bean>
+	
+</beans>

@@ -1,0 +1,9 @@
+﻿2010-09-20
+1.JdbcManager类中getRecById()方法中增加获得大字段的类型
+2.修改组织拖动后选中人员报JS错问题
+3.ext-base.js中加入try-catch，解决“模块管理”中增加模块后拖动报js错问题
+4.增加移除管理员功能
+5.JdbcEntityDao中增加大字段处理，Constants中“平台管理员”修改为“系统管理员”
+6.更新config.properties文件
+7.JdbcManager整查，释放jdbc连接
+8.将分页数量PAGE_DEFAULT_LIMIT和用户默认密码DEFAULT_START_PASSWORD设置到config.properties文件中

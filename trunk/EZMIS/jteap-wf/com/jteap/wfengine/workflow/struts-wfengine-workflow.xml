@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+	<!-- 工作流 -->
+	<package name="jteap.wfengine.workflow" namespace="/jteap/wfengine/workflow" extends="jteap-actions">
+		<action name="WorkflowAction" class="wfengine_WorkflowAction">
+			<result name="openForm">/jteap/wfengine/wfi/wfForm.jsp</result>
+		</action>
+		<action name="FlowCatalogAction" class="wfengine_FlowCatalogAction"></action>
+		<action name="FlowConfigAction" class="wfengine_FlowConfigAction">
+			<result name="upload_result">/jteap/wfengine/wfdef/upload_result.jsp</result>
+		</action>		
+		<action name="FlowLogAction" class="wfengine_FlowLogAction"></action>		
+		<action name="NodeOperationAction" class="wfengine_NodeOperationAction"></action>
+	</package>
+
+</struts>

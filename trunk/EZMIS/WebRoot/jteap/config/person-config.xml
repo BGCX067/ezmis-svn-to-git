@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<config>
+	<property id="lxfs1" name='联系方式1' value='11'	type='String'></property>
+	<property id="lxfs2" name='联系方式2' value=''	type='String'></property>
+	<property id="lxfs3" name='联系方式3' value=''	type='String'></property>
+	<property id="rssj" name='入司时间'	value='2008/01/02'	type='Date'></property>
+	<property id="lxfs4" name='联系方式4' value=''	type='String'></property>
+	<property id="sjhm1" name="手机号码1" value='' type="Enum" enumValue="号码1:11111111111#号码2:222222222222" mode="local"></property>
+	<property id="sjhm2" name="手机号码2" value='' type="Enum" enumValue="/jteap/system/person/PersonAction!showSjListAction.do" mode="remote"></property>
+</config>

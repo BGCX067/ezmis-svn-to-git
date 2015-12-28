@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+
+	<!-- 分季度工作统计-->
+	<package name="jteap.dgt.fjdgztj" namespace="/jteap/dgt/fjdgztj"
+		extends="jteap-actions">
+		
+		<action name="TongJiAction" class="tongjiAction"></action>
+		
+		<action name="WyhdAction" class="wyhdAction"></action>
+		
+		<action name="Gz110Action" class="gz110Action"></action>
+		
+		<action name="LdjsAction" class="ldjsAction"></action>
+		
+		<action name="DsdtAction" class="dsdtAction"></action>
+		
+		
+	</package>
+
+	<package name="Action" extends="struts-default">
+		<action name="GhAction" class="ghAction">
+			<result name="index">/jteap/gh/index.jsp</result>
+			<result name="top5List">/jteap/gh/frame.jsp</result>
+			<result name="content" >/jteap/gh/wzContent.jsp</result>
+			<result name="ghjj" >/jteap/gh/ghjl.jsp</result>
+			<result type="stream"> 
+                <param name="contentType">image/jpeg</param> 
+                <param name="inputName">input</param> 
+            </result> 
+			
+		</action>
+	</package>
+
+</struts>

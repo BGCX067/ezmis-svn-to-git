@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd"
+	default-autowire="byName" default-lazy-init="true">
+	
+	<bean id="gclxManager" class="com.jteap.gcht.gcxmgl.manager.GclxManager" />
+	<bean id="kgqzManager" class="com.jteap.gcht.gcxmgl.manager.KgqzManager" />
+	<bean id="gcysManager" class="com.jteap.gcht.gcxmgl.manager.GcysManager" />
+				
+	<bean id="ht_GclxAction" class="com.jteap.gcht.gcxmgl.web.GclxAction" scope="prototype"></bean>
+	<bean id="ht_KgqzAction" class="com.jteap.gcht.gcxmgl.web.KgqzAction" scope="prototype"></bean>
+	<bean id="ht_GcysAction" class="com.jteap.gcht.gcxmgl.web.GcysAction" scope="prototype"></bean>
+	<bean id="ht_ZlbzjAction" class="com.jteap.gcht.gcxmgl.web.ZlbzjqzdAction" scope="prototype"></bean>
+	<bean id="ht_GcyjssAction" class="com.jteap.gcht.gcxmgl.web.GcyjssAction" scope="prototype"></bean>
+	
+</beans>

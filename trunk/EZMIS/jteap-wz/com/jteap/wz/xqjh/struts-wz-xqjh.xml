@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="com.jteap.wz.xqjh" namespace="/jteap/wz/xqjh" extends="jteap-actions">
+		<action name="XqjhAction" class="wz_XqjhAction"></action>
+		<action name="XqjhDetailAction" class="wz_XqjhDetailAction">
+			<result>/jteap/wz/wzxqjh/sccgjhinfo.jsp</result>
+		</action>		
+	</package>
+</struts>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="jteap.gcht.gcxmgl" namespace="/jteap/gcht/gcxmgl" extends="jteap-actions">
+		<action name="GclxAction" class="ht_GclxAction"></action>
+		<action name="KgqzAction" class="ht_KgqzAction"></action>
+		<action name="GcysAction" class="ht_GcysAction"></action>
+		<!-- 质量保证金 -->
+		<action name="ZlbzjAction" class="ht_ZlbzjAction"></action>
+		<!-- 工程预决算书 -->
+		<action name="GcyjssAction" class="ht_GcyjssAction"></action>
+	</package>
+</struts>

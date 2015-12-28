@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd"
+	default-autowire="byName" default-lazy-init="true">
+
+
+
+	<!--JBPM configuration -->
+	<bean id="jbpmConfiguration"   class="org.springmodules.workflow.jbpm31.LocalJbpmConfigurationFactoryBean">          
+   		<property name="sessionFactory" ref="sessionFactory" />          
+   		<property name="configuration" value="classpath:jbpm.cfg.xml" /> 
+   </bean>  
+  
+   <bean id="jbpmTemplate" class="org.springmodules.workflow.jbpm31.JbpmTemplate"> 
+   		 <property name="jbpmConfiguration" ref="jbpmConfiguration"/> 
+   		 <!--<constructor-arg index="0" ref="jbpmConfiguration"/>-->
+   </bean> 
+
+
+
+
+	<!-- 流程定义 -->
+	<bean id="flowConfigManager" class="com.jteap.wfengine.workflow.manager.FlowConfigManager" />
+	<bean id="flowCatalogManager" class="com.jteap.wfengine.workflow.manager.FlowCatalogManager" />
+	<bean id="nodeConfigManager" class="com.jteap.wfengine.workflow.manager.NodeConfigManager" />
+	<bean id="nodePermissionManager" class="com.jteap.wfengine.workflow.manager.NodePermissionManager" />
+	<bean id="nodeVariableManager" class="com.jteap.wfengine.workflow.manager.NodeVariableManager" />
+	<bean id="variableManager" class="com.jteap.wfengine.workflow.manager.VariableManager" />
+	<bean id="workEntrustManager" class="com.jteap.wfengine.workflow.manager.WorkEntrustManager" />
+	<bean id="workFlowLogManager" class="com.jteap.wfengine.workflow.manager.WorkFlowLogManager" />
+	<bean id="jbpmOperateManager" class="com.jteap.wfengine.workflow.manager.JbpmOperateManager" />
+	<bean id="nodeOperationManager" class="com.jteap.wfengine.workflow.manager.NodeOperationManager" />
+	
+	<bean id="wfengine_NodeOperationAction" class="com.jteap.wfengine.workflow.web.NodeOperationAction" />
+	<bean id="wfengine_WorkflowAction" class="com.jteap.wfengine.workflow.web.WorkflowAction"></bean>
+	<bean id="wfengine_FlowCatalogAction" class="com.jteap.wfengine.workflow.web.FlowCatalogAction"></bean>
+	<bean id="wfengine_FlowConfigAction" class="com.jteap.wfengine.workflow.web.FlowConfigAction"></bean>
+	<bean id="wfengine_FlowLogAction" class="com.jteap.wfengine.workflow.web.FlowLogAction"></bean>
+
+</beans>

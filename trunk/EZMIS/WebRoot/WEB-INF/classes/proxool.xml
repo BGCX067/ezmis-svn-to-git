@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<something-else-entirely>
+	<!-- 平台数据源 -->
+	<proxool>
+		<alias>jteap</alias>
+		<driver-url>jdbc:oracle:thin:@192.168.10.231:1521:ORCL</driver-url>
+		<driver-class>oracle.jdbc.OracleDriver</driver-class>
+		<statistics>1m,15m,1d</statistics>
+		<driver-properties>
+			<property name="user" value="EZMIS" />
+			<property name="password" value="EZMIS" />
+		</driver-properties>
+
+		<house-keeping-sleep-time>90000</house-keeping-sleep-time>
+
+		<maximum-new-connections>20</maximum-new-connections>
+
+		<prototype-count>5</prototype-count>
+
+		<maximum-connection-count>30</maximum-connection-count>
+
+		<minimum-connection-count>15</minimum-connection-count>
+		<trace>true</trace>
+		<verbose>true</verbose>
+		<house-keeping-test-sql>
+			select 1 from dual;
+		</house-keeping-test-sql>
+	</proxool>
+</something-else-entirely>

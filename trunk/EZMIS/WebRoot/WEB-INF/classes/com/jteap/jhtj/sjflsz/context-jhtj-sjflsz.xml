@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd"
+	default-autowire="byName" default-lazy-init="true">
+
+	<bean id="tjItemKindManager" class="com.jteap.jhtj.sjflsz.manager.TjItemKindManager" />
+	<bean id="system_tjItemKindAction" class="com.jteap.jhtj.sjflsz.web.TjItemKindAction" scope="prototype"/>
+
+	
+	<bean id="tjItemKindKeyManager" class="com.jteap.jhtj.sjflsz.manager.TjItemKindKeyManager" />
+	<bean id="system_tjItemKindKeyAction" class="com.jteap.jhtj.sjflsz.web.TjItemKindKeyAction" scope="prototype"/>
+</beans>

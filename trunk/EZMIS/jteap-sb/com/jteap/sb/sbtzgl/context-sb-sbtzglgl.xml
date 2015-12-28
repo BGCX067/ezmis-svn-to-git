@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd"
+	default-autowire="byName" default-lazy-init="true">
+
+	<bean id="jctzManager" class="com.jteap.sb.sbtzgl.manager.JctzManager" />
+	<bean id="sbtzCatalogManager" class="com.jteap.sb.sbtzgl.manager.SbtzCatalogManager" />
+	
+	<bean id="sb_JctzAction" class="com.jteap.sb.sbtzgl.web.JctzAction" scope="prototype"></bean>
+	<bean id="sb_SbtzCatalogAction" class="com.jteap.sb.sbtzgl.web.SbtzCatalogAction" scope="prototype"></bean>
+	
+</beans>

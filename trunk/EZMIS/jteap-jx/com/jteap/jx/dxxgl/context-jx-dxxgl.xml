@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd"
+	default-autowire="byName" default-lazy-init="true">
+
+	<bean id="jzjxjhManager" class="com.jteap.jx.dxxgl.manager.JzjxjhManager"></bean>
+	<bean id="jx_JzjxjhAction" class="com.jteap.jx.dxxgl.web.JzjxjhAction"  scope="prototype"></bean>
+	
+	<bean id="jzjxxmManager" class="com.jteap.jx.dxxgl.manager.JzjxxmManager"></bean>
+	<bean id="jx_JzjxxmAction" class="com.jteap.jx.dxxgl.web.JzjxxmAction"  scope="prototype"></bean>
+	
+	<bean id="jxzjbgManager" class="com.jteap.jx.dxxgl.manager.JxzjbgManager"></bean>
+	<bean id="jx_JxzjbgAction" class="com.jteap.jx.dxxgl.web.JxzjbgAction"  scope="prototype"></bean>
+	
+	<bean id="jxsbtzManager" class="com.jteap.jx.dxxgl.manager.JxsbtzManager"></bean>
+	<bean id="jx_JxsbtzAction" class="com.jteap.jx.dxxgl.web.JxsbtzAction"  scope="prototype"></bean>
+	
+	<bean id="gyxtjxjhManager" class="com.jteap.jx.dxxgl.manager.GyxtjxjhManager"></bean>
+	<bean id="jx_GyxtjxjhAction" class="com.jteap.jx.dxxgl.web.GyxtjxjhAction"  scope="prototype"></bean>
+	
+	<bean id="gyxtjxjhBjManager" class="com.jteap.jx.dxxgl.manager.GyxtjxjhBjManager"></bean>
+	<bean id="jx_GyxtjxjhBjAction" class="com.jteap.jx.dxxgl.web.GyxtjxjhBjAction"  scope="prototype"></bean>
+	
+	<bean id="gyxtjxjhJlManager" class="com.jteap.jx.dxxgl.manager.GyxtjxjhJlManager"></bean>
+	<bean id="jx_GyxtjxjhJlAction" class="com.jteap.jx.dxxgl.web.GyxtjxjhJlAction"  scope="prototype"></bean>
+	
+</beans>

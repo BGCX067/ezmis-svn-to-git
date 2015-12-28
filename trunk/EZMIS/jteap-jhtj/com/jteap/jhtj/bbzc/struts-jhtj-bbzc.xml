@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	
+	
+	<!-- 人员组织 -->
+	<package name="jteap.jhtj.bbzc" namespace="/jteap/jhtj/bbzc"
+		extends="jteap-actions">
+		<action name="bbzcAction" class="system_bbzcAction">
+		</action>
+		
+		<action name="bbIndexAction" class="system_bbIndexAction"></action>
+	</package>
+</struts>

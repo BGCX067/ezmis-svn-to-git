@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+	
+	<!-- 登录 -->
+	<package name="jteap.login" extends="jteap-actions">
+		<action name="LoginAction" class="system_LoginAction">
+            <result type="redirect" name="success">/jteap/index.jsp</result>
+            <result name="input">/login.jsp</result>
+            
+        </action>
+        
+        <action name="LogoutAction" method="logout" class="system_LoginAction">
+            <result type="redirectAction" name="success">LoginAction!input</result>
+        </action>
+	</package>
+	
+	
+
+	
+</struts>

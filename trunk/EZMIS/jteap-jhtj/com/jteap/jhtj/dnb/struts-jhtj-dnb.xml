@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	
+	
+	<!-- 人员组织 -->
+	<package name="jteap.jhtj.dnb" namespace="/jteap/jhtj/dnb"
+		extends="jteap-actions">
+		<action name="dnbAction" class="system_dnbAction">
+		</action>
+		<action name="dnbBbAction" class="system_dnbBbAction">
+		</action>
+		<action name="dnbChangeAction" class="system_dnbChangeAction"></action>
+	</package>
+</struts>

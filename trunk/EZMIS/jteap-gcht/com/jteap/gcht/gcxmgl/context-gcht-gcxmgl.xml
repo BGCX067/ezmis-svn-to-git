@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd"
+	default-autowire="byName" default-lazy-init="true">
+	
+	<bean id="gclxManager" class="com.jteap.gcht.gcxmgl.manager.GclxManager" />
+	<bean id="gclxcxManager" class="com.jteap.gcht.gcxmgl.manager.GclxcxManager" />
+	
+	<bean id="kgqzManager" class="com.jteap.gcht.gcxmgl.manager.KgqzManager" />
+	<bean id="kgqzcxManager" class="com.jteap.gcht.gcxmgl.manager.KgqzcxManager"/>
+	
+	<bean id="gcysManager" class="com.jteap.gcht.gcxmgl.manager.GcysManager" />
+	<bean id="gcyscxManager" class="com.jteap.gcht.gcxmgl.manager.GcyscxManager" />
+	
+	
+	<bean id="jszfManager" class="com.jteap.gcht.gcxmgl.manager.JszfManager" />
+	<bean id="jszfcxManager" class="com.jteap.gcht.gcxmgl.manager.JszfcxManager" />
+
+	<bean id="personManager" class="com.jteap.system.person.manager.PersonManager" />
+				
+	<bean id="ht_GclxAction" class="com.jteap.gcht.gcxmgl.web.GclxAction" scope="prototype"></bean>
+	<bean id="ht_GclxcxAction" class="com.jteap.gcht.gcxmgl.web.GclxcxAction" scope="prototype"></bean>
+	<bean id="ht_KgqzcxAction" class="com.jteap.gcht.gcxmgl.web.KgqzcxAction" scope="prototype"></bean>
+	<bean id="ht_KgqzAction" class="com.jteap.gcht.gcxmgl.web.KgqzAction" scope="prototype"></bean>
+	<bean id="ht_GcysAction" class="com.jteap.gcht.gcxmgl.web.GcysAction" scope="prototype"></bean>
+	<bean id="ht_GcyscxAction" class="com.jteap.gcht.gcxmgl.web.GcyscxAction" scope="prototype"></bean>
+	<bean id="ht_ZlbzjAction" class="com.jteap.gcht.gcxmgl.web.ZlbzjqzdAction" scope="prototype"></bean>
+	<bean id="ht_GcyjssAction" class="com.jteap.gcht.gcxmgl.web.GcyjssAction" scope="prototype"></bean>
+	<bean id="ht_JszfAction" class="com.jteap.gcht.gcxmgl.web.JszfAction" scope="prototype"></bean>
+	<bean id="ht_JszfcxAction" class="com.jteap.gcht.gcxmgl.web.JszfcxAction" scope="prototype"></bean>
+	
+	
+</beans>

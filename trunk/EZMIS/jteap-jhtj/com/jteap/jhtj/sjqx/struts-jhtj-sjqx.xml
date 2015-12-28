@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	
+	
+	<!-- 人员组织 -->
+	<package name="jteap.jhtj.sjqx" namespace="/jteap/jhtj/sjqx"
+		extends="jteap-actions">
+		<action name="sjqxAction" class="system_sjqxAction">
+		</action>
+		
+		<action name="flTreeAction" class="system_flTreeAction"></action>
+		<action name="bbTreeAction" class="system_bbTreeAction"></action>
+	</package>
+</struts>

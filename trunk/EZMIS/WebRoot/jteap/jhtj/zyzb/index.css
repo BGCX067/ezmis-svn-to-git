@@ -1,0 +1,87 @@
+.LM01Txt {
+	height: 24px;
+	margin-right: 5px;
+	font-size: 13px;
+	color: #1C488F;
+	text-decoration: none;
+	padding-left: 7px;
+	padding-top: 5px;
+	text-align: left;
+	font-weight: bold;
+	width:25%
+}
+.arrowlistmenu{
+	width: 100%;
+}
+.arrowlistmenu ul{ /*CSS for UL of each sub menu*/
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.arrowlistmenu ul li{
+	padding-bottom: 2px; /*bottom spacing between menu items*/
+}
+.arrowlistmenu ul li{
+	color: #1c488f; /*custom bullet list image*/
+	display: block;
+	padding: 2px 0;
+	padding-left: 19px; /*link text is indented 19px*/
+	text-decoration: none;
+	font-weight: bold;
+	border-bottom: 1px solid #D3E3F1;
+	font-size: 90%;
+	background-image: url(icon/arrowbullet.png);
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+.arrowlistmenu ul li{
+	color: #1c488f;
+}
+.arrowlistmenu ul li{ /*hover state CSS*/
+	color: #F26422;
+	background-color: #F3F3F3;
+}
+
+.FBorder {
+	background-color: #FFFFFF;
+	border: 1px solid #A4D3EE;
+	line-height: 20px;
+	margin-bottom: 4px;
+	font-size: 13px;
+	color: #000000;
+}
+
+
+.GridCellJ {
+MARGIN: 1px; BACKGROUND-COLOR: #ffffff
+}
+
+.GridCellL2 {
+	background-color: #FFFFE9;
+	border-bottom-width: 1px;
+	border-bottom-style: dashed;
+	border-bottom-color: #326F70;
+	border-right-width: 1px;
+	border-right-style: dashed;
+	border-right-color: #326F70;
+	font-size: 13px;
+	color: #000000;
+}
+
+.GridCellL {
+	background-color: #FFFFFF;
+	font-size: 13px;
+	color: #000000;
+	text-indent: 4px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-right-color: #224C4C;
+	border-bottom-color: #224C4C;
+	border-left-color: #A4D3EE;
+	display: block;
+	padding: 2px 4px 2px 2px;
+}

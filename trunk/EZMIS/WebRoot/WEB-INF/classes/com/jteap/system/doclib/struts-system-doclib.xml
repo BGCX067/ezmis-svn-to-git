@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	
+
+	<!-- 自定义文档中心动作-->
+	<package name="jteap.system.doclib" namespace="/jteap/doclib" extends="jteap-actions">
+		<action name="DoclibCatalogAction" class="system_DoclibCatalogAction"></action>
+		<action name="DoclibCatalogFieldAction" class="system_DoclibCatalogFieldAction"></action>
+		<action name="DoclibAttachAction" class="system_DoclibAttachAction"></action>
+		<action name="DoclibAction" class="system_DoclibAction">
+			<result name="showDoclibInfo">/jteap/doclib/iform/doclibinfo.jsp</result>
+			<result name="modifyDoclibInfo">/jteap/doclib/iform/modifydoclib.jsp</result>
+		</action>
+		<!-- 文档级别 -->
+		<action name="DoclibLevelAction" class="system_DoclibLevelAction"></action>	
+		<action name="DoclibLevelRoleAction" class="system_DoclibLevelRoleAction"></action>		
+		
+		<action name="DoclibRoleTreeAction" class="system_DoclibRoleTreeAction"></action>
+	</package>
+	
+
+	
+</struts>

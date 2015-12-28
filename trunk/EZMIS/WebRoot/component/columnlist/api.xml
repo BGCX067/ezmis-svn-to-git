@@ -1,0 +1,198 @@
+<?xml version="1.0"?>
+
+<?xml-stylesheet type="text/xsl" href="api.xsl"?>
+
+<documentation>
+
+<class name="ColumnList">
+
+	<description>
+		The class that represents a column list.<br/>
+		All indexes are zero based.
+	</description>
+
+	<syntax>new ColumnList();</syntax>
+
+	<methods>
+		<method name="create">
+			<description>Transforms the supplied container into an empty column list.</description>
+			<arguments>
+				<argument name="eContent" type="HTML Element" description="The target container which the column list will be based upon." />
+				<argument name="aColumns" type="String[]" description="Array containing the desired column names." />
+				<argument name="aColumns" type="[][]" description="Optionallt a two dimensional array can be specified instead for the aColumns parameter. In that case the first child element is the column header, the second the width (number and unit, ex '30%') and the third the data type, see setColumnTypes for values." />
+			</arguments>
+			<returns type="iErrorCode" description="Error code, a non-zero value indicates failure." />
+		</method>
+		<method name="bind">
+			<description>Binds column list to an existing HTML structure. See the usage instructions for further information.</description>
+			<arguments>
+				<argument name="eCont"    type="HTML Element" description="The outer container." />
+				<argument name="eHead"    type="HTML Element" description="Container with the column list header." />
+				<argument name="eBody"    type="HTML Element" description="Container with the column list body." />
+			</arguments>
+			<returns type="MenuItem" />
+		</method>
+		<method name="calcSize">
+			<description>Recalculates the size of the column list widget. Should be called if the size of the outermost container is changed.</description>
+			<returns type="void" />
+		</method>
+		<method name="selectRow">
+			<description>Selects the row identified by the sequence number supplied.</description>
+			<arguments>
+				<argument name="iRowIndex"  type="Number" description="Index of the row to select." />
+				<arguments name="bMultiple"  type="Boolean" description="If set to true and multi-select is allowed the the previously selected row will not be deselected. If the specified row is already selected it will be deselected." optional="true" default="false" />
+			</arguments>
+			<returns type="iErrorCode" description="Error code, a non-zero value indicates failure." />
+		</method>
+		<method name="selectRange">
+			<description>Selects all rows in the range defined by the iFromRowIndex and iToRowIndex parameters.</description>
+			<arguments>
+				<argument name="iFromRowIndex" type="Number" description="Index of the first row to select." />
+				<arguments name="iToRowIndex"  type="Number" description="Index of the last row to select." />
+			</arguments>
+			<returns type="iErrorCode" description="Error code, a non-zero value indicates failure." />
+		</method>
+		<method name="selectRange">
+			<description>Selects all rows specified in the iRowIndex parameter.</description>
+			<arguments>
+				<argument name="iRowIndex" type="Number[]" description="Array containing the row indexes to select." />
+			</arguments>
+			<returns type="iErrorCode" description="Error code, a non-zero value indicates failure." />
+		</method>
+		<method name="resize">
+			<description>Resize the grid to the given dimensions, the outer (border) size is given, not the inner (content) size.</description>
+			<arguments>
+				<argument name="iWidth"  type="Number" description="Desired width in pixels." />
+				<argument name="iHeight" type="Number" description="Desired height in pixels." />
+			</arguments>
+			<returns type="void" />
+		</method>
+		<method name="addRow">
+			<description>Appends supplied row to the column list.</description>
+			<arguments>
+				<argument name="aRowData" type="String[]" description="Array containing data for the new row. Each element represents a cell." />
+			</arguments>
+			<returns type="iErrorCode" description="Error code, a non-zero value indicates failure." />
+		</method>
+		<method name="addRows">
+			<description>Appends supplied rows to the column list.</description>
+			<arguments>
+				<argument name="aData" type="String[][]" description="Two dimensional array containing the data. The first dimension specifies the row and the second the column, thus each element represents a cell." />
+			</arguments>
+			<returns type="iErrorCode" description="Error code, a non-zero value indicates failure." />
+		</method>
+		<method name="removeRow">
+			<description>Removes the row identified by the sequence number supplied.</description>
+			<arguments>
+				<argument name="iRowIndex"  type="Number" description="Index of the row to remove." />
+			</arguments>
+			<returns type="iErrorCode" description="Error code, a non-zero value indicates failure." />
+		</method>
+		<method name="removeRange">
+			<description>Removes all rows in the range defined by the iFromRowIndex and iToRowIndex parameters.</description>
+			<arguments>
+				<argument name="iFromRowIndex" type="Number" description="Index of the first row to remove." />
+				<arguments name="iToRowIndex"  type="Number" description="Index of the last row to remove." />
+			</arguments>
+			<returns type="iErrorCode" description="Error code, a non-zero value indicates failure." />
+		</method>
+		<method name="removeRange">
+			<description>Removes all rows specified in the iRowIndex parameter.</description>
+			<arguments>
+				<argument name="iRowIndex" type="Number[]" description="Array containing the row indexes to remove." />
+			</arguments>
+			<returns type="iErrorCode" description="Error code, a non-zero value indicates failure." />
+		</method>
+		<method name="clear">
+			<description>Removes all rows from column list.</description>
+			<arguments />
+			<returns type="iErrorCode" description="Error code, a non-zero value indicates failure." />
+		</method>
+		<method name="getSelectedRow">
+			<description>Returns the row index of the selected row. If multiple rows are selected the first one is returned.</description>
+			<returns type="Number" description="Index of selected row or -1 if no row is selected." />
+		</method>
+		<method name="getSelectedRange">
+			<description>Returns an array containing the row indexes of all selected rows.</description>
+			<returns type="Number[]" description="Indexes of selected rows or an empty array of no rows are selected." />
+		</method>
+		<method name="getRowCount">
+			<description>Returns the number of rows in the column list.</description>
+			<returns type="Number" description="Number of rows." />
+		</method>
+		<method name="getColumnCount">
+			<description>Returns the number of columns in the column list.</description>
+			<returns type="Number" description="Number of columns." />
+		</method>
+		<method name="getCellValue">
+			<description>Returns the content of the specified cell.</description>
+			<arguments>
+				<argument name="iRowIndex" type="Number" description="Row index." />
+				<argument name="iColIndex" type="Number" description="Column index." />
+			</arguments>
+			<returns type="String" />
+		</method>
+		<method name="setCellValue">
+			<description>Sets the content of the specified cell.</description>
+			<arguments>
+				<argument name="iRowIndex" type="Number" description="Row index." />
+				<argument name="iColIndex" type="Number" description="Column index." />
+				<argument name="sValue"    type="String" description="Desired value." />
+			</arguments>
+			<returns type="iErrorCode" description="Error code, a non-zero value indicates failure." />
+		</method>
+		<method name="setColumnAlignment">
+			<description>Sets column text alignment.</description>
+			<arguments>
+				<argument name="iAlignment" type="Number[]" description="An array containing the alignment types. ALIGN_AUTO, ALIGN_LEFT, ALIGN_CENTER or ALIGN_RIGHT." />
+			</arguments>
+			<returns type="void" />
+		</method>
+		<method name="setColumnTypes">
+			<description>Sets the column data types. Used to determine alignment and sorting.</description>
+			<arguments>
+				<argument name="iTypesTypes" type="Number[]" description="An array containing the sort types. STRING, TYPE_NUMBER, TYPE_DATE, TYPE_STRING_NO_CASE or custom string value that will be passed to sortable table. Can be registered with the SortableTable.prototype.addSortType method." />
+			</arguments>
+			<returns type="void" />
+		</method>
+		<method name="setSortTypes">
+			<description>Sets the column data types. Used to determine alignment and sorting.</description>
+			<arguments>
+				<argument name="iTypesTypes" type="Number[]" description="An array containing the sort types. STRING, TYPE_NUMBER, TYPE_DATE, TYPE_STRING_NO_CASE or custom string value that will be passed to sortable table. Can be registered with the SortableTable.prototype.addSortType method." />
+			</arguments>
+			<returns type="void" />
+		</method>
+		<method name="sort">
+			<description>Sorts the column list by the specified column.</description>
+			<arguments>
+				<argument name="iColumnIndex" type="Number" description="Index of column to sort by." />
+				<argument name="bDescending" type="Boolean" optional="true" default="false" description="Sort will be descending if true, ascending if false.." />
+			</arguments>
+			<returns type="void" />
+		</method>
+	</methods>
+	<fields>
+		<field name="multiple" type="Boolean" default="true" description="If true multiple selection is allowed, if false it's not." />
+		<field name="colorEvenRows" type="Boolean" default="true" description="If enabled odd and even rows will have different class names (odd and even) to allow their background color to be different." />
+		<field name="resizeColumns" type="Boolean" default="true" description="Enable column resizing. If enabled the columns may be resized by dragging the border between two column headers." />
+		<field name="bodyColResize" type="Boolean" default="true" description="If enabled the size of the body columns will be updated as the header column is resized, if not the size of the body columns won't update until resize operation has completed." />		
+		<field name="moveColumns" type="Boolean" default="true" description="Enable column moving. If enabled columns can be reorganized using drag and drop." />
+		<field name="rowSelection" type="Boolean" default="true" description="Enable column selection. If enabled rows can be selected using either the mouse or keyboard." />
+		<field name="columnSorting" type="Boolean" default="true" description="Enable column sorting. If enabled sort order can be set by clicking the column headers." />
+		<field name="columnAlign" type="Boolean" default="true" description="Enable column text alignment. If enabled the text alignment of columns can be set explicitly or determined implicit based on column data type." />
+		<field name="sortAscImage" type="String" default="images/asc.png" description="Image used to indicate ascending sort order" />
+		<field name="sortDescImage" type="String" default="images/desc.png" description="Image used to indicate descending sort order" />
+		<field name="sortCol" type="Number" readOnly="true" description="Indicates which column the column list is sorted by or -1 if it is not sorted." />
+		<field name="sortDescending" type="Boolean" readOnly="true" description="Indicates sort direction. False for ascending, true for descending." />
+		<field name="error" type="String" readOnly="true" description="If a method has returned an error code this property will contain an error message." />
+		<field name="selectedRows" type="Number[]" readOnly="true" description="An array containing the indexes of all selected rows." />
+	</fields>
+	<events>
+		<event name="onresize" description="Reference to function that will be called when the widget has been resized." />
+		<event name="onsort" description="Reference to function that will be called when a sort operation has been performed." />
+		<event name="onselect" description="Reference to function that will be called when a row has been selected." />
+	</events>
+
+</class>
+
+</documentation>

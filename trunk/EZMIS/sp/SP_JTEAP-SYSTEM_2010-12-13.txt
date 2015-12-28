@@ -1,0 +1,7 @@
+﻿2010-12-13
+1.修改部门维护和角色管理中添加用户不正确的bug
+2.修改部门维护不选中组织时查询bug错误
+3.date.js中加入getDataByDay(val,dayCount, format)方法。
+  此方法用于在传入时间上加减天数
+4.SystemFuncAction类中clearHibernateL2CacheAction方法中加入角色和人员关系的hibernate二级缓存清除
+5.部门维护和角色管理中用户登录名最小长度改为4

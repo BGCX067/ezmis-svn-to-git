@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="jteap.jx.dxxgl" namespace="/jteap/jx/dxxgl" extends="jteap-actions">
+		<action name="JzjxjhAction" class="jx_JzjxjhAction" />
+		<action name="JzjxxmAction" class="jx_JzjxxmAction" />
+		<action name="JxzjbgAction" class="jx_JxzjbgAction" />
+		<action name="JxsbtzAction" class="jx_JxsbtzAction" />
+		<action name="GyxtjxjhAction" class="jx_GyxtjxjhAction" />
+		<action name="GyxtjxjhBjAction" class="jx_GyxtjxjhBjAction" />
+		<action name="GyxtjxjhJlAction" class="jx_GyxtjxjhJlAction" />
+	</package>
+</struts>

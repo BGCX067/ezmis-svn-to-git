@@ -1,0 +1,149 @@
+/*****Panel样式设置*****/
+.x-border-layout-ct{background:#E7FFE7;}
+.x-panel-body{border:1px solid #105C53;border-top:0 none;overflow:hidden;background:#E7FFE7;position:relative;padding:1px;}
+.x-layout-collapsed{position:absolute;left:-10000px;top:-10000px;visibility:hidden;background-color:#d2e0f2;width:20px;height:20px;overflow:hidden;border:1px solid #98c0f4;z-index:20;}
+.x-panel-body-noheader,.x-panel-mc .x-panel-body{border-top:0px solid #00AB99;}
+.x-panel-bc{background:#E7FFE7} 	
+
+/*****Tab样式设置*****/
+.x-tab-panel-header,.x-tab-panel-footer{background:#00B09B;border:1px solid #005148;overflow:hidden;zoom:1;}
+.x-tab-panel-header{border:1px solid #005148;padding-bottom:2px;}
+.x-tab-panel-footer{border:1px solid #005148;padding-top:2px;}
+ul.x-tab-strip-top{padding-top:1px;background:#E7FFE7;border-bottom:1px solid #005047;}
+ul.x-tab-strip-bottom{padding-bottom:1px;background:url(../images/hb3e/tabs/tab-strip-btm-bg.gif) #80F8EF repeat-x top;border-top:1px solid #8db2e3;border-bottom:0 none;}
+.x-tab-panel-header-plain .x-tab-strip-spacer,.x-tab-panel-footer-plain .x-tab-strip-spacer{border:1px solid #005047;height:2px;background:#00B09B;font-size:1px;line-height:1px;}
+
+/*****Toolbar样式设置*****/
+.x-toolbar{border-color:#005148;border-style:solid;border-width:0 0 1px 0;display:block;padding:2px;background:#00B09B url(../images/hb3e/toolbar/bg.gif) repeat-x top left;position:relative;zoom:1;}
+.x-panel-tbar .x-toolbar{border:1px solid #005148;border-top:0 none;overflow:hidden;padding:2px;}
+.x-panel-bbar .x-toolbar{border:0px solid #005148;border-top:0 none;overflow:hidden;padding:0px;}
+
+
+/*****菜单Button样式设置*****/
+.x-toolbar .x-btn-over .x-btn-left{background:url(../images/hb3e/toolbar/tb-btn-sprite.gif) repeat-x 0 -42px;}
+.x-toolbar .x-btn-over .x-btn-right{background:url(../images/hb3e/toolbar/tb-btn-sprite.gif) repeat-x 0 -42px;}
+.x-toolbar .x-btn-over .x-btn-center{background:url(../images/hb3e/toolbar/tb-btn-sprite.gif) repeat-x 0 -42px;}
+.x-toolbar .x-btn-click .x-btn-left,.x-toolbar .x-btn-pressed .x-btn-left,.x-toolbar .x-btn-menu-active .x-btn-left{background:url(../images/hb3e/toolbar/tb-btn-sprite.gif) repeat-x 0 -42px;}
+.x-toolbar .x-btn-click .x-btn-right,.x-toolbar .x-btn-pressed .x-btn-right,.x-toolbar .x-btn-menu-active .x-btn-right{background:url(../images/hb3e/toolbar/tb-btn-sprite.gif) repeat-x 0 -42px;}
+.x-toolbar .x-btn-click .x-btn-center,.x-toolbar .x-btn-pressed .x-btn-center,.x-toolbar .x-btn-menu-active .x-btn-center{background:url(../images/hb3e/toolbar/tb-btn-sprite.gif) repeat-x 0 -42px;}
+.x-btn-text-icon .x-btn-with-menu .x-btn-center em{display:block;background:transparent url(../images/hb3e/toolbar/btn-arrow.gif) no-repeat right 5px;padding-right:12px;}
+
+/*****Menu样式设置*****/
+.x-menu{border:1px solid #005148;z-index:15000;zoom:1;background:#007469 url(../images/hb3e/menu/menu.gif) repeat-y;padding:2px;}
+.x-menu-item-active{background:#007469 url(../images/hb3e/menu/item-over.gif) repeat-x left bottom;border:1px solid #007469;padding:0;}
+.x-menu a.x-menu-item{display:block;line-height:16px;padding:3px 21px 3px 3px;white-space:nowrap;text-decoration:none;color:#FFFFFF;-moz-outline:0 none;outline:0 none;cursor:pointer;}
+.x-menu-item-active a.x-menu-item{color:#15428b;}
+.x-menu-item-arrow{background:transparent url(../images/hb3e/menu/menu-parent.gif) no-repeat right;}
+
+/*****footer字体效果*****/
+.x-toolbar .ytb-text{font-weight:normal;color:#FFFFFF;padding-bottom:2px;margin:0;}
+
+/*****查询面板样式效果*****/
+.x-layout-collapsed{position:absolute;left:-10000px;top:-10000px;visibility:hidden;background-color:#007469;width:20px;height:20px;overflow:hidden;border:1px solid #005148;z-index:20;}
+.x-panel-tl{background: transparent url(../images/hb3e/panel/panel-title-bg.gif) repeat-x;border:1px solid #005148;}
+.x-panel-tr{background: transparent url(../images/hb3e/panel/panel-title-bg.gif) repeat-x;padding:0;}
+.x-panel-tc{background: transparent url(../images/hb3e/panel/panel-title-bg.gif) repeat-x;}
+/*****查询面板底边框间隔样式效果*****/
+.x-panel-nofooter .x-panel-bc,.x-panel-nofooter .x-window-bc{background:none;height:0px;font-size:0;line-height:0;}
+/*******************************/
+.x-panel-tbar-noheader .x-toolbar,.x-panel-mc .x-panel-tbar .x-toolbar{border-top:0px solid #99bbe8;border-bottom:0 none;}
+
+/*****Grid样式效果*****/
+.x-panel-ml{background:#00AB99;border-left:0px solid #005148;border-right:0px solid #005148;padding:0px;zoom:1;}
+.x-panel-mr{background:#00AB99;padding-right:0px;zoom:1;}
+.x-panel-mc{background:#E7FFE7;border-left:1px solid #005148;border-right:1px solid #005148;border-bottom:1px solid #005148;padding:0;margin:0;font:normal 11px tahoma,arial,helvetica,sans-serif;}
+.x-panel-bc{background:#E7FFE7}
+.x-panel-bc .x-panel-footer{zoom:1;}
+.x-panel-bl{background:#00AF99;border-left:0px solid #005148;border-right:0px solid #005148;border-bottom:0px solid #005148;padding:0px;padding-left:0px}
+.x-panel-br{background:#E7FFE7;border:0px solid #005148;}
+.x-tab-panel-body{border:1px solid #005148;background:#E7FFE7;}
+.x-grid-panel .x-panel-mc .x-panel-body{border:0px solid #99bbe8;}
+
+/*****Window样式设置*****/
+.x-window-tc{background:transparent url(../images/hb3e/window/top-bottom.png) repeat-x 0 0;overflow:hidden;zoom:1;}
+.x-window-tl{background:transparent url(../images/hb3e/window/left-corners.png) no-repeat 0 0;padding-left:0px;zoom:1;z-index:1;position:relative;}
+.x-window-tr{background:transparent url(../images/hb3e/window/right-corners.png) no-repeat right 0;padding-right:0px;}
+.x-window-bc{background:#004940;}
+.x-window-bc .x-window-footer{padding-bottom:6px;zoom:1;font-size:0;line-height:0;}
+.x-window-bl{background:#004940;border-left:1px solid #005148;border-right:1px solid #005148;border-bottom:1px solid #005148;}
+.x-window-br{background:#004940;}
+.x-window-mc{border:11px solid #015546;padding:0;margin:0;font:normal 11px tahoma,arial,helvetica,sans-serif;background:red;}
+.x-window-ml{background:transparent url(../images/hb3e/window/left-right.png) repeat-y 0 0;padding-left:6px;zoom:1;}
+.x-window-mr{background:transparent url(../images/hb3e/window/left-right.png) repeat-y right 0;padding-right:6px;zoom:1;}
+body.x-body-masked .x-window-plain .x-window-mc{background:#E7FFE7;}
+.x-window-plain .x-window-mc{border:1px solid #004A40;}
+.x-window-plain .x-window-body{border:1px solid #004940;}
+.x-window-header-text{cursor:pointer;font-weight:solid;color:#FFFFFF;padding-left:6px;padding-top:10px;margin:6px;}
+.x-tool-close{background-position:0 -0;}
+.x-panel-btns-ct .x-panel-btns-right table{float:right;clear:none;}
+
+.x-window-tl .x-window-header{background:#004940;color:#15428b;font:bold 11px tahoma,arial,verdana,sans-serif;padding:6px 6px 4px 0;}
+
+/*****Head图片样式设置*****/
+.x-panel-header {
+    overflow:hidden;
+    zoom:1;
+    color:#15428b;
+	font:bold 11px tahoma,arial,verdana,sans-serif;
+    padding:5px 3px 4px 5px;
+    border:1px solid #005148;
+    line-height: 15px;
+    background: transparent url(../images/hb3e/panel/panel-title-bg.gif) repeat-x;
+}
+
+/*****Tab样式设置*****/
+.x-tab-strip-top .x-tab-strip-inner{background:transparent url(../images/hb3e/tabs/tabs-sprite.gif) repeat-x 0 -92px;}
+.x-tab-strip-top .x-tab-strip-active .x-tab-strip-inner{background-position:0 -69px;}
+.x-tab-strip-top .x-tab-strip-over .x-tab-strip-inner{background-position:0 -69px;}
+
+.x-tab-strip-top .x-tab-left{background:transparent url(../images/hb3e/tabs/tabs-sprite.gif) no-repeat right -184px;padding-right:10px;}
+.x-tab-strip-top .x-tab-strip-active .x-tab-left{background-position:right -138px;}
+.x-tab-strip-top .x-tab-strip-over .x-tab-left{background-position:right -138px;}
+
+.x-tab-strip-top .x-tab-right{background:transparent url(../images/hb3e/tabs/tabs-sprite.gif) no-repeat 0 -23px;padding-left:10px;}
+.x-tab-strip-top .x-tab-strip-active .x-tab-right{background-position:0 0;}
+.x-tab-strip-top .x-tab-strip-over .x-tab-right{background-position:0 0;}
+
+.x-tab-strip span.x-tab-strip-text{font-weight:thin;color:#FFFFFF;white-space:nowrap;cursor:pointer;padding:4px 0;}
+.x-tab-strip-active span.x-tab-strip-text{cursor:default;color:#15428b;font-weight:bold;}
+
+/*****菜单左右滚动按钮样式设置*****/
+.x-tab-scroller-left{background:transparent url(../images/hb3e/tabs/scroll-left.gif) no-repeat -18px 0;border-bottom:1px solid #8db2e3;width:18px;position:absolute;left:0;top:0;z-index:10;cursor:pointer;}
+.x-tab-scroller-left-over{background-position:0 0;}
+.x-tab-scroller-left-disabled{background-position:-18px 0;opacity:.5;-moz-opacity:.5;filter:alpha(opacity=50);cursor:default;}
+.x-tab-scroller-right{background:transparent url(../images/hb3e/tabs/scroll-right.gif) no-repeat 0 0;border-bottom:1px solid #8db2e3;width:18px;position:absolute;right:0;top:0;z-index:10;cursor:pointer;}
+.x-tab-scroller-right-over{background-position:-18px 0;}
+.x-tab-scroller-right-disabled{background-position:0 0;opacity:.5;-moz-opacity:.5;filter:alpha(opacity=50);cursor:default;}
+
+/*****disabled按钮样式设置*****/
+.x-btn-disabled *{color:red!important;cursor:default!important;}
+
+/*****refresh按钮样式设置*****/
+.x-tbar-loading{background-image:url(../images/hb3e/grid/refresh.gif)!important;}
+
+/*****菜单栏下item分割线样式设置*****/
+.x-menu-sep{display:block;font-size:1px;line-height:1px;margin:2px 3px;background-color:#005148;border-bottom:1px solid #005148;overflow:hidden;}
+
+/*****Paging-info样式设置*****/
+.x-paging-info{position:absolute;top:5px;right:8px;color:#FFFFFF;}
+
+/*****Split间距样式设置(查询面板与Grid之间的距离)*****/
+.x-layout-split{position:absolute;height:0px;width:5px;line-height:1px;font-size:1px;z-index:3;background-color:transparent;}
+
+/*****滚动条样式(IE内部属性)*****/ 
+body {   
+    scrollbar-face-color : #007469;   
+    scrollbar-3dlight-color : #007469;   
+    scrollbar-base-color : #fff;   
+    scrollbar-arrow-color : #c0c0c0;   
+    scrollbar-shadow-color : #007469;   
+    scrollbar-darkshadow-color :#fff;   
+}
+
+/*****主菜单字体样式*****/
+.x-btn-text-icon .x-btn-center .x-btn-text{background-position:0 2px;background-repeat:no-repeat;padding-left:18px;padding-top:3px;padding-bottom:2px;padding-right:0;color:#FFFFFF}
+.x-btn-text-bg{color:#FFFFFF}
+
+.x-portlet .x-panel-mr{padding-right:0px}
+.x-portlet .x-panel-ml {padding-left:0;}
+.x-portlet .x-panel-bl {padding-left:0;}

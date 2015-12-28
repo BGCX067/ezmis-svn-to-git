@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd"
+	default-autowire="byName" default-lazy-init="true">
+
+	<bean id="xqjhSelectManager" class="com.jteap.wz.wzlysq.manager.XqjhSelectManager" />
+	
+	<bean id="wzlysqManager" class="com.jteap.wz.wzlysq.manager.WzlysqManager" />
+	
+	<bean id="wzlysqDetailManager" class="com.jteap.wz.wzlysq.manager.WzlysqDetailManager" />
+	
+	<bean id="wzlysqJDBCManager" class="com.jteap.wz.wzlysq.manager.WzlysqJDBCManager" />
+	
+	<bean id="xqjhselectaction" class="com.jteap.wz.wzlysq.web.XqjhSelectAction" scope="prototype"></bean>
+	
+	<bean id="wzlysqAction" class="com.jteap.wz.wzlysq.web.WzlysqAction" scope="prototype"></bean>
+	
+	<bean id="wzlysqDetailAction" class="com.jteap.wz.wzlysq.web.WzlysqDetailAction" scope="prototype"></bean>
+	
+	<bean id="wzlysqxxAction" class="com.jteap.wz.wzlysq.web.WzlysqxxAction" scope="prototype"></bean>
+</beans>

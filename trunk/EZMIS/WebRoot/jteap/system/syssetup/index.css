@@ -1,0 +1,26 @@
+body{
+ font-size: 9pt;
+}
+
+table{
+	font-size: 9pt;
+	background-color: #8DB2E3;
+}
+
+table input{
+	margin-left: 2px;
+	width:100%;
+	
+}
+
+table td{
+	background-color: white;
+	padding: 5 5 5 5;
+	vertical-align: top;
+	border-bottom: solid 1px #8DB2E3;
+}
+
+#tdNsr span{
+
+	width:100px;
+}

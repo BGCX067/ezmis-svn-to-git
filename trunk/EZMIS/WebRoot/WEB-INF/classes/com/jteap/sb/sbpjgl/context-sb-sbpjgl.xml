@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd"
+	default-autowire="byName" default-lazy-init="true">
+
+	<bean id="sbpjManager" class="com.jteap.sb.sbpjgl.manager.SbpjManager" />
+	<bean id="sbpjCatalogManager" class="com.jteap.sb.sbpjgl.manager.SbpjCatalogManager" />
+	
+	<bean id="sb_SbpjAction" class="com.jteap.sb.sbpjgl.web.SbpjAction" scope="prototype"></bean>
+	<bean id="sb_SbpjCatalogAction" class="com.jteap.sb.sbpjgl.web.SbpjCatalogAction" scope="prototype"></bean>
+	
+</beans>

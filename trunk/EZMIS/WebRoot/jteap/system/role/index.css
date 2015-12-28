@@ -1,0 +1,113 @@
+
+.loading-indicator {
+    font:bold 13px  Tahoma, Verdana, Arial, Helvetica, sans-serif;
+    position:absolute;
+    top:35%;
+    left:43%;
+    color:#444;
+    background-image:url(../resources/images/default/shared/large-loading.gif);
+    background-repeat: no-repeat;
+    background-position:left 5px;
+    padding:10px 10px 10px 38px;
+	text-align:left;
+}
+#loading-mask{
+	position:absolute;
+	left:0;
+	top:0;
+    width:100%;
+    height:100%;
+    z-index:20000;
+    background-color:white;
+}
+#loading{
+	position:absolute;
+	left:45%;
+	top:40%;
+	padding:2px;
+	z-index:20001;
+    height:auto;
+}
+#loading img {
+    margin-bottom:5px;
+}
+
+#loading .loading-indicator{
+	background:white;
+	color:#555;
+	font:bold 13px tahoma,arial,helvetica;
+	padding:10px;
+	margin:0;
+    text-align:center;
+    height:auto;
+}
+
+
+#index .x-layout-collapsed-north{
+	background-image: url(icon/bg_query_panel.gif);
+   	background-repeat:no-repeat;
+  	background-position:left;
+}
+
+.x-column-tree .x-tree-node {
+    zoom:1;
+}
+.x-column-tree .x-tree-node-el {
+    /*border-bottom:1px solid #eee; borders? */
+    zoom:1;
+}
+.x-column-tree .x-tree-selected {
+    background: #d9e8fb;
+}
+.x-column-tree  .x-tree-node a {
+    line-height:18px;
+    vertical-align:middle;
+}
+.x-column-tree  .x-tree-node a span{
+	
+}
+.x-column-tree  .x-tree-node .x-tree-selected a span{
+	background:transparent;
+	color:#000;
+}
+.x-tree-col {
+    float:left;
+    overflow:hidden;
+    padding:0 1px;
+    zoom:1;
+}
+
+.x-tree-col-text, .x-tree-hd-text {
+    overflow:hidden;
+    -o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+    padding:3px 3px 3px 5px;
+    white-space: nowrap;
+    font:normal 11px arial, tahoma, helvetica, sans-serif;
+}
+
+.x-tree-headers {
+    background: #f9f9f9 url(../../resources/images/default/grid/grid3-hrow.gif) repeat-x 0 bottom;
+	cursor:default;
+    zoom:1;
+}
+
+.x-tree-hd {
+    float:left;
+    overflow:hidden;
+    border-left:1px solid #eee;
+    border-right:1px solid #d0d0d0;
+}
+
+.task {
+    background-image:url(../../resources/icon/cog.png) !important;
+}
+.task-folder {
+    background-image:url(../../resources/icon/folder_go.png) !important;
+}
+.comunicable{
+	background-image:url(icon/icon_10.gif) repeat-x 0 bottom;
+}
+.uncomunicable{
+	background-image:url(icon/icon_11.gif) !important;
+}

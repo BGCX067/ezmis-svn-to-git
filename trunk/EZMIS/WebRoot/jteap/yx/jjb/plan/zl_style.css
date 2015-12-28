@@ -1,0 +1,92 @@
+/* CSS Document */
+/*html{filter:expression(document.execCommand("BackgroundImageCache", false, true))}*/
+html,body{margin:0px;padding:0px;font-size:12px;color:#666;text-align:left; overflow:auto}
+a{text-decoration:none;color:#1B75BE}
+a:hover{text-decoration:underline}
+form{margin:0px;padding:0px}
+.fl{float:left}
+.fr{float:right}
+.Trig{ text-align:right}
+.Tlef{ text-align:left}
+.clear{clear:both;height:0px;font-size:0px;line-height:0px;overflow:hidden}
+.C000{color:#000}
+.C666{color:#666}
+.C333,.Cont_tit .C333{color:#333}
+.C4E728D{color:#4E728D}
+.Cc00{ color:#C00}
+.C00604C{color:#00604C}
+.CC000EC{ color:#C000EC}
+.CEA5E00{color:#EA5E00}
+.C999{ color:#999}
+.Cblack,span.Cblack{ color:#000}
+.Table_fix{ table-layout:fixed}
+form{padding:0px; margin:0px}
+
+.sec_box_JSQ_table input,.bot_line_btnB,.btn_SER_Top,.td_fh input,a.Ico_aBox,.gj_tab td input.btn,.CD_tab tr.tr_on,.CD_tab tr.tr_kai_tit td,.ts_back input,.cy_so .btn,.sc_bot_div input,td.hb_time img,.hb_city_Chose a,div.sx_top input.btn,.xz_box,.zl_bot input,.WZ_CH,input.btn_comm,input.btn_blue_B,input.Back_IND{cursor:pointer!important;cursor:hand}
+.bot_line_btnB{width:80px;height:28px;color:#333;padding-top:2px;margin-top:5px}
+
+/*图片整合 */
+.Top,.NAV_L_Tit,.Cont_tit,.sx_J_12,.INDEX_Top,.Cont_caiDet12,.IND_Time .tit,.IND_Site .tit,.cs_cont div.on,.hb_r_tab th,.sx_top,.sx_tab td,.xzbg,.lieche_tab th{background-image:url(bg_x.gif);background-repeat:repeat-x}
+.lieche_nei_tab th{ background-image:url(bg_x_add.gif); background-repeat:repeat-x}
+a.a_INDEX,.Top_B_arr,td.Cont_tbL a:hover,td.Cont_tbL a.on,.Cont_tbL a.on_m,.sx_J_11,.sx_J_13,.sx_J_31,.sec_box_NOS input,.IND_T_L,.IND_T_R,.SER_Logo,.icon_d,.Cont_caiDet11,.Cont_caiDet13,.Cont_caiDet31,.Cont_caiDet33,.IND_M_ref,.IND_M_line .tit,a.T_r_close,.CAL_wid_LT,.CAL_wid_LR,.CAL_LN a,.ico_bY,.ico_bX,.cs_bot a.on,.cy_ses_line_TB,.hb_r_tab td a.a_k,.hb_r_tab td a.a_g,a.a_syt,a.a_xyt,.xzbg .CC000EC,.xz_info_line,.WZ_tit_W,.WZ_CH,.lieche_tab td a.a_k,.lieche_tab td a.a_g,td a.a_cy_ser{background-image:url(icon/bg.gif);background-repeat:no-repeat}
+div.menu_div a:hover,div.menu_div a.on{ background-image:url(bg_add.gif); background-repeat:no-repeat}
+.BG_Lnav{background-image:url(bg_Lnav.gif);background-repeat:repeat-y}
+.sx_J_21{background-image:url(bg_y.gif);background-repeat:repeat-y}
+.Ico_aBox_icon,.Ico_aBox_sha{ background-image:url(IND_Obg.gif); background-repeat:no-repeat}
+a.Ico_aBox:hover{ background-image:url(IND_bgwide.gif); background-repeat:no-repeat}
+.cs_cont span{ background-image:url(bk_point.gif); background-repeat:no-repeat}
+
+
+.ZL_Cont_tab{width:100%;border:0px;table-layout:fixed}
+	.Cont_tit{background-color:#FDFDFD;border-bottom:#F1F1F1 1px solid;height:auto;padding:5px 2px 2px 0px;background-position:0px -95px}
+		.Cont_tit font{color:#2567AF;font-weight:bold;margin:0px;padding:0px;font-size:18px}
+		.Cont_tit span{display:block;margin-top:0px;color:#666}
+	
+.Cont{margin:15px}
+	.sxjsq_tab{width:100%;height:auto;table-layout:fixed;overflow:hidden}	
+		.sx_J_11{width:4px;height:80px;font-size:0px;overflow:hidden;background-position:-230px -5px}
+		.sx_J_12{width:100%;height:80px;vertical-align:top;background-position:0px -258px;text-align:center}
+		.sx_J_13{width:6px;height:80px;font-size:0px;overflow:hidden;background-position:-234px -5px}
+		.sx_J_21{background-position:-5px 0px;vertical-align:top;width:390px;height:auto}
+		.sx_J_31{width:100px;height:7px;background-position:-5px -100px;font-size:0px;overflow:hidden}
+	
+		.sec_box_NOS{margin:17px auto;text-align:center}
+		.sec_box_NOS input{width:100%;border:#557B97 1px solid;font-family:"Arial Black";font-size:24px;color:#000;padding:2px 5px;letter-spacing:5px;background-position:-254px -5px; overflow:hidden; background-attachment:fixed}
+		.tips_p{width:100%;margin:1px 0 0 13px;+margin-top:0;float:left;display:inline;position:relative;background-color:#CCCCCC}
+		.sec_box_NON{position:absolute;top:0;left:0;width:355px;height:20px;line-height:20px;text-align:left;text-indent:8px;white-space:nowrap;text-overflow:ellipsis;overflow: hidden;background-color:#D3DFE7}
+
+		.sec_box_JSQ_table{width:100%;margin:15px auto}
+		.sec_box_JSQ_table td{text-align:center;width:20%;padding-top:5px;padding-bottom:5px}
+		.sec_box_JSQ_table input{width:52px;height:30px;font-family:Verdana, Arial, Helvetica, sans-serif;font-size:14px;font-weight:bold;color:#333}
+		input.jsq_btn_B{height:70px}
+		input.fsize18{font-size:18px}
+
+	
+/*万年历*/
+.CAL_wid{width:100%;height:auto;border:#A9C8CE 1px solid; border-top-width:0px; position:relative; margin-left:0px}
+	.CAL_wid_LT{ position:absolute; left:-1px; top:0px; width:5px; height:43px; background-position:-99px -165px}
+	.CAL_wid_LR{ position:absolute; right:-1px; top:0px; width:5px; height:43px; background-position:-104px -165px}
+	.CAL_wid_top{ height:43px; background-image:url(Cal_bg_tit.gif); background-repeat:repeat-x}
+	.CAL_LN{ height:18px; line-height:18px; background-color:#22AADF; margin:0px 1px}
+		.CAL_LN a{ display:block; width:65px; height:18px; float:left; line-height:19px; overflow:hidden; color:#FFF; text-decoration:none}
+		.CAL_LN a:hover{ background-color:#55BEE6; text-decoration:none}
+		a.CAL_A1{ text-indent:18px; background-position:-436px -85px}
+		a.CAL_A2{ text-indent:18px; background-position:-511px -85px}
+		a.CAL_A3{ width:35px; background-position:-579px -85px}
+		a.CAL_A4{ text-indent:10px; background-position:-611px -85px}
+		a.CAL_A5{ text-indent:10px; background-position:-684px -85px}
+		.CAL_Az{ float:left; width:55px; height:18px}
+		
+.wnl_div{ margin-top:-3px; margin-bottom:0px}
+.sunday td{ background-color:#D3E9F3;font-size:28px; font-weight:bold; font-family:SimHei; text-align:center}
+.cal_day_NO{ width:100%; height:100%; border:0px;}
+	.cal_day_NO td{font-size:26px; font-family:Verdana, Arial, Helvetica, sans-serif; color:#666; font-weight:bold;}
+.cal_day_jr{ width:100%; height:100%; border:0px;}
+	.cal_day_jr td{ font-size:12px; color:#565656;}
+	td.weekend_ms{ background-color:#F60; color:#FFF}
+	.CAL_div{ margin:1px}
+
+	
+/*返回按钮*/
+.bot_back_btn{text-align:left; padding-left:95px; margin-top:15px; clear:both; border-top:#E0E9ED 2px solid; padding-top:8px; padding-bottom:15px}
+	input.Back_IND{font-size:14px; color:#333; padding-top:2px; height:30px;width:140px; padding-top:2px}

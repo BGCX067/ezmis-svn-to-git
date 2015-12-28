@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="jteap.jx.qxgl" namespace="/jteap/jx/qxgl" extends="jteap-actions">
+		<action name="QxglAction" class="jx_QxglAction" />
+		<action name="QxcxAction" class="jx_QxcxAction" />
+		<action name="QxtjAction" class="jx_QxtjAction" />
+		<action name="ExportExcelAction" class="jx_ExportExcelAction" />
+		<action name="GroupExtendForJxAction" class="jx_GroupExtendForJxAction" />
+	</package>
+</struts>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd"
+	default-autowire="byName" default-lazy-init="true">
+
+	<bean id="wzdaManager" class="com.jteap.wz.wzda.manager.WzdaManager" />
+	
+	<bean id="wz_WzdaAction" class="com.jteap.wz.wzda.web.WzdaAction" scope="prototype"></bean>
+	
+	<bean id="velocityConfig" class="org.springframework.web.servlet.view.velocity.VelocityConfigurer">
+  		<property name="resourceLoaderPath" value="/jteap/wz/vm/"/>
+  		<property name="overrideLogging" value="false"/>
+	</bean>
+</beans>

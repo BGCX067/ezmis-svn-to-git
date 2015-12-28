@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd"
+	default-autowire="byName" default-lazy-init="true">
+
+	
+    <!-- 角色 -->
+    <bean id="roleManager" class="com.jteap.system.role.manager.RoleManager"/>
+    <bean id="system_RoleAction" class="com.jteap.system.role.web.RoleAction" scope="prototype"></bean>
+    
+   
+    <!-- 角色&资源关联对象   -->
+     <bean id="r2rManager" class="com.jteap.system.role.manager.R2RManager"/>
+     <bean id="system_R2RAction" class="com.jteap.system.role.web.R2RAction" scope="prototype"></bean>
+     
+   
+
+
+	
+</beans>

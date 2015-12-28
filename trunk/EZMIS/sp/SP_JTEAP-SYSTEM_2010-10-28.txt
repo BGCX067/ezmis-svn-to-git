@@ -1,0 +1,4 @@
+﻿2010-10-28
+1.组织模块中增加组织标识
+2.TB_SYS_GROUP表中添加字段“GROUP_SN”，类型varchar2，长度50。
+3.更新jteap-core.jar包，AbstractAction导出功能修改；HqlUtil类修改。
